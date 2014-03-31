@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93DD87E2-953A-4B27-A836-846BC834BECB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ACKategories</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBDA58DA-DDB6-48FA-9B13-0953F1DF7D54</key>
+		<string>ssh://github.com/AckeeCZ/ACKategories.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ACKategories/ACKategories.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBDA58DA-DDB6-48FA-9B13-0953F1DF7D54</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/AckeeCZ/ACKategories.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBDA58DA-DDB6-48FA-9B13-0953F1DF7D54</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBDA58DA-DDB6-48FA-9B13-0953F1DF7D54</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Categories</string>
+		</dict>
+	</array>
+</dict>
+</plist>
