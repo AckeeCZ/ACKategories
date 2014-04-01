@@ -117,7 +117,7 @@
 {
     CGImageRef rawImageRef=image.CGImage;
     
-    const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
+    const CGFloat colorMasking[6] = {222, 255, 222, 255, 222, 255};
     
     UIGraphicsBeginImageContext(image.size);
     CGImageRef maskedImageRef=CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
@@ -143,7 +143,7 @@
     
     //    const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
     
-    const float colorMasking[6] = {[[array objectAtIndex:0] floatValue], [[array objectAtIndex:1] floatValue], [[array objectAtIndex:2] floatValue], [[array objectAtIndex:3] floatValue], [[array objectAtIndex:4] floatValue], [[array objectAtIndex:5] floatValue]};
+    const CGFloat colorMasking[6] = {[[array objectAtIndex:0] floatValue], [[array objectAtIndex:1] floatValue], [[array objectAtIndex:2] floatValue], [[array objectAtIndex:3] floatValue], [[array objectAtIndex:4] floatValue], [[array objectAtIndex:5] floatValue]};
     
     
     UIGraphicsBeginImageContext(image.size);
@@ -208,7 +208,7 @@
         CGContextSetRGBFillColor(context, newRed, newGreen, newBlue, alpha);
         CGContextFillRect(context, bounds);
     }
-    float maskingColors[6] = {minRed, maxRed, minGreen, maxGreen, minBlue, maxBlue};
+    CGFloat maskingColors[6] = {minRed, maxRed, minGreen, maxGreen, minBlue, maxBlue};
     CGImageRef maskedImageRef = CGImageCreateWithMaskingColors(imageRef, maskingColors);
     if (!maskedImageRef) return nil;
     if (alpha) CGContextDrawImage(context, bounds, maskedImageRef);

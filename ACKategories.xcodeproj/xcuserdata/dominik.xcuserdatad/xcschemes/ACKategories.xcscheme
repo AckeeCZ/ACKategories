@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B487CE4518EABD8A004EF69C"
-               BuildableName = "BuildACKategories"
-               BlueprintName = "BuildACKategories"
+               BlueprintIdentifier = "B422E1D118EADC0D00E0297F"
+               BuildableName = "ACKategories.framework"
+               BlueprintName = "ACKategories"
                ReferencedContainer = "container:ACKategories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

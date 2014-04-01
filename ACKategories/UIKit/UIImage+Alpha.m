@@ -3,6 +3,7 @@
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
+#import <UIKit/UIKit.h>
 #import "UIImage+Alpha.h"
 
 // Private helper methods
@@ -94,6 +95,9 @@
 // Creates a mask that makes the outer edges transparent and everything else opaque
 // The size must include the entire mask (opaque part + transparent border)
 // The caller is responsible for releasing the returned reference by calling CGImageRelease
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+
 - (CGImageRef)newBorderMask:(NSUInteger)borderSize size:(CGSize)size {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
     
@@ -123,5 +127,7 @@
     
     return maskImageRef;
 }
+
+#pragma clang diagnostic pop
 
 @end

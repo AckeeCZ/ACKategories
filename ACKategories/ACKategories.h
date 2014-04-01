@@ -1,19 +1,52 @@
-
-
+//
+//  ACKategories.h
+//  ACKategories
+//
+//  Created by Dominik Vesely on 01/04/14.
+//  Copyright (c) 2014 Dominik Veselý. All rights reserved.
+//
 
 //UIKit
-#import "UIColor+Extra.h"
-#import "UIImage+Alpha.h"
-#import "UIImage+Resize.h"
+#import <UIBarButtonItem+Buttons.h>
+#import <UIButton+Buttons.h>
+#import <UIColor+Extra.h>
+#import <UIControl+Blocks.h>
+#import <UIDevice+IdentifierAddition.h>
+#import <UIDevice+Serial.h>
+#import <UIGestureRecognizer+Blocks.h>
+#import <UIImage+Alpha.h>
+#import <UIImage+Color.h>
+#import <UIImage+Resize.h>
+#import <UIImage+RoundedCorner.h>
+#import <UIView+Actions.h>
+#import <UIWebView+Blocks.h>
 
 //Foundations
-#import "UIImageView+WebCache.h"
-#import "UIImage+RoundedCorner.h"
-#import "UIView+Ext.h"
-#import "UIDevice+IdentifierAddition.h"
 
-
-
+#import <NSArray+Access.h>
+#import <NSArray+Blocks.h>
+#import <NSDictionary+Blocks.h>
+#import <NSDictionary+Intersection.h>
+#import <NSDictionary+Types.h>
+#import <NSDictionary+URLParams.h>
+#import <NSLock+Blocks.h>
+#import <NSMutableDictionary+ConditionalSet.h>
+#import <NSObject+Creation.h>
+#import <NSObject+Marker.h>
+#import "NSObject+PerformBlock.h"
+#import <NSOperationQueue+WorkerQueue.h>
+#import <NSSet+Blocks.h>
+#import <NSSet+Intersection.h>
+#import <NSString+MD5Addition.h>
+#import <NSString+URLEncode.h>
+#import <NSURL+Parameters.h>
+#import <Stack.h>
+#import <NSData+MD5Addition.h>
+#import <NSDateComponents+namedWeekday.h>
+#import <NSObject+Creation.h>
+#import <NSObject+Marker.h>
+#import <NSObject+PerformBlock.h>
+#import <NSOperationQueue+WorkerQueue.h>
 
 #define kClearColor [UIColor clearColor]
 /*
@@ -143,4 +176,3 @@ return _sharedObject;
 #define FlushPool(p) [p drain]; p = [[NSAutoreleasePool alloc] init]
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-

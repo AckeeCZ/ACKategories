@@ -2,7 +2,7 @@
 // Created by Trevor Harmon on 8/5/09.
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
-
+#import <UIKit/UIKit.h>
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
 #import "UIImage+Alpha.h"
@@ -93,7 +93,8 @@
             break;
             
         default:
-            [NSException raise:NSInvalidArgumentException format:@"Unsupported content mode: %d", contentMode];
+            [NSException raise:NSInvalidArgumentException format:@"Unsupported content mode: %ld",
+             (long)contentMode];
     }
     
     CGSize newSize = CGSizeMake(self.size.width * ratio, self.size.height * ratio);
@@ -103,6 +104,9 @@
 
 #pragma mark -
 #pragma mark Private helper methods
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
 // Returns a copy of the image that has been transformed using the given affine transform and scaled to the new size
 // The new image's orientation will be UIImageOrientationUp, regardless of the current image's orientation
@@ -144,6 +148,12 @@
     return newImage;
 }
 
+#pragma clang diagnostic pop
+
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+
 // Returns an affine transform that takes into account the image orientation when drawing a scaled image
 - (CGAffineTransform)transformForOrientation:(CGSize)newSize {
     CGAffineTransform transform = CGAffineTransformIdentity;
@@ -166,6 +176,10 @@
             transform = CGAffineTransformTranslate(transform, 0, newSize.height);
             transform = CGAffineTransformRotate(transform, -M_PI_2);
             break;
+        case UIImageOrientationUp:
+        case UIImageOrientationUpMirrored:
+
+            break;
     }
     
     switch (self.imageOrientation) {
@@ -180,9 +194,18 @@
             transform = CGAffineTransformTranslate(transform, newSize.height, 0);
             transform = CGAffineTransformScale(transform, -1, 1);
             break;
+            
+        case UIImageOrientationDown:
+        case UIImageOrientationLeft:
+        case UIImageOrientationUp:
+        case UIImageOrientationRight:
+            break;    
     }
     
     return transform;
 }
+
+#pragma clang diagnostic pop
+
 
 @end

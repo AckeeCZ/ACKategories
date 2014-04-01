@@ -7,6 +7,8 @@
 //
 
 #import "UIColor+Extra.h"
+#import "ACKategories.h"
+
 
 @implementation UIColor (Extra)
 
@@ -18,21 +20,33 @@
 	return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }
 
-+ (UIColor *) colorWithHex:(uint) hex
+
+
+
++ (UIColor *)colorWithHex:(uint)color
 {
-	int red, green, blue, alpha;
-	
-	blue = hex & 0x000000FF;
-	green = ((hex & 0x0000FF00) >> 8);
-	red = ((hex & 0x00FF0000) >> 16);
-	alpha = ((hex & 0xFF000000) >> 24);
-	
-	return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:(((color & 0xFF0000) >> 16)) / 255.0f
+                           green:(((color & 0xFF00) >> 8)) / 255.0f
+                            blue:((color & 0xFF)) / 255.0f
+                           alpha:1.0];
 }
+
++ (UIColor *)colorWithHexString:(NSString *)hexString;
+{
+    unsigned rgbValue = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:hexString];
+    [scanner setScanLocation:1]; // bypass '#' character
+    [scanner scanHexInt:&rgbValue];
+    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
+}
+
+
+
+
 
 + (UIColor *)darkerColorForColor:(UIColor *)c
 {
-    float r, g, b, a;
+    CGFloat r, g, b, a;
     if ([c getRed:&r green:&g blue:&b alpha:&a])
         return [UIColor colorWithRed:MAX(r - 0.2, 0.0)
                                green:MAX(g - 0.2, 0.0)
@@ -40,6 +54,18 @@
                                alpha:a];
     return nil;
 }
+
++ (UIColor *)lighterColorForColor:(UIColor *)c
+{
+    CGFloat r, g, b, a;
+    if ([c getRed:&r green:&g blue:&b alpha:&a])
+        return [UIColor colorWithRed:MAX(r + 0.2, 1.0)
+                               green:MAX(g + 0.2, 1.0)
+                                blue:MAX(b + 0.2, 1.0)
+                               alpha:a];
+    return nil;
+}
+
 
 @end
 

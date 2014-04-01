@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B487CE4518EABD8A004EF69C"
-               BuildableName = "BuildACKategories"
-               BlueprintName = "BuildACKategories"
+               BlueprintIdentifier = "B422E1A918EAC14C00E0297F"
+               BuildableName = "Ac.framework"
+               BlueprintName = "Ac"
                ReferencedContainer = "container:ACKategories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B422E1B918EAC14D00E0297F"
+               BuildableName = "AcTests.xctest"
+               BlueprintName = "AcTests"
+               ReferencedContainer = "container:ACKategories.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

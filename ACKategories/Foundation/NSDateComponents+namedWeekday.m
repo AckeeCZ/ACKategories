@@ -11,7 +11,7 @@
 @implementation NSDateComponents (namedWeekday)
 
 - (NSString *)namedWeekday {
-    NSString* key = [NSString stringWithFormat:@"WEEKDAY_%d",self.weekday];
+    NSString* key = [NSString stringWithFormat:@"WEEKDAY_%ld",(long)self.weekday];
     return NSLocalizedString(key,@"");    
 }
 

@@ -3,8 +3,11 @@
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
+#import <UIKit/UIKit.h>
+
 #import "UIImage+RoundedCorner.h"
 #import "UIImage+Alpha.h"
+
 
 // Private helper methods
 @interface UIImage ()
@@ -55,6 +58,8 @@
 #pragma mark -
 #pragma mark Private helper methods
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 // Adds a rectangular path to the given context and rounds its corners by the given extents
 // Original author: Björn Sållarp. Used with permission. See: http://blog.sallarp.com/iphone-uiimage-round-corners/
 - (void)addRoundedRectToPath:(CGRect)rect context:(CGContextRef)context ovalWidth:(CGFloat)ovalWidth ovalHeight:(CGFloat)ovalHeight {
@@ -75,5 +80,8 @@
     CGContextClosePath(context);
     CGContextRestoreGState(context);
 }
+
+#pragma clang diagnostic push
+
 
 @end
