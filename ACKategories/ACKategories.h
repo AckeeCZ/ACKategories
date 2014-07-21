@@ -20,6 +20,7 @@
 #import <UIImage+RoundedCorner.h>
 #import <UIView+Actions.h>
 #import <UIWebView+Blocks.h>
+#import <UIView+Ext.h>
 
 //Foundations
 
