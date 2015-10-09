@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'ACKategories'
-  spec.version      = '2.2'
+  spec.version      = '2.3'
   spec.license = { :type => 'MIT', :text => <<-LICENSE
                    Copyright 2014 Ackee
                  LICENSE
@@ -13,3 +13,4 @@ Pod::Spec.new do |spec|
   spec.framework    = 'SystemConfiguration'
   spec.requires_arc = true
 end
+
