@@ -3,47 +3,43 @@
 import Quick
 import Nimble
 import ACKategories
+import UIKit
 
-class TableOfContentsSpec: QuickSpec {
+class ControlBlocksSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+        describe("Button") {
+            it("runs handler on tap") {
 
-            it("can read") {
-                expect("number") == "string"
-            }
+                var x = "Button not pressed"
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    x = "Button pressed"
                 }
 
-                it("can read") {
-                    expect("🐮") == "🐮"
+                button.sendActionsForControlEvents(.TouchUpInside)
+
+                expect(x) == "Button pressed"
+            }
+
+            it("holds only one handler") {
+
+                var x = "First handler not called"
+                var y = "Second handler not called"
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    x = "First handler called"
+                }
+                button.on(.TouchUpInside) { sender in
+                    y = "Second handler called"
                 }
 
-                it("will eventually pass") {
-                    var time = "passing"
+                button.sendActionsForControlEvents(.TouchUpInside)
 
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
+                expect(x) == "First handler not called"
+                expect(y) == "Second handler called"
             }
         }
     }
