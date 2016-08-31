@@ -41,6 +41,17 @@ class ControlBlocksSpec: QuickSpec {
                 expect(x) == "First handler not called"
                 expect(y) == "Second handler called"
             }
+
+            itBehavesLike("object without leaks") {
+                NSDictionary {
+
+                    let button = UIButton()
+                    button.on(.TouchUpInside) { sender in
+                        sender.tag = 1
+                    }
+                    return button
+                }
+            }
         }
     }
 }
