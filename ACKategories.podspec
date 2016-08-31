@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ACKategories'
-  s.version          = '0.1.0'
+  s.version          = '3.0.0'
   s.summary          = 'A short description of ACKategories.'
 
 # This description is used to generate tags and improve search results.
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/ACKategories'
+  s.homepage         = 'https://github.com/AckeeCZ/ACKategories'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jan Mísař' => 'misar.jan@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/ACKategories.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/AckeeCZ/ACKategories.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/ackeecz'
 
   s.ios.deployment_target = '8.0'
 
