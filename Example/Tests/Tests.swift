@@ -23,7 +23,27 @@ class ControlBlocksSpec: QuickSpec {
                 expect(x) == "Button pressed"
             }
 
-            it("holds only one handler") {
+            it("runs handlers for all registered events") {
+
+                var x = "Button not pressed"
+                var y = "Button not pressed"
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    x = "Button TouchUpInside"
+                }
+                button.on(.TouchDown) { sender in
+                    y = "Button TouchDown"
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(x) == "Button TouchUpInside"
+
+                button.sendActionsForControlEvents(.TouchDown)
+                expect(y) == "Button TouchDown"
+            }
+
+            it("holds only one handler for particular event") {
 
                 var x = "First handler not called"
                 var y = "Second handler not called"
@@ -40,6 +60,26 @@ class ControlBlocksSpec: QuickSpec {
 
                 expect(x) == "First handler not called"
                 expect(y) == "Second handler called"
+            }
+
+            it("runs one handler for more events") {
+
+                var x = 0
+
+                let button = UIButton()
+                button.on([.TouchUpInside, .TouchDown]) { sender in
+                    x += 1
+                }
+                button.on(.TouchUpInside) { sender in
+                    x += 1
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActionsForControlEvents(.TouchDown)
+                expect(x) == 3
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(x) == 5
             }
 
             itBehavesLike("object without leaks") {
