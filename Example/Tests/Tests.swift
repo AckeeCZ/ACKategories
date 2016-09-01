@@ -11,55 +11,55 @@ class ControlBlocksSpec: QuickSpec {
         describe("Button") {
             it("runs handler on tap") {
 
-                var x = "Button not pressed"
+                var firstCalled = false
 
                 let button = UIButton()
                 button.on(.TouchUpInside) { sender in
-                    x = "Button pressed"
+                    firstCalled = true
                 }
 
                 button.sendActionsForControlEvents(.TouchUpInside)
 
-                expect(x) == "Button pressed"
+                expect(firstCalled) == true
             }
 
             it("runs handlers for all registered events") {
 
-                var x = "Button not pressed"
-                var y = "Button not pressed"
+                var firstCalled = false
+                var secondCalled = false
 
                 let button = UIButton()
                 button.on(.TouchUpInside) { sender in
-                    x = "Button TouchUpInside"
+                    firstCalled = true
                 }
                 button.on(.TouchDown) { sender in
-                    y = "Button TouchDown"
+                    secondCalled = true
                 }
 
                 button.sendActionsForControlEvents(.TouchUpInside)
-                expect(x) == "Button TouchUpInside"
+                expect(firstCalled) == true
 
                 button.sendActionsForControlEvents(.TouchDown)
-                expect(y) == "Button TouchDown"
+                expect(secondCalled) == true
             }
 
             it("holds only one handler for particular event") {
 
-                var x = "First handler not called"
-                var y = "Second handler not called"
+                var firstCalled = false
+                var secondCalled = false
 
                 let button = UIButton()
                 button.on(.TouchUpInside) { sender in
-                    x = "First handler called"
+                    firstCalled = true
                 }
                 button.on(.TouchUpInside) { sender in
-                    y = "Second handler called"
+                    secondCalled = true
                 }
 
                 button.sendActionsForControlEvents(.TouchUpInside)
 
-                expect(x) == "First handler not called"
-                expect(y) == "Second handler called"
+                expect(firstCalled) == false
+                expect(secondCalled) == true
             }
 
             it("runs one handler for more events") {
@@ -89,6 +89,7 @@ class ControlBlocksSpec: QuickSpec {
                     button.on(.TouchUpInside) { sender in
                         sender.tag = 1
                     }
+                    button.sendActionsForControlEvents(.TouchUpInside)
                     return button
                 }
             }
