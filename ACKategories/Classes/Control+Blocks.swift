@@ -13,7 +13,7 @@ class CollectionWrapper<T: UIControl> {
 }
 
 class ActionWrapper<T: UIControl> {
-    var action: (T -> Void)
+    let action: (T -> Void)
 
     init(action: (T -> Void)) {
         self.action = action
@@ -42,7 +42,7 @@ public extension UIControlEventHandling where Self: UIControl {
      */
     func on(events: UIControlEvents, handler: Self -> Void) {
 
-        var targetsWrapper: CollectionWrapper<Self>! = nil
+        let targetsWrapper: CollectionWrapper<Self>
 
         if let associatedTargetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self> {
             targetsWrapper = associatedTargetsWrapper
