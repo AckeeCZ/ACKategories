@@ -33,4 +33,19 @@ public extension UIColor {
 
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
+
+    public var isLight: Bool {
+
+        let components = CGColorGetComponents(self.CGColor)
+        let red = components[0]
+        let green = components[1]
+        let blue = components[2]
+        let brightness = (red * 299 + green * 587 + blue * 114) / 1000
+
+        return brightness > 0.5
+    }
+
+    public var isDark: Bool {
+        return !isLight
+    }
 }
