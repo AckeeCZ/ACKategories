@@ -28,6 +28,7 @@ class ActionWrapper<T: UIControl> {
 
 public protocol UIControlEventHandling {
     func on(events: UIControlEvents, handler: Self -> Void)
+    func off(events: UIControlEvents)
 }
 
 private var actionKey: UInt8 = 0
@@ -58,6 +59,21 @@ public extension UIControlEventHandling where Self: UIControl {
         let actionWrapper = ActionWrapper(action: handler)
         targetsWrapper.targets[events.rawValue] = actionWrapper
         addTarget(actionWrapper, action: #selector(ActionWrapper.invokeAction(_:)), forControlEvents: events)
+    }
+
+    /**
+     Removes registered action block for defined events.
+
+     off... We are not stupid, drunk and neither high, we know it's really shity name for this method, but we saw it in Tactile and we found it so funny that we had to use it 😄
+
+     - parameter events Events to fire action block
+     */
+    func off(events: UIControlEvents) {
+
+        if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
+            removeTarget(target, action: nil, forControlEvents: events)
+            targetsWrapper.targets.removeValueForKey(events.rawValue)
+        }
     }
 }
 

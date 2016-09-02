@@ -82,6 +82,25 @@ class ControlBlocksSpec: QuickSpec {
                 expect(x) == 5
             }
 
+            it("can unregister action block") {
+
+                var firstCalled = false
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    firstCalled = true
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(firstCalled) == true
+
+                firstCalled = false
+                button.off(.TouchUpInside)
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(firstCalled) == false
+            }
+
             itBehavesLike("object without leaks") {
                 NSDictionary {
 
