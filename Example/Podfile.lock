@@ -1,5 +1,5 @@
 PODS:
-  - ACKategories (0.1.0)
+  - ACKategories (3.0.0)
   - Nimble (3.2.0)
   - Quick (0.9.3)
 
@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ACKategories: be6d50bfa24b49f6ba3b6546b6c2d67130c321cf
+  ACKategories: 2f4797812f2692293d60140ced74f242b379ed8f
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
-PODFILE CHECKSUM: 7812d9c9bc01ec33d6ec57d8047f286876674967
+PODFILE CHECKSUM: 7319cec11f77d754bad78f0cf33b7cf176ff9e51
 
 COCOAPODS: 1.0.1

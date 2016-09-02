@@ -3,46 +3,113 @@
 import Quick
 import Nimble
 import ACKategories
+import UIKit
 
-class TableOfContentsSpec: QuickSpec {
+class ControlBlocksSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+        describe("Button") {
+            it("runs handler on tap") {
 
-            it("can read") {
-                expect("number") == "string"
-            }
+                var firstCalled = false
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    firstCalled = true
                 }
 
-                it("can read") {
-                    expect("🐮") == "🐮"
+                button.sendActionsForControlEvents(.TouchUpInside)
+
+                expect(firstCalled) == true
+            }
+
+            it("runs handlers for all registered events") {
+
+                var firstCalled = false
+                var secondCalled = false
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    firstCalled = true
+                }
+                button.on(.TouchDown) { sender in
+                    secondCalled = true
                 }
 
-                it("will eventually pass") {
-                    var time = "passing"
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(firstCalled) == true
 
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
+                button.sendActionsForControlEvents(.TouchDown)
+                expect(secondCalled) == true
+            }
+
+            it("holds only one handler for particular event") {
+
+                var firstCalled = false
+                var secondCalled = false
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    firstCalled = true
+                }
+                button.on(.TouchUpInside) { sender in
+                    secondCalled = true
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+
+                expect(firstCalled) == false
+                expect(secondCalled) == true
+            }
+
+            it("runs one handler for more events") {
+
+                var x = 0
+
+                let button = UIButton()
+                button.on([.TouchUpInside, .TouchDown]) { sender in
+                    x += 1
+                }
+                button.on(.TouchUpInside) { sender in
+                    x += 1
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActionsForControlEvents(.TouchDown)
+                expect(x) == 3
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(x) == 5
+            }
+
+            it("can unregister action block") {
+
+                var firstCalled = false
+
+                let button = UIButton()
+                button.on(.TouchUpInside) { sender in
+                    firstCalled = true
+                }
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(firstCalled) == true
+
+                firstCalled = false
+                button.off(.TouchUpInside)
+
+                button.sendActionsForControlEvents(.TouchUpInside)
+                expect(firstCalled) == false
+            }
+
+            itBehavesLike("object without leaks") {
+                NSDictionary {
+
+                    let button = UIButton()
+                    button.on(.TouchUpInside) { sender in
+                        sender.tag = 1
                     }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
+                    button.sendActionsForControlEvents(.TouchUpInside)
+                    return button
                 }
             }
         }
