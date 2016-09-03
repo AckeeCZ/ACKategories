@@ -38,8 +38,8 @@ public extension UIControlEventHandling where Self: UIControl {
     /**
      Register action block to be executed on defined events.
 
-     - parameter events Events to fire action block
-     - parameter handler Actionblock to be executed
+     - parameter events: Events to fire action block
+     - parameter handler: Actionblock to be executed
      */
     func on(events: UIControlEvents, handler: Self -> Void) {
 
@@ -66,7 +66,7 @@ public extension UIControlEventHandling where Self: UIControl {
 
      off... We are not stupid, drunk and neither high, we know it's really shity name for this method, but we saw it in Tactile and we found it so funny that we had to use it 😄
 
-     - parameter events Events to fire action block
+     - parameter events: Events to fire action block
      */
     func off(events: UIControlEvents) {
 
