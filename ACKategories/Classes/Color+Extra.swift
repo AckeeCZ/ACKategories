@@ -12,7 +12,7 @@ public extension UIColor {
     /**
      Initialize color from hex int (eg. 0xff00ff).
 
-     - parameter hex Hex int to create color from
+     - parameter hex: Hex int to create color from
      */
     public convenience init(hex: UInt32) {
         self.init(
@@ -26,7 +26,7 @@ public extension UIColor {
     /**
      Initialize color from hex string (eg. "#ff00ff"). Leading '#' is mandatory.
 
-     - parameter hexString Hex string to create color from
+     - parameter hexString: Hex string to create color from
      */
     public convenience init(hexString: String) {
         var rgbValue: UInt32 = 0
@@ -58,7 +58,7 @@ public extension UIColor {
     /**
      Make color lighter with defined amount.
 
-     - parameter amount Defines how much lighter color is returned. Should be from 0.0 to 1.0
+     - parameter amount: Defines how much lighter color is returned. Should be from 0.0 to 1.0
      */
     public func lighter(amount: CGFloat) -> UIColor {
         return colorWithBrightnessAmount(1 + amount)
@@ -67,7 +67,7 @@ public extension UIColor {
     /**
      Make color darker with defined amount.
 
-     - parameter amount Defines how much darker color is returned. Should be from 0.0 to 1.0
+     - parameter amount: Defines how much darker color is returned. Should be from 0.0 to 1.0
      */
     public func darker(amount: CGFloat) -> UIColor {
         return colorWithBrightnessAmount(1 - amount)
