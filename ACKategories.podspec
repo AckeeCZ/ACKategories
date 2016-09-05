@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ACKategories'
   s.version          = '3.0.0'
-  s.summary          = 'A short description of ACKategories.'
+  s.summary          = 'A bunch of useful tools, cocoa subclasses and extensions'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Tools, cocoa subclasses and extensions we love to use at Ackee.
                        DESC
 
   s.homepage         = 'https://github.com/AckeeCZ/ACKategories'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Jan Mísař' => 'misar.jan@gmail.com' }
+  s.author           = { 'Ackee' => 'info@ackee.cz' }
   s.source           = { :git => 'https://github.com/AckeeCZ/ACKategories.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ackeecz'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ACKategories/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ACKategories' => ['ACKategories/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
