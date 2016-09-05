@@ -100,18 +100,6 @@ class ControlBlocksSpec: QuickSpec {
                 button.sendActionsForControlEvents(.TouchUpInside)
                 expect(firstCalled) == false
             }
-
-            itBehavesLike("object without leaks") {
-                NSDictionary {
-
-                    let button = UIButton()
-                    button.on(.TouchUpInside) { sender in
-                        sender.tag = 1
-                    }
-                    button.sendActionsForControlEvents(.TouchUpInside)
-                    return button
-                }
-            }
         }
     }
 }
