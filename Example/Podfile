@@ -6,7 +6,7 @@ target 'ACKategories_Example' do
     target 'ACKategories_Tests' do
         inherit! :search_paths
         
-        pod 'Quick', '~> 0.8'
+        pod 'Quick', '~> 0.9'
         pod 'Nimble', '~> 3.0'
     end
 end
