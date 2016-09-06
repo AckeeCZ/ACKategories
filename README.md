@@ -37,6 +37,12 @@ button.on(.TouchUpInside) { sender in
 }
 ```
 
+### String
+- trim strings easily
+- get first letter of string
+- simplify localization
+- get length of string easily
+
 ### TableHeaderFooterView
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.
 
