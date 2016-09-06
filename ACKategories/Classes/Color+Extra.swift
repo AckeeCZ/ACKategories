@@ -47,12 +47,12 @@ public extension UIColor {
 
     /// Make color 25% lighter
     public var lighter: UIColor {
-        return colorWithBrightnessAmount(0.75)
+        return colorWithBrightnessAmount(1.25)
     }
 
     /// Make color 25% darker
     public var darker: UIColor {
-        return colorWithBrightnessAmount(1.25)
+        return colorWithBrightnessAmount(0.75)
     }
 
     /**
