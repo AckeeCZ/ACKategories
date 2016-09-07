@@ -48,7 +48,7 @@ Use this view as TableHeaderView or TableFooterView when your table/footer has d
 
 ## Author
 
-[Ackee](www.ackee.cz) team
+[Ackee](https://ackee.cz) team
 
 ## License
 
