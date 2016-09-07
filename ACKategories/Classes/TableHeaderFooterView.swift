@@ -1,3 +1,5 @@
+/// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
+
 class TableHeaderFooterView: UIView {
     private var tableView: UITableView? {
         return superview as? UITableView
@@ -20,8 +22,10 @@ class TableHeaderFooterView: UIView {
         case .Footer: defer { tableView?.tableFooterView = self }
         case .None: return
         }
-        let height = systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+
         var frame = self.frame
+        let height = systemLayoutSizeFittingSize(CGSize(width: frame.width, height: UILayoutFittingCompressedSize.height), withHorizontalFittingPriority: 1000, verticalFittingPriority: 500).height
+
         frame.size.height = height
         self.frame = frame
     }
