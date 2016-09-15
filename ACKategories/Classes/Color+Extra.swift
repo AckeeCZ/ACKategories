@@ -115,7 +115,7 @@ public extension UIColor {
     public func image(size: CGSize) -> UIImage {
         let rect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContext(size)
-        let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()!
 
         CGContextSetFillColorWithColor(context, self.CGColor)
         CGContextFillRect(context, rect)
@@ -123,6 +123,6 @@ public extension UIColor {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 }
