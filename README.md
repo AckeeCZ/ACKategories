@@ -14,6 +14,10 @@ ACKategories is available through [CocoaPods](http://cocoapods.org). To install 
 ```ruby
 pod "ACKategories"
 ```
+ACKategories is meant to be used with **Swift 2.2** and **Xcode 7.3.1**.
+
+### Swift 2.3
+If you're interested in using ACKategories in your **Swift 2.3** projects you might want to see branch `swift2.3`.
 
 ## List of features
 This is only fast description of features, see source code for documentation commentsand details.
