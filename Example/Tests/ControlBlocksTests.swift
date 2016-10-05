@@ -14,11 +14,11 @@ class ControlBlocksSpec: QuickSpec {
                 var firstCalled = false
 
                 let button = UIButton()
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     firstCalled = true
                 }
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
 
                 expect(firstCalled) == true
             }
@@ -29,17 +29,17 @@ class ControlBlocksSpec: QuickSpec {
                 var secondCalled = false
 
                 let button = UIButton()
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     firstCalled = true
                 }
-                button.on(.TouchDown) { sender in
+                button.on(.touchDown) { sender in
                     secondCalled = true
                 }
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
                 expect(firstCalled) == true
 
-                button.sendActionsForControlEvents(.TouchDown)
+                button.sendActions(for: .touchDown)
                 expect(secondCalled) == true
             }
 
@@ -49,14 +49,14 @@ class ControlBlocksSpec: QuickSpec {
                 var secondCalled = false
 
                 let button = UIButton()
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     firstCalled = true
                 }
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     secondCalled = true
                 }
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
 
                 expect(firstCalled) == false
                 expect(secondCalled) == true
@@ -67,18 +67,18 @@ class ControlBlocksSpec: QuickSpec {
                 var x = 0
 
                 let button = UIButton()
-                button.on([.TouchUpInside, .TouchDown]) { sender in
+                button.on([.touchUpInside, .touchDown]) { sender in
                     x += 1
                 }
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     x += 1
                 }
 
-                button.sendActionsForControlEvents(.TouchUpInside)
-                button.sendActionsForControlEvents(.TouchDown)
+                button.sendActions(for: .touchUpInside)
+                button.sendActions(for: .touchDown)
                 expect(x) == 3
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
                 expect(x) == 5
             }
 
@@ -87,17 +87,17 @@ class ControlBlocksSpec: QuickSpec {
                 var firstCalled = false
 
                 let button = UIButton()
-                button.on(.TouchUpInside) { sender in
+                button.on(.touchUpInside) { sender in
                     firstCalled = true
                 }
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
                 expect(firstCalled) == true
 
                 firstCalled = false
-                button.off(.TouchUpInside)
+                button.off(.touchUpInside)
 
-                button.sendActionsForControlEvents(.TouchUpInside)
+                button.sendActions(for: .touchUpInside)
                 expect(firstCalled) == false
             }
         }

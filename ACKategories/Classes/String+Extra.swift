@@ -6,7 +6,7 @@ extension String {
 
     /// Removes whitespaces from the start and end of self
     public var trimmed: String {
-        return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
     /// Returns number of characters in self
@@ -17,6 +17,6 @@ extension String {
     /// Returns first letter of self
     public var firstLetter: String? {
         guard length > 0 else { return nil }
-        return substringToIndex(startIndex.successor())
+        return substring(to: characters.index(after: startIndex))
     }
 }

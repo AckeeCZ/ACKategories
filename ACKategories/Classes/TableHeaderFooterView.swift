@@ -1,34 +1,34 @@
 
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
 
-public class TableHeaderFooterView: UIView {
+open class TableHeaderFooterView: UIView {
 
-    private var tableView: UITableView? {
+    fileprivate var tableView: UITableView? {
         return superview as? UITableView
     }
 
-    private var status: Status {
-        return self == tableView?.tableHeaderView ? .Header :
-            self == tableView?.tableFooterView ? .Footer :
-            .None
+    fileprivate var status: Status {
+        return self == tableView?.tableHeaderView ? .header :
+            self == tableView?.tableFooterView ? .footer :
+            .none
     }
 
-    private enum Status {
-        case Header // is set as tableHeaderView
-        case Footer // is set as tableFooterView
-        case None // is used as normal view elsewhere
+    fileprivate enum Status {
+        case header // is set as tableHeaderView
+        case footer // is set as tableFooterView
+        case none // is used as normal view elsewhere
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         switch status {
-        case .Header: defer { tableView?.tableHeaderView = self }
-        case .Footer: defer { tableView?.tableFooterView = self }
-        case .None: return
+        case .header: defer { tableView?.tableHeaderView = self }
+        case .footer: defer { tableView?.tableFooterView = self }
+        case .none: return
         }
 
         var frame = self.frame
-        let height = systemLayoutSizeFittingSize(CGSize(width: frame.width, height: UILayoutFittingCompressedSize.height), withHorizontalFittingPriority: 1000, verticalFittingPriority: 500).height
+        let height = systemLayoutSizeFitting(CGSize(width: frame.width, height: UILayoutFittingCompressedSize.height), withHorizontalFittingPriority: 1000, verticalFittingPriority: 500).height
 
         frame.size.height = height
         self.frame = frame

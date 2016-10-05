@@ -30,9 +30,9 @@ public extension UIColor {
      */
     public convenience init(hexString: String) {
         var rgbValue: UInt32 = 0
-        let scanner = NSScanner(string: hexString)
+        let scanner = Scanner(string: hexString)
         scanner.scanLocation = 1 // bypass '#' character
-        scanner.scanHexInt(&rgbValue)
+        scanner.scanHexInt32(&rgbValue)
         self.init(hex: rgbValue)
     }
 
@@ -60,7 +60,7 @@ public extension UIColor {
 
      - parameter amount: Defines how much lighter color is returned. Should be from 0.0 to 1.0
      */
-    public func lighter(amount: CGFloat) -> UIColor {
+    public func lighter(_ amount: CGFloat) -> UIColor {
         return colorWithBrightnessAmount(1 + amount)
     }
 
@@ -69,11 +69,11 @@ public extension UIColor {
 
      - parameter amount: Defines how much darker color is returned. Should be from 0.0 to 1.0
      */
-    public func darker(amount: CGFloat) -> UIColor {
+    public func darker(_ amount: CGFloat) -> UIColor {
         return colorWithBrightnessAmount(1 - amount)
     }
 
-    private func colorWithBrightnessAmount(amount: CGFloat) -> UIColor {
+    fileprivate func colorWithBrightnessAmount(_ amount: CGFloat) -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0
         var b: CGFloat = 0
@@ -92,11 +92,11 @@ public extension UIColor {
     /// Returns true for light colors. When light color is used as background, you should use black as a text color.
     public var isLight: Bool {
 
-        let components = CGColorGetComponents(self.CGColor)
-        let red = components[0]
-        let green = components[1]
-        let blue = components[2]
-        let brightness = (red * 299 + green * 587 + blue * 114) / 1000
+        let components = self.cgColor.components
+        let red = components?[0]
+        let green = components?[1]
+        let blue = components?[2]
+        let brightness = (red! * 299 + green! * 587 + blue! * 114) / 1000
 
         return brightness > 0.5
     }
@@ -108,21 +108,21 @@ public extension UIColor {
 
     /// Create 1 x 1 px image from color.
     public var image: UIImage {
-        return image(CGSizeMake(1, 1))
+        return image(CGSize(width: 1, height: 1))
     }
 
     /// Create image from color with defined size.
-    public func image(size: CGSize) -> UIImage {
-        let rect = CGRectMake(0, 0, size.width, size.height)
+    public func image(_ size: CGSize) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
 
-        CGContextSetFillColorWithColor(context, self.CGColor)
-        CGContextFillRect(context, rect)
+        context?.setFillColor(self.cgColor)
+        context?.fill(rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 }
