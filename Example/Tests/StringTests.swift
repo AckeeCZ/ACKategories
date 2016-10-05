@@ -15,7 +15,6 @@ class StringSpec: QuickSpec {
         describe("String") {
             it("reads first letter") {
                 let string = "String"
-                string.firstLetter
 
                 expect(string.firstLetter) == "S"
                 expect(string.firstLetter) != "s"
