@@ -50,6 +50,12 @@ button.on(.TouchUpInside) { sender in
 ### TableHeaderFooterView
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.
 
+## Forking this repository 
+If you use our extensions within your team we would love to hear about it. Drop us a tweet at [@ackeecz][1] or leave a star here on Github. BTW we would also like to know what other extensions you use!
+
+## Sharing is caring
+This repo has been opensourced within our `#sharingiscaring` action when we have decided to opensource our internal projects.
+
 ## Author
 
 [Ackee](https://ackee.cz) team
@@ -57,3 +63,5 @@ Use this view as TableHeaderView or TableFooterView when your table/footer has d
 ## License
 
 ACKategories is available under the MIT license. See the LICENSE file for more info.
+
+[1]:	https://twitter.com/AckeeCZ
