@@ -26,72 +26,25 @@ class ActionWrapper<T: UIControl> {
     }
 }
 
-//public protocol UIControlEventHandling {
-//    /**
-//     Register action block to be executed on defined events.
-//
-//     - parameter events: Events to fire action block
-//     - parameter handler: Actionblock to be executed
-//     */
-//    func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void)
-//
-//    /**
-//     Removes registered action block for defined events.
-//
-//     off... We are not stupid, drunk and neither high, we know it's really shity name for this method, but we saw it in Tactile and we found it so funny that we had to use it 😄
-//
-//     - parameter events: Events to fire action block
-//     */
-//    func off(_ events: UIControlEvents)
-//}
+public protocol UIControlEventHandling { }
 
 private var actionKey: UInt8 = 0
 
-//public extension UIControlEventHandling where Self: UIControl {
-//
-//    func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void) {
-//        
-//        let targetsWrapper: CollectionWrapper<Self>
-//        
-//        if let associatedTargetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self> {
-//            targetsWrapper = associatedTargetsWrapper
-//        } else {
-//            targetsWrapper = CollectionWrapper()
-//            objc_setAssociatedObject(self, &actionKey, targetsWrapper, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//        }
-//        
-//        if let target = targetsWrapper.targets[events.rawValue] {
-//            removeTarget(target, action: nil, for: events)
-//        }
-//        
-//        let actionWrapper = ActionWrapper(action: handler)
-//        targetsWrapper.targets[events.rawValue] = actionWrapper
-//        addTarget(actionWrapper, action: #selector(ActionWrapper.invokeAction(_:)), for: events)
-//    }
-//    
-//    func off(_ events: UIControlEvents) {
-//        
-//        if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
-//            removeTarget(target, action: nil, for: events)
-//            targetsWrapper.targets.removeValue(forKey: events.rawValue)
-//        }
-//    }
-//    
-//}
+extension UIControl: UIControlEventHandling {}
 
-extension UIControl/*: UIControlEventHandling*/ {
-
+public extension UIControlEventHandling where Self: UIControl {
+    
     /**
      Register action block to be executed on defined events.
      
      - parameter events: Events to fire action block
      - parameter handler: Actionblock to be executed
      */
-    public func on(_ events: UIControlEvents, handler: @escaping (UIControl) -> Void) {
+    func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void) {
         
-        let targetsWrapper: CollectionWrapper<UIControl>
+        let targetsWrapper: CollectionWrapper<Self>
         
-        if let associatedTargetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<UIControl> {
+        if let associatedTargetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self> {
             targetsWrapper = associatedTargetsWrapper
         } else {
             targetsWrapper = CollectionWrapper()
@@ -114,12 +67,12 @@ extension UIControl/*: UIControlEventHandling*/ {
      
      - parameter events: Events to fire action block
      */
-    public func off(_ events: UIControlEvents) {
+    func off(_ events: UIControlEvents) {
         
-        if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<UIControl>, let target = targetsWrapper.targets[events.rawValue] {
+        if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
             removeTarget(target, action: nil, for: events)
             targetsWrapper.targets.removeValue(forKey: events.rawValue)
         }
     }
-
+    
 }
