@@ -29,7 +29,7 @@ class StringSpec: QuickSpec {
             it("trimms") {
                 let string = "     String\nString\n\n\n"
 
-                expect(string.trimmed) == "String\nString"
+                expect(string.trimmed()) == "String\nString"
             }
         }
     }

@@ -1,11 +1,11 @@
 extension String {
     /// Uses self as key to Localizable.strings and returns it's localized value or self
-    public var localized: String {
+    public func localized() -> String {
         return NSLocalizedString(self, comment: "")
     }
 
     /// Removes whitespaces from the start and end of self
-    public var trimmed: String {
+    public func trimmed() -> String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 

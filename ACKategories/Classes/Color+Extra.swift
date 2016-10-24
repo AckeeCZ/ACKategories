@@ -37,7 +37,7 @@ public extension UIColor {
     }
 
     /// Create random color
-    public static var random: UIColor {
+    public static func random() -> UIColor {
         let randomRed = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomGreen = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomBlue = CGFloat(arc4random()) / CGFloat(UInt32.max)
@@ -45,32 +45,22 @@ public extension UIColor {
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
 
-    /// Make color 25% lighter
-    public var lighter: UIColor {
-        return colorWithBrightnessAmount(1.25)
-    }
-
-    /// Make color 25% darker
-    public var darker: UIColor {
-        return colorWithBrightnessAmount(0.75)
-    }
-
     /**
      Make color lighter with defined amount.
-
+     
      - parameter amount: Defines how much lighter color is returned. Should be from 0.0 to 1.0
      */
-    public func lighter(_ amount: CGFloat) -> UIColor {
-        return colorWithBrightnessAmount(1 + amount)
+    public func brightened(by amount: CGFloat = 0.25) -> UIColor {
+        return colorWithBrightnessAmount(1 + max(0, amount))
     }
 
     /**
      Make color darker with defined amount.
-
+     
      - parameter amount: Defines how much darker color is returned. Should be from 0.0 to 1.0
      */
-    public func darker(_ amount: CGFloat) -> UIColor {
-        return colorWithBrightnessAmount(1 - amount)
+    public func darkened(by amount: CGFloat = 0.25) -> UIColor {
+        return colorWithBrightnessAmount(1 - max(0, amount))
     }
 
     fileprivate func colorWithBrightnessAmount(_ amount: CGFloat) -> UIColor {
@@ -106,13 +96,8 @@ public extension UIColor {
         return !isLight
     }
 
-    /// Create 1 x 1 px image from color.
-    public var image: UIImage {
-        return image(CGSize(width: 1, height: 1))
-    }
-
     /// Create image from color with defined size.
-    public func image(_ size: CGSize) -> UIImage {
+    public func image(of size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
