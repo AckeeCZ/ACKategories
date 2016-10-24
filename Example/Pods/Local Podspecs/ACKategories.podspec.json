@@ -1,6 +1,6 @@
 {
   "name": "ACKategories",
-  "version": "3.0.0",
+  "version": "3.1.1",
   "summary": "A bunch of useful tools, cocoa subclasses and extensions",
   "description": "Tools, cocoa subclasses and extensions we love to use at Ackee.",
   "homepage": "https://github.com/AckeeCZ/ACKategories",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/AckeeCZ/ACKategories.git",
-    "tag": "3.0.0"
+    "tag": "3.1.1"
   },
   "social_media_url": "https://twitter.com/ackeecz",
   "platforms": {

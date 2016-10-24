@@ -15,7 +15,6 @@ class StringSpec: QuickSpec {
         describe("String") {
             it("reads first letter") {
                 let string = "String"
-                string.firstLetter
 
                 expect(string.firstLetter) == "S"
                 expect(string.firstLetter) != "s"
@@ -30,7 +29,7 @@ class StringSpec: QuickSpec {
             it("trimms") {
                 let string = "     String\nString\n\n\n"
 
-                expect(string.trimmed) == "String\nString"
+                expect(string.trimmed()) == "String\nString"
             }
         }
     }
