@@ -23,7 +23,7 @@ If you're interested in using ACKategories in your **Swift 2.3** projects you mi
 This is only fast description of features, see source code for documentation commentsand details.
 
 ### Button
-Extension for Button that fixes `intrinsicContentSize()` and adds `titleEdgeInsets` to it.
+Extension for Button that fixes `intrinsicContentSize` and adds `titleEdgeInsets` to it.
 
 ### Color
 - Initialize colors with hex codes
@@ -36,7 +36,7 @@ Extension for Button that fixes `intrinsicContentSize()` and adds `titleEdgeInse
 Add action blocks to Controls.
 ```swift
 let button = UIButton()
-button.on(.TouchUpInside) { sender in
+button.on(.touchUpInside) { sender in
 	...
 }
 ```
