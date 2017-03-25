@@ -40,6 +40,7 @@ button.on(.touchUpInside) { sender in
 	...
 }
 ```
+If running on iOS 9 or later you can use implicit parameter `UIControl.primaryActionTriggered`.
 
 ### String
 - trim strings easily
@@ -49,6 +50,16 @@ button.on(.touchUpInside) { sender in
 
 ### TableHeaderFooterView
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.
+
+### UITableView and UICollectionView extensions
+Since now you can use simple extension which autoregisters your `UITableView` and `UICollectionView` cells!
+```swift
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  let cell: YourCustomCell = tableView.dequeCellForIndexPath(indexPath) // generically dequed cell which was autoregistered, no need to register your cells in advance
+  return cell
+}
+```
+And it's the same story with `UICollectionView`.
 
 ## Forking this repository 
 If you use our extensions within your team we would love to hear about it. Drop us a tweet at [@ackeecz][1] or leave a star here on Github. BTW we would also like to know what other extensions you use!
