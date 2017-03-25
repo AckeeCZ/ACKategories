@@ -40,7 +40,7 @@ public extension UIControlEventHandling where Self: UIControl {
      - parameter events: Events to fire action block
      - parameter handler: Actionblock to be executed
      */
-    func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void) {
+    public func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void) {
         
         let targetsWrapper: CollectionWrapper<Self>
         
@@ -66,7 +66,7 @@ public extension UIControlEventHandling where Self: UIControl {
      - parameter handler: Actionblock to be executed
      */
     @available(iOS 9.0, *)
-    func on(handler: @escaping (Self) -> Void) {
+    public func on(handler: @escaping (Self) -> Void) {
         on(.primaryActionTriggered, handler: handler)
     }
     
@@ -77,7 +77,7 @@ public extension UIControlEventHandling where Self: UIControl {
      
      - parameter events: Events to fire action block
      */
-    func off(_ events: UIControlEvents) {
+    public func off(_ events: UIControlEvents) {
         
         if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
             removeTarget(target, action: nil, for: events)
