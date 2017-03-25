@@ -61,6 +61,16 @@ public extension UIControlEventHandling where Self: UIControl {
     }
     
     /**
+     Register action block to be executed on primary action.
+     
+     - parameter handler: Actionblock to be executed
+     */
+    @available(iOS 9.0, *)
+    func on(handler: @escaping (Self) -> Void) {
+        on(.primaryActionTriggered, handler: handler)
+    }
+    
+    /**
      Removes registered action block for defined events.
      
      off... We are not stupid, drunk and neither high, we know it's really shity name for this method, but we saw it in Tactile and we found it so funny that we had to use it 😄
