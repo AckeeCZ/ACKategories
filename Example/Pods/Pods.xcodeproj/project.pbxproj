@@ -45,6 +45,8 @@
 		6445B28465C1A7900E895709BC333C23 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F7A0F8C62C4604F1171567DDDCC1B /* Contain.swift */; };
 		67C114A4923A98F1CA04F80B2F56C58C /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F13CDB5E2FBA53F6844FF5408E37ECC /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		684A7E4C24ADAAB1B497B5F658036FC2 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB293DD748964D20041A48D0616DFC6B /* Functional.swift */; };
+		69E7FCBF1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7FCBE1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift */; };
+		69E7FCC11E8730C50024D8FE /* UIControlEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7FCC01E8730C50024D8FE /* UIControlEvents.swift */; };
 		6DCE39F14D6AA86F82441E011C9B399A /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7ADD722D321979FD7D64C31167947 /* Callsite.swift */; };
 		7070E1BDFFD9D6D40C6ED465BD5C58CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC405455F8E20BD0434D9D3E3D2879A /* Foundation.framework */; };
 		74C0C955A968122899AB6E0DA79D3FA0 /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE134C970257401B63634789F76E1D99 /* NMBObjCMatcher.swift */; };
@@ -189,6 +191,8 @@
 		60F5E1E31EE6993B411E615A3564AE63 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		65473B0CF645DD9ED979CF1129A67137 /* ACKategories-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACKategories-prefix.pch"; sourceTree = "<group>"; };
 		6778B35F731CACE8A16DE3FB29296715 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
+		69E7FCBE1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAndCollectionViewExtensions.swift; sourceTree = "<group>"; };
+		69E7FCC01E8730C50024D8FE /* UIControlEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlEvents.swift; sourceTree = "<group>"; };
 		6BFD142E366265060C7305FA73FFE05C /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		6DF32783790F019A5F94A41ABE00A907 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		6DF8CB19918B3D63E49F6AD164F42B1C /* Pods-ACKategories_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ACKategories_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -589,6 +593,8 @@
 				DD5C213DCE0D1DCADB58DBB0050D94CD /* Control+Blocks.swift */,
 				066D82D8DEFF9C97D28B374C6FA443E6 /* String+Extra.swift */,
 				BECDF7EC6CCF6B6B382E355D14D18105 /* TableHeaderFooterView.swift */,
+				69E7FCBE1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift */,
+				69E7FCC01E8730C50024D8FE /* UIControlEvents.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -881,8 +887,10 @@
 				77EC16946C5C78394A4202FF03150677 /* Buttons+FixedIntrinsicContentSize.swift in Sources */,
 				18B9E811580C83DCE54BA69D42C5BC56 /* Color+Extra.swift in Sources */,
 				8EF769B703EC0976FC2A967A1BF16FDA /* Control+Blocks.swift in Sources */,
+				69E7FCC11E8730C50024D8FE /* UIControlEvents.swift in Sources */,
 				E6C84937E695C124074C43CEDCB19D44 /* String+Extra.swift in Sources */,
 				A432889507AED9EE5388D2D8B2D499E4 /* TableHeaderFooterView.swift in Sources */,
+				69E7FCBF1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
