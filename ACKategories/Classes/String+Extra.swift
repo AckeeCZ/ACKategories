@@ -19,4 +19,13 @@ extension String {
         guard length > 0 else { return nil }
         return substring(to: characters.index(after: startIndex))
     }
+    
+    /// Normalizes string - removes interpuction etc.
+    public func normalizedValue() -> String {
+        let mutableString = NSMutableString(string: self) as CFMutableString
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, Bool(0))
+        CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, Bool(0))
+        CFStringLowercase(mutableString, Locale.current as CFLocale!)
+        return mutableString as String
+    }
 }

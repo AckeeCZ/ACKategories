@@ -36,6 +36,28 @@ extension Dictionary where Value: OptionalProtocol {
             }
         }
     }
+    
+    
+    
+    /**
+     Simulation of classic valueForKeyPath method.
+     
+     - Parameter keyPath: Dot separated key path
+     */
+    public func value<T>(for keyPath: String) -> T? {
+        let components = keyPath.components(separatedBy: ".")
+        
+        var result: Any? = self
+        components.forEach { key in
+            guard let key = key as? Key else {
+                return
+            }
+            result = (result as? Dictionary<Key, Value>)?[key]
+        }
+        return result as? T
+    }
+    
+    
 }
 
 
@@ -51,3 +73,11 @@ extension Optional where Wrapped == String {
     }
 }
 
+
+extension NumberFormatter {
+    
+    public func string(from number: Int) -> String? {
+        return self.string(from: NSNumber(value: number))
+    }
+    
+}

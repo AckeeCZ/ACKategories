@@ -22,6 +22,16 @@ class FoundationSpec: QuickSpec {
                 expect(dict.count) == 3
                 expect(dictWithoutNils.count) == 2
             }
+            
+            
+            it("gets correct value") {
+                let dict: [String:Any?] = ["key":1, "key2":["key3":3.17]]
+                let value1: Int = dict.value(for: "key")!
+                let value2: Double = dict.value(for: "key2.key3")!
+
+                expect(value1) == 1
+                expect(value2) == 3.17
+            }
         }
         
         
@@ -36,6 +46,18 @@ class FoundationSpec: QuickSpec {
                 expect(string1.isEmpty) == false
                 expect(string2.isEmpty) == true
                 expect(string3.isEmpty) == true
+            }
+        }
+        
+        
+        describe("NumberFormatter") {
+            
+            it("converts int to string") {
+                let numberFormatter = NumberFormatter()
+                let integer = 10
+                let numberString = numberFormatter.string(from: integer)
+                
+                expect(numberString) == "10"
             }
         }
     }

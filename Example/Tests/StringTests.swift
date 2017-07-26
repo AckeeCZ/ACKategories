@@ -31,6 +31,13 @@ class StringSpec: QuickSpec {
 
                 expect(string.trimmed()) == "String\nString"
             }
+            
+            
+            it("normalizes") {
+                let string = "řžýřšč"
+                
+                expect(string.normalizedValue()) == "rzyrsc"
+            }
         }
     }
 }
