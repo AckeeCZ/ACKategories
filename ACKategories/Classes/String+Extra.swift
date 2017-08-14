@@ -1,3 +1,5 @@
+import Foundation
+
 extension String {
     /// Uses self as key to Localizable.strings and returns it's localized value or self
     public func localized() -> String {
