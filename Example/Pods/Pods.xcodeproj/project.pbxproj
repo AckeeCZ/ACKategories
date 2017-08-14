@@ -10,6 +10,7 @@
 		099C64CF560DC424DB43BBBEC6370D8F /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7E9F063000B004BCB218F18B209FD /* ThrowError.swift */; };
 		18B9E811580C83DCE54BA69D42C5BC56 /* Color+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ECF4844F632DBEE6A5E220E9305C95 /* Color+Extra.swift */; };
 		1C849851C90F63658DC067845E9EEE14 /* NSString+QCKSelectorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0CF1CE5B94B840EAE1E96F1F28C39B /* NSString+QCKSelectorName.m */; };
+		1CF5E2461F0546AC0091E22B /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5E2451F0546AC0091E22B /* FoundationExtensions.swift */; };
 		21FCC4B725EAF5F42EDFDA386FF3EC4C /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB792EB92B266C62D2E1A3E796509C /* BeNil.swift */; };
 		22E95438F85E02BCF2B022D57FBD05F2 /* ACKategories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15989F900D9EEFDF2D3CF960E75BC701 /* ACKategories-dummy.m */; };
 		24AE47A6560D6EBB0AFF78BAAAB15E0F /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D4D3AB41BF86798B09F014F3CE39 /* AsyncMatcherWrapper.swift */; };
@@ -160,6 +161,7 @@
 		1965B93D61DAC1B951AB135F685199F9 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Sources/Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		1B17DFE07B22FFA7A4C28C1AB14A7A79 /* Pods-ACKategories_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ACKategories_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C6B3017F53936E25BA623FC38E73C38 /* NSString+QCKSelectorName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+QCKSelectorName.h"; path = "Sources/QuickObjectiveC/NSString+QCKSelectorName.h"; sourceTree = "<group>"; };
+		1CF5E2451F0546AC0091E22B /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		1FFA3BF7178C87470B21A4CE0C5BD4F0 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		21B10587E876B2D228A97FE5A41EC654 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		23FC1B26014CE28426C23CFE7BF4B04A /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+CurrentTestBundle.swift"; path = "Sources/Quick/NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 				BECDF7EC6CCF6B6B382E355D14D18105 /* TableHeaderFooterView.swift */,
 				69E7FCBE1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift */,
 				69E7FCC01E8730C50024D8FE /* UIControlEvents.swift */,
+				1CF5E2451F0546AC0091E22B /* FoundationExtensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 				E6C84937E695C124074C43CEDCB19D44 /* String+Extra.swift in Sources */,
 				A432889507AED9EE5388D2D8B2D499E4 /* TableHeaderFooterView.swift in Sources */,
 				69E7FCBF1E87306D0024D8FE /* TableAndCollectionViewExtensions.swift in Sources */,
+				1CF5E2461F0546AC0091E22B /* FoundationExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
