@@ -49,7 +49,7 @@ Add action blocks to Controls.
 ```swift
 let button = UIButton()
 button.on(.touchUpInside) { sender in
-	...
+    ...
 }
 ```
 If running on iOS 9 or later you can use implicit parameter `UIControl.primaryActionTriggered`.
@@ -67,8 +67,9 @@ Use this view as TableHeaderView or TableFooterView when your table/footer has d
 Since now you can use simple extension which autoregisters your `UITableView` and `UICollectionView` cells!
 ```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  let cell: YourCustomCell = tableView.dequeCellForIndexPath(indexPath) // generically dequed cell which was autoregistered, no need to register your cells in advance
-  return cell
+    // generically dequed cell which was autoregistered, no need to register your cells in advance
+    let cell: YourCustomCell = tableView.dequeCellForIndexPath(indexPath)
+    return cell
 }
 ```
 And it's the same story with `UICollectionView`.
