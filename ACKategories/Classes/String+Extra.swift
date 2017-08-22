@@ -19,14 +19,15 @@ extension String {
     /// Returns first letter of self
     public var firstLetter: String? {
         guard length > 0 else { return nil }
-        return substring(to: characters.index(after: startIndex))
+        return self.first.flatMap { String($0) }
+//        return substring(to: characters.index(after: startIndex))
     }
     
     /// Normalizes string - removes interpuction etc.
     public func normalizedValue() -> String {
         let mutableString = NSMutableString(string: self) as CFMutableString
-        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, Bool(0))
-        CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, Bool(0))
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false)
         CFStringLowercase(mutableString, Locale.current as CFLocale!)
         return mutableString as String
     }
