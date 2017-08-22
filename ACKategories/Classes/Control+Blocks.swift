@@ -78,7 +78,6 @@ public extension UIControlEventHandling where Self: UIControl {
      - parameter events: Events to fire action block
      */
     public func off(_ events: UIControlEvents) {
-        
         if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
             removeTarget(target, action: nil, for: events)
             targetsWrapper.targets.removeValue(forKey: events.rawValue)

@@ -22,6 +22,7 @@ open class TableHeaderFooterView: UIView {
 
     override open func layoutSubviews() {
         super.layoutSubviews()
+        
         switch status {
         case .header: defer { tableView?.tableHeaderView = self }
         case .footer: defer { tableView?.tableFooterView = self }
@@ -38,4 +39,5 @@ open class TableHeaderFooterView: UIView {
         frame.size.height = size.height
         self.frame = frame
     }
+    
 }

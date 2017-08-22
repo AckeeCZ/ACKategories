@@ -51,7 +51,7 @@ public extension UIColor {
      - parameter amount: Defines how much lighter color is returned. Should be from 0.0 to 1.0
      */
     public func brightened(by amount: CGFloat = 0.25) -> UIColor {
-        return colorWithBrightnessAmount(1 + max(0, amount))
+        return with(brightnessAmount: 1 + max(0, amount))
     }
 
     /**
@@ -60,10 +60,10 @@ public extension UIColor {
      - parameter amount: Defines how much darker color is returned. Should be from 0.0 to 1.0
      */
     public func darkened(by amount: CGFloat = 0.25) -> UIColor {
-        return colorWithBrightnessAmount(1 - max(0, amount))
+        return with(brightnessAmount: 1 - max(0, amount))
     }
 
-    fileprivate func colorWithBrightnessAmount(_ amount: CGFloat) -> UIColor {
+    fileprivate func with(brightnessAmount: CGFloat) -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0
         var b: CGFloat = 0
@@ -74,7 +74,7 @@ public extension UIColor {
         return UIColor(
             hue: h,
             saturation: s,
-            brightness: b * amount,
+            brightness: b * brightnessAmount,
             alpha: a
         )
     }

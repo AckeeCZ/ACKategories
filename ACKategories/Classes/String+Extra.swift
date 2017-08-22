@@ -11,16 +11,10 @@ extension String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
-    /// Returns number of characters in self
-    public var length: Int {
-        return characters.count
-    }
-
     /// Returns first letter of self
     public var firstLetter: String? {
-        guard length > 0 else { return nil }
+        guard count > 0 else { return nil }
         return self.first.flatMap { String($0) }
-//        return substring(to: characters.index(after: startIndex))
     }
     
     /// Normalizes string - removes interpuction etc.
