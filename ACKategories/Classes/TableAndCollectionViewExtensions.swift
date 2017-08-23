@@ -1,10 +1,10 @@
 import UIKit
 
-protocol Reusable { }
+public protocol Reusable { }
 
 extension Reusable {
     
-    static var reuseIdentifier: String {
+    public static var reuseIdentifier: String {
         return NSStringFromClass(self as! AnyObject.Type)
     }
     
