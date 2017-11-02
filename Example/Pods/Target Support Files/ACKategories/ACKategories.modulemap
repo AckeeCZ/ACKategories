@@ -1,6 +1,0 @@
-framework module ACKategories {
-  umbrella header "ACKategories-umbrella.h"
-
-  export *
-  module * { export * }
-}
