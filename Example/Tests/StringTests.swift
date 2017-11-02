@@ -23,7 +23,7 @@ class StringSpec: QuickSpec {
             it("uses correct length") {
                 let string = "String"
 
-                expect(string.length) == 6
+                expect(string.count) == 6
             }
 
             it("trimms") {

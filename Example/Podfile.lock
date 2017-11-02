@@ -1,11 +1,11 @@
 PODS:
-  - ACKategories (3.1.1)
-  - Nimble (5.0.0)
+  - ACKategories (4.2.0)
+  - Nimble (7.0.2)
   - Quick (0.10.0)
 
 DEPENDENCIES:
   - ACKategories (from `../`)
-  - Nimble (~> 5.0)
+  - Nimble (~> 7.0)
   - Quick (~> 0.10)
 
 EXTERNAL SOURCES:
@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ACKategories: 65eb2bbb8aa7a4275053f429a486c8803e11a0d7
-  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
+  ACKategories: bfa3c4202cd537d0a7d72f7cb16a2d8fcf12d6d9
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
-PODFILE CHECKSUM: 84c5ab9c6c04a42ecfd650339c49380076d1d7fa
+PODFILE CHECKSUM: d1c07d2cea4c9f0248b8bedc935bd5a8a080b31c
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.3.1

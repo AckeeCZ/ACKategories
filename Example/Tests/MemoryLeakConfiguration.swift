@@ -27,7 +27,7 @@ class MemoryLeakConfiguration: QuickConfiguration {
                 weak var ref = object
                 object = nil
 
-                expect(ref).toEventually(beNil(), description: "Memory leak detected on \(ref)")
+                expect(ref).toEventually(beNil(), description: "Memory leak detected on \(String(describing: ref))")
             }
         }
     }

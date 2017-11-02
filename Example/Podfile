@@ -7,15 +7,22 @@ target 'ACKategories_Example' do
         inherit! :search_paths
         
         pod 'Quick', '~> 0.10'
-        pod 'Nimble', '~> 5.0'
+        pod 'Nimble', '~> 7.0'
     end
 end
 
 post_install do |installer|
+    swift3 = [
+    'Quick'
+    ]
+    
     installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.0'
+        if swift3.include? target.to_s then
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
         end
     end
+    
 end
 
