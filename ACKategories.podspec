@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ACKategories'
-  s.version          = '4.2.0'
+  s.version          = '5.0.0'
   s.summary          = 'A bunch of useful tools, cocoa subclasses and extensions'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
   s.source           = { :git => 'https://github.com/AckeeCZ/ACKategories.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ackeecz'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.3'
 
   s.source_files = 'ACKategories/Classes/**/*'
 

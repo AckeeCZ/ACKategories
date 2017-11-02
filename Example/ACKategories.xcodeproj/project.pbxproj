@@ -40,7 +40,7 @@
 		3DA1857613DF31894F224EF6 /* Pods-ACKategories_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACKategories_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACKategories_Tests/Pods-ACKategories_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4631ACD545F32E3CBC276342 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4B4AC20B3D608CCB8989AEE1 /* Pods_ACKategories_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACKategories_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		573B23300E7CB81AA01425E0 /* ACKategories.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACKategories.podspec; path = ../ACKategories.podspec; sourceTree = "<group>"; };
+		573B23300E7CB81AA01425E0 /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = ACKategories.podspec; path = ../ACKategories.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ACKategories_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACKategories_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
