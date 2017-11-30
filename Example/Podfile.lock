@@ -1,5 +1,5 @@
 PODS:
-  - ACKategories (4.2.0)
+  - ACKategories (5.0.0)
   - Nimble (7.0.2)
   - Quick (0.10.0)
 
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ACKategories: bfa3c4202cd537d0a7d72f7cb16a2d8fcf12d6d9
+  ACKategories: 139a869c79dcc12d6f6debd53898f3d169b8dd4e
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
