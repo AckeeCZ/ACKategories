@@ -61,3 +61,9 @@ extension NumberFormatter {
         return self.string(from: NSNumber(value: number))
     }
 }
+
+func +<Key, Value> (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
+    var result = lhs
+    for (k, v) in rhs { result.updateValue(v, forKey: k) }
+    return result
+}
