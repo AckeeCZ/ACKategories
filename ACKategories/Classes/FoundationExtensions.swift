@@ -77,15 +77,13 @@ extension Array where Element: Equatable {
 }
 
 extension Bundle {
-    public var receiptData: Data? {
-        return appStoreReceiptURL.flatMap { try? Data(contentsOf: $0) }
-    }
-    
-    public var version: String? {
-        return infoDictionary?["CFBundleShortVersionString"] as? String
-    }
-    
-    public var buildNumber: Int? {
-        return (infoDictionary?["CFBundleVersion"] as? String).flatMap { Int($0) }
-    }
+    public var receiptData: Data? { return appStoreReceiptURL.flatMap { try? Data(contentsOf: $0) } }
+    public var version: String? { return infoDictionary?["CFBundleShortVersionString"] as? String }
+    public var buildNumber: Int? { return (infoDictionary?["CFBundleVersion"] as? String).flatMap { Int($0) } }
+}
+
+extension TimeInterval {
+    static var minute: TimeInterval { return TimeInterval(60) }
+    static var hour: TimeInterval { return minute * 60 }
+    static var day: TimeInterval { return hour * 24 }
 }
