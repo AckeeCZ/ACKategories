@@ -1,11 +1,3 @@
-//
-//  Control.swift
-//  Pods
-//
-//  Created by Jan Mísař on 31.08.16.
-//
-//
-
 import UIKit
 
 class CollectionWrapper<T: UIControl> {

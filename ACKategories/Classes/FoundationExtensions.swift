@@ -1,13 +1,4 @@
-//
-//  FoundationExtensions.swift
-//  Pods
-//
-//  Created by Tomas Holka on 29/06/2017.
-//
-//
-
 import Foundation
-
 
 public protocol OptionalProtocol {
     associatedtype WrappedValue
@@ -19,11 +10,9 @@ extension Optional: OptionalProtocol {
     public var optional: WrappedValue? { return self }
 }
 
-
 extension Dictionary where Value: OptionalProtocol {
     
-    
-    // Removes nils from dictionary
+    /// Removes nils from dictionary
     public var nilsRemoved: [Key: Value.WrappedValue] {
         return self.reduce([:]) { acc, element -> [Key: Value.WrappedValue] in
             
@@ -36,8 +25,6 @@ extension Dictionary where Value: OptionalProtocol {
             }
         }
     }
-    
-    
     
     /**
      Simulation of classic valueForKeyPath method.
@@ -56,11 +43,7 @@ extension Dictionary where Value: OptionalProtocol {
         }
         return result as? T
     }
-    
-    
 }
-
-
 
 extension Optional where Wrapped == String {
     public var isEmpty: Bool {
@@ -73,11 +56,8 @@ extension Optional where Wrapped == String {
     }
 }
 
-
 extension NumberFormatter {
-    
     public func string(from number: Int) -> String? {
         return self.string(from: NSNumber(value: number))
     }
-    
 }
