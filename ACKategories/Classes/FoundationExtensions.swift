@@ -62,8 +62,16 @@ extension NumberFormatter {
     }
 }
 
-func +<Key, Value> (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
+public func +<Key, Value> (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
     var result = lhs
     for (k, v) in rhs { result.updateValue(v, forKey: k) }
     return result
+}
+
+extension Array where Element: Equatable {
+    public mutating func remove(object: Element) {
+        if let index = index(of: object) {
+            remove(at: index)
+        }
+    }
 }
