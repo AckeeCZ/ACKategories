@@ -83,7 +83,7 @@ extension Bundle {
 }
 
 extension TimeInterval {
-    static var minute: TimeInterval { return TimeInterval(60) }
-    static var hour: TimeInterval { return minute * 60 }
-    static var day: TimeInterval { return hour * 24 }
+    public static var minute: TimeInterval { return TimeInterval(60) }
+    public static var hour: TimeInterval { return minute * 60 }
+    public static var day: TimeInterval { return hour * 24 }
 }
