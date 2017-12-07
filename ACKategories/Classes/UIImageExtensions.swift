@@ -24,7 +24,7 @@ extension UIImage {
             newSize = CGSize(width: (size.width / size.height) * maxDimension, height: maxDimension)
         }
         
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
         draw(in: CGRect(origin: .zero, size: newSize))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
