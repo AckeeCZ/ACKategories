@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6964365B1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */; };
+		6965AEE91FDB5752001A08C5 /* ConditionalAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6965AEE81FDB5752001A08C5 /* ConditionalAssignment.swift */; };
 		69A646BE1FD1AE1600BD4A98 /* SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */; };
 		69A646BF1FD1AE1600BD4A98 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */; };
 		69A646C01FD1AE1600BD4A98 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafeAreaCompat.swift"; sourceTree = "<group>"; };
+		6965AEE81FDB5752001A08C5 /* ConditionalAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalAssignment.swift; sourceTree = "<group>"; };
 		69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeSubscript.swift; sourceTree = "<group>"; };
 		69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -87,19 +89,20 @@
 		D253FF851F0A65A80079215C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */,
-				69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */,
-				69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */,
-				69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */,
-				69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */,
-				69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */,
 				D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */,
 				D253FF881F0A65A80079215C /* Color+Extra.swift */,
+				6965AEE81FDB5752001A08C5 /* ConditionalAssignment.swift */,
 				D253FF891F0A65A80079215C /* Control+Blocks.swift */,
+				69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */,
+				69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */,
 				D253FF8A1F0A65A80079215C /* String+Extra.swift */,
 				D253FF8B1F0A65A80079215C /* TableAndCollectionViewExtensions.swift */,
 				D253FF8C1F0A65A80079215C /* TableHeaderFooterView.swift */,
 				D253FF8D1F0A65A80079215C /* UIControlEvents.swift */,
+				69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */,
+				69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */,
+				6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */,
+				69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				69A646C01FD1AE1600BD4A98 /* UIImageExtensions.swift in Sources */,
 				D253FF951F0A65A80079215C /* TableHeaderFooterView.swift in Sources */,
 				69A646BF1FD1AE1600BD4A98 /* FoundationExtensions.swift in Sources */,
+				6965AEE91FDB5752001A08C5 /* ConditionalAssignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
