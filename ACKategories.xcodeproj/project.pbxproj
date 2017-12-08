@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6964365B1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */; };
 		69A646BE1FD1AE1600BD4A98 /* SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */; };
 		69A646BF1FD1AE1600BD4A98 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */; };
 		69A646C01FD1AE1600BD4A98 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafeAreaCompat.swift"; sourceTree = "<group>"; };
 		69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeSubscript.swift; sourceTree = "<group>"; };
 		69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		D253FF851F0A65A80079215C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */,
 				69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */,
 				69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */,
 				69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */,
@@ -182,6 +185,7 @@
 			files = (
 				D253FF911F0A65A80079215C /* Color+Extra.swift in Sources */,
 				D253FF901F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift in Sources */,
+				6964365B1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift in Sources */,
 				69A646C21FD1AE1600BD4A98 /* UserDefaultsExtensions.swift in Sources */,
 				69A646C11FD1AE1600BD4A98 /* UISearchBarExtensions.swift in Sources */,
 				D253FF961F0A65A80079215C /* UIControlEvents.swift in Sources */,
