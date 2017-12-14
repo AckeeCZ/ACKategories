@@ -61,3 +61,29 @@ extension NumberFormatter {
         return self.string(from: NSNumber(value: number))
     }
 }
+
+public func +<Key, Value> (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
+    var result = lhs
+    for (k, v) in rhs { result.updateValue(v, forKey: k) }
+    return result
+}
+
+extension Array where Element: Equatable {
+    public mutating func remove(object: Element) {
+        if let index = index(of: object) {
+            remove(at: index)
+        }
+    }
+}
+
+extension Bundle {
+    public var receiptData: Data? { return appStoreReceiptURL.flatMap { try? Data(contentsOf: $0) } }
+    public var version: String? { return infoDictionary?["CFBundleShortVersionString"] as? String }
+    public var buildNumber: Int? { return (infoDictionary?["CFBundleVersion"] as? String).flatMap { Int($0) } }
+}
+
+extension TimeInterval {
+    public static var minute: TimeInterval { return TimeInterval(60) }
+    public static var hour: TimeInterval { return minute * 60 }
+    public static var day: TimeInterval { return hour * 24 }
+}

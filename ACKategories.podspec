@@ -31,6 +31,6 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
 
   s.source_files = 'ACKategories/Classes/**/*'
 
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
