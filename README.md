@@ -1,5 +1,6 @@
 ![ackee|ACKategories](https://github.com/AckeeCZ/ACKategories/blob/master/Resources/cover-image.png)
 
+[![Swift](https://img.shields.io/badge/swift-4.0-orange.svg)](https://github.com/AckeeCZ/ACKategories)
 [![CI Status](http://img.shields.io/travis/AckeeCZ/ACKategories.svg?style=flat)](https://travis-ci.org/AckeeCZ/ACKategories)
 [![Version](https://img.shields.io/cocoapods/v/ACKategories.svg?style=flat)](http://cocoapods.org/pods/ACKategories)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -25,8 +26,6 @@ You can also use [Carthage](https://github.com/Carthage/Carthage). Specify this 
 ```
 github "AckeeCZ/ACKategories"
 ```
-
-ACKategories is meant to be used with **Swift 2.2** and **Xcode 7.3.1**.
 
 ### Swift 2.3
 If you're interested in using ACKategories in your **Swift 2.3** projects you might want to see branch `swift2.3`.
