@@ -14,6 +14,7 @@
 		69A646C01FD1AE1600BD4A98 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */; };
 		69A646C11FD1AE1600BD4A98 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */; };
 		69A646C21FD1AE1600BD4A98 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */; };
+		D20947A220279D8C00CD5C1D /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20947A120279D8C00CD5C1D /* NSAttributedStringExtensions.swift */; };
 		D253FF901F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */; };
 		D253FF911F0A65A80079215C /* Color+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF881F0A65A80079215C /* Color+Extra.swift */; };
 		D253FF921F0A65A80079215C /* Control+Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF891F0A65A80079215C /* Control+Blocks.swift */; };
@@ -31,6 +32,7 @@
 		69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		D20947A120279D8C00CD5C1D /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D253FF841F0A65A80079215C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Buttons+FixedIntrinsicContentSize.swift"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */,
 				6964365A1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift */,
 				69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */,
+				D20947A120279D8C00CD5C1D /* NSAttributedStringExtensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				D253FF911F0A65A80079215C /* Color+Extra.swift in Sources */,
 				D253FF901F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift in Sources */,
+				D20947A220279D8C00CD5C1D /* NSAttributedStringExtensions.swift in Sources */,
 				6964365B1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift in Sources */,
 				69A646C21FD1AE1600BD4A98 /* UserDefaultsExtensions.swift in Sources */,
 				69A646C11FD1AE1600BD4A98 /* UISearchBarExtensions.swift in Sources */,
