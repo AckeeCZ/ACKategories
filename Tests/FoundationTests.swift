@@ -55,4 +55,19 @@ final class FoundationTests: XCTestCase {
         
         XCTAssertEqual("10", numberString)
     }
+    
+    func testThatDictionariesAreMerged() {
+        let dict1 = ["a": "b"]
+        let dict2 = ["b": "a"]
+        
+        XCTAssertEqual(dict1 + dict2, ["a": "b", "b": "a"])
+    }
+    
+    func testThatObjectIsRemovedFromArray() {
+        var array = [1, 2, 3, 5]
+        
+        array.remove(object: 2)
+        
+        XCTAssertEqual([1, 3, 5], array)
+    }
 }
