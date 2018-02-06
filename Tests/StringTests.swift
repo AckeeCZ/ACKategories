@@ -28,4 +28,21 @@ final class StringTests: XCTestCase {
         
         XCTAssertEqual(string.normalized(), "escrzyaieua")
     }
+    
+    func testStringMatchesRegex() {
+        let string = "aBc037"
+        let regex = "([a-zA-Z]+)([0-9])+"
+        
+        XCTAssertTrue(string.matchesRegex(regex))
+    }
+    
+    func testStringIsNumeric() {
+        let string = "1234567890"
+        XCTAssertTrue(string.isNumeric)
+    }
+    
+    func testStringIsNotNumeric() {
+        let string = "1234567890a"
+        XCTAssertFalse(string.isNumeric)
+    }
 }

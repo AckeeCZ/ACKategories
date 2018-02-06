@@ -8,7 +8,7 @@ extension String {
     }
     
     /// Returns true if string contains just numeric characters
-    var isNumeric: Bool {
+    public var isNumeric: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
     
