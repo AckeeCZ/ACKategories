@@ -45,6 +45,13 @@
 			remoteGlobalIDString = D253FF771F0A65610079215C;
 			remoteInfo = ACKategories;
 		};
+		691F85862029E91F00DA4FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D253FF6F1F0A65610079215C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 691F85672029E2E100DA4FAD;
+			remoteInfo = "ACKategories-Example";
+		};
 		69306C6C2029C4F800BBE8F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D253FF6F1F0A65610079215C /* Project object */;
@@ -261,6 +268,7 @@
 			);
 			dependencies = (
 				69306C6D2029C4F800BBE8F0 /* PBXTargetDependency */,
+				691F85872029E91F00DA4FAD /* PBXTargetDependency */,
 			);
 			name = UnitTests;
 			productName = UnitTests;
@@ -303,6 +311,7 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
+						TestTargetID = 691F85672029E2E100DA4FAD;
 					};
 					D253FF771F0A65610079215C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -408,6 +417,11 @@
 			target = D253FF771F0A65610079215C /* ACKategories */;
 			targetProxy = 691F85812029E79200DA4FAD /* PBXContainerItemProxy */;
 		};
+		691F85872029E91F00DA4FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 691F85672029E2E100DA4FAD /* ACKategories-Example */;
+			targetProxy = 691F85862029E91F00DA4FAD /* PBXContainerItemProxy */;
+		};
 		69306C6D2029C4F800BBE8F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D253FF771F0A65610079215C /* ACKategories */;
@@ -503,6 +517,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACKategories-Example.app/ACKategories-Example";
 			};
 			name = Debug;
 		};
@@ -529,6 +544,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACKategories-Example.app/ACKategories-Example";
 			};
 			name = Release;
 		};

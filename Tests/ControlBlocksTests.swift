@@ -52,7 +52,7 @@ final class ControlBlocksTests: XCTestCase {
         button.sendActions(for: .touchUpInside)
         
         XCTAssertFalse(firstCalled)
-        XCTAssertTrue(firstCalled)
+        XCTAssertTrue(secondCalled)
     }
     
     func testRunsOneHandlerForMoreEvents() {
