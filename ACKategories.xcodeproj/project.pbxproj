@@ -21,10 +21,11 @@
 		69306C5C2029C48300BBE8F0 /* UIViewController+SafeAreaCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */; };
 		69306C5D2029C48300BBE8F0 /* SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C4E2029C48200BBE8F0 /* SafeSubscript.swift */; };
 		69306C5E2029C48300BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C4F2029C48200BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift */; };
-		69306C5F2029C48300BBE8F0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69306C502029C48200BBE8F0 /* Info.plist */; };
-		69306C612029C48B00BBE8F0 /* ACKategories.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 69306C602029C48B00BBE8F0 /* ACKategories.podspec */; };
-		69306C692029C4F800BBE8F0 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C682029C4F800BBE8F0 /* UnitTests.swift */; };
 		69306C6B2029C4F800BBE8F0 /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; };
+		69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C762029C6EF00BBE8F0 /* ColorTests.swift */; };
+		69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */; };
+		69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C742029C6EF00BBE8F0 /* FoundationTests.swift */; };
+		69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C752029C6EF00BBE8F0 /* StringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,11 @@
 		69306C502029C48200BBE8F0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69306C602029C48B00BBE8F0 /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = ACKategories.podspec; sourceTree = "<group>"; };
 		69306C662029C4F800BBE8F0 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69306C682029C4F800BBE8F0 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		69306C6A2029C4F800BBE8F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlBlocksTests.swift; sourceTree = "<group>"; };
+		69306C742029C6EF00BBE8F0 /* FoundationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationTests.swift; sourceTree = "<group>"; };
+		69306C752029C6EF00BBE8F0 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		69306C762029C6EF00BBE8F0 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,7 +108,10 @@
 		69306C672029C4F800BBE8F0 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				69306C682029C4F800BBE8F0 /* UnitTests.swift */,
+				69306C762029C6EF00BBE8F0 /* ColorTests.swift */,
+				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
+				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
+				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
 				69306C6A2029C4F800BBE8F0 /* Info.plist */,
 			);
 			name = UnitTests;
@@ -191,7 +198,8 @@
 				TargetAttributes = {
 					69306C652029C4F800BBE8F0 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Manual;
 					};
 					D253FF771F0A65610079215C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -230,8 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69306C612029C48B00BBE8F0 /* ACKategories.podspec in Resources */,
-				69306C5F2029C48300BBE8F0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69306C692029C4F800BBE8F0 /* UnitTests.swift in Sources */,
+				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
+				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
+				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
+				69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,15 +291,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.ACKategories.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,15 +318,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.ACKategories.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
