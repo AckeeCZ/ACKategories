@@ -16,6 +16,7 @@
 		691F857F2029E79200DA4FAD /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; };
 		691F85802029E79200DA4FAD /* ACKategories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		691F85852029E7EC00DA4FAD /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 691F857D2029E34700DA4FAD /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */; };
 		69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */; };
 		69306C522029C48300BBE8F0 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C432029C48200BBE8F0 /* UIColor+Extra.swift */; };
 		69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */; };
@@ -85,6 +86,7 @@
 		691F85762029E2E100DA4FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		691F857A2029E30600DA4FAD /* Cartfile.private */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Cartfile.private; sourceTree = "<group>"; };
 		691F857D2029E34700DA4FAD /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalAssignmentTests.swift; sourceTree = "<group>"; };
 		69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69306C432029C48200BBE8F0 /* UIColor+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				69306C762029C6EF00BBE8F0 /* ColorTests.swift */,
+				691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */,
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
 				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
+				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
 				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
 				69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */,
