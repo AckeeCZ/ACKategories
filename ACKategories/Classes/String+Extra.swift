@@ -33,7 +33,6 @@ extension String {
     
     /// Returns **true** if `self` matches `regex`
     public func matchesRegex(_ regex: String) -> Bool {
-        _ = regex.normalizedvalue()
         let test = NSPredicate(format: "SELF MATCHES %@", regex)
         return test.evaluate(with: self)
     }
@@ -43,7 +42,7 @@ extension String {
 
 extension String {
     @available(*, renamed: "normalized()")
-    public func normalizedvalue() -> String {
+    public func normalizedValue() -> String {
         return normalized()
     }
 }
