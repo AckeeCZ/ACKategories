@@ -45,18 +45,7 @@ extension Dictionary where Value: OptionalProtocol {
     }
 }
 
-extension Optional where Wrapped == String {
-    public var isEmpty: Bool {
-        switch self {
-        case .none:
-            return true
-        case .some(let value):
-            return value.isEmpty
-        }
-    }
-}
-
-extension Optional where Wrapped == Collection {
+extension Optional where Wrapped: Collection {
     public var isEmpty: Bool {
         switch self {
         case .none:

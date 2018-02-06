@@ -47,6 +47,17 @@ class FoundationSpec: QuickSpec {
                 expect(string2.isEmpty) == true
                 expect(string3.isEmpty) == true
             }
+            
+            it("checks if array is empty") {
+                
+                let array1: [Int]? = [1, 2, 3]
+                let array2: [Int]? = nil
+                let array3: [Int]? = []
+                
+                expect(array1.isEmpty) == false
+                expect(array2.isEmpty) == true
+                expect(array3.isEmpty) == true
+            }
         }
         
         
