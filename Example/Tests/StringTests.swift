@@ -20,12 +20,6 @@ class StringSpec: QuickSpec {
                 expect(string.firstLetter) != "s"
             }
 
-            it("uses correct length") {
-                let string = "String"
-
-                expect(string.count) == 6
-            }
-
             it("trimms") {
                 let string = "     String\nString\n\n\n"
 
@@ -34,9 +28,9 @@ class StringSpec: QuickSpec {
             
             
             it("normalizes") {
-                let string = "řžýřšč"
+                let string = "ěščřžýáíéüä"
                 
-                expect(string.normalizedValue()) == "rzyrsc"
+                expect(string.normalizedValue()) == "escrzyaieua"
             }
         }
     }
