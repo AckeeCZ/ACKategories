@@ -26,9 +26,9 @@ You can also use [Carthage](https://github.com/Carthage/Carthage). Specify this 
 github "AckeeCZ/ACKategories"
 ```
 
+### Swift versions
 ACKategories is written in **Swift 4.0**.
 
-### Older versions of Swift
 If you're interested in using ACKategories in your older projects see all branches, there probably is the version you need.
 
 ## List of features
