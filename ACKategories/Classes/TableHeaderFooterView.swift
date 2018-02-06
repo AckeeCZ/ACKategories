@@ -1,9 +1,7 @@
 import UIKit
 
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
-
 open class TableHeaderFooterView: UIView {
-
     fileprivate var tableView: UITableView? {
         return superview as? UITableView
     }
@@ -39,5 +37,4 @@ open class TableHeaderFooterView: UIView {
         frame.size.height = size.height
         self.frame = frame
     }
-    
 }
