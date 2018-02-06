@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ACKategories: 466897e38bfcdc1dc51c56ab1cc1e7c3cc1d6f35
+  ACKategories: 451728dca25ff25741996c25c8ddcb9dd48574d1
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
 PODFILE CHECKSUM: d1c07d2cea4c9f0248b8bedc935bd5a8a080b31c
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

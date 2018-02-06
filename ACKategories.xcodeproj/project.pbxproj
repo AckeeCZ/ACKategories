@@ -14,9 +14,9 @@
 		69A646C01FD1AE1600BD4A98 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */; };
 		69A646C11FD1AE1600BD4A98 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */; };
 		69A646C21FD1AE1600BD4A98 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */; };
-		D253FF901F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */; };
-		D253FF911F0A65A80079215C /* Color+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF881F0A65A80079215C /* Color+Extra.swift */; };
-		D253FF921F0A65A80079215C /* Control+Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF891F0A65A80079215C /* Control+Blocks.swift */; };
+		D253FF901F0A65A80079215C /* UIButton+FixedIntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF871F0A65A80079215C /* UIButton+FixedIntrinsicContentSize.swift */; };
+		D253FF911F0A65A80079215C /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF881F0A65A80079215C /* UIColor+Extra.swift */; };
+		D253FF921F0A65A80079215C /* UIControl+Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF891F0A65A80079215C /* UIControl+Blocks.swift */; };
 		D253FF931F0A65A80079215C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF8A1F0A65A80079215C /* String+Extra.swift */; };
 		D253FF941F0A65A80079215C /* TableAndCollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF8B1F0A65A80079215C /* TableAndCollectionViewExtensions.swift */; };
 		D253FF951F0A65A80079215C /* TableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253FF8C1F0A65A80079215C /* TableHeaderFooterView.swift */; };
@@ -33,9 +33,9 @@
 		69A646BD1FD1AE1600BD4A98 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D253FF841F0A65A80079215C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Buttons+FixedIntrinsicContentSize.swift"; sourceTree = "<group>"; };
-		D253FF881F0A65A80079215C /* Color+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extra.swift"; sourceTree = "<group>"; };
-		D253FF891F0A65A80079215C /* Control+Blocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Control+Blocks.swift"; sourceTree = "<group>"; };
+		D253FF871F0A65A80079215C /* UIButton+FixedIntrinsicContentSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+FixedIntrinsicContentSize.swift"; sourceTree = "<group>"; };
+		D253FF881F0A65A80079215C /* UIColor+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
+		D253FF891F0A65A80079215C /* UIControl+Blocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Blocks.swift"; sourceTree = "<group>"; };
 		D253FF8A1F0A65A80079215C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
 		D253FF8B1F0A65A80079215C /* TableAndCollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAndCollectionViewExtensions.swift; sourceTree = "<group>"; };
 		D253FF8C1F0A65A80079215C /* TableHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -89,15 +89,15 @@
 		D253FF851F0A65A80079215C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D253FF871F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift */,
-				D253FF881F0A65A80079215C /* Color+Extra.swift */,
 				6965AEE81FDB5752001A08C5 /* ConditionalAssignment.swift */,
-				D253FF891F0A65A80079215C /* Control+Blocks.swift */,
 				69A646BA1FD1AE1600BD4A98 /* FoundationExtensions.swift */,
 				69A646B91FD1AE1600BD4A98 /* SafeSubscript.swift */,
 				D253FF8A1F0A65A80079215C /* String+Extra.swift */,
 				D253FF8B1F0A65A80079215C /* TableAndCollectionViewExtensions.swift */,
 				D253FF8C1F0A65A80079215C /* TableHeaderFooterView.swift */,
+				D253FF871F0A65A80079215C /* UIButton+FixedIntrinsicContentSize.swift */,
+				D253FF881F0A65A80079215C /* UIColor+Extra.swift */,
+				D253FF891F0A65A80079215C /* UIControl+Blocks.swift */,
 				D253FF8D1F0A65A80079215C /* UIControlEvents.swift */,
 				69A646BB1FD1AE1600BD4A98 /* UIImageExtensions.swift */,
 				69A646BC1FD1AE1600BD4A98 /* UISearchBarExtensions.swift */,
@@ -186,13 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D253FF911F0A65A80079215C /* Color+Extra.swift in Sources */,
-				D253FF901F0A65A80079215C /* Buttons+FixedIntrinsicContentSize.swift in Sources */,
+				D253FF911F0A65A80079215C /* UIColor+Extra.swift in Sources */,
+				D253FF901F0A65A80079215C /* UIButton+FixedIntrinsicContentSize.swift in Sources */,
 				6964365B1FDAF72A000D5CAA /* UIViewController+SafeAreaCompat.swift in Sources */,
 				69A646C21FD1AE1600BD4A98 /* UserDefaultsExtensions.swift in Sources */,
 				69A646C11FD1AE1600BD4A98 /* UISearchBarExtensions.swift in Sources */,
 				D253FF961F0A65A80079215C /* UIControlEvents.swift in Sources */,
-				D253FF921F0A65A80079215C /* Control+Blocks.swift in Sources */,
+				D253FF921F0A65A80079215C /* UIControl+Blocks.swift in Sources */,
 				69A646BE1FD1AE1600BD4A98 /* SafeSubscript.swift in Sources */,
 				D253FF931F0A65A80079215C /* String+Extra.swift in Sources */,
 				D253FF941F0A65A80079215C /* TableAndCollectionViewExtensions.swift in Sources */,

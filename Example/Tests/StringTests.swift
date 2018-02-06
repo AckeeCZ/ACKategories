@@ -30,7 +30,7 @@ class StringSpec: QuickSpec {
             it("normalizes") {
                 let string = "ěščřžýáíéüä"
                 
-                expect(string.normalizedValue()) == "escrzyaieua"
+                expect(string.normalized()) == "escrzyaieua"
             }
         }
     }

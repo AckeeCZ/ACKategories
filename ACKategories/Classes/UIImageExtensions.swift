@@ -2,7 +2,9 @@ import UIKit
 
 extension UIImage {
     
-    // taken from http://stackoverflow.com/questions/10850184/ios-image-get-rotated-90-degree-after-saved-as-png-representation-data
+    /// Fix image orientation when sending e.g. to API
+    ///
+    /// Taken from http://stackoverflow.com/questions/10850184/ios-image-get-rotated-90-degree-after-saved-as-png-representation-data
     public func fixedOrientation() -> UIImage {
         guard imageOrientation != .up else { return self }
         
@@ -14,6 +16,9 @@ extension UIImage {
         return normalizedImage
     }
     
+    /// Resize image to `maxDimension`
+    ///
+    /// If greater dimension is larger than `maxDimension` image will be resized to match it respection its aspect ratio.
     public func resized(maxDimension: CGFloat) -> UIImage? {
         let isLandscape = size.width > size.height
         
