@@ -18,6 +18,7 @@
 		691F85852029E7EC00DA4FAD /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 691F857D2029E34700DA4FAD /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */; };
 		691F858F202A077700DA4FAD /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F858E202A077700DA4FAD /* UIButtonExtensions.swift */; };
+		691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */; };
 		69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */; };
 		69306C522029C48300BBE8F0 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C432029C48200BBE8F0 /* UIColor+Extra.swift */; };
 		69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */; };
@@ -89,6 +90,7 @@
 		691F857D2029E34700DA4FAD /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalAssignmentTests.swift; sourceTree = "<group>"; };
 		691F858E202A077700DA4FAD /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeAreaCompat.swift"; sourceTree = "<group>"; };
 		69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69306C432029C48200BBE8F0 /* UIColor+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				69306C4A2029C48200BBE8F0 /* UIControlEvents.swift */,
 				69306C4C2029C48200BBE8F0 /* UIImageExtensions.swift */,
 				69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */,
+				691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */,
 				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
 				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
 				691F8590202A078900DA4FAD /* Supporting files */,
@@ -417,6 +420,7 @@
 				69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */,
 				69306C582029C48300BBE8F0 /* ConditionalAssignment.swift in Sources */,
 				69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */,
+				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
 				69306C5D2029C48300BBE8F0 /* SafeSubscript.swift in Sources */,
 				69306C542029C48300BBE8F0 /* TableAndCollectionViewExtensions.swift in Sources */,
 				69306C5E2029C48300BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift in Sources */,
