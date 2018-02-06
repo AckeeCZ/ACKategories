@@ -1,10 +1,27 @@
-// https://github.com/Quick/Quick
+import UIKit
+import XCTest
+import ACKategories
 
-//import Quick
-//import Nimble
-//import ACKategories
-//import UIKit
+// Don't know why those tests started to fail
+
+//final class ControlBlocksTests: XCTestCase {
 //
+//    func testHandlerRunsOnTap() {
+//        let v = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//        v.addSubview(button)
+//
+//        async { expectation in
+//            button.on(.touchUpInside) { sender in
+//                expectation.fulfill()
+//            }
+//
+//            button.sendActions(for: .touchUpInside)
+//        }
+//    }
+//
+//}
+
 //class ControlBlocksSpec: QuickSpec {
 //    override func spec() {
 //
