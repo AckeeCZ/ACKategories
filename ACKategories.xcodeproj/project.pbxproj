@@ -16,6 +16,9 @@
 		691F857F2029E79200DA4FAD /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; };
 		691F85802029E79200DA4FAD /* ACKategories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		691F85852029E7EC00DA4FAD /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 691F857D2029E34700DA4FAD /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */; };
+		691F858F202A077700DA4FAD /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F858E202A077700DA4FAD /* UIButtonExtensions.swift */; };
+		691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */; };
 		69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */; };
 		69306C522029C48300BBE8F0 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C432029C48200BBE8F0 /* UIColor+Extra.swift */; };
 		69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */; };
@@ -85,6 +88,9 @@
 		691F85762029E2E100DA4FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		691F857A2029E30600DA4FAD /* Cartfile.private */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Cartfile.private; sourceTree = "<group>"; };
 		691F857D2029E34700DA4FAD /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalAssignmentTests.swift; sourceTree = "<group>"; };
+		691F858E202A077700DA4FAD /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeAreaCompat.swift"; sourceTree = "<group>"; };
 		69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69306C432029C48200BBE8F0 /* UIColor+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -166,24 +172,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		691F8590202A078900DA4FAD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				69306C502029C48200BBE8F0 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		69306C412029C48200BBE8F0 /* ACKategories */ = {
 			isa = PBXGroup;
 			children = (
-				69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */,
-				69306C432029C48200BBE8F0 /* UIColor+Extra.swift */,
-				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
-				69306C452029C48200BBE8F0 /* TableAndCollectionViewExtensions.swift */,
-				69306C462029C48200BBE8F0 /* FoundationExtensions.swift */,
-				69306C472029C48200BBE8F0 /* TableHeaderFooterView.swift */,
-				69306C482029C48200BBE8F0 /* UIControl+Blocks.swift */,
 				69306C492029C48200BBE8F0 /* ConditionalAssignment.swift */,
-				69306C4A2029C48200BBE8F0 /* UIControlEvents.swift */,
-				69306C4B2029C48200BBE8F0 /* String+Extra.swift */,
-				69306C4C2029C48200BBE8F0 /* UIImageExtensions.swift */,
-				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
+				69306C462029C48200BBE8F0 /* FoundationExtensions.swift */,
 				69306C4E2029C48200BBE8F0 /* SafeSubscript.swift */,
+				69306C4B2029C48200BBE8F0 /* String+Extra.swift */,
+				69306C452029C48200BBE8F0 /* TableAndCollectionViewExtensions.swift */,
+				69306C472029C48200BBE8F0 /* TableHeaderFooterView.swift */,
 				69306C4F2029C48200BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift */,
-				69306C502029C48200BBE8F0 /* Info.plist */,
+				691F858E202A077700DA4FAD /* UIButtonExtensions.swift */,
+				69306C432029C48200BBE8F0 /* UIColor+Extra.swift */,
+				69306C482029C48200BBE8F0 /* UIControl+Blocks.swift */,
+				69306C4A2029C48200BBE8F0 /* UIControlEvents.swift */,
+				69306C4C2029C48200BBE8F0 /* UIImageExtensions.swift */,
+				69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */,
+				691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */,
+				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
+				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
+				691F8590202A078900DA4FAD /* Supporting files */,
 			);
 			path = ACKategories;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				69306C762029C6EF00BBE8F0 /* ColorTests.swift */,
+				691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */,
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
 				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
@@ -300,7 +317,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Josef Dolezal";
 				TargetAttributes = {
 					691F85672029E2E100DA4FAD = {
@@ -382,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
+				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
 				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
 				69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */,
@@ -392,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691F858F202A077700DA4FAD /* UIButtonExtensions.swift in Sources */,
 				69306C5C2029C48300BBE8F0 /* UIViewController+SafeAreaCompat.swift in Sources */,
 				69306C522029C48300BBE8F0 /* UIColor+Extra.swift in Sources */,
 				69306C5B2029C48300BBE8F0 /* UIImageExtensions.swift in Sources */,
@@ -401,6 +420,7 @@
 				69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */,
 				69306C582029C48300BBE8F0 /* ConditionalAssignment.swift in Sources */,
 				69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */,
+				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
 				69306C5D2029C48300BBE8F0 /* SafeSubscript.swift in Sources */,
 				69306C542029C48300BBE8F0 /* TableAndCollectionViewExtensions.swift in Sources */,
 				69306C5E2029C48300BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift in Sources */,
@@ -666,13 +686,14 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ACKategories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ACKategories/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.ACKategories;
@@ -689,13 +710,14 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ACKategories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ACKategories/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.ACKategories;
