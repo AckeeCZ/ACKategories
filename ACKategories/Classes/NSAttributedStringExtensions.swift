@@ -8,17 +8,6 @@
 
 import Foundation
 
-precedencegroup ConcatenationGroup {
-    associativity: left
-    higherThan: AssignmentPrecedence
-}
-
-infix operator ++: ConcatenationGroup
-
-public func ++(_ lhs: NSAttributedString, _ rhs: NSAttributedString) -> NSAttributedString {
-    return lhs.byAppending(rhs)
-}
-
 public extension NSAttributedString {
     func byAppending(_ other: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
@@ -27,5 +16,9 @@ public extension NSAttributedString {
         result.append(other)
 
         return result
+    }
+
+    public static func +(_ lhs: NSAttributedString, _ rhs: NSAttributedString) -> NSAttributedString {
+        return lhs.byAppending(rhs)
     }
 }
