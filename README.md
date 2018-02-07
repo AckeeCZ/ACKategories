@@ -27,24 +27,31 @@ You can also use [Carthage](https://github.com/Carthage/Carthage). Specify this 
 github "AckeeCZ/ACKategories"
 ```
 
+<<<<<<< HEAD
 ### Swift 2.3
 If you're interested in using ACKategories in your **Swift 2.3** projects you might want to see branch `swift2.3`.
+=======
+### Swift versions
+ACKategories is written in **Swift 4.0**.
+
+If you're interested in using ACKategories in your older projects see all branches, there probably is the version you need.
+>>>>>>> master
 
 ## List of features
-This is only fast description of features, see source code for documentation commentsand details.
+This is only fast description of features, see source code for documentation comments and details.
 
-### Button
-Extension for Button that fixes `intrinsicContentSize` and adds `titleEdgeInsets` to it.
+### UIButton
+Extension for UIButton that fixes `intrinsicContentSize` and adds `titleEdgeInsets` to it.
 
-### Color
+### UIColor
 - Initialize colors with hex codes
 - Create random color
 - Create lighter/darker colors from color
 - Recognize light/dark background colors to decide what text color you should use.
 - Create solid color image from color.
 
-### Control
-Add action blocks to Controls.
+### UIControl
+Add action blocks to UIControls.
 ```swift
 let button = UIButton()
 button.on(.touchUpInside) { sender in
@@ -57,7 +64,9 @@ If running on iOS 9 or later you can use implicit parameter `UIControl.primaryAc
 - trim strings easily
 - get first letter of string
 - simplify localization
-- get length of string easily
+
+### Collections
+- `isEmpty` on optional collections (even strings). Returns `true` when collection is `nil` or empty.
 
 ### TableHeaderFooterView
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.

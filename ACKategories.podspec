@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
+
   s.description      = <<-DESC
 Tools, cocoa subclasses and extensions we love to use at Ackee.
                        DESC
@@ -29,7 +30,7 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
 
   s.ios.deployment_target = '8.3'
 
-  s.source_files = 'ACKategories/Classes/**/*'
+  s.source_files = 'ACKategories/**/*'
 
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
