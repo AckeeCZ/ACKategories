@@ -38,6 +38,7 @@
 		69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */; };
 		69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C742029C6EF00BBE8F0 /* FoundationTests.swift */; };
 		69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C752029C6EF00BBE8F0 /* StringTests.swift */; };
+		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		69306C752029C6EF00BBE8F0 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		69306C762029C6EF00BBE8F0 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */,
 				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
 				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
+				D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */,
 				691F8590202A078900DA4FAD /* Supporting files */,
 			);
 			path = ACKategories;
@@ -422,6 +425,7 @@
 				69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */,
 				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
 				69306C5D2029C48300BBE8F0 /* SafeSubscript.swift in Sources */,
+				D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */,
 				69306C542029C48300BBE8F0 /* TableAndCollectionViewExtensions.swift in Sources */,
 				69306C5E2029C48300BBE8F0 /* UIButton+FixedIntrinsicContentSize.swift in Sources */,
 				69306C572029C48300BBE8F0 /* UIControl+Blocks.swift in Sources */,
