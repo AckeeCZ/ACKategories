@@ -28,4 +28,22 @@ final class ConditionalAssignmentTests: XCTestCase {
         
         XCTAssertEqual(oldValue, "a")
     }
+    
+    func testVariableIsOptionalValueIsIgnoredIfNil() {
+        var oldValue: String? = "a"
+        let newValue: String? = nil
+        
+        oldValue =? newValue
+        
+        XCTAssertEqual(oldValue, "a")
+    }
+    
+    func testVariableIsOptionalValueIsSetIfNotNil() {
+        var oldValue: String? = "a"
+        let newValue: String? = "b"
+        
+        oldValue =? newValue
+        
+        XCTAssertEqual(oldValue, newValue)
+    }
 }
