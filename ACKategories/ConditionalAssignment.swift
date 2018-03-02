@@ -14,3 +14,9 @@ public func =?<T>(variable: inout T, value: T?) {
         variable = v
     }
 }
+
+public func =?<T>(variable: inout T?, value: T?) {
+    if let v = value {
+        variable = v
+    }
+}
