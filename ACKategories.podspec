@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ACKategories'
-  s.version          = '5.2.1'
+  s.version          = '5.2.2'
   s.summary          = 'A bunch of useful tools, cocoa subclasses and extensions'
 
 # This description is used to generate tags and improve search results.
