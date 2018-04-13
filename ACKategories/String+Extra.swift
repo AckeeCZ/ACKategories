@@ -39,8 +39,8 @@ extension String {
     }
     
     /// Check if `self` is valid email with default regex
-    public func isValidEmail(emailRegex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}") -> Bool {
-        return matchesRegex(emailRegex)
+    public func isValidEmail(regex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}") -> Bool {
+        return matchesRegex(regex)
     }
     
     /// Fill string with padding character to mach given length
