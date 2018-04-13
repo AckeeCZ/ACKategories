@@ -1,6 +1,12 @@
 import Foundation
 
 extension String {
+    public enum Side {
+        case both
+        case leading
+        case trailing
+    }
+    
     /// Returns first letter of self
     public var firstLetter: String? {
         guard count > 0 else { return nil }
@@ -15,11 +21,6 @@ extension String {
     /// Uses self as key to Localizable.strings and returns it's localized value or self
     public func localized() -> String {
         return NSLocalizedString(self, comment: "")
-    }
-
-    /// Removes whitespaces from the start and end of self
-    public func trimmed() -> String {
-        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
     /// Normalizes string - removes interpuction etc.
@@ -52,12 +53,25 @@ extension String {
         }
     }
     
-    /// Remove given character from the beginning
-    public func removeLeftPadding(pad: Character) -> String {
-        return reduce("") {
-            guard $0.isEmpty else { return $0 + String($1) }
-            return $1 == pad ? $0 : $0 + String($1)
+    /// Removes characters in `characterSet` from sides of string
+    public func trimmed(characterSet: CharacterSet = .whitespacesAndNewlines, from side: Side = .both) -> String {
+        func leadingTrim(_ string: String) -> String {
+            return string.reduce("") {
+                guard $0.isEmpty else { return $0 + String($1) }
+                return characterSet.isSuperset(of: CharacterSet(charactersIn: String($1))) ? $0 : $0 + String($1)
+            }
         }
+        
+        switch side {
+        case .both: return trimmingCharacters(in: characterSet)
+        case .leading: return leadingTrim(self)
+        case .trailing: return String(leadingTrim(String(reversed())).reversed())
+        }
+    }
+    
+    /// Removes characters in `characterSet` from sides of string
+    public func trimmed(charactersIn string: String, from side: Side = .both) -> String {
+        return trimmed(characterSet: CharacterSet(charactersIn: string), from: side)
     }
 }
 
