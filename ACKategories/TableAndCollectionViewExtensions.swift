@@ -3,6 +3,7 @@ import UIKit
 public protocol Reusable { }
 
 extension Reusable {
+    /// Reuse identifier
     public static var reuseIdentifier: String {
         return NSStringFromClass(self as! AnyObject.Type)
     }

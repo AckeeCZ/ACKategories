@@ -15,6 +15,7 @@ public func =?<T>(variable: inout T, value: T?) {
     }
 }
 
+/// Set value of left-hand side only if right-hand side differs from `nil`
 public func =?<T>(variable: inout T?, value: T?) {
     if let v = value {
         variable = v

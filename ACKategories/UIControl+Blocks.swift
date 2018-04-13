@@ -1,10 +1,10 @@
 import UIKit
 
-class CollectionWrapper<T: UIControl> {
+private final class CollectionWrapper<T: UIControl> {
     var targets: [UIControlEvents.RawValue: ActionWrapper<T>] = [:]
 }
 
-class ActionWrapper<T: UIControl> {
+private final class ActionWrapper<T: UIControl> {
     let action: ((T) -> Void)
 
     init(action: @escaping ((T) -> Void)) {

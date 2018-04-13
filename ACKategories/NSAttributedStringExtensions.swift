@@ -9,6 +9,7 @@
 import Foundation
 
 public extension NSAttributedString {
+    /// Append another attributed string
     func byAppending(_ other: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
 
@@ -18,6 +19,7 @@ public extension NSAttributedString {
         return result
     }
 
+    /// Concat two attributed strings
     public static func +(_ lhs: NSAttributedString, _ rhs: NSAttributedString) -> NSAttributedString {
         return lhs.byAppending(rhs)
     }

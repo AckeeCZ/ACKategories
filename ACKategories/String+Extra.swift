@@ -36,6 +36,29 @@ extension String {
         let test = NSPredicate(format: "SELF MATCHES %@", regex)
         return test.evaluate(with: self)
     }
+    
+    /// Check if `self` is valid email with default regex
+    public func isValidEmail(emailRegex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}") -> Bool {
+        return matchesRegex(emailRegex)
+    }
+    
+    /// Fill string with padding character to mach given length
+    public func leftPadding(toLength: Int, withPad character: Character) -> String {
+        let stringLength = self.count
+        if stringLength < toLength {
+            return String(repeatElement(character, count: toLength - stringLength)) + self
+        } else {
+            return String(self.suffix(toLength))
+        }
+    }
+    
+    /// Remove given character from the beginning
+    func removeLeftPadding(pad: Character) -> String {
+        return reduce("") {
+            guard $0.isEmpty else { return $0 + String($1) }
+            return $1 == pad ? $0 : $0 + String($1)
+        }
+    }
 }
 
 // MARK: - Deprecations

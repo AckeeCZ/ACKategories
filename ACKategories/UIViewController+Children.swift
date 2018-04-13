@@ -27,6 +27,7 @@ extension UIViewController {
         childViewController.didMove(toParentViewController: self)
     }
 
+    /// Remove child view controller from controller hierarchy, nothing happens if `self` is not `parent` of `childViewController`
     public func remove(childViewController: UIViewController) {
         guard childViewController.parent === self else { return }
         
