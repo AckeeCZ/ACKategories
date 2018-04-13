@@ -69,4 +69,22 @@ final class StringTests: XCTestCase {
         let string = paddedString.trimmed(charactersIn: "0", from: .both)
         XCTAssertEqual(string, "a00bc")
     }
+    
+    func testJustLeadingPaddingIsRemoved() {
+        let paddedString = "00a00bc00"
+        let string = paddedString.trimmed(charactersIn: "0", from: .leading)
+        XCTAssertEqual(string, "a00bc00")
+    }
+    
+    func testJustTrailingPaddingIsRemoved() {
+        let paddedString = "00a00bc00"
+        let string = paddedString.trimmed(charactersIn: "0", from: .trailing)
+        XCTAssertEqual(string, "00a00bc")
+    }
+    
+    func testStringPaddingIsRemoved() {
+        let paddedString = "xyxya00bcxy"
+        let string = paddedString.trimmed(charactersIn: "xy0", from: .both)
+        XCTAssertEqual(string, "a00bc")
+    }
 }
