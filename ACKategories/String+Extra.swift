@@ -53,7 +53,7 @@ extension String {
     }
     
     /// Remove given character from the beginning
-    func removeLeftPadding(pad: Character) -> String {
+    public func removeLeftPadding(pad: Character) -> String {
         return reduce("") {
             guard $0.isEmpty else { return $0 + String($1) }
             return $1 == pad ? $0 : $0 + String($1)
