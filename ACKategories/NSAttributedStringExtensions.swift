@@ -10,7 +10,7 @@ import Foundation
 
 public extension NSAttributedString {
     /// Append another attributed string
-    func byAppending(_ other: NSAttributedString) -> NSAttributedString {
+    public func byAppending(_ other: NSAttributedString) -> NSAttributedString {
         let result = NSMutableAttributedString()
 
         result.append(self)
