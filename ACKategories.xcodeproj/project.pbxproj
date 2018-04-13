@@ -11,7 +11,6 @@
 		691F856D2029E2E100DA4FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F856C2029E2E100DA4FAD /* ViewController.swift */; };
 		691F85722029E2E100DA4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691F85712029E2E100DA4FAD /* Assets.xcassets */; };
 		691F85752029E2E100DA4FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691F85732029E2E100DA4FAD /* LaunchScreen.storyboard */; };
-		691F857B2029E30600DA4FAD /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 691F857A2029E30600DA4FAD /* Cartfile.private */; };
 		691F857E2029E34700DA4FAD /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F857D2029E34700DA4FAD /* SnapKit.framework */; };
 		691F857F2029E79200DA4FAD /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; };
 		691F85802029E79200DA4FAD /* ACKategories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D253FF781F0A65610079215C /* ACKategories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -382,7 +381,6 @@
 			files = (
 				691F85752029E2E100DA4FAD /* LaunchScreen.storyboard in Resources */,
 				691F85722029E2E100DA4FAD /* Assets.xcassets in Resources */,
-				691F857B2029E30600DA4FAD /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
