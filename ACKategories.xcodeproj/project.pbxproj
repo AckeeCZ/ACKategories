@@ -38,6 +38,7 @@
 		69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */; };
 		69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C742029C6EF00BBE8F0 /* FoundationTests.swift */; };
 		69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C752029C6EF00BBE8F0 /* StringTests.swift */; };
+		6939359820809F3D00EDA582 /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359720809F3D00EDA582 /* UIViewController+Children.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		69306C742029C6EF00BBE8F0 /* FoundationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationTests.swift; sourceTree = "<group>"; };
 		69306C752029C6EF00BBE8F0 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		69306C762029C6EF00BBE8F0 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		6939359720809F3D00EDA582 /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 				69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */,
 				691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */,
 				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
+				6939359720809F3D00EDA582 /* UIViewController+Children.swift */,
 				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
 				D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */,
 				691F8590202A078900DA4FAD /* Supporting files */,
@@ -320,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Josef Dolezal";
 				TargetAttributes = {
 					691F85672029E2E100DA4FAD = {
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				691F858F202A077700DA4FAD /* UIButtonExtensions.swift in Sources */,
+				6939359820809F3D00EDA582 /* UIViewController+Children.swift in Sources */,
 				69306C5C2029C48300BBE8F0 /* UIViewController+SafeAreaCompat.swift in Sources */,
 				69306C522029C48300BBE8F0 /* UIColor+Extra.swift in Sources */,
 				69306C5B2029C48300BBE8F0 /* UIImageExtensions.swift in Sources */,
@@ -586,6 +590,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -593,6 +598,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -646,6 +652,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -653,6 +660,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
