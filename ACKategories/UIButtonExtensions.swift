@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIButton {
-    func centerVertically(padding: CGFloat = 6.0) {
+    /// Center title vertically with given space
+    public func centerVertically(padding: CGFloat = 6.0) {
         guard let imageSize = imageView?.frame.size, let titleSize = titleLabel?.frame.size else { return }
         let totalHeight = imageSize.height + titleSize.height + padding
         

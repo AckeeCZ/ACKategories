@@ -6,6 +6,7 @@ public protocol SafeRandomAccessCollection: RandomAccessCollection {
 }
 
 extension Array: SafeRandomAccessCollection {
+    /// Return object at index if inside bounds, `nil` otherwise
     public subscript(safe index: Int) -> Iterator.Element? {
         return indices ~= index ? self[index] : nil
     }

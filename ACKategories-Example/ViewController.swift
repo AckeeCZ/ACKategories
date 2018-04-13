@@ -26,6 +26,17 @@ final class ViewController: UIViewController {
             make.center.equalToSuperview()
         }
         self.button = button
+        
+        let container = UIView()
+        view.addSubview(container)
+        container.snp.makeConstraints { (make) in
+            make.bottom.leading.trailing.equalToSuperview()
+            make.height.equalTo(100)
+        }
+        
+        let childVC = UIViewController()
+        childVC.view.backgroundColor = .red
+        display(childViewController: childVC, in: container)
     }
     
     override func viewDidLoad() {
