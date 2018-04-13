@@ -27,7 +27,7 @@ extension String {
         let mutableString = NSMutableString(string: self) as CFMutableString
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
         CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false)
-        CFStringLowercase(mutableString, Locale.current as CFLocale!)
+        CFStringLowercase(mutableString, Locale.current as CFLocale)
         return mutableString as String
     }
     
