@@ -12,8 +12,8 @@ extension UIViewController {
     
     /// Display `childViewController` in given `view`.
     ///
-    /// If `view` is `nil` then controller is displayed in `self.view`.
-    public func display(childViewController: UIViewController, in view: UIView?) {
+    /// If `view` is `nil` (by default) then controller is displayed in `self.view`.
+    public func display(childViewController: UIViewController, in view: UIView? = nil) {
         guard let view = view ?? self.view else { return }
         
         view.translatesAutoresizingMaskIntoConstraints = false

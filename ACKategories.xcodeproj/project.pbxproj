@@ -39,6 +39,7 @@
 		69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C742029C6EF00BBE8F0 /* FoundationTests.swift */; };
 		69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C752029C6EF00BBE8F0 /* StringTests.swift */; };
 		6939359820809F3D00EDA582 /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359720809F3D00EDA582 /* UIViewController+Children.swift */; };
+		6939359B2080A34C00EDA582 /* UIViewControllerChildrenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693935992080A34400EDA582 /* UIViewControllerChildrenTests.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		69306C752029C6EF00BBE8F0 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		69306C762029C6EF00BBE8F0 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 		6939359720809F3D00EDA582 /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
+		693935992080A34400EDA582 /* UIViewControllerChildrenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildrenTests.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
 				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
+				693935992080A34400EDA582 /* UIViewControllerChildrenTests.swift */,
 				691F85632029DE5500DA4FAD /* Supporting files */,
 			);
 			name = UnitTests;
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
+				6939359B2080A34C00EDA582 /* UIViewControllerChildrenTests.swift in Sources */,
 				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
 				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
