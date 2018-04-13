@@ -45,4 +45,16 @@ final class StringTests: XCTestCase {
         let string = "1234567890a"
         XCTAssertFalse(string.isNumeric)
     }
+    
+    func testStringIsPadded() {
+        let string = "abc"
+        let paddedString = string.leftPadding(toLength: 5, withPad: "0")
+        XCTAssertEqual("00abc", paddedString)
+    }
+    
+    func testPaddingIsRemoved() {
+        let paddedString = "00abc"
+        let string = paddedString.removeLeftPadding(pad: "0")
+        XCTAssertEqual(string, "abc")
+    }
 }
