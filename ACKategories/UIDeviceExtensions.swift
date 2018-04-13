@@ -10,7 +10,7 @@ import UIKit
 
 extension UIDevice {
     /// Return **true** if device is iPad
-    var isPad: Bool {
+    public var isPad: Bool {
         return userInterfaceIdiom == .pad
     }
 }
