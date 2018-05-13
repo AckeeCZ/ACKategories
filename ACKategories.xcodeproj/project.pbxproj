@@ -42,6 +42,7 @@
 		6939359D2080AA6100EDA582 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359C2080AA6100EDA582 /* UIDeviceExtensions.swift */; };
 		6939359F2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */; };
 		693935A12080AB5A00EDA582 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693935A02080AB5A00EDA582 /* UILabelExtensions.swift */; };
+		8829F99320A87C4A00354A87 /* UIView+LayerShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829F99220A87C4A00354A87 /* UIView+LayerShortcuts.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		6939359C2080AA6100EDA582 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableParagraphStyleExtensions.swift; sourceTree = "<group>"; };
 		693935A02080AB5A00EDA582 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		8829F99220A87C4A00354A87 /* UIView+LayerShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayerShortcuts.swift"; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 				69306C4C2029C48200BBE8F0 /* UIImageExtensions.swift */,
 				693935A02080AB5A00EDA582 /* UILabelExtensions.swift */,
 				69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */,
+				8829F99220A87C4A00354A87 /* UIView+LayerShortcuts.swift */,
 				691F8591202A083E00DA4FAD /* UIView+SafeAreaCompat.swift */,
 				6939359720809F3D00EDA582 /* UIViewController+Children.swift */,
 				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
@@ -335,7 +338,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Josef Dolezal";
+				ORGANIZATIONNAME = "Ackee, s.r.o.";
 				TargetAttributes = {
 					691F85672029E2E100DA4FAD = {
 						CreatedOnToolsVersion = 9.2;
@@ -441,6 +444,7 @@
 				693935A12080AB5A00EDA582 /* UILabelExtensions.swift in Sources */,
 				69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */,
 				6939359F2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift in Sources */,
+				8829F99320A87C4A00354A87 /* UIView+LayerShortcuts.swift in Sources */,
 				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
 				69306C5D2029C48300BBE8F0 /* SafeSubscript.swift in Sources */,
 				D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */,

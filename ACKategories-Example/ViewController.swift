@@ -20,6 +20,8 @@ final class ViewController: UIViewController {
         view.backgroundColor = .white
         
         let button = UIButton(type: .system)
+        button.backgroundColor = .yellow
+        button.cornerRadius = 5
         button.setTitle("Tap here!", for: .normal)
         view.addSubview(button)
         button.snp.makeConstraints { make in
