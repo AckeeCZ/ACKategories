@@ -11,3 +11,12 @@ extension Array: SafeRandomAccessCollection {
         return indices ~= index ? self[index] : nil
     }
 }
+
+extension Array where Element: Equatable {
+    /// Remove given object
+    public mutating func remove(object: Element) {
+        if let index = index(of: object) {
+            remove(at: index)
+        }
+    }
+}
