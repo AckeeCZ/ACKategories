@@ -3,7 +3,7 @@ import UIKit
 /// View that can be used to make different color
 /// when scrollView bounces on top
 @available(iOS 9.0, *)
-public final class FakeHeaderView: UIView {
+public final class FakeHeaderView: TableHeaderFooterView {
     
     // MARK: Initializers
     
