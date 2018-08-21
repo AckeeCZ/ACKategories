@@ -3,7 +3,7 @@ import UIKit
 /// View that can be used to make different color
 /// when scrollView bounces on bottom
 @available(iOS 9.0, *)
-public final class FakeFooterView: TableHeaderFooterView {
+public final class FakeFooterView: UIView {
     
     // MARK: Initializers
     
