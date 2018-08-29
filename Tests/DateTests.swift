@@ -61,4 +61,3 @@ final class DateTests: XCTestCase {
         XCTAssertEqual(Int(df.string(from: date)), date.year)
     }
 }
-
