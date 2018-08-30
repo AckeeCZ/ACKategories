@@ -52,7 +52,6 @@
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
-		A3F605B62136F56C005CBE3F /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B52136F56C005CBE3F /* FlowCoordinatorTests.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,7 +143,6 @@
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
-		A3F605B52136F56C005CBE3F /* FlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,7 +255,6 @@
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				881A82ED21131D0F00267D2E /* DateFormattingTests.swift */,
 				6925243820D1471F00228289 /* DateTests.swift */,
-				A3F605B52136F56C005CBE3F /* FlowCoordinatorTests.swift */,
 				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
 				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
 				693935992080A34400EDA582 /* UIViewControllerChildrenTests.swift */,
@@ -453,7 +450,6 @@
 				6925243A20D1472300228289 /* DateTests.swift in Sources */,
 				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
-				A3F605B62136F56C005CBE3F /* FlowCoordinatorTests.swift in Sources */,
 				881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */,
 				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
 				69306C852029C92B00BBE8F0 /* FoundationTests.swift in Sources */,

@@ -15,29 +15,40 @@ import UIKit
  All start methods are supposed to be overriden and property `rootViewController` must be set in the end of the overriden implementation to avoid memory leaks.
  Don't forget to call super.start().
  */
-class FlowCoordinator: NSObject, UINavigationControllerDelegate {
+open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
 
-    weak var navigationController: UINavigationController?
+    /// Reference to the navigation controller used within the flow
+    public weak var navigationController: UINavigationController?
 
     /// First VC of the flow. Must be set when FC starts.
-    weak var rootViewController: UIViewController!
+    public weak var rootViewController: UIViewController!
+    
+    /// Parent coordinator
+    public weak var parentCoordinator: FlowCoordinator?
+    
+    /// Array of child coordinators
+    public var childCoordinators = [FlowCoordinator]()
+    
+    /// Logging switch
+    public static var logEnabled = true
 
     // MARK: - Lifecycle
 
     /// Just start and return rootViewController. Object calling this method will connect returned view controller to the flow.
-    @discardableResult func start() -> UIViewController {
+    @discardableResult
+    public func start() -> UIViewController {
         checkRootViewController()
 
         return UIViewController()
     }
 
     /// Start in window. Window's root VC is supposed to be set.
-    func start(in window: UIWindow) {
+    public func start(in window: UIWindow) {
         checkRootViewController()
     }
 
     /// Start within existing navigation controller.
-    func start(with navigationController: UINavigationController) {
+    public func start(with navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.delegate = self
 
@@ -45,67 +56,71 @@ class FlowCoordinator: NSObject, UINavigationControllerDelegate {
     }
 
     /// Start by presenting from given VC. This method must be overriden by subclass.
-    func start(from viewController: UIViewController) {
+    public func start(from viewController: UIViewController) {
         checkRootViewController()
     }
 
     /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
-    func stop(animated: Bool = false) {
-
+    public func stop(animated: Bool = false) {
+        
         // stop all children
         childCoordinators.forEach { $0.stop(animated: animated) }
-
+        
         // dismiss all VCs presented from root or nav
         if rootViewController.presentedViewController != nil {
             rootViewController.dismiss(animated: animated)
         }
-
-        if navigationController?.presentedViewController != nil {
-            navigationController?.dismiss(animated: animated)
-        }
-
+        
         // dismiss when root was presented
-        if rootViewController.presentingViewController != nil {
-            rootViewController.presentingViewController?.dismiss(animated: animated)
-        }
-
+        rootViewController.presentingViewController?.dismiss(animated: animated)
+        
         // pop all view controllers when started within navigation controller
         if let index = navigationController?.viewControllers.index(of: rootViewController) {
-            let viewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
-            navigationController?.setViewControllers(viewControllers, animated: animated)
+            // VCs to be removed from navigation stack
+            let toRemoveViewControllers = navigationController.flatMap { Array($0.viewControllers[index..<$0.viewControllers.count]) } ?? []
+            
+            // dismiss all presented VCs on VCs to be removed
+            toRemoveViewControllers.forEach { vc in
+                if vc.presentedViewController != nil {
+                    vc.dismiss(animated: animated)
+                }
+            }
+            
+            // VCs to remain in the navigation stack
+            let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
+            navigationController?.setViewControllers(remainingViewControllers, animated: animated)
         }
-
+        
+        // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
+        navigationController?.delegate = parentCoordinator
+        
         parentCoordinator?.removeChild(self)
     }
 
     // MARK: - Child coordinators
 
-    weak var parentCoordinator: FlowCoordinator?
-
-    var childCoordinators = [FlowCoordinator]()
-
-    func addChild(_ flowController: FlowCoordinator) {
+    public func addChild(_ flowController: FlowCoordinator) {
         if !childCoordinators.contains { $0 === flowController } {
             childCoordinators.append(flowController)
             flowController.parentCoordinator = self
         }
     }
 
-    func removeChild(_ flowController: FlowCoordinator) {
-        if let index = childCoordinators.index (where: { $0 === flowController }) {
+    public func removeChild(_ flowController: FlowCoordinator) {
+        if let index = childCoordinators.index(where: { $0 === flowController }) {
             childCoordinators.remove(at: index)
         }
     }
 
     // MARK: - UINavigationControllerDelegate
 
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
 
         // ensure the view controller is popping
-        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
-            !navigationController.viewControllers.contains(fromViewController) else {
-                return
-        }
+        guard
+            let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
+            !navigationController.viewControllers.contains(fromViewController)
+        else { return }
 
         if let firstViewController = rootViewController, fromViewController == firstViewController {
             navigationController.delegate = parentCoordinator
@@ -115,9 +130,7 @@ class FlowCoordinator: NSObject, UINavigationControllerDelegate {
 
     // MARK: - Debug
 
-    static var logEnabled: Bool = true
-
-    override init() {
+    override public init() {
         super.init()
         if FlowCoordinator.logEnabled {
             NSLog("🔀 👶 \(self)")
