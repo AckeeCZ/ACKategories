@@ -12,7 +12,7 @@ import ACKategories
 final class FoundationTests: XCTestCase {
     
     func testThatDictionaryCountsCorrectly() {
-        let dict: [String:Any?] = ["key":1, "key2":"value2", "key3":nil]
+        let dict: [String: Any?] = ["key": 1, "key2": "value2", "key3": nil]
         let dictWithoutNils = dict.nilsRemoved
         
         XCTAssertEqual(3, dict.count)
@@ -20,7 +20,7 @@ final class FoundationTests: XCTestCase {
     }
     
     func testThatDictionaryGetsCorrectValue() {
-        let dict: [String:Any?] = ["key":1, "key2":["key3":3.17]]
+        let dict: [String: Any?] = ["key": 1, "key2": ["key3": 3.17]]
         let value1: Int = dict.value(for: "key")!
         let value2: Double = dict.value(for: "key2.key3")!
         
