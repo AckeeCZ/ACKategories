@@ -36,19 +36,19 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
 
     /// Just start and return rootViewController. Object calling this method will connect returned view controller to the flow.
     @discardableResult
-    public func start() -> UIViewController {
+    open func start() -> UIViewController {
         checkRootViewController()
 
         return UIViewController()
     }
 
     /// Start in window. Window's root VC is supposed to be set.
-    public func start(in window: UIWindow) {
+    open func start(in window: UIWindow) {
         checkRootViewController()
     }
 
     /// Start within existing navigation controller.
-    public func start(with navigationController: UINavigationController) {
+    open func start(with navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.delegate = self
 
@@ -56,12 +56,12 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
     }
 
     /// Start by presenting from given VC. This method must be overriden by subclass.
-    public func start(from viewController: UIViewController) {
+    open func start(from viewController: UIViewController) {
         checkRootViewController()
     }
 
     /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
-    public func stop(animated: Bool = false) {
+    open func stop(animated: Bool = false) {
         
         // stop all children
         childCoordinators.forEach { $0.stop(animated: animated) }
