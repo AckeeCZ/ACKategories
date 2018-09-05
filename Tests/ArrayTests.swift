@@ -36,4 +36,23 @@ final class ArrayTests: XCTestCase {
             XCTAssertNil(array[safe: -$0 - 1])
         }
     }
+    
+    func testSafeRangeSubscriptReturnsCorrectObjects() {
+        let range1 = 0..<10
+        let range2 = 5..<15
+        let resultRange = range2.lowerBound..<range1.upperBound
+        let array = range1.map { $0 }
+        
+        resultRange.forEach {
+            XCTAssertEqual($0, array[safe: range2][$0 - resultRange.count])
+        }
+    }
+    
+    func testSafeRangeSubscriptReturnsAllForOverlapingRange() {
+        let range1 = 0..<10
+        let range2 = 0..<15
+        let array = range1.map { $0 }
+        
+        XCTAssertEqual(array, array[safe: range2])
+    }
 }
