@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691F28D22140843300609471 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F28D12140843300609471 /* ArrayTests.swift */; };
 		691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F856A2029E2E100DA4FAD /* AppDelegate.swift */; };
 		691F856D2029E2E100DA4FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F856C2029E2E100DA4FAD /* ViewController.swift */; };
 		691F85722029E2E100DA4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691F85712029E2E100DA4FAD /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		691F28D12140843300609471 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		691F85682029E2E100DA4FAD /* ACKategories-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACKategories-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		691F856A2029E2E100DA4FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		691F856C2029E2E100DA4FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		69306C672029C4F800BBE8F0 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				691F28D12140843300609471 /* ArrayTests.swift */,
 				69306C762029C6EF00BBE8F0 /* ColorTests.swift */,
 				691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */,
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
@@ -449,6 +452,7 @@
 				6939359B2080A34C00EDA582 /* UIViewControllerChildrenTests.swift in Sources */,
 				6925243A20D1472300228289 /* DateTests.swift in Sources */,
 				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
+				691F28D22140843300609471 /* ArrayTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
 				881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */,
 				69306C842029C92B00BBE8F0 /* ControlBlocksTests.swift in Sources */,
