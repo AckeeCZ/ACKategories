@@ -11,3 +11,17 @@ extension Optional where Wrapped: Collection {
         }
     }
 }
+
+extension Collection {
+    /// Return object at index if inside bounds, `nil` otherwise
+    public subscript(safe index: Index) -> Iterator.Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
+extension Collection where Index: Strideable, Index.Stride: SignedInteger {
+    /// Return objects in given range
+    public subscript(safe range: CountableRange<Index>) -> Array<Element> {
+        return range.compactMap { self[safe: $0] }
+    }
+}
