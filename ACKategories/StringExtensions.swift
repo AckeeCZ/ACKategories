@@ -73,6 +73,13 @@ extension String {
     public func trimmed(charactersIn string: String, from side: Side = .both) -> String {
         return trimmed(characterSet: CharacterSet(charactersIn: string), from: side)
     }
+    
+    /// Removes diacritics from string using given locale
+    ///
+    /// If no locale is given `Locale.current` is used
+    public func removingDiacritics(_ locale: Locale = Locale.current) -> String {
+        return folding(options: .diacriticInsensitive, locale: locale)
+    }
 }
 
 // MARK: - Deprecations
