@@ -87,4 +87,9 @@ final class StringTests: XCTestCase {
         let string = paddedString.trimmed(charactersIn: "xy0", from: .both)
         XCTAssertEqual(string, "a00bc")
     }
+    
+    func testDiacriticIsRemoved() {
+        let originalString = "ěščřžýáíéasdfghjkl"
+        XCTAssertEqual(originalString.removingDiacritics(), "escrzyaieasdfghjkl")
+    }
 }
