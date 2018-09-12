@@ -57,6 +57,7 @@
 		693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */; };
 		693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960B214978B50036C236 /* VCCompositionViewController.swift */; };
 		693B960E214979060036C236 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960D214979060036C236 /* TitleViewController.swift */; };
+		693B95F421496C6D0036C236 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F321496C6D0036C236 /* ContainerView.swift */; };
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
@@ -156,6 +157,7 @@
 		693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		693B960B214978B50036C236 /* VCCompositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCompositionViewController.swift; sourceTree = "<group>"; };
 		693B960D214979060036C236 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		693B95F321496C6D0036C236 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				6925242B20D1439300228289 /* BundleExtensions.swift */,
 				6925242920D1434A00228289 /* CollectionExtensions.swift */,
 				69306C492029C48200BBE8F0 /* ConditionalAssignment.swift */,
+				693B95F321496C6D0036C236 /* ContainerView.swift */,
 				6925243620D1470B00228289 /* DateExtensions.swift */,
 				881A82EB21131CEC00267D2E /* DateFormatting.swift */,
 				6925242720D142E200228289 /* DictionaryExtensions.swift */,
@@ -555,6 +558,7 @@
 				69306C5C2029C48300BBE8F0 /* UIViewController+SafeAreaCompat.swift in Sources */,
 				6925243720D1470B00228289 /* DateExtensions.swift in Sources */,
 				6925242C20D1439300228289 /* BundleExtensions.swift in Sources */,
+				693B95F421496C6D0036C236 /* ContainerView.swift in Sources */,
 				69306C522029C48300BBE8F0 /* UIColorExtensions.swift in Sources */,
 				A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */,
 				69306C5B2029C48300BBE8F0 /* UIImageExtensions.swift in Sources */,
