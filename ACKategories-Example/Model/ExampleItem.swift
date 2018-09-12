@@ -10,8 +10,9 @@ import Foundation
 
 enum ExampleItem {
     case uiControlBlocks
+    case viewControllerComposition
     
-    static var allCases: [ExampleItem] { return [.uiControlBlocks] }
+    static var allCases: [ExampleItem] { return [.uiControlBlocks, .viewControllerComposition] }
     
     var title: String { return data.title }
     var subtitle: String { return data.subtitle }
@@ -19,6 +20,7 @@ enum ExampleItem {
     private var data: (title: String, subtitle: String) {
         switch self {
         case .uiControlBlocks: return ("UIControl blocks", "Use closures instead of target - selector pattern")
+        case .viewControllerComposition: return ("View controller composition", "Simply embed view controller into another one")
         }
     }
 }
