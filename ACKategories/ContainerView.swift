@@ -3,8 +3,7 @@ import UIKit
 
 @available(iOSApplicationExtension 9.0, *)
 public final class ContainerView<ContainedView: UIView>: UIView {
-    
-    private(set) weak var containedView: ContainedView!
+    public private(set) weak var containedView: ContainedView!
     
     // MARK: Initializers
     
