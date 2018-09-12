@@ -27,13 +27,14 @@ final class AppFlowCoordinator: FlowCoordinator {
 
 extension AppFlowCoordinator: ExampleListFlowDelegate {
     func exampleItemSelected(_ item: ExampleItem, in viewController: ExampleListViewController) {
-        let vc = controller(for: item)
-        navigationController?.pushViewController(vc, animated: true)
+        let itemVC = controller(for: item)
+        itemVC.title = item.title
+        navigationController?.pushViewController(itemVC, animated: true)
     }
     
     private func controller(for item: ExampleItem) -> UIViewController {
         switch item {
-        case .uiControlBlocks: return ViewController()
+        case .uiControlBlocks: return UIControlBlocksViewController()
         }
     }
 }

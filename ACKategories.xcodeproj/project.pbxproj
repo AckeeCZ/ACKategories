@@ -54,6 +54,8 @@
 		693B95F9214972B40036C236 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F8214972B40036C236 /* ExampleItem.swift */; };
 		693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95FD2149733B0036C236 /* ExampleListViewModel.swift */; };
 		693B96012149747E0036C236 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B96002149747E0036C236 /* AppFlowCoordinator.swift */; };
+		693B9604214977740036C236 /* UIControlBlocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B9603214977740036C236 /* UIControlBlocksViewController.swift */; };
+		693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */; };
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
@@ -150,6 +152,8 @@
 		693B95F8214972B40036C236 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		693B95FD2149733B0036C236 /* ExampleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewModel.swift; sourceTree = "<group>"; };
 		693B96002149747E0036C236 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		693B9603214977740036C236 /* UIControlBlocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlBlocksViewController.swift; sourceTree = "<group>"; };
+		693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
@@ -198,7 +202,8 @@
 			children = (
 				693B95FF214974680036C236 /* Flow coordinators */,
 				693B95F7214972A70036C236 /* Model */,
-				693B95FC214973000036C236 /* Example list */,
+				693B9605214977E40036C236 /* View */,
+				693B9607214977F80036C236 /* Screens */,
 				691F856A2029E2E100DA4FAD /* AppDelegate.swift */,
 				691F856C2029E2E100DA4FAD /* ViewController.swift */,
 				691F85712029E2E100DA4FAD /* Assets.xcassets */,
@@ -302,6 +307,31 @@
 				693B96002149747E0036C236 /* AppFlowCoordinator.swift */,
 			);
 			path = "Flow coordinators";
+			sourceTree = "<group>";
+		};
+		693B96022149773F0036C236 /* UIControl blocks */ = {
+			isa = PBXGroup;
+			children = (
+				693B9603214977740036C236 /* UIControlBlocksViewController.swift */,
+			);
+			path = "UIControl blocks";
+			sourceTree = "<group>";
+		};
+		693B9605214977E40036C236 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		693B9607214977F80036C236 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				693B95FC214973000036C236 /* Example list */,
+				693B96022149773F0036C236 /* UIControl blocks */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		D253FF6E1F0A65610079215C = {
@@ -474,10 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */,
 				693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */,
 				691F856D2029E2E100DA4FAD /* ViewController.swift in Sources */,
 				693B95F6214970080036C236 /* ExampleListViewController.swift in Sources */,
 				691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */,
+				693B9604214977740036C236 /* UIControlBlocksViewController.swift in Sources */,
 				693B96012149747E0036C236 /* AppFlowCoordinator.swift in Sources */,
 				693B95F9214972B40036C236 /* ExampleItem.swift in Sources */,
 			);

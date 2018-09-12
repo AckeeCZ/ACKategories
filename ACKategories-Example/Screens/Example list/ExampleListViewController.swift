@@ -65,7 +65,7 @@ extension ExampleListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel.items[indexPath.row]
-        let cell = tableView.dequeueCell(for: indexPath)
+        let cell: TitleSubtitleTableViewCell = tableView.dequeueCell(for: indexPath)
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.subtitle
         return cell
