@@ -14,6 +14,9 @@ final class TitleSubtitleTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        
+        textLabel?.numberOfLines = 0
+        detailTextLabel?.numberOfLines = 0
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -49,6 +49,7 @@
 		6939359D2080AA6100EDA582 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359C2080AA6100EDA582 /* UIDeviceExtensions.swift */; };
 		6939359F2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */; };
 		693935A12080AB5A00EDA582 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693935A02080AB5A00EDA582 /* UILabelExtensions.swift */; };
+		693B95F421496C6D0036C236 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F321496C6D0036C236 /* ContainerView.swift */; };
 		693B95F6214970080036C236 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F5214970080036C236 /* ExampleListViewController.swift */; };
 		693B95F9214972B40036C236 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F8214972B40036C236 /* ExampleItem.swift */; };
 		693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95FD2149733B0036C236 /* ExampleListViewModel.swift */; };
@@ -57,7 +58,7 @@
 		693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */; };
 		693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960B214978B50036C236 /* VCCompositionViewController.swift */; };
 		693B960E214979060036C236 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960D214979060036C236 /* TitleViewController.swift */; };
-		693B95F421496C6D0036C236 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B95F321496C6D0036C236 /* ContainerView.swift */; };
+		6997F94D2149B29E0078C3F3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997F94C2149B29E0078C3F3 /* ContainerViewController.swift */; };
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
@@ -149,6 +150,7 @@
 		6939359C2080AA6100EDA582 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableParagraphStyleExtensions.swift; sourceTree = "<group>"; };
 		693935A02080AB5A00EDA582 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		693B95F321496C6D0036C236 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		693B95F5214970080036C236 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
 		693B95F8214972B40036C236 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		693B95FD2149733B0036C236 /* ExampleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewModel.swift; sourceTree = "<group>"; };
@@ -157,7 +159,7 @@
 		693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		693B960B214978B50036C236 /* VCCompositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCompositionViewController.swift; sourceTree = "<group>"; };
 		693B960D214979060036C236 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		693B95F321496C6D0036C236 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		6997F94C2149B29E0078C3F3 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		693B9607214977F80036C236 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6997F94B2149B28E0078C3F3 /* Container view */,
 				693B960A214978930036C236 /* VC composition */,
 				693B95FC214973000036C236 /* Example list */,
 				693B96022149773F0036C236 /* UIControl blocks */,
@@ -346,6 +349,14 @@
 				693B960D214979060036C236 /* TitleViewController.swift */,
 			);
 			path = "VC composition";
+			sourceTree = "<group>";
+		};
+		6997F94B2149B28E0078C3F3 /* Container view */ = {
+			isa = PBXGroup;
+			children = (
+				6997F94C2149B29E0078C3F3 /* ContainerViewController.swift */,
+			);
+			path = "Container view";
 			sourceTree = "<group>";
 		};
 		D253FF6E1F0A65610079215C = {
@@ -520,6 +531,7 @@
 			files = (
 				693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */,
 				693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */,
+				6997F94D2149B29E0078C3F3 /* ContainerViewController.swift in Sources */,
 				693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */,
 				693B95F6214970080036C236 /* ExampleListViewController.swift in Sources */,
 				691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */,
@@ -631,7 +643,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ACKategories-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.ACKategories.ACKategories-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -657,7 +669,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ACKategories-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.ACKategories.ACKategories-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -36,6 +36,7 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
         switch item {
         case .uiControlBlocks: return UIControlBlocksViewController()
         case .viewControllerComposition: return VCCompositionViewController()
+        case .containerView: return ContainerViewController()
         }
     }
 }
