@@ -1,7 +1,7 @@
 import UIKit
 
 
-@available(iOSApplicationExtension 9.0, *)
+@available(iOS 9.0, *)
 public final class ContainerView<ContainedView: UIView>: UIView {
     public private(set) weak var containedView: ContainedView!
     
