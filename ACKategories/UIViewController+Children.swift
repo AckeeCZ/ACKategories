@@ -19,21 +19,21 @@ extension UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         childViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        childViewController.willMove(toParentViewController: self)
-        addChildViewController(childViewController)
+        childViewController.willMove(toParent: self)
+        addChild(childViewController)
         view.addSubview(childViewController.view)
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view]))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view]))
-        childViewController.didMove(toParentViewController: self)
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view]))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view]))
+        childViewController.didMove(toParent: self)
     }
 
     /// Remove child view controller from controller hierarchy, nothing happens if `self` is not `parent` of `childViewController`
     public func remove(childViewController: UIViewController) {
         guard childViewController.parent === self else { return }
         
-        childViewController.willMove(toParentViewController: nil)
+        childViewController.willMove(toParent: nil)
         childViewController.view.removeFromSuperview()
-        childViewController.removeFromParentViewController()
-        childViewController.didMove(toParentViewController: nil)
+        childViewController.removeFromParent()
+        childViewController.didMove(toParent: nil)
     }
 }

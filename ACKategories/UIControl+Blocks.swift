@@ -1,7 +1,7 @@
 import UIKit
 
 private final class CollectionWrapper<T: UIControl> {
-    var targets: [UIControlEvents.RawValue: ActionWrapper<T>] = [:]
+    var targets: [UIControl.Event.RawValue: ActionWrapper<T>] = [:]
 }
 
 private final class ActionWrapper<T: UIControl> {
@@ -32,7 +32,7 @@ public extension UIControlEventHandling where Self: UIControl {
      - parameter events: Events to fire action block
      - parameter handler: Actionblock to be executed
      */
-    public func on(_ events: UIControlEvents, handler: @escaping (Self) -> Void) {
+    public func on(_ events: UIControl.Event, handler: @escaping (Self) -> Void) {
         
         let targetsWrapper: CollectionWrapper<Self>
         
@@ -69,7 +69,7 @@ public extension UIControlEventHandling where Self: UIControl {
      
      - parameter events: Events to fire action block
      */
-    public func off(_ events: UIControlEvents) {
+    public func off(_ events: UIControl.Event) {
         if let targetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self>, let target = targetsWrapper.targets[events.rawValue] {
             removeTarget(target, action: nil, for: events)
             targetsWrapper.targets.removeValue(forKey: events.rawValue)
