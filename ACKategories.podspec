@@ -11,6 +11,6 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
   s.source           = { :git => 'https://github.com/AckeeCZ/ACKategories.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ackeecz'
   s.ios.deployment_target = '8.3'
-  s.source_files = 'ACKategories/**/*'
+  s.source_files = 'ACKategories/**/*.swift'
   s.frameworks = 'UIKit'
 end
