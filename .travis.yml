@@ -2,15 +2,25 @@ osx_image: xcode9.4
 language: objective-c
 env:
   global:
-    - FRAMEWORK_NAME=ACKategories
+  - FRAMEWORK_NAME=ACKategories
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
 before_script:
 - travis_wait 60 carthage bootstrap --platform iOS --cache-builds
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
 script:
-- set -o pipefail && xcodebuild test -scheme ACKategories -destination 'platform=iOS Simulator,name=iPhone X,OS=11.4' ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -scheme ACKategories -destination 'platform=iOS
+  Simulator,name=iPhone X,OS=11.4' ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+deploy:
+  provider: releases
+  api_key:
+    secure: YDcNgfW9+5xvi2F6CFVpKjRTZRcH1FFW0pzXlKvvS+qKZUomketirPb8eGI0ZJoqAPNEkKpVgkopRBPdLfOoOVI4WiO7fuu/5TTDlIV7C57aUNfY5kplAyjF7o2oLdG1ufDz+WR6awTCmi7ZLMefB2wGFr1ytId5B/W3W2wIAadCIqrarPQs6/zgmkCI9ndc7vTkr4Q7mo0WR0t0fNgBfZ5xIPpt2Uw5SqKNlXSSoH7Ci2THdveu7FryzYFdUZnuQlBxt7Up+j+NNGNQ4Q7QKNxG0pU5yuMedoj+benSR9dJlY1NOpyVvQV1Ou9WSzwi5Ns8U6Kba7tHAhL/leURCSuMbk72OJDgOFLIiAFLUktZmnIDtLEGWL5mL0witePCIrqLh87Ao+st/9twMHR1WNf4y2HrgPF2NUeYThlGpTHb/WPqbj6VOhcmR5OfGxjyMGOI87BWrmUh/StegiNbrL9r7MZjuYUJMRuz99UkI1iUJYVGWVs58z+tiQ8hne60Zktv5Pnhh/nTsHFOjmkdhnPgXvEwaYTtJgrus8HXwjYE/H4LLd8RUGXnjzgMykr3FVJjd06kS3SHR0RfbbaMmmytJxtIotyyPc3dWVTxfyJuS+VY3mMnNN47Hw4vsHuzAN8/1O0PKikEy/W6KYTzxd/nO545HkXiTHZYsdD7m0A=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: AckeeCZ/ACKategories
+    tags: true
