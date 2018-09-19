@@ -3,6 +3,9 @@ language: objective-c
 env:
   global:
   - FRAMEWORK_NAME=ACKategories
+cache:
+  directories:
+  - Carthage
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
