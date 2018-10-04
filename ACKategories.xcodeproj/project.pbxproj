@@ -26,7 +26,6 @@
 		6925243220D1455F00228289 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925243120D1455F00228289 /* UIStackViewExtensions.swift */; };
 		6925243520D145F600228289 /* UIStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925243320D145F200228289 /* UIStackViewTests.swift */; };
 		6925243720D1470B00228289 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925243620D1470B00228289 /* DateExtensions.swift */; };
-		6925243A20D1472300228289 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925243820D1471F00228289 /* DateTests.swift */; };
 		69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */; };
 		69306C522029C48300BBE8F0 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C432029C48200BBE8F0 /* UIColorExtensions.swift */; };
 		69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */; };
@@ -121,7 +120,6 @@
 		6925243120D1455F00228289 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		6925243320D145F200228289 /* UIStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewTests.swift; sourceTree = "<group>"; };
 		6925243620D1470B00228289 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		6925243820D1471F00228289 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69306C432029C48200BBE8F0 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 				691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */,
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				881A82ED21131D0F00267D2E /* DateFormattingTests.swift */,
-				6925243820D1471F00228289 /* DateTests.swift */,
 				69306C742029C6EF00BBE8F0 /* FoundationTests.swift */,
 				69306C752029C6EF00BBE8F0 /* StringTests.swift */,
 				693935992080A34400EDA582 /* UIViewControllerChildrenTests.swift */,
@@ -531,7 +528,6 @@
 				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
 				6925243520D145F600228289 /* UIStackViewTests.swift in Sources */,
 				6939359B2080A34C00EDA582 /* UIViewControllerChildrenTests.swift in Sources */,
-				6925243A20D1472300228289 /* DateTests.swift in Sources */,
 				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,
 				691F28D22140843300609471 /* ArrayTests.swift in Sources */,
 				69306C872029C92B00BBE8F0 /* StringTests.swift in Sources */,
