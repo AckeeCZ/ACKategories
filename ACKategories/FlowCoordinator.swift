@@ -1,11 +1,3 @@
-//
-//  FlowCoordinator.swift
-//  FlowCoordinators
-//
-//  Created by Jan Misar on 27.07.18.
-//  Copyright © 2018 Jan Misar. All rights reserved.
-//
-
 import UIKit
 
 /** Handles view controllers connections and flow
