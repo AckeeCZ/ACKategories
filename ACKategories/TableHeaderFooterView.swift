@@ -29,7 +29,7 @@ open class TableHeaderFooterView: UIView {
 
         var frame = self.frame
         let size = systemLayoutSizeFitting(
-            CGSize(width: frame.width, height: UILayoutFittingCompressedSize.height),
+            CGSize(width: frame.width, height: UIView.layoutFittingCompressedSize.height),
             withHorizontalFittingPriority: UILayoutPriority(rawValue: 1000),
             verticalFittingPriority: UILayoutPriority(rawValue: 500)
         )

@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIControlEvents {
+extension UIControl.Event {
     /// Combined event for `.touchUpOutside`, `.touchUpInside`, `.touchCancel`
-    public static let touchEndEvents: UIControlEvents = [.touchUpOutside, .touchUpInside, .touchCancel]
+    public static let touchEndEvents: UIControl.Event = [.touchUpOutside, .touchUpInside, .touchCancel]
 }

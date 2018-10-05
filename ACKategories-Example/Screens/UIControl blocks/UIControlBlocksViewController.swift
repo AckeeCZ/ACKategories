@@ -1,18 +1,18 @@
 //
-//  ViewController.swift
-//  ACKategories-Example
+//  UIControlBlocksViewController.swift
+//  ACKategories
 //
-//  Created by Jakub Olejník on 06/02/2018.
-//  Copyright © 2018 Josef Dolezal. All rights reserved.
+//  Created by Jakub Olejník on 12/09/2018.
+//  Copyright © 2018 Ackee, s.r.o. All rights reserved.
 //
 
 import UIKit
-import SnapKit
-import ACKategories
 
-final class ViewController: UIViewController {
+final class UIControlBlocksViewController: UIViewController {
 
     private weak var button: UIButton!
+    
+    // MARK: View life cycle
     
     override func loadView() {
         super.loadView()
@@ -26,17 +26,6 @@ final class ViewController: UIViewController {
             make.center.equalToSuperview()
         }
         self.button = button
-        
-        let container = UIView()
-        view.addSubview(container)
-        container.snp.makeConstraints { (make) in
-            make.bottom.leading.trailing.equalToSuperview()
-            make.height.equalTo(100)
-        }
-        
-        let childVC = UIViewController()
-        childVC.view.backgroundColor = .red
-        display(childViewController: childVC, in: container)
     }
     
     override func viewDidLoad() {
@@ -51,10 +40,4 @@ final class ViewController: UIViewController {
             self.present(alertVC, animated: true)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
