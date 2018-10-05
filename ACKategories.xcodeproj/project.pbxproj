@@ -54,6 +54,7 @@
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
+		F8CA9D63216755DC00F1AF45 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA9D62216755DB00F1AF45 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		F8CA9D62216755DB00F1AF45 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				881A82EB21131CEC00267D2E /* DateFormatting.swift */,
 				6925242720D142E200228289 /* DictionaryExtensions.swift */,
 				A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */,
+				F8CA9D62216755DB00F1AF45 /* GradientView.swift */,
 				D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */,
 				6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */,
 				6925242520D142C800228289 /* NumberFormatterExtensions.swift */,
@@ -490,6 +493,7 @@
 				6925242620D142C800228289 /* NumberFormatterExtensions.swift in Sources */,
 				69306C572029C48300BBE8F0 /* UIControl+Blocks.swift in Sources */,
 				6925242E20D143DE00228289 /* ArrayExtensions.swift in Sources */,
+				F8CA9D63216755DC00F1AF45 /* GradientView.swift in Sources */,
 				69306C562029C48300BBE8F0 /* TableHeaderFooterView.swift in Sources */,
 				6925243020D1440800228289 /* TimeIntervalExtensions.swift in Sources */,
 			);

@@ -66,6 +66,9 @@ If running on iOS 9 or later you can use implicit parameter `UIControl.primaryAc
 ### TableHeaderFooterView
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.
 
+### GradientView
+Use this view when you want to create a view with gradient colors.
+
 ### UITableView and UICollectionView extensions
 Since now you can use simple extension which autoregisters your `UITableView` and `UICollectionView` cells!
 ```swift
