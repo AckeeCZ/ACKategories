@@ -67,7 +67,16 @@ If running on iOS 9 or later you can use implicit parameter `UIControl.primaryAc
 Use this view as TableHeaderView or TableFooterView when your table/footer has dynamic content size.
 
 ### GradientView
-Use this view when you want to create a view with gradient colors.
+Use this view when you want to create a view with gradient colors and a given axis.
+
+`Init` takes two parameters:
+- `colors`: The colors to be used for the gradient.
+- `axis`: The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
+
+Please **note**: If one of your colors is clear, you should usually define to which "clear color" it should go to - i.e. if you want to go from white to clear, write:
+```swift
+let gradientView = GradientView(colors: [UIColor.white, UIColor.white.withAlphaComponent(0)], axis: .vertical)
+```
 
 ### UITableView and UICollectionView extensions
 Since now you can use simple extension which autoregisters your `UITableView` and `UICollectionView` cells!
