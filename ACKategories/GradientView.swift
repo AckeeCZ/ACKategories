@@ -24,7 +24,7 @@ open class GradientView: UIView {
         - colors: The colors to be used for the gradient.
         - axis: The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
      */
-    public init(colors: [UIColor], axis: UILayoutConstraintAxis) {
+    public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
