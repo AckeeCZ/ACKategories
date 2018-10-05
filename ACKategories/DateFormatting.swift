@@ -1,14 +1,7 @@
-//
-//  DateFormatting.swift
-//  Skeleton
-//
-//  Created by Jan Misar on 02.08.18.
-//
-
 import Foundation
 
 /// Date formatters cached for future use
-fileprivate var dateFormattersCache = [String: DateFormatter]()
+private var dateFormattersCache = [String: DateFormatter]()
 
 extension DateFormatter {
     

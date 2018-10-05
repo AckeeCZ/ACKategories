@@ -81,12 +81,3 @@ extension String {
         return folding(options: .diacriticInsensitive, locale: locale)
     }
 }
-
-// MARK: - Deprecations
-
-extension String {
-    @available(*, renamed: "normalized()")
-    public func normalizedValue() -> String {
-        return normalized()
-    }
-}
