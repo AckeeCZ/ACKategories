@@ -123,27 +123,27 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
 
     // MARK: - Debug
 
-    @available(iOSApplicationExtension 10.0, *)
-    private var flowCoordinatorLog: OSLog { return OSLog(subsystem: Bundle.main.bundleIdentifier ?? "-", category: "FlowCoordinator") }
+    // It is not advised to wrap os_log, but we are basically wrapping it here anyway, so it should not matter
+    private func logMessage(_ message: String) {
+        if #available(iOS 10.0, *) {
+            let flowCoordinatorLog = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "-", category: "FlowCoordinator")
+            // Currently there is a bug which does not display .debug logs in the console, thus info
+            os_log("%@", log: flowCoordinatorLog, type: .info, message)
+        } else {
+            NSLog(message)
+        }
+    }
 
     override public init() {
         super.init()
         if FlowCoordinator.logEnabled {
-            if #available(iOSApplicationExtension 10.0, *) {
-                os_log("🔀 👶 %@", log: flowCoordinatorLog, type: .info, self)
-            } else {
-                NSLog("🔀 👶 \(self)")
-            }
+            logMessage("🔀 ⚰️ \(self)")
         }
     }
 
     deinit {
         if FlowCoordinator.logEnabled {
-            if #available(iOSApplicationExtension 10.0, *) {
-                os_log("🔀 ⚰️ %@", log: flowCoordinatorLog, type: .info, self)
-            } else {
-                NSLog("🔀 ⚰️ \(self)")
-            }
+            logMessage("🔀 ⚰️ \(self)")
         }
     }
 
