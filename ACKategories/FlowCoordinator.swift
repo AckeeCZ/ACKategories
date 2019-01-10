@@ -1,4 +1,5 @@
 import UIKit
+import os.log
 
 /** Handles view controllers connections and flow
  
@@ -122,16 +123,27 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
 
     // MARK: - Debug
 
+    @available(iOSApplicationExtension 10.0, *)
+    private var flowCoordinatorLog: OSLog { return OSLog(subsystem: Bundle.main.bundleIdentifier ?? "-", category: "FlowCoordinator") }
+
     override public init() {
         super.init()
         if FlowCoordinator.logEnabled {
-            NSLog("🔀 👶 \(self)")
+            if #available(iOSApplicationExtension 10.0, *) {
+                os_log("🔀 👶 %@", log: flowCoordinatorLog, type: .info, self)
+            } else {
+                NSLog("🔀 👶 \(self)")
+            }
         }
     }
 
     deinit {
         if FlowCoordinator.logEnabled {
-            NSLog("🔀 ⚰️ \(self)")
+            if #available(iOSApplicationExtension 10.0, *) {
+                os_log("🔀 ⚰️ %@", log: flowCoordinatorLog, type: .info, self)
+            } else {
+                NSLog("🔀 ⚰️ \(self)")
+            }
         }
     }
 
