@@ -33,7 +33,7 @@ extension Collection {
         return indices.contains(index) ? self[index] : nil
     }
 
-    /// Return `true` if `self¨ is not empty
+    /// Return `true` if `self` is not empty
     public var isNotEmpty: Bool {
         return !isEmpty
     }
