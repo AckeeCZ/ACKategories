@@ -59,6 +59,7 @@
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		A3F605B42136F41D005CBE3F /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */; };
 		D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */; };
+		F8646FD0220825680026DC0E /* CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8646FCF220825680026DC0E /* CollectionTests.swift */; };
 		F8CA9D63216755DC00F1AF45 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA9D62216755DB00F1AF45 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +159,7 @@
 		A3F605B32136F41D005CBE3F /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		D253FF781F0A65610079215C /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF92C3202BA8DD00C1A129 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		F8646FCF220825680026DC0E /* CollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTests.swift; sourceTree = "<group>"; };
 		F8CA9D62216755DB00F1AF45 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +271,7 @@
 			children = (
 				691F28D12140843300609471 /* ArrayTests.swift */,
 				69306C762029C6EF00BBE8F0 /* ColorTests.swift */,
+				F8646FCF220825680026DC0E /* CollectionTests.swift */,
 				691F858A202A00E700DA4FAD /* ConditionalAssignmentTests.swift */,
 				69306C732029C6EF00BBE8F0 /* ControlBlocksTests.swift */,
 				881A82ED21131D0F00267D2E /* DateFormattingTests.swift */,
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69306C832029C92B00BBE8F0 /* ColorTests.swift in Sources */,
+				F8646FD0220825680026DC0E /* CollectionTests.swift in Sources */,
 				6925243520D145F600228289 /* UIStackViewTests.swift in Sources */,
 				6939359B2080A34C00EDA582 /* UIViewControllerChildrenTests.swift in Sources */,
 				691F858B202A00E700DA4FAD /* ConditionalAssignmentTests.swift in Sources */,

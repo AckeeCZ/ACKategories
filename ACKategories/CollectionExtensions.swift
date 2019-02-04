@@ -22,7 +22,7 @@ extension Optional where Wrapped: Collection {
     }
 
     /// Return `self` if it is not empty and not nil, otherwise return nil
-    var nonEmpty: Wrapped? {
+    public var nonEmpty: Wrapped? {
         return self?.isEmpty == true ? nil : self
     }
 }
