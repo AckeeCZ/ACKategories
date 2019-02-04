@@ -8,6 +8,6 @@
 
 ## master
 
-```
 - Move from NSLog to unified logging (#39, kudos to @fortmarek)
-```
+- Allow additional logic for isEmpty for collections (#40, kudos to @fortmarek) 
+
