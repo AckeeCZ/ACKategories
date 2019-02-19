@@ -137,7 +137,7 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
     override public init() {
         super.init()
         if FlowCoordinator.logEnabled {
-            logMessage("🔀 ⚰️ \(self)")
+            logMessage("🔀 👶 \(self)")
         }
     }
 
