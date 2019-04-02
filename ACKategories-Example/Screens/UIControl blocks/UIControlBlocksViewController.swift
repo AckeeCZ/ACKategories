@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ACKategories
 
-final class UIControlBlocksViewController: UIViewController {
+final class UIControlBlocksViewController: Base.ViewController<Any> {
 
     private weak var button: UIButton!
     

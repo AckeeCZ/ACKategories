@@ -9,7 +9,7 @@
 import UIKit
 import ACKategories
 
-final class AppFlowCoordinator: FlowCoordinator {
+final class AppFlowCoordinator: Base.FlowCoordinator {
     override func start(in window: UIWindow) {
         super.start(in: window)
         
@@ -34,7 +34,7 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
     
     private func controller(for item: ExampleItem) -> UIViewController {
         switch item {
-        case .uiControlBlocks: return UIControlBlocksViewController()
+        case .uiControlBlocks: return UIControlBlocksViewController(viewModel: 0)
         case .viewControllerComposition: return VCCompositionViewController()
         }
     }

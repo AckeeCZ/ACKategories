@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ACKategories
 
-class TitleViewController: UIViewController {
+class TitleViewController: Base.ViewController<Any> {
     private(set) weak var nameLabel: UILabel!
     
     private let name: String
@@ -19,7 +20,7 @@ class TitleViewController: UIViewController {
     init(name: String, color: UIColor) {
         self.name = name
         self.color = color
-        super.init(nibName: nil, bundle: nil)
+        super.init(viewModel: 0)
     }
 
     required init?(coder aDecoder: NSCoder) {
