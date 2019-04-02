@@ -68,7 +68,7 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
         rootViewController.presentingViewController?.dismiss(animated: animated)
         
         // pop all view controllers when started within navigation controller
-        if let index = navigationController?.viewControllers.index(of: rootViewController) {
+        if let index = navigationController?.viewControllers.firstIndex(of: rootViewController) {
             // VCs to be removed from navigation stack
             let toRemoveViewControllers = navigationController.flatMap { Array($0.viewControllers[index..<$0.viewControllers.count]) } ?? []
             
@@ -100,7 +100,7 @@ open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
     }
 
     public func removeChild(_ flowController: FlowCoordinator) {
-        if let index = childCoordinators.index(where: { $0 === flowController }) {
+        if let index = childCoordinators.firstIndex(where: { $0 === flowController }) {
             childCoordinators.remove(at: index)
         }
     }
