@@ -19,7 +19,7 @@ extension Base {
         
         init() {
             if Base.memoryLoggingEnabled && Base.viewModelMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("🧠 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
                 } else {
                     NSLog("🧠 👶 \(self)")
@@ -29,7 +29,7 @@ extension Base {
         
         deinit {
             if Base.memoryLoggingEnabled && Base.viewModelMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("🧠 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
                 } else {
                     NSLog("🧠 ⚰️ \(self)")

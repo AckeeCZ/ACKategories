@@ -129,7 +129,7 @@ extension Base {
         override public init() {
             super.init()
             if Base.memoryLoggingEnabled && Base.flowCoordinatorMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("🔀 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
                 } else {
                     NSLog("🔀 👶 \(self)")
@@ -139,7 +139,7 @@ extension Base {
         
         deinit {
             if Base.memoryLoggingEnabled && Base.flowCoordinatorMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("🔀 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
                 } else {
                     NSLog("🔀 ⚰️ \(self)")

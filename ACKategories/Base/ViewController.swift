@@ -30,7 +30,7 @@ extension Base {
             super.init(nibName: nil, bundle: nil)
             
             if Base.memoryLoggingEnabled && Base.viewControllerMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("📱 👶 %@", log: Logger.lifecycleLog(), type: .info, self)
                 } else {
                     NSLog("📱 👶 \(self)")
@@ -78,7 +78,7 @@ extension Base {
         
         deinit {
             if Base.memoryLoggingEnabled && Base.viewControllerMemoryLoggingEnabled {
-                if #available(iOSApplicationExtension 10.0, *) {
+                if #available(iOS 10.0, *) {
                     os_log("📱 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, self)
                 } else {
                     NSLog("📱 ⚰️ \(self)")
