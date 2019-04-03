@@ -9,11 +9,11 @@
 import UIKit
 import os.log
 
-public extension Base {
+extension Base {
     
     /// Turn on/off logging of init/deinit of all VCs
     /// ⚠️ Has no effect when Base.memoryLoggingEnabled is true
-    static var viewControllerMemoryLoggingEnabled: Bool = true
+    public static var viewControllerMemoryLoggingEnabled: Bool = true
     
     /// Base class for all view controllers
     open class ViewController<ViewModelType>: UIViewController {

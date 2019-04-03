@@ -1,11 +1,11 @@
 import UIKit
 import os.log
 
-public extension Base {
+extension Base {
     
     /// Turn on/off logging of init/deinit of all FCs
     /// ⚠️ Has no effect when Base.memoryLoggingEnabled is true
-    static var flowCoordinatorMemoryLoggingEnabled: Bool = true
+    public static var flowCoordinatorMemoryLoggingEnabled: Bool = true
     
     /** Handles view controllers connections and flow
      

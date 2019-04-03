@@ -8,11 +8,11 @@
 import Foundation
 import os.log
 
-public extension Base {
+extension Base {
     
     /// Turn on/off logging of init/deinit of all VMs
     /// ⚠️ Has no effect when Base.memoryLoggingEnabled is true
-    static var viewModelMemoryLoggingEnabled: Bool = true
+    public static var viewModelMemoryLoggingEnabled: Bool = true
     
     /// Base class for all view models
     open class ViewModel {
@@ -39,5 +39,5 @@ public extension Base {
     }
     
     /// Empty class for Base.ViewControllerNoVM
-    class NoViewModel {}
+    public struct NoViewModel {}
 }
