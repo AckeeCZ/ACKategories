@@ -29,4 +29,7 @@ public extension Base {
             }
         }
     }
+    
+    /// Empty class for Base.ViewControllerNoVM
+    class NoViewModel {}
 }

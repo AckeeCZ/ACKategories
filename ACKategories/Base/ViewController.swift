@@ -79,4 +79,14 @@ public extension Base {
         }
     }
     
+    /// Base VC with no VM
+    open class ViewControllerNoVM: Base.ViewController<NoViewModel> {
+        public init() {
+            super.init(viewModel: NoViewModel())
+        }
+        
+        required public init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
 }
