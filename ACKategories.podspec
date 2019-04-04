@@ -13,5 +13,5 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
   s.ios.deployment_target = '8.3'
   s.source_files = 'ACKategories/**/*.swift', 'LICENSE'
   s.frameworks = 'UIKit'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end

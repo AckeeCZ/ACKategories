@@ -6,7 +6,7 @@ public extension UIColor {
 
      - parameter hex: Hex int to create color from
      */
-    public convenience init(hex: UInt32) {
+    convenience init(hex: UInt32) {
         self.init(
             red: CGFloat(Double((hex & 0xFF0000) >> 16) / 255.0),
             green: CGFloat(Double((hex & 0xFF00) >> 8) / 255.0),
@@ -20,7 +20,7 @@ public extension UIColor {
 
      - parameter hexString: Hex string to create color from
      */
-    public convenience init(hexString: String) {
+    convenience init(hexString: String) {
         var rgbValue: UInt32 = 0
         let scanner = Scanner(string: hexString)
         scanner.scanLocation = 1 // bypass '#' character
@@ -29,7 +29,7 @@ public extension UIColor {
     }
 
     /// Create random color
-    public static func random() -> UIColor {
+    static func random() -> UIColor {
         let randomRed = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomGreen = CGFloat(arc4random()) / CGFloat(UInt32.max)
         let randomBlue = CGFloat(arc4random()) / CGFloat(UInt32.max)
@@ -42,7 +42,7 @@ public extension UIColor {
      
      - parameter amount: Defines how much lighter color is returned. Should be from 0.0 to 1.0
      */
-    public func brightened(by amount: CGFloat = 0.25) -> UIColor {
+    func brightened(by amount: CGFloat = 0.25) -> UIColor {
         return with(brightnessAmount: 1 + max(0, amount))
     }
 
@@ -51,7 +51,7 @@ public extension UIColor {
      
      - parameter amount: Defines how much darker color is returned. Should be from 0.0 to 1.0
      */
-    public func darkened(by amount: CGFloat = 0.25) -> UIColor {
+    func darkened(by amount: CGFloat = 0.25) -> UIColor {
         return with(brightnessAmount: 1 - max(0, amount))
     }
 
@@ -72,7 +72,7 @@ public extension UIColor {
     }
 
     /// Returns true for light colors. When light color is used as background, you should use black as a text color.
-    public var isLight: Bool {
+    var isLight: Bool {
 
         let components = self.cgColor.components
         let red = components?[0]
@@ -84,12 +84,12 @@ public extension UIColor {
     }
 
     /// Returns true for dark colors. When dark color is used as background, you should use white as a text color.
-    public var isDark: Bool {
+    var isDark: Bool {
         return !isLight
     }
 
     /// Create image from color with defined size.
-    public func image(of size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+    func image(of size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()

@@ -7,23 +7,21 @@
 //
 
 import UIKit
+import ACKategories
 
 protocol ExampleListFlowDelegate: class {
     func exampleItemSelected(_ item: ExampleItem, in viewController: ExampleListViewController)
 }
 
-final class ExampleListViewController: UIViewController {
+final class ExampleListViewController: Base.ViewController<ExampleListViewModeling> {
     weak var flowDelegate: ExampleListFlowDelegate?
     
     private weak var tableView: UITableView!
     
-    private let viewModel: ExampleListViewModeling
-    
     // MARK: Initializers
     
-    init(viewModel: ExampleListViewModeling) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+    override init(viewModel: ExampleListViewModeling) {
+        super.init(viewModel: viewModel)
         self.title = "ACKategories"
     }
     
