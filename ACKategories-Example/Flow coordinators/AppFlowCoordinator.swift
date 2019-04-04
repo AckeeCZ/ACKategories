@@ -34,7 +34,7 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
     
     private func controller(for item: ExampleItem) -> UIViewController {
         switch item {
-        case .uiControlBlocks: return UIControlBlocksViewController(viewModel: 0)
+        case .uiControlBlocks: return UIControlBlocksViewController()
         case .viewControllerComposition: return VCCompositionViewController()
         }
     }
