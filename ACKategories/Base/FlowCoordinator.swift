@@ -14,7 +14,7 @@ extension Base {
      All start methods are supposed to be overriden and property `rootViewController` must be set in the end of the overriden implementation to avoid memory leaks.
      Don't forget to call super.start().
      */
-    open class FlowCoordinator: NSObject, UINavigationControllerDelegate {
+    open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate {
         
         /// Reference to the navigation controller used within the flow
         public weak var navigationController: UINavigationController?
@@ -27,6 +27,9 @@ extension Base {
         
         /// Array of child coordinators
         public var childCoordinators = [FlowCoordinator]()
+
+        /// Currently active coordinator
+        weak var activeChild: FlowCoordinator?
         
         // MARK: - Lifecycle
         
@@ -123,6 +126,13 @@ extension Base {
                 stop()
             }
         }
+
+        // MARK: - DeepLink
+
+        /// Handle deep link with currently active coordinator. If not handled, function returns false
+        @discardableResult func handleDeeplink(_ deeplink: DeepLinkType) -> Bool {
+            return activeChild?.handleDeeplink(deeplink) ?? false
+        }
         
         // MARK: - Debug
         
@@ -153,5 +163,13 @@ extension Base {
                 if self?.rootViewController == nil { assertionFailure("rootViewController is nil") }
             }
         }
+    }
+
+    /// Empty class for Base.FlowCoordinator with no deep link handling
+    public enum NoDeepLink {}
+
+    /// Base VC with no VM
+    open class FlowCoordinatorNoDeepLink: Base.FlowCoordinator<NoDeepLink> {
+
     }
 }
