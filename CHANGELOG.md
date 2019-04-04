@@ -7,7 +7,6 @@
 ```
 ## master
 - Swift 5 & Xcode 10.2 migration (#45, kudos to @janmisar)
-- set deployment target to iOS 10+ (#45, kudos to @janmisar)
 - base classes for VCs, VMs, FCs (#45, kudos to @janmisar)
 
 ## 6.0.3
