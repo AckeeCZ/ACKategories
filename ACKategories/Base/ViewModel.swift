@@ -17,7 +17,7 @@ extension Base {
     /// Base class for all view models
     open class ViewModel {
         
-        init() {
+        public init() {
             if Base.memoryLoggingEnabled && Base.viewModelMemoryLoggingEnabled {
                 if #available(iOS 10.0, *) {
                     os_log("🧠 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")

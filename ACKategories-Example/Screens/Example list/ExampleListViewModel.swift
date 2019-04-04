@@ -6,6 +6,8 @@
 //  Copyright © 2018 Ackee, s.r.o. All rights reserved.
 //
 
+import ACKategories
+
 protocol ExampleListViewModelingActions {
 	
 }
@@ -20,6 +22,6 @@ extension ExampleListViewModeling where Self: ExampleListViewModelingActions {
     var actions: ExampleListViewModelingActions { return self }
 }
 
-final class ExampleListViewModel: ExampleListViewModeling, ExampleListViewModelingActions {
+final class ExampleListViewModel: Base.ViewModel, ExampleListViewModeling, ExampleListViewModelingActions {
     let items = ExampleItem.allCases
 }
