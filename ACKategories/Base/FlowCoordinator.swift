@@ -29,7 +29,7 @@ extension Base {
         public var childCoordinators = [FlowCoordinator]()
 
         /// Currently active coordinator
-        weak var activeChild: FlowCoordinator?
+        public weak var activeChild: FlowCoordinator?
         
         // MARK: - Lifecycle
         
@@ -130,7 +130,7 @@ extension Base {
         // MARK: - DeepLink
 
         /// Handle deep link with currently active coordinator. If not handled, function returns false
-        @discardableResult func handleDeeplink(_ deeplink: DeepLinkType) -> Bool {
+        @discardableResult open func handleDeeplink(_ deeplink: DeepLinkType) -> Bool {
             return activeChild?.handleDeeplink(deeplink) ?? false
         }
         
