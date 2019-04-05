@@ -16,17 +16,12 @@ extension Base {
     public static var viewControllerMemoryLoggingEnabled: Bool = true
     
     /// Base class for all view controllers
-    open class ViewController<ViewModelType>: UIViewController {
+    open class ViewController: UIViewController {
         
         /// Navigation bar is shown/hidden in viewWillAppear according to this flag
-        var hasNavigationBar: Bool = true
+        open var hasNavigationBar: Bool = true
         
-        /// Corresponding viewModel
-        public let viewModel: ViewModelType
-        
-        public init(viewModel: ViewModelType) {
-            self.viewModel = viewModel
-            
+        public init() {
             super.init(nibName: nil, bundle: nil)
             
             if Base.memoryLoggingEnabled && Base.viewControllerMemoryLoggingEnabled {
@@ -84,17 +79,6 @@ extension Base {
                     NSLog("📱 ⚰️ \(self)")
                 }
             }
-        }
-    }
-    
-    /// Base VC with no VM
-    open class ViewControllerNoVM: Base.ViewController<NoViewModel> {
-        public init() {
-            super.init(viewModel: NoViewModel())
-        }
-        
-        required public init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
         }
     }
 }
