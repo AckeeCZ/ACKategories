@@ -9,7 +9,7 @@
 import UIKit
 import ACKategories
 
-class TitleViewController: Base.ViewControllerNoVM {
+class TitleViewController: BaseViewControllerNoVM {
     private(set) weak var nameLabel: UILabel!
     
     private let name: String

@@ -37,7 +37,4 @@ extension Base {
             }
         }
     }
-    
-    /// Empty class for Base.ViewControllerNoVM
-    public struct NoViewModel {}
 }

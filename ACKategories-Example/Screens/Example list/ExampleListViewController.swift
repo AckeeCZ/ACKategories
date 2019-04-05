@@ -13,7 +13,7 @@ protocol ExampleListFlowDelegate: class {
     func exampleItemSelected(_ item: ExampleItem, in viewController: ExampleListViewController)
 }
 
-final class ExampleListViewController: Base.ViewController<ExampleListViewModeling> {
+final class ExampleListViewController: BaseViewController<ExampleListViewModeling> {
     weak var flowDelegate: ExampleListFlowDelegate?
     
     private weak var tableView: UITableView!
