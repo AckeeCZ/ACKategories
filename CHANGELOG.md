@@ -5,12 +5,12 @@
 ```
 - <description> (#<PR_number>, kudos to @<author>)
 ```
+
+- added deep link generic for `Base.FlowCoordinator` (#47, kudos to @fortmarek)
+
 ## master
 - Swift 5 & Xcode 10.2 migration (#45, kudos to @janmisar)
 - base classes for VCs, VMs, FCs (#45, kudos to @janmisar)
-
-## 6.0.4
-- added deep link generic for `Base.FlowCoordinator` (#47, kudos to @fortmarek)
 
 ## 6.0.3
 - fix init emoji in `FlowCoordinator` (#42, kudos to @Dominoo)
