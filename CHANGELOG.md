@@ -7,6 +7,8 @@
 ```
 
 ## master
+
+## 6.1
 - added deep link generic for `Base.FlowCoordinator` (#47, kudos to @fortmarek)
 - Swift 5 & Xcode 10.2 migration (#45, kudos to @janmisar)
 - base classes for VCs, VMs, FCs (#45, kudos to @janmisar)
