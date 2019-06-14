@@ -55,6 +55,7 @@
 		693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */; };
 		693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960B214978B50036C236 /* VCCompositionViewController.swift */; };
 		693B960E214979060036C236 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960D214979060036C236 /* TitleViewController.swift */; };
+		69A77B0322B3B33900AABFEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A77B0222B3B33900AABFEF /* UIViewExtensions.swift */; };
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		8835B8252253956C0011F003 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B8242253956C0011F003 /* Base.swift */; };
@@ -159,6 +160,7 @@
 		693B9608214978070036C236 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		693B960B214978B50036C236 /* VCCompositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCompositionViewController.swift; sourceTree = "<group>"; };
 		693B960D214979060036C236 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		69A77B0222B3B33900AABFEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		8835B8242253956C0011F003 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -243,7 +245,6 @@
 		69306C412029C48200BBE8F0 /* ACKategories */ = {
 			isa = PBXGroup;
 			children = (
-				8835B8232253955B0011F003 /* Base */,
 				6925242D20D143DE00228289 /* ArrayExtensions.swift */,
 				6925242B20D1439300228289 /* BundleExtensions.swift */,
 				6925242920D1434A00228289 /* CollectionExtensions.swift */,
@@ -271,7 +272,9 @@
 				6939359720809F3D00EDA582 /* UIViewController+Children.swift */,
 				69306C4D2029C48200BBE8F0 /* UIViewController+SafeAreaCompat.swift */,
 				69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */,
+				8835B8232253955B0011F003 /* Base */,
 				691F8590202A078900DA4FAD /* Supporting files */,
+				69A77B0222B3B33900AABFEF /* UIViewExtensions.swift */,
 			);
 			path = ACKategories;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				6925242820D142E200228289 /* DictionaryExtensions.swift in Sources */,
 				693935A12080AB5A00EDA582 /* UILabelExtensions.swift in Sources */,
 				8835B82B22539DDF0011F003 /* ViewModel.swift in Sources */,
+				69A77B0322B3B33900AABFEF /* UIViewExtensions.swift in Sources */,
 				69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */,
 				6939359F2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift in Sources */,
 				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
