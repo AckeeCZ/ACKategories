@@ -11,7 +11,7 @@
 
 name: Greet Everybody
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
