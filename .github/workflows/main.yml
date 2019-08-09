@@ -1,0 +1,23 @@
+#name: Main workflow
+# This workflow is triggered on pushes to the repository.
+#on: [push]
+
+#jobs:
+ # build:
+  #  name: Carthage
+   # runs-on: macos-latest
+    #steps:
+#    - run: echo "abc"
+
+name: Greet Everybody
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: Greeting
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Test"
