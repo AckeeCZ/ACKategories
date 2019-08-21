@@ -10,6 +10,27 @@ import XCTest
 import ACKategories
 
 final class ColorTests: XCTestCase {
+    
+    func testColorToHex() {
+        var hexColor: String
+        
+        let clearColor = UIColor.clear
+        hexColor = clearColor.hexString
+        XCTAssertEqual("#000000", hexColor)
+        
+        let blackColor = UIColor.black
+        hexColor = blackColor.hexString
+        XCTAssertEqual("#000000", hexColor)
+        
+        let whiteColor = UIColor.white
+        hexColor = whiteColor.hexString
+        XCTAssertEqual("#FFFFFF", hexColor)
+        
+        let greenColor = UIColor.green
+        hexColor = greenColor.hexString
+        XCTAssertEqual("#00FF00", hexColor)
+    }
+    
     func testLightColorRecognition() {
         var color = UIColor(hex: 0xffffff)
         
