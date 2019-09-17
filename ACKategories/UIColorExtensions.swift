@@ -34,7 +34,7 @@ public extension UIColor {
      */
     var hexString: String? {
         guard let components = cgColor.components, cgColor.numberOfComponents > 1 else { return nil }
-        let isMonochrome = (cgColor.colorSpace?.model == .monochrome) || (cgColor.numberOfComponents == 1)
+        let isMonochrome = cgColor.colorSpace?.model == .monochrome
         
         let r: CGFloat = isMonochrome ? components[0] : components[0]
         let g: CGFloat = isMonochrome ? components[0] : components[1]
