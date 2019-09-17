@@ -29,17 +29,17 @@ public extension UIColor {
     }
     
     /**
-     Returns color as hex string (eg. '#ff00ff').
+     Returns color as hex string (eg. '#ff00ff') or nil if RGBA components coudn't be loaded.
      Monochrome check included (works for white/black/clear).
      */
-    var hexString: String {
-        let components = cgColor.components
-        let isMonochrome = cgColor.colorSpace?.model == .monochrome
+    var hexString: String? {
+        guard let components = cgColor.components, cgColor.numberOfComponents > 1 else { return nil }
+        let isMonochrome = (cgColor.colorSpace?.model == .monochrome) || (cgColor.numberOfComponents == 1)
         
-        let r: CGFloat = isMonochrome ? components![0] : components![0]
-        let g: CGFloat = isMonochrome ? components![0] : components![1]
-        let b: CGFloat = isMonochrome ? components![0] : components![2]
-        
+        let r: CGFloat = isMonochrome ? components[0] : components[0]
+        let g: CGFloat = isMonochrome ? components[0] : components[1]
+        let b: CGFloat = isMonochrome ? components[0] : components[2]
+
         return String(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
     }
 
