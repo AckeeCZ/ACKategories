@@ -12,7 +12,7 @@ import ACKategories
 final class ColorTests: XCTestCase {
     
     func testColorToHex() {
-        var hexColor: String
+        var hexColor: String?
         
         let clearColor = UIColor.clear
         hexColor = clearColor.hexString
@@ -28,6 +28,23 @@ final class ColorTests: XCTestCase {
         
         let greenColor = UIColor.green
         hexColor = greenColor.hexString
+        XCTAssertEqual("#00FF00", hexColor)
+        
+        let p3redColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
+        hexColor = p3redColor.hexString
+        XCTAssertEqual("#000000", hexColor)
+        
+        let image = UIColor.green.image()
+        let patternImageColor = UIColor(patternImage: image)
+        hexColor = patternImageColor.hexString
+        XCTAssertEqual(nil, hexColor)
+        
+        let white = UIColor(white: 1, alpha: 1)
+        hexColor = white.hexString
+        XCTAssertEqual("#FFFFFF", hexColor)
+
+        let rgb = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+        hexColor = rgb.hexString
         XCTAssertEqual("#00FF00", hexColor)
     }
     
