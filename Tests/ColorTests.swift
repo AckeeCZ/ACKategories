@@ -11,7 +11,7 @@ import ACKategories
 
 final class ColorTests: XCTestCase {
     
-    func testColorToHex() {
+    func testBasicColorsToHex() {
         var hexColor: String?
         
         let clearColor = UIColor.clear
@@ -29,22 +29,32 @@ final class ColorTests: XCTestCase {
         let greenColor = UIColor.green
         hexColor = greenColor.hexString
         XCTAssertEqual("#00FF00", hexColor)
-        
-        let p3redColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
-        hexColor = p3redColor.hexString
-        XCTAssertEqual("#000000", hexColor)
-        
+    }
+    
+    func testP3RedColorToHex() {
+        if #available(iOS 10, *) {
+            let p3redColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
+            let hexColor = p3redColor.hexString
+            XCTAssertEqual("#000000", hexColor)
+        }
+    }
+    
+    func testPatternImageColorToHex() {
         let image = UIColor.green.image()
         let patternImageColor = UIColor(patternImage: image)
-        hexColor = patternImageColor.hexString
+        let hexColor = patternImageColor.hexString
         XCTAssertEqual(nil, hexColor)
-        
+    }
+    
+    func testColorWithGrayscaleToHex() {
         let white = UIColor(white: 1, alpha: 1)
-        hexColor = white.hexString
+        let hexColor = white.hexString
         XCTAssertEqual("#FFFFFF", hexColor)
+    }
 
+    func testRGBColorToHex() {
         let rgb = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
-        hexColor = rgb.hexString
+        let hexColor = rgb.hexString
         XCTAssertEqual("#00FF00", hexColor)
     }
     
