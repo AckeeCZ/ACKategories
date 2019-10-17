@@ -10,6 +10,12 @@
 - add `forceIntrinsic()` to `UIView` to set its `contentHuggingPriority` and `contentCompressionResistance` to `UILayoutPriority.required` (#48, kudos to @olejnjak)
 - add `hexString` closure into `UIColorExtension` that will return hex string from `UIColor` (#49, kudos to @majkcajk)
 - add SwiftPM manifest (#52, kudos to @olejnjak)
+- add `type` parameter to `dequeueCell(...)` methods so using it is more convenient (#53, kudos to @olejnjak)
+
+  From now you can also use
+  ```swift
+  tableView.dequeueCell(for: indexPath, type: YourCell.self)
+  ```
 
 ## 6.1
 - added deep link generic for `Base.FlowCoordinator` (#47, kudos to @fortmarek)
