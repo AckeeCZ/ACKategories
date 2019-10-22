@@ -14,7 +14,7 @@ extension Base {
      All start methods are supposed to be overriden and property `rootViewController` must be set in the end of the overriden implementation to avoid memory leaks.
      Don't forget to call super.start().
      */
-    open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate {
+    open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate {
         
         /// Reference to the navigation controller used within the flow
         public weak var navigationController: UINavigationController?
@@ -55,8 +55,11 @@ extension Base {
         }
         
         /// Start by presenting from given VC. This method must be overriden by subclass.
+        ///
+        /// Make sure that `rootViewController` is set so no iOS 13 presentation leaks are possible
         open func start(from viewController: UIViewController) {
-            checkRootViewController()
+            assert(rootViewController != nil, "rootViewController is nil")
+            rootViewController?.presentationController?.delegate = self
         }
         
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
@@ -123,6 +126,14 @@ extension Base {
             
             if let firstViewController = rootViewController, fromViewController == firstViewController {
                 navigationController.delegate = parentCoordinator
+                stop()
+            }
+        }
+        
+        // MARK: - UIAdaptivePresentationControllerDelegate
+        
+        public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+            if presentationController.presentedViewController == rootViewController {
                 stop()
             }
         }
