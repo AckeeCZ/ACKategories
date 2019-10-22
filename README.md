@@ -35,6 +35,10 @@ If you're interested in using ACKategories in your older projects see all branch
 ## List of features
 This is only fast description of features, see source code for documentation comments and details.
 
+### Flow coordinators
+
+ACKategories contain basic `FlowCoordinator` that should be used as parent class for all your flow coordinators. For more information see [FlowCoordinators](Documentation/FlowCoordinators.md).
+
 ### UIButton
 Extension for UIButton that fixes `intrinsicContentSize` and adds `titleEdgeInsets` to it.
 
