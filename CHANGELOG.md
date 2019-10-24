@@ -6,7 +6,7 @@
 - <description> (#<PR_number>, kudos to @<author>)
 ```
 
-## master
+## Next
 
 ## 6.2
 - add `forceIntrinsic()` to `UIView` to set its `contentHuggingPriority` and `contentCompressionResistance` to `UILayoutPriority.required` (#48, kudos to @olejnjak)
