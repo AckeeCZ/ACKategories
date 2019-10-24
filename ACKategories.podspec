@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ACKategories'
-  s.version          = '6.2.0'
+  s.version          = '6.2.2'
   s.summary          = 'A bunch of useful tools, cocoa subclasses and extensions'
   s.description      = <<-DESC
 Tools, cocoa subclasses and extensions we love to use at Ackee.
