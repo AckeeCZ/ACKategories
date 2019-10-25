@@ -8,6 +8,10 @@
 
 ## Next
 
+## 6.2.1
+
+## 6.2.1
+
 ## 6.2
 - add `forceIntrinsic()` to `UIView` to set its `contentHuggingPriority` and `contentCompressionResistance` to `UILayoutPriority.required` (#48, kudos to @olejnjak)
 - add `hexString` closure into `UIColorExtension` that will return hex string from `UIColor` (#49, kudos to @majkcajk)

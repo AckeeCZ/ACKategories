@@ -16,7 +16,7 @@ A bunch of tools, cocoa subclasses and extensions we created and use at Ackee.
 ACKategories is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "ACKategories", "~> 6.2.0"
+pod "ACKategories", "~> 6.2.1"
 ```
 
 ### Carthage
@@ -32,7 +32,7 @@ github "AckeeCZ/ACKategories" ~> 6.2.0
 Or you can use [SPM](https://github.com/apple/swift-package-manager). Add this to your `Package.swift`: 
 
 ```swift
-.package(url: "https://github.com/AckeeCZ/ACKategories.git", .upToNextMajor(from: "6.2.0")),
+.package(url: "https://github.com/AckeeCZ/ACKategories.git", .upToNextMajor(from: "6.2.1")),
 ```
 
 
