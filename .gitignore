@@ -33,4 +33,6 @@ Carthage
 Pods/
 
 # Tapestry
-tapestries/.build
+Tapestries/.build
+Tapestries/.swiftpm
+
