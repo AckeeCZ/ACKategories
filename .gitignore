@@ -31,3 +31,8 @@ Carthage
 # `pod install` in .travis.yml
 #
 Pods/
+
+# Tapestry
+Tapestries/.build
+Tapestries/.swiftpm
+
