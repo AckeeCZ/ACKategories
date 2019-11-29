@@ -7,7 +7,7 @@
 ```
 
 ## Next
-
+- add support for Dark Mode when creating colored images from `UIColor` (#59, kudos to @svastven)
 - add `tapestry` for automating future releases (#56, kudos to @fortmarek)
 
 ## 6.2
