@@ -7,7 +7,7 @@
 ```
 
 ## Next
-
+- add support for generic dequeueing for MKAnnotationViews `dequeueAnnotationView(for annotation: MKAnnotation)`
 - add `tapestry` for automating future releases (#56, kudos to @fortmarek)
 
 ## 6.2
