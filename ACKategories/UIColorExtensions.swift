@@ -114,7 +114,11 @@ public extension UIColor {
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-
-        return image!
+        
+        if #available(iOS 13.0, *) {
+            return image!.withTintColor(self)
+        } else {
+            return image!
+        }
     }
 }
