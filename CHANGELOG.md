@@ -10,8 +10,6 @@
 - add support for Dark Mode when creating colored images from `UIColor` (#59, kudos to @svastven)
 - add `tapestry` for automating future releases (#56, kudos to @fortmarek)
 - update [FlowCoordinator](ACKategories/Base/FlowCoordinator.swift) to count with iOS 13 modal presentations (#55, kudos to @olejnjak)
-    
-    ⚠️ **BREAKING CHANGE:** as `FlowCoordinator.start(from viewController:)` now expects that its `rootViewController` is already set, you might need to adjust some of your code
 
 ## 6.2
 - add `forceIntrinsic()` to `UIView` to set its `contentHuggingPriority` and `contentCompressionResistance` to `UILayoutPriority.required` (#48, kudos to @olejnjak)
