@@ -1,4 +1,4 @@
-osx_image: xcode10.2
+osx_image: xcode11.2
 language: objective-c
 env:
   global:
@@ -17,7 +17,7 @@ before_deploy:
 after_deploy:
 - pod trunk push
 script:
-- set -o pipefail && xcodebuild test -scheme ACKategories -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.2' ONLY_ACTIVE_ARCH=YES | xcpretty
+- set -o pipefail && xcodebuild test -scheme ACKategories -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.2.2' ONLY_ACTIVE_ARCH=YES | xcpretty
 - pod lib lint
 deploy:
   provider: releases

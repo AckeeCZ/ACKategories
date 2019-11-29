@@ -37,4 +37,9 @@ class BaseViewControllerNoVM: BaseViewController<NoViewModel> {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func loadView() {
+        super.loadView()
+        view.backgroundColor = .white
+    }
 }
