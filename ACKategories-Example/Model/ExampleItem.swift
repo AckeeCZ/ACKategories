@@ -12,6 +12,7 @@ enum ExampleItem: CaseIterable {
     case uiControlBlocks
     case viewControllerComposition
     case mapViewController
+    case present
     
     var title: String { return data.title }
     var subtitle: String { return data.subtitle }
@@ -21,6 +22,7 @@ enum ExampleItem: CaseIterable {
         case .uiControlBlocks: return ("UIControl blocks", "Use closures instead of target - selector pattern")
         case .viewControllerComposition: return ("View controller composition", "Simply embed view controller into another one")
         case .mapViewController: return ("Map View Controller", "Operations on MKMapView")
+        case .present: return ("Present", "Example usage of starting flow coordinator with modal present")
         }
     }
 }

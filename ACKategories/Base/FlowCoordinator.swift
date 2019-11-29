@@ -14,13 +14,18 @@ extension Base {
      All start methods are supposed to be overriden and property `rootViewController` must be set in the end of the overriden implementation to avoid memory leaks.
      Don't forget to call super.start().
      */
-    open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate {
+    open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate {
         
         /// Reference to the navigation controller used within the flow
         public weak var navigationController: UINavigationController?
         
         /// First VC of the flow. Must be set when FC starts.
-        public weak var rootViewController: UIViewController!
+        public weak var rootViewController: UIViewController! {
+            didSet { rootVCSetter(rootViewController) }
+        }
+        
+        /// When flow coordinator handles modally presented flow, we are interested `rootVC` changes
+        private var rootVCSetter: (UIViewController?) -> () = { _ in }
         
         /// Parent coordinator
         public weak var parentCoordinator: FlowCoordinator?
@@ -56,7 +61,10 @@ extension Base {
         
         /// Start by presenting from given VC. This method must be overriden by subclass.
         open func start(from viewController: UIViewController) {
-            checkRootViewController()
+            rootVCSetter = { [weak self] rootVC in
+                rootVC?.presentationController?.delegate = self
+            }
+            rootVCSetter(rootViewController)
         }
         
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
@@ -123,6 +131,14 @@ extension Base {
             
             if let firstViewController = rootViewController, fromViewController == firstViewController {
                 navigationController.delegate = parentCoordinator
+                stop()
+            }
+        }
+        
+        // MARK: - UIAdaptivePresentationControllerDelegate
+        
+        public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+            if presentationController.presentedViewController == rootViewController {
                 stop()
             }
         }

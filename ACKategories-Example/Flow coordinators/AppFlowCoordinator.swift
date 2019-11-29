@@ -27,16 +27,23 @@ final class AppFlowCoordinator: Base.FlowCoordinatorNoDeepLink {
 
 extension AppFlowCoordinator: ExampleListFlowDelegate {
     func exampleItemSelected(_ item: ExampleItem, in viewController: ExampleListViewController) {
-        let itemVC = controller(for: item)
-        itemVC.title = item.title
-        navigationController?.pushViewController(itemVC, animated: true)
-    }
-    
-    private func controller(for item: ExampleItem) -> UIViewController {
         switch item {
-        case .uiControlBlocks: return UIControlBlocksViewController()
-        case .viewControllerComposition: return VCCompositionViewController()
-        case .mapViewController: return MapViewController(viewModel: MapViewModel())
+        case .uiControlBlocks:
+            let itemVC = UIControlBlocksViewController()
+            itemVC.title = item.title
+            navigationController?.pushViewController(itemVC, animated: true)
+        case .viewControllerComposition:
+            let itemVC = VCCompositionViewController()
+            itemVC.title = item.title
+            navigationController?.pushViewController(itemVC, animated: true)
+        case .present:
+            let modalFlow = ModalFlowCoordinator()
+            addChild(modalFlow)
+            modalFlow.start(from: viewController)
+         case .mapViewController: 
+            let mapVC = MapViewController(viewModel: MapViewModel())
+            mapVC.title = item.title
+            navigationController?.pushViewController(mapVC, animated: true)
         }
     }
 }

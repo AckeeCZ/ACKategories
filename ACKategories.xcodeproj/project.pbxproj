@@ -59,6 +59,8 @@
 		693B960E214979060036C236 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B960D214979060036C236 /* TitleViewController.swift */; };
 		69A77B0322B3B33900AABFEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A77B0222B3B33900AABFEF /* UIViewExtensions.swift */; };
 		69A77B0522B3B3DD00AABFEF /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A77B0422B3B3DD00AABFEF /* UIViewTests.swift */; };
+		69C8EE23235F429800FDB01E /* ModalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8EE22235F429800FDB01E /* ModalFlowCoordinator.swift */; };
+		69C8EE27235F42DE00FDB01E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8EE26235F42DE00FDB01E /* ModalViewController.swift */; };
 		881A82EC21131CEC00267D2E /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82EB21131CEC00267D2E /* DateFormatting.swift */; };
 		881A82EF21131D8D00267D2E /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A82ED21131D0F00267D2E /* DateFormattingTests.swift */; };
 		8835B8252253956C0011F003 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835B8242253956C0011F003 /* Base.swift */; };
@@ -168,6 +170,8 @@
 		69932D312358650D00B8D195 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		69A77B0222B3B33900AABFEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		69A77B0422B3B3DD00AABFEF /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
+		69C8EE22235F429800FDB01E /* ModalFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFlowCoordinator.swift; sourceTree = "<group>"; };
+		69C8EE26235F42DE00FDB01E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		881A82EB21131CEC00267D2E /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		881A82ED21131D0F00267D2E /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		8835B8242253956C0011F003 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				693B96002149747E0036C236 /* AppFlowCoordinator.swift */,
+				69C8EE22235F429800FDB01E /* ModalFlowCoordinator.swift */,
 			);
 			path = "Flow coordinators";
 			sourceTree = "<group>";
@@ -359,11 +364,12 @@
 		693B9607214977F80036C236 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				888BAF3022576892009A2E78 /* BaseViewController.swift */,
 				0ED2F1F823914B7000912CC5 /* MapView */,
-				693B960A214978930036C236 /* VC composition */,
+				69C8EE24235F42C100FDB01E /* Base */,
 				693B95FC214973000036C236 /* Example list */,
+				69C8EE25235F42CB00FDB01E /* Modal */,
 				693B96022149773F0036C236 /* UIControl blocks */,
+				693B960A214978930036C236 /* VC composition */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -375,6 +381,22 @@
 				693B960D214979060036C236 /* TitleViewController.swift */,
 			);
 			path = "VC composition";
+			sourceTree = "<group>";
+		};
+		69C8EE24235F42C100FDB01E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				888BAF3022576892009A2E78 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		69C8EE25235F42CB00FDB01E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				69C8EE26235F42DE00FDB01E /* ModalViewController.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		8835B8232253955B0011F003 /* Base */ = {
@@ -565,11 +587,13 @@
 				693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */,
 				693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */,
 				693B95F6214970080036C236 /* ExampleListViewController.swift in Sources */,
+				69C8EE27235F42DE00FDB01E /* ModalViewController.swift in Sources */,
 				691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */,
 				888BAF3122576892009A2E78 /* BaseViewController.swift in Sources */,
 				693B9604214977740036C236 /* UIControlBlocksViewController.swift in Sources */,
 				693B96012149747E0036C236 /* AppFlowCoordinator.swift in Sources */,
 				693B95F9214972B40036C236 /* ExampleItem.swift in Sources */,
+				69C8EE23235F429800FDB01E /* ModalFlowCoordinator.swift in Sources */,
 				693B960E214979060036C236 /* TitleViewController.swift in Sources */,
 				0ED2F1FA2391525C00912CC5 /* MapViewModel.swift in Sources */,
 			);
@@ -681,7 +705,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ACKategories-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,7 +733,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ACKategories-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,7 +760,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Tests/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -767,7 +791,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Tests/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -22,6 +22,11 @@ final class UIControlBlocksViewController: BaseViewControllerNoVM {
         
         let button = UIButton(type: .system)
         button.setTitle("Tap here!", for: .normal)
+        
+        if #available(iOS 13.0, *) {
+            button.setBackgroundImage(UIColor.systemGray6.image(), for: .normal)
+        }
+        
         view.addSubview(button)
         button.snp.makeConstraints { make in
             make.center.equalToSuperview()
