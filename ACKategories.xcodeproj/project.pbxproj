@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED2F1F723914B6B00912CC5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2F1F623914B6B00912CC5 /* MapViewController.swift */; };
+		0ED2F1FA2391525C00912CC5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2F1F92391525C00912CC5 /* MapViewModel.swift */; };
 		691F28D22140843300609471 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F28D12140843300609471 /* ArrayTests.swift */; };
 		691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F856A2029E2E100DA4FAD /* AppDelegate.swift */; };
 		691F85722029E2E100DA4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691F85712029E2E100DA4FAD /* Assets.xcassets */; };
@@ -110,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0ED2F1F623914B6B00912CC5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0ED2F1F92391525C00912CC5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		691F28D12140843300609471 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		691F85682029E2E100DA4FAD /* ACKategories-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACKategories-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		691F856A2029E2E100DA4FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED2F1F823914B7000912CC5 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2F1F623914B6B00912CC5 /* MapViewController.swift */,
+				0ED2F1F92391525C00912CC5 /* MapViewModel.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		691F85632029DE5500DA4FAD /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				888BAF3022576892009A2E78 /* BaseViewController.swift */,
+				0ED2F1F823914B7000912CC5 /* MapView */,
 				693B960A214978930036C236 /* VC composition */,
 				693B95FC214973000036C236 /* Example list */,
 				693B96022149773F0036C236 /* UIControl blocks */,
@@ -546,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED2F1F723914B6B00912CC5 /* MapViewController.swift in Sources */,
 				693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */,
 				693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */,
 				693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */,
@@ -556,6 +571,7 @@
 				693B96012149747E0036C236 /* AppFlowCoordinator.swift in Sources */,
 				693B95F9214972B40036C236 /* ExampleItem.swift in Sources */,
 				693B960E214979060036C236 /* TitleViewController.swift in Sources */,
+				0ED2F1FA2391525C00912CC5 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
