@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- add support for generic dequeueing for MKAnnotationViews `dequeueAnnotationView(for annotation: MKAnnotation)` (#60, kudos to @svastven)
 - add support for Dark Mode when creating colored images from `UIColor` (#59, kudos to @svastven)
 - add `tapestry` for automating future releases (#56, kudos to @fortmarek)
 - update [FlowCoordinator](ACKategories/Base/FlowCoordinator.swift) to count with iOS 13 modal presentations (#55, kudos to @olejnjak)

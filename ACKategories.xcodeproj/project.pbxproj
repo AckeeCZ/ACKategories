@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED2F1F723914B6B00912CC5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2F1F623914B6B00912CC5 /* MapViewController.swift */; };
+		0ED2F1FA2391525C00912CC5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2F1F92391525C00912CC5 /* MapViewModel.swift */; };
 		691F28D22140843300609471 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F28D12140843300609471 /* ArrayTests.swift */; };
 		691F856B2029E2E100DA4FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F856A2029E2E100DA4FAD /* AppDelegate.swift */; };
 		691F85722029E2E100DA4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691F85712029E2E100DA4FAD /* Assets.xcassets */; };
@@ -29,7 +31,7 @@
 		69306C512029C48300BBE8F0 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */; };
 		69306C522029C48300BBE8F0 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C432029C48200BBE8F0 /* UIColorExtensions.swift */; };
 		69306C532029C48300BBE8F0 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */; };
-		69306C542029C48300BBE8F0 /* TableAndCollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C452029C48200BBE8F0 /* TableAndCollectionViewExtensions.swift */; };
+		69306C542029C48300BBE8F0 /* ReusableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C452029C48200BBE8F0 /* ReusableViewExtensions.swift */; };
 		69306C562029C48300BBE8F0 /* TableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C472029C48200BBE8F0 /* TableHeaderFooterView.swift */; };
 		69306C572029C48300BBE8F0 /* UIControl+Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C482029C48200BBE8F0 /* UIControl+Blocks.swift */; };
 		69306C582029C48300BBE8F0 /* ConditionalAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306C492029C48200BBE8F0 /* ConditionalAssignment.swift */; };
@@ -112,6 +114,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0ED2F1F623914B6B00912CC5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0ED2F1F92391525C00912CC5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		691F28D12140843300609471 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		691F85682029E2E100DA4FAD /* ACKategories-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACKategories-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		691F856A2029E2E100DA4FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 		69306C422029C48200BBE8F0 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69306C432029C48200BBE8F0 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		69306C442029C48200BBE8F0 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
-		69306C452029C48200BBE8F0 /* TableAndCollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAndCollectionViewExtensions.swift; sourceTree = "<group>"; };
+		69306C452029C48200BBE8F0 /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
 		69306C472029C48200BBE8F0 /* TableHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterView.swift; sourceTree = "<group>"; };
 		69306C482029C48200BBE8F0 /* UIControl+Blocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Blocks.swift"; sourceTree = "<group>"; };
 		69306C492029C48200BBE8F0 /* ConditionalAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalAssignment.swift; sourceTree = "<group>"; };
@@ -210,6 +214,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED2F1F823914B7000912CC5 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2F1F623914B6B00912CC5 /* MapViewController.swift */,
+				0ED2F1F92391525C00912CC5 /* MapViewModel.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		691F85632029DE5500DA4FAD /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +278,7 @@
 				6939359E2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift */,
 				6925242520D142C800228289 /* NumberFormatterExtensions.swift */,
 				69306C4B2029C48200BBE8F0 /* StringExtensions.swift */,
-				69306C452029C48200BBE8F0 /* TableAndCollectionViewExtensions.swift */,
+				69306C452029C48200BBE8F0 /* ReusableViewExtensions.swift */,
 				69306C472029C48200BBE8F0 /* TableHeaderFooterView.swift */,
 				691F858E202A077700DA4FAD /* UIButtonExtensions.swift */,
 				69306C432029C48200BBE8F0 /* UIColorExtensions.swift */,
@@ -351,6 +364,7 @@
 		693B9607214977F80036C236 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0ED2F1F823914B7000912CC5 /* MapView */,
 				69C8EE24235F42C100FDB01E /* Base */,
 				693B95FC214973000036C236 /* Example list */,
 				69C8EE25235F42CB00FDB01E /* Modal */,
@@ -568,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED2F1F723914B6B00912CC5 /* MapViewController.swift in Sources */,
 				693B9609214978070036C236 /* TitleSubtitleTableViewCell.swift in Sources */,
 				693B95FE2149733B0036C236 /* ExampleListViewModel.swift in Sources */,
 				693B960C214978B50036C236 /* VCCompositionViewController.swift in Sources */,
@@ -580,6 +595,7 @@
 				693B95F9214972B40036C236 /* ExampleItem.swift in Sources */,
 				69C8EE23235F429800FDB01E /* ModalFlowCoordinator.swift in Sources */,
 				693B960E214979060036C236 /* TitleViewController.swift in Sources */,
+				0ED2F1FA2391525C00912CC5 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +648,7 @@
 				6939359F2080AB2800EDA582 /* NSMutableParagraphStyleExtensions.swift in Sources */,
 				691F8592202A083E00DA4FAD /* UIView+SafeAreaCompat.swift in Sources */,
 				D2FF92C4202BA8DE00C1A129 /* NSAttributedStringExtensions.swift in Sources */,
-				69306C542029C48300BBE8F0 /* TableAndCollectionViewExtensions.swift in Sources */,
+				69306C542029C48300BBE8F0 /* ReusableViewExtensions.swift in Sources */,
 				6925242620D142C800228289 /* NumberFormatterExtensions.swift in Sources */,
 				69306C572029C48300BBE8F0 /* UIControl+Blocks.swift in Sources */,
 				6925242E20D143DE00228289 /* ArrayExtensions.swift in Sources */,

@@ -40,6 +40,10 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
             let modalFlow = ModalFlowCoordinator()
             addChild(modalFlow)
             modalFlow.start(from: viewController)
+         case .mapViewController: 
+            let mapVC = MapViewController(viewModel: MapViewModel())
+            mapVC.title = item.title
+            navigationController?.pushViewController(mapVC, animated: true)
         }
     }
 }
