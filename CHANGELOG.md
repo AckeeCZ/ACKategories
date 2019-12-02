@@ -7,6 +7,8 @@
 ```
 
 ## Next
+
+## 6.3
 - add support for generic dequeueing for MKAnnotationViews `dequeueAnnotationView(for annotation: MKAnnotation)` (#60, kudos to @svastven)
 - add support for Dark Mode when creating colored images from `UIColor` (#59, kudos to @svastven)
 - add `tapestry` for automating future releases (#56, kudos to @fortmarek)
