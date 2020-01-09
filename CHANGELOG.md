@@ -8,6 +8,7 @@
 
 ## Next
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
+- use native `UISearchBar.searchTextField` on iOS 13+ (#61, kudos to @olejnjak)
 
 ## 6.3
 - add support for generic dequeueing for MKAnnotationViews `dequeueAnnotationView(for annotation: MKAnnotation)` (#60, kudos to @svastven)
