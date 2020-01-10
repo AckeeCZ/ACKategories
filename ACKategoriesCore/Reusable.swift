@@ -25,7 +25,7 @@ extension MKMapView {
     ///
     /// For iOS versions lower than `iOS 11.0` the Annotation view is dequeued at first and then created if non-exitent.
     public func dequeueAnnotationView<T>(for annotation: MKAnnotation) -> T where T: MKAnnotationView {
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, macOS 10.13, *) {
             register(T.classForCoder(), forAnnotationViewWithReuseIdentifier: T.reuseIdentifier)
             return dequeueReusableAnnotationView(withIdentifier: T.reuseIdentifier, for: annotation) as! T
         } else {
