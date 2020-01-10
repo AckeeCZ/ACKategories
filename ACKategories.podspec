@@ -20,6 +20,8 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
   end
   
   s.subspec 'iOS' do |ios|
-      ios.source_files     = 'ACKategories-iOS/**/*.swift', 'ACKategoriesCore/**/*.swift'
+      ios.dependency 'ACKategories/Core'
+      ios.source_files     = 'ACKategories-iOS/**/*.swift'
+      ios.exclude_files    = 'ACKategories-iOS/Aliases.swift'
   end
 end
