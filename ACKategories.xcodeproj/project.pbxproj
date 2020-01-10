@@ -216,6 +216,7 @@
 		69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalFlowCoordinator.swift; sourceTree = "<group>"; };
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69FA5FC323C869A200B44BCD /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ACKategories.podspec; sourceTree = "<group>"; };
+		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +319,7 @@
 			children = (
 				69FA5FC323C869A200B44BCD /* ACKategories.podspec */,
 				695096B423C78E6400E8F457 /* Cartfile.private */,
+				69FA5FE423C8712D00B44BCD /* Package.swift */,
 				69E819EC23C773240054687B /* ACKategoriesCore */,
 				69E819F723C773240054687B /* ACKategoriesCoreTests */,
 				69E81A0823C773370054687B /* ACKategories-iOS */,
