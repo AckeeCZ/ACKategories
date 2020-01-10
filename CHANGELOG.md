@@ -7,6 +7,8 @@
 ```
 
 ## Next
+
+## 6.4.0
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
 - use native `UISearchBar.searchTextField` on iOS 13+ (#61, kudos to @olejnjak)
 
