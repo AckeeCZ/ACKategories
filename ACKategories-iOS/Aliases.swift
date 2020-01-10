@@ -7,7 +7,7 @@
 
 /// As _ACKategories-iOS_ does not embed _ACKategoriesCore_ in Carthage distribution (so it is simpler to develop and also to integrate),
 /// we need to somehow bridge types from _ACKategoriesCore_ in other distribution channels, this is the purpose of this file,
-/// so it should be part of SwiftPM and Cocoapods distributions.
+/// so it should be part of SwiftPM and Cocoapods distributions, but not compiled with Carthage distribution.
 
 import ACKategoriesCore
 
