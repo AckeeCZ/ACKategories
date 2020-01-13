@@ -6,4 +6,4 @@ let config = TapestryConfig(release: Release(actions: [.pre(.docsUpdate),
                                                    "ACKategories.podspec",
                                                    "CHANGELOG.md"],
                                              commitMessage: "Version \(Argument.version)",
-                                             push: false))
+                                             push: true))
