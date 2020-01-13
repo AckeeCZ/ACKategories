@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
 
 ## 6.4.0
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
