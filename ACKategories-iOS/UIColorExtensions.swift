@@ -109,7 +109,16 @@ public extension UIColor {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
 
-        context?.setFillColor(self.cgColor)
+        if #available(iOS 13.0, *) {
+            // if self has alpha < 1 then this alpha is correctly applied on content
+            // during context rendering, which is right behavior. But after that in
+            // `.withTintColor(self)` below, this alpha is applied again and resulting
+            // image is more transparent then it should be. So use any non-transparent
+            // color here to draw the content and set resulting color with alpha only below.
+            context?.setFillColor(UIColor.white.cgColor)
+        } else {
+            context?.setFillColor(self.cgColor)
+        }
         context?.fill(rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
