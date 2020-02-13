@@ -7,8 +7,9 @@
 //
 
 import XCTest
+import ACKategoriesCore
 
-class CollectionTests: XCTestCase {
+final class CollectionTests: XCTestCase {
 
     func testNonEmpty() {
         var array: [Int]? = nil

@@ -2,8 +2,6 @@ import UIKit
 import XCTest
 import ACKategories
 
-// Don't know why those tests started to fail
-
 final class ControlBlocksTests: XCTestCase {
 
     func testHandlerRunsOnTap() {

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import ACKategories
+import ACKategoriesCore
 
 final class ConditionalAssignmentTests: XCTestCase {
     

@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
 - Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
 - use native `UISearchBar.searchTextField` on iOS 13+ (#61, kudos to @olejnjak)

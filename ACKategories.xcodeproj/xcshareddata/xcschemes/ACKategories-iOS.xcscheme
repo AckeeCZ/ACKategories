@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D253FF771F0A65610079215C"
+               BlueprintIdentifier = "69E81A0623C773370054687B"
                BuildableName = "ACKategories.framework"
-               BlueprintName = "ACKategories"
-               ReferencedContainer = "container:ACKategories.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69306C652029C4F800BBE8F0"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BlueprintName = "ACKategories-iOS"
                ReferencedContainer = "container:ACKategories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,27 +27,22 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D253FF771F0A65610079215C"
-            BuildableName = "ACKategories.framework"
-            BlueprintName = "ACKategories"
-            ReferencedContainer = "container:ACKategories.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69306C652029C4F800BBE8F0"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BlueprintIdentifier = "69E81A0E23C773370054687B"
+               BuildableName = "ACKategories-iOSTests.xctest"
+               BlueprintName = "ACKategories-iOSTests"
                ReferencedContainer = "container:ACKategories.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -73,15 +54,8 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D253FF771F0A65610079215C"
-            BuildableName = "ACKategories.framework"
-            BlueprintName = "ACKategories"
-            ReferencedContainer = "container:ACKategories.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -92,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D253FF771F0A65610079215C"
+            BlueprintIdentifier = "69E81A0623C773370054687B"
             BuildableName = "ACKategories.framework"
-            BlueprintName = "ACKategories"
+            BlueprintName = "ACKategories-iOS"
             ReferencedContainer = "container:ACKategories.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

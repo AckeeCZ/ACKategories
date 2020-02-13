@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import ACKategories
+import ACKategoriesCore
 
 final class StringTests: XCTestCase {
     func testStringReadsFirstLetter() {
