@@ -15,7 +15,7 @@ extension UIDevice {
     }
     
     /// Returns device model name e.g. "iPhone11,6" for XS Max
-    var modelName: String {
+    public var modelName: String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
