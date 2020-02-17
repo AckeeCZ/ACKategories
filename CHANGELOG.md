@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- add `UIDevice.current.modelName` extension to receive model name of current device (#66, kudos to @olejnjak)
 - separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
 - Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
