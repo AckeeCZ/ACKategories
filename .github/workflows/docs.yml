@@ -12,8 +12,7 @@ jobs:
         uses: SwiftDocOrg/swift-doc@master
         with:
           inputs: 
-          - "ACKategories-iOS"
-          - "ACKategoriesCore"
+          - "ACKategories-iOS ACKategoriesCore"
           output: "Documentation"
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@master
