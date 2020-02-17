@@ -8,7 +8,10 @@
 
 ## Next
 - Add [swift-doc](https://github.com/SwiftDocOrg/swift-doc) action, checks actions ([#67](https://github.com/AckeeCZ/ACKategories/pull/67), kudos to @fortmarek)
+- separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
+- Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
+- use native `UISearchBar.searchTextField` on iOS 13+ (#61, kudos to @olejnjak)
 
 ## 6.3
 - add support for generic dequeueing for MKAnnotationViews `dequeueAnnotationView(for annotation: MKAnnotation)` (#60, kudos to @svastven)
