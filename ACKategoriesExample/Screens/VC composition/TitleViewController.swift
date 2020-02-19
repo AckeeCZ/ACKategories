@@ -11,10 +11,10 @@ import ACKategories
 
 class TitleViewController: BaseViewControllerNoVM {
     private(set) weak var nameLabel: UILabel!
-    
+
     private let name: String
     private let color: UIColor
-    
+
     // MARK: Initializers
 
     init(name: String, color: UIColor) {
@@ -33,7 +33,7 @@ class TitleViewController: BaseViewControllerNoVM {
         super.loadView()
 
         view.backgroundColor = color
-        
+
         let nameLabel = UILabel()
         nameLabel.textAlignment = .center
         nameLabel.text = name

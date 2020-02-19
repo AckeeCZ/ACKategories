@@ -10,7 +10,7 @@ import Foundation
 
 /// Just namespace for all base classes
 public enum Base {
-    
+
     /// Turn on/off logging of init/deinit of base classes
     public static var memoryLoggingEnabled: Bool = true
 }

@@ -27,7 +27,7 @@ public extension UIColor {
         scanner.scanHexInt32(&rgbValue)
         self.init(hex: rgbValue)
     }
-    
+
     /**
      Returns color as hex string (eg. '#ff00ff') or nil if RGBA components coudn't be loaded.
      Monochrome check included (works for white/black/clear).
@@ -35,7 +35,7 @@ public extension UIColor {
     var hexString: String? {
         guard let components = cgColor.components, cgColor.numberOfComponents > 1 else { return nil }
         let isMonochrome = cgColor.colorSpace?.model == .monochrome
-        
+
         let r: CGFloat = isMonochrome ? components[0] : components[0]
         let g: CGFloat = isMonochrome ? components[0] : components[1]
         let b: CGFloat = isMonochrome ? components[0] : components[2]
@@ -123,7 +123,7 @@ public extension UIColor {
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         if #available(iOS 13.0, *) {
             return image!.withTintColor(self)
         } else {

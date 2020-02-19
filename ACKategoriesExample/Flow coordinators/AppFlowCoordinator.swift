@@ -12,17 +12,17 @@ import ACKategories
 final class AppFlowCoordinator: Base.FlowCoordinatorNoDeepLink {
     override func start(in window: UIWindow) {
         super.start(in: window)
-        
+
         let exampleListVM = ExampleListViewModel()
         let exampleListVC = ExampleListViewController(viewModel: exampleListVM)
         exampleListVC.flowDelegate = self
-        
+
         let navigationController = UINavigationController(rootViewController: exampleListVC)
         window.rootViewController = navigationController
-        
+
         self.rootViewController = navigationController
         self.navigationController = navigationController
-    }    
+    }
 }
 
 extension AppFlowCoordinator: ExampleListFlowDelegate {
@@ -40,7 +40,7 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
             let modalFlow = ModalFlowCoordinator()
             addChild(modalFlow)
             modalFlow.start(from: viewController)
-         case .mapViewController: 
+         case .mapViewController:
             let mapVC = MapViewController(viewModel: MapViewModel())
             mapVC.title = item.title
             navigationController?.pushViewController(mapVC, animated: true)

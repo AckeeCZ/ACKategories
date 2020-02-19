@@ -12,7 +12,7 @@ extension UITableView {
         register(T.classForCoder(), forCellReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
     /// Dequeues `UITableViewHeaderFooterView` generically according to expression result type
     ///
     /// View doesn't need to be registered as this method registers it before use.
@@ -30,7 +30,7 @@ extension UICollectionView {
         register(T.classForCoder(), forCellWithReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
     /// Dequeues `UICollectionReusableView` generically according to expression result type
     ///
     /// View doesn't need to be registered as this method registers it before use.

@@ -11,7 +11,7 @@ import CoreLocation
 import MapKit
 
 protocol MapViewModelingActions {
-    
+
 }
 
 protocol MapViewModeling {
@@ -28,7 +28,7 @@ final class MapViewModel: Base.ViewModel, MapViewModeling, MapViewModelingAction
         CLLocationCoordinate2D(latitude: 50.109445, longitude: 14.357311),
         CLLocationCoordinate2D(latitude: 50.075125, longitude: 14.568965)
     ]
-    
+
     lazy var annotations: [MKAnnotation] = coordinates.map {
         let annotation = MKPointAnnotation()
         annotation.coordinate = $0

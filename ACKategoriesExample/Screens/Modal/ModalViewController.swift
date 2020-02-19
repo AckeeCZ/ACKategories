@@ -14,14 +14,14 @@ protocol ModalFlowDelegate: AnyObject {
 
 final class ModalViewController: BaseViewControllerNoVM {
     weak var flowDelegate: ModalFlowDelegate?
-    
+
     private weak var button: UIButton!
-    
+
     // MARK: - View life cycle
-    
+
     override func loadView() {
         super.loadView()
-        
+
         let button = UIButton(type: .system)
         button.setTitle("Dismiss", for: .normal)
         view.addSubview(button)
@@ -30,10 +30,10 @@ final class ModalViewController: BaseViewControllerNoVM {
         }
         self.button = button
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         button.on { [weak self] _ in
             guard let self = self else { return }
             self.flowDelegate?.didTapDismiss(in: self)

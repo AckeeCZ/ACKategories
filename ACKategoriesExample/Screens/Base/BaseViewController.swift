@@ -10,16 +10,16 @@ import UIKit
 import ACKategories
 
 class BaseViewController<ViewModelType>: Base.ViewController {
-    
+
     /// Corresponding viewModel
     let viewModel: ViewModelType
-    
+
     init(viewModel: ViewModelType) {
         self.viewModel = viewModel
-        
+
         super.init()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,11 +33,11 @@ class BaseViewControllerNoVM: BaseViewController<NoViewModel> {
     public init() {
         super.init(viewModel: NoViewModel())
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white

@@ -33,7 +33,7 @@ extension MKMapView {
                 annotationView.annotation = annotation
                 return annotationView as! T
             }
-            
+
             let annotationView = T()
             annotationView.annotation = annotation
             return annotationView

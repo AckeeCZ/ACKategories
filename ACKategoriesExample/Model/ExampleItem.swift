@@ -13,10 +13,10 @@ enum ExampleItem: CaseIterable {
     case viewControllerComposition
     case mapViewController
     case present
-    
+
     var title: String { return data.title }
     var subtitle: String { return data.subtitle }
-    
+
     private var data: (title: String, subtitle: String) {
         switch self {
         case .uiControlBlocks: return ("UIControl blocks", "Use closures instead of target - selector pattern")

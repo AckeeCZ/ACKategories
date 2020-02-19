@@ -13,7 +13,7 @@ extension UIDevice {
     public var isPad: Bool {
         return userInterfaceIdiom == .pad
     }
-    
+
     /// Returns device model name e.g. "iPhone11,6" for XS Max
     public var modelName: String {
         var systemInfo = utsname()
