@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Add [swift-doc](https://github.com/SwiftDocOrg/swift-doc) action, checks actions ([#67](https://github.com/AckeeCZ/ACKategories/pull/67), kudos to @fortmarek)
 - add `UIDevice.current.modelName` extension to receive model name of current device (#66, kudos to @olejnjak)
 - separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
 - Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
