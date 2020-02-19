@@ -90,9 +90,9 @@ public extension UIColor {
     var isLight: Bool {
 
         guard let components = cgColor.components else { return true }
-        let red = components?[0]
-        let green = components?[1]
-        let blue = components?[2]
+        let red = components[0]
+        let green = components[1]
+        let blue = components[2]
         let brightness = (red * 299 + green * 587 + blue * 114) / 1000
 
         return brightness > 0.5
