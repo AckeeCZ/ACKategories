@@ -12,7 +12,7 @@ import MapKit
 
 final class MapViewController: BaseViewController<MapViewModeling> {
     private weak var mapView: MKMapView!
-    
+
     override func loadView() {
         super.loadView()
         let mapView = MKMapView()
@@ -23,10 +23,10 @@ final class MapViewController: BaseViewController<MapViewModeling> {
         }
         self.mapView = mapView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let annotations = viewModel.annotations
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: false)

@@ -25,7 +25,7 @@ private var actionKey: UInt8 = 0
 extension UIControl: UIControlEventHandling {}
 
 public extension UIControlEventHandling where Self: UIControl {
-    
+
     /**
      Register action block to be executed on defined events.
      
@@ -33,25 +33,25 @@ public extension UIControlEventHandling where Self: UIControl {
      - parameter handler: Actionblock to be executed
      */
     func on(_ events: UIControl.Event, handler: @escaping (Self) -> Void) {
-        
+
         let targetsWrapper: CollectionWrapper<Self>
-        
+
         if let associatedTargetsWrapper = objc_getAssociatedObject(self, &actionKey) as? CollectionWrapper<Self> {
             targetsWrapper = associatedTargetsWrapper
         } else {
             targetsWrapper = CollectionWrapper()
             objc_setAssociatedObject(self, &actionKey, targetsWrapper, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
-        
+
         if let target = targetsWrapper.targets[events.rawValue] {
             removeTarget(target, action: nil, for: events)
         }
-        
+
         let actionWrapper = ActionWrapper(action: handler)
         targetsWrapper.targets[events.rawValue] = actionWrapper
         addTarget(actionWrapper, action: #selector(ActionWrapper.invokeAction(_:)), for: events)
     }
-    
+
     /**
      Register action block to be executed on primary action.
      
@@ -61,7 +61,7 @@ public extension UIControlEventHandling where Self: UIControl {
     func on(handler: @escaping (Self) -> Void) {
         on(.primaryActionTriggered, handler: handler)
     }
-    
+
     /**
      Removes registered action block for defined events.
      
@@ -75,5 +75,5 @@ public extension UIControlEventHandling where Self: UIControl {
             targetsWrapper.targets.removeValue(forKey: events.rawValue)
         }
     }
-    
+
 }

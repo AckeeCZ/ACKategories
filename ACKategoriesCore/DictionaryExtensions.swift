@@ -14,7 +14,7 @@ extension Dictionary where Value: OptionalProtocol {
     /// Removes nils from dictionary
     public var nilsRemoved: [Key: Value.WrappedValue] {
         return self.reduce([:]) { acc, element -> [Key: Value.WrappedValue] in
-            
+
             if let value = element.value.optional {
                 var result = acc
                 result[element.key] = value
@@ -24,7 +24,7 @@ extension Dictionary where Value: OptionalProtocol {
             }
         }
     }
-    
+
     /**
      Simulation of classic valueForKeyPath method.
      
@@ -32,7 +32,7 @@ extension Dictionary where Value: OptionalProtocol {
      */
     public func value<T>(for keyPath: String) -> T? {
         let components = keyPath.components(separatedBy: ".")
-        
+
         var result: Any? = self
         components.forEach { key in
             guard let key = key as? Key else {

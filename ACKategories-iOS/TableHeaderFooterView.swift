@@ -24,7 +24,7 @@ open class TableHeaderFooterView: UIView {
         if status == .none {
             return
         }
-        
+
         var frame = self.frame
         let size = systemLayoutSizeFitting(
             CGSize(width: frame.width, height: UIView.layoutFittingCompressedSize.height),
@@ -34,7 +34,7 @@ open class TableHeaderFooterView: UIView {
 
         frame.size.height = size.height
         self.frame = frame
-        
+
         switch status {
         case .header: tableView?.tableHeaderView = self
         case .footer: tableView?.tableFooterView = self

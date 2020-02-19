@@ -9,12 +9,12 @@
 import ACKategories
 
 protocol ExampleListViewModelingActions {
-	
+
 }
 
 protocol ExampleListViewModeling {
 	var actions: ExampleListViewModelingActions { get }
-    
+
     var items: [ExampleItem] { get }
 }
 

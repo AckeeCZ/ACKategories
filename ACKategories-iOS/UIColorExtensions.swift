@@ -27,7 +27,7 @@ public extension UIColor {
         scanner.scanHexInt32(&rgbValue)
         self.init(hex: rgbValue)
     }
-    
+
     /**
      Returns color as hex string (eg. '#ff00ff') or nil if RGBA components coudn't be loaded.
      Monochrome check included (works for white/black/clear).
@@ -35,7 +35,7 @@ public extension UIColor {
     var hexString: String? {
         guard let components = cgColor.components, cgColor.numberOfComponents > 1 else { return nil }
         let isMonochrome = cgColor.colorSpace?.model == .monochrome
-        
+
         let r: CGFloat = isMonochrome ? components[0] : components[0]
         let g: CGFloat = isMonochrome ? components[0] : components[1]
         let b: CGFloat = isMonochrome ? components[0] : components[2]
@@ -89,11 +89,11 @@ public extension UIColor {
     /// Returns true for light colors. When light color is used as background, you should use black as a text color.
     var isLight: Bool {
 
-        let components = self.cgColor.components
-        let red = components?[0]
-        let green = components?[1]
-        let blue = components?[2]
-        let brightness = (red! * 299 + green! * 587 + blue! * 114) / 1000
+        guard let components = cgColor.components else { return true }
+        let red = components[0]
+        let green = components[1]
+        let blue = components[2]
+        let brightness = (red * 299 + green * 587 + blue * 114) / 1000
 
         return brightness > 0.5
     }
@@ -121,13 +121,14 @@ public extension UIColor {
         }
         context?.fill(rect)
 
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        // swiftlint:disable:next force_unwrapping
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
+
         if #available(iOS 13.0, *) {
-            return image!.withTintColor(self)
+            return image.withTintColor(self)
         } else {
-            return image!
+            return image
         }
     }
 }

@@ -7,6 +7,8 @@
 
 import MapKit
 
+// swiftlint:disable force_cast
+
 public protocol Reusable { }
 
 extension Reusable {
@@ -33,7 +35,7 @@ extension MKMapView {
                 annotationView.annotation = annotation
                 return annotationView as! T
             }
-            
+
             let annotationView = T()
             annotationView.annotation = annotation
             return annotationView

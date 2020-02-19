@@ -5,7 +5,7 @@ extension UIViewController {
     private enum Keys {
         static var safeArea: UInt8 = 0
     }
-    
+
     /// Layout guide compatibility extension for iOS 11 safe area
     ///
     /// On iOS 11+ is the same as `view.safeAreaLayoutGuide`.
@@ -16,7 +16,7 @@ extension UIViewController {
             return view.safeAreaLayoutGuide
         } else {
             if let layoutGuide = objc_getAssociatedObject(self, &Keys.safeArea) as? UILayoutGuide { return layoutGuide }
-            
+
             let layoutGuide = UILayoutGuide()
             view.addLayoutGuide(layoutGuide)
             layoutGuide.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true

@@ -12,7 +12,7 @@ import ACKategories
 final class ModalFlowCoordinator: Base.FlowCoordinatorNoDeepLink {
     override func start(from viewController: UIViewController) {
         super.start(from: viewController)
-        
+
         let modalVC = ModalViewController()
         modalVC.flowDelegate = self
         rootViewController = modalVC
