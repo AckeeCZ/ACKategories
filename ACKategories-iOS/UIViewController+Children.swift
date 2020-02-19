@@ -14,7 +14,10 @@ extension UIViewController {
     ///
     /// If `view` is `nil` (by default) then controller is displayed in `self.view`.
     public func display(childViewController: UIViewController, in view: UIView? = nil) {
-        guard let view = view ?? self.view else { return }
+        guard
+            let view = view ?? self.view,
+            let childView = childViewController.view
+        else { return }
 
         view.translatesAutoresizingMaskIntoConstraints = false
         childViewController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,8 +25,8 @@ extension UIViewController {
         childViewController.willMove(toParent: self)
         addChild(childViewController)
         view.addSubview(childViewController.view)
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view!]))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childViewController.view!]))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childView]))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": childView]))
         childViewController.didMove(toParent: self)
     }
 

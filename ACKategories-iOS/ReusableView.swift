@@ -1,5 +1,7 @@
 import UIKit
 
+// swiftlint:disable force_cast
+
 extension UITableViewCell: Reusable { }
 extension UITableViewHeaderFooterView: Reusable { }
 extension UICollectionReusableView: Reusable { }

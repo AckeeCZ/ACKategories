@@ -89,11 +89,11 @@ public extension UIColor {
     /// Returns true for light colors. When light color is used as background, you should use black as a text color.
     var isLight: Bool {
 
-        let components = self.cgColor.components
+        guard let components = cgColor.components else { return true }
         let red = components?[0]
         let green = components?[1]
         let blue = components?[2]
-        let brightness = (red! * 299 + green! * 587 + blue! * 114) / 1000
+        let brightness = (red * 299 + green * 587 + blue * 114) / 1000
 
         return brightness > 0.5
     }
@@ -121,13 +121,14 @@ public extension UIColor {
         }
         context?.fill(rect)
 
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        // swiftlint:disable:next force_unwrapping
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
         if #available(iOS 13.0, *) {
-            return image!.withTintColor(self)
+            return image.withTintColor(self)
         } else {
-            return image!
+            return image
         }
     }
 }

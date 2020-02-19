@@ -7,6 +7,8 @@
 
 import MapKit
 
+// swiftlint:disable force_cast
+
 public protocol Reusable { }
 
 extension Reusable {
