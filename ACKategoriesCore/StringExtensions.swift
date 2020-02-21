@@ -18,7 +18,7 @@ extension String {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
 
-    /// Uses self as key to Localizable.strings and returns it's localized value or self
+    /// Uses self as key to Localizable.strings and returns its localized value or self
     public func localized() -> String {
         return NSLocalizedString(self, comment: "")
     }

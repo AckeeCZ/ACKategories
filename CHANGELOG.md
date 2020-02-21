@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Fix a typo ([#70](https://github.com/AckeeCZ/ACKategories/pull/70), kudos to @michalsrutek)
 - Fix swiftlint violations ([#69](https://github.com/AckeeCZ/ACKategories/pull/69), kudos to @fortmarek)
 - Update tapestry structure ([#68](https://github.com/AckeeCZ/ACKategories/pull/68), kudos to @fortmarek)
 - Add [swift-doc](https://github.com/SwiftDocOrg/swift-doc) action, checks actions ([#67](https://github.com/AckeeCZ/ACKategories/pull/67), kudos to @fortmarek)
