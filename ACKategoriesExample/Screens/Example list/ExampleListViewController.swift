@@ -9,7 +9,7 @@
 import UIKit
 import ACKategories
 
-protocol ExampleListFlowDelegate: class {
+protocol ExampleListFlowDelegate: AnyObject {
     func exampleItemSelected(_ item: ExampleItem, in viewController: ExampleListViewController)
 }
 
