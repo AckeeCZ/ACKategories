@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Use a preferred `AnyObject` keyword instead of `class` in protocol conformance ([#71](https://github.com/AckeeCZ/ACKategories/pull/71), kudos to @michalsrutek)
 - Fix a typo ([#70](https://github.com/AckeeCZ/ACKategories/pull/70), kudos to @michalsrutek)
 - Fix swiftlint violations ([#69](https://github.com/AckeeCZ/ACKategories/pull/69), kudos to @fortmarek)
 - Update tapestry structure ([#68](https://github.com/AckeeCZ/ACKategories/pull/68), kudos to @fortmarek)
