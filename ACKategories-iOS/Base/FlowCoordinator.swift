@@ -70,6 +70,8 @@ extension Base {
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
         open func stop(animated: Bool = false) {
 
+            var shouldCallDismissOnPresentingVC = true
+
             // stop all children
             childCoordinators.forEach { $0.stop(animated: animated) }
 
@@ -77,9 +79,6 @@ extension Base {
             if rootViewController.presentedViewController != nil {
                 rootViewController.dismiss(animated: animated)
             }
-
-            // dismiss when root was presented
-            rootViewController.presentingViewController?.dismiss(animated: animated)
 
             // pop all view controllers when started within navigation controller
             if let index = navigationController?.viewControllers.firstIndex(of: rootViewController) {
@@ -96,6 +95,13 @@ extension Base {
                 // VCs to remain in the navigation stack
                 let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
                 navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+                
+                shouldCallDismissOnPresentingVC = remainingViewControllers.isEmpty
+            }
+
+            if shouldCallDismissOnPresentingVC {
+                // dismiss when root was presented
+                rootViewController.presentingViewController?.dismiss(animated: animated)
             }
 
             // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
