@@ -96,7 +96,10 @@ extension Base {
 
                 // VCs to remain in the navigation stack
                 let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
-                navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+
+                if remainingViewControllers.isNotEmpty {
+                    navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+                }
 
                 // set the appropriate value based on whether there are VCs remaining in the navigation stack
                 shouldCallDismissOnPresentingVC = remainingViewControllers.isEmpty
