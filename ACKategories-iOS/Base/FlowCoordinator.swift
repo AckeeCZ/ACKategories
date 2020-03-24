@@ -105,7 +105,10 @@ extension Base {
                 shouldCallDismissOnPresentingVC = remainingViewControllers.isEmpty
             }
 
-            // ensure that dismiss will be called on presentingVC of root only when appropriate
+            // ensure that dismiss will be called on presentingVC of root only when appropriate,
+            // as presentingVC of root when modally presenting can be UITabBarController,
+            // but the whole navigation shouldn't be dismissed, as there are still VCs
+            // remaining in the navigation stack
             if shouldCallDismissOnPresentingVC {
                 // dismiss when root was presented
                 rootViewController.presentingViewController?.dismiss(animated: animated)
