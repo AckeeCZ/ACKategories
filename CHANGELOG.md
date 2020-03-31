@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.4.1
+
 ### Fixed
 
 - Fix `GradientView` layer frame on orientation change ([#74](https://github.com/AckeeCZ/ACKategories/pull/74), kudos to @fortmarek)
