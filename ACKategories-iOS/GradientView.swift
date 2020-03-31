@@ -16,8 +16,12 @@ import UIKit
  */
 open class GradientView: UIView {
 
-    private weak var gradientLayer: CAGradientLayer!
-
+    override open class var layerClass: Swift.AnyClass {
+        get {
+            return CAGradientLayer.self
+        }
+    }
+    
     /**
      Creates a gradient view with colors and axis
      - Parameters:
@@ -26,7 +30,7 @@ open class GradientView: UIView {
      */
     public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
-        let gradientLayer = CAGradientLayer()
+        guard let gradientLayer = layer as? CAGradientLayer else { return }
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map { $0.cgColor }
         if axis == .vertical {
@@ -36,17 +40,9 @@ open class GradientView: UIView {
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         }
-
-        layer.insertSublayer(gradientLayer, at: 0)
-        self.gradientLayer = gradientLayer
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        gradientLayer.frame = bounds
     }
 }
