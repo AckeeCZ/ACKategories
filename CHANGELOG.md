@@ -10,6 +10,7 @@
 
 ### Changed
 
+- Fix typos ([#76](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @michalsrutek)
 - Set `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES` ([#75](https://github.com/AckeeCZ/ACKategories/pull/75), kudos to @fortmarek)
 
 ## 6.4.1

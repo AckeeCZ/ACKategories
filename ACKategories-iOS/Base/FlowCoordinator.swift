@@ -11,7 +11,7 @@ extension Base {
      
      Starts with one of `start()` methods and ends with `stop()`.
      
-     All start methods are supposed to be overriden and property `rootViewController` must be set in the end of the overriden implementation to avoid memory leaks.
+     All start methods are supposed to be overridden and property `rootViewController` must be set in the end of the overridden implementation to avoid memory leaks.
      Don't forget to call super.start().
      */
     open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate {
@@ -59,7 +59,7 @@ extension Base {
             checkRootViewController()
         }
 
-        /// Start by presenting from given VC. This method must be overriden by subclass.
+        /// Start by presenting from given VC. This method must be overridden by subclass.
         open func start(from viewController: UIViewController) {
             rootVCSetter = { [weak self] rootVC in
                 rootVC?.presentationController?.delegate = self
@@ -67,7 +67,7 @@ extension Base {
             rootVCSetter(rootViewController)
         }
 
-        /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpcted behavior.
+        /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpected behavior.
         open func stop(animated: Bool = false) {
 
             // stop all children
