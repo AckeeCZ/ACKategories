@@ -29,7 +29,7 @@ public extension UIColor {
     }
 
     /**
-     Returns color as hex string (eg. '#ff00ff') or nil if RGBA components coudn't be loaded.
+     Returns color as hex string (eg. '#ff00ff') or nil if RGBA components couldn't be loaded.
      Monochrome check included (works for white/black/clear).
      */
     var hexString: String? {

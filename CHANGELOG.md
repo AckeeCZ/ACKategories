@@ -7,17 +7,42 @@
 ```
 
 ## Next
-- Fix generate docs action ([#73](https://github.com/AckeeCZ/ACKategories/pull/73), kudos to @fortmarek)
+
+### Changed
+
+- Fix typos ([#76](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @michalsrutek)
+- Set `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES` ([#75](https://github.com/AckeeCZ/ACKategories/pull/75), kudos to @fortmarek)
 - Do not dismiss `presentingViewController` of `rootViewController` on `Base.FlowCoordinator` `stop()` when remaining VCs in the navigation stack ([#72](https://github.com/AckeeCZ/ACKategories/pull/72), kudos to @IgorRosocha)
-- Use a preferred `AnyObject` keyword instead of `class` in protocol conformance ([#71](https://github.com/AckeeCZ/ACKategories/pull/71), kudos to @michalsrutek)
+
+## 6.4.1
+
+### Fixed
+
+- Fix `GradientView` layer frame on orientation change ([#74](https://github.com/AckeeCZ/ACKategories/pull/74), kudos to @fortmarek)
+- Fix generate docs action ([#73](https://github.com/AckeeCZ/ACKategories/pull/73), kudos to @fortmarek)
 - Fix a typo ([#70](https://github.com/AckeeCZ/ACKategories/pull/70), kudos to @michalsrutek)
-- Fix swiftlint violations ([#69](https://github.com/AckeeCZ/ACKategories/pull/69), kudos to @fortmarek)
-- Update tapestry structure ([#68](https://github.com/AckeeCZ/ACKategories/pull/68), kudos to @fortmarek)
+
+### Changed
+
+- Use a preferred `AnyObject` keyword instead of `class` in protocol conformance ([#71](https://github.com/AckeeCZ/ACKategories/pull/71), kudos to @michalsrutek)
+
+## 6.4.0
+
+### Added
+
 - Add [swift-doc](https://github.com/SwiftDocOrg/swift-doc) action, checks actions ([#67](https://github.com/AckeeCZ/ACKategories/pull/67), kudos to @fortmarek)
 - add `UIDevice.current.modelName` extension to receive model name of current device (#66, kudos to @olejnjak)
-- separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
-- Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
 - add `clearLaunchScreenCache()` to completely clear launch screen cache (#63, kudos to @igorrosocha)
+
+### Fixed
+
+- Fix swiftlint violations ([#69](https://github.com/AckeeCZ/ACKategories/pull/69), kudos to @fortmarek)
+- Fix wrong transparency in `UIColor.image()` (#65, kudos to @janmisar)
+
+### Changed
+
+- Update tapestry structure ([#68](https://github.com/AckeeCZ/ACKategories/pull/68), kudos to @fortmarek)
+- separate frameworks for Swift and iOS (#64, kudos to @olejnjak)
 - use native `UISearchBar.searchTextField` on iOS 13+ (#61, kudos to @olejnjak)
 
 ## 6.3

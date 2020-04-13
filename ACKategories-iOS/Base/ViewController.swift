@@ -37,38 +37,38 @@ extension Base {
             fatalError("init(coder:) has not been implemented")
         }
 
-        private var firstWillAppearOccured = false
+        private var firstWillAppearOccurred = false
 
         override open func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
 
-            if !firstWillAppearOccured {
+            if !firstWillAppearOccurred {
                 viewWillFirstAppear(animated)
-                firstWillAppearOccured = true
+                firstWillAppearOccurred = true
             }
 
             navigationController?.setNavigationBarHidden(!hasNavigationBar, animated: animated)
         }
 
-        private var firstDidAppearOccured = false
+        private var firstDidAppearOccurred = false
 
         override open func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
 
-            if !firstDidAppearOccured {
+            if !firstDidAppearOccurred {
                 viewDidFirstAppear(animated)
-                firstDidAppearOccured = true
+                firstDidAppearOccurred = true
             }
         }
 
         /// Method is called when `viewWillAppear(_:)` is called for the first time
         open func viewWillFirstAppear(_ animated: Bool) {
-            // to be overriden
+            // to be overridden
         }
 
         /// Method is called when `viewDidAppear(_:)` is called for the first time
         open func viewDidFirstAppear(_ animated: Bool) {
-            // to be overriden
+            // to be overridden
         }
 
         deinit {
