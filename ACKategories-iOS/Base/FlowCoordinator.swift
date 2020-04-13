@@ -70,6 +70,10 @@ extension Base {
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpected behavior.
         open func stop(animated: Bool = false) {
 
+            /// Determines whether dismiss should be called on `presentingViewController` of root,
+            /// based on whether there are remaining VCs in the navigation stack.
+            var shouldCallDismissOnPresentingVC = true
+
             // stop all children
             childCoordinators.forEach { $0.stop(animated: animated) }
 
@@ -77,9 +81,6 @@ extension Base {
             if rootViewController.presentedViewController != nil {
                 rootViewController.dismiss(animated: animated)
             }
-
-            // dismiss when root was presented
-            rootViewController.presentingViewController?.dismiss(animated: animated)
 
             // pop all view controllers when started within navigation controller
             if let index = navigationController?.viewControllers.firstIndex(of: rootViewController) {
@@ -95,7 +96,22 @@ extension Base {
 
                 // VCs to remain in the navigation stack
                 let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
-                navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+
+                if remainingViewControllers.isNotEmpty {
+                    navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+                }
+
+                // set the appropriate value based on whether there are VCs remaining in the navigation stack
+                shouldCallDismissOnPresentingVC = remainingViewControllers.isEmpty
+            }
+
+            // ensure that dismiss will be called on presentingVC of root only when appropriate,
+            // as presentingVC of root when modally presenting can be UITabBarController,
+            // but the whole navigation shouldn't be dismissed, as there are still VCs
+            // remaining in the navigation stack
+            if shouldCallDismissOnPresentingVC {
+                // dismiss when root was presented
+                rootViewController.presentingViewController?.dismiss(animated: animated)
             }
 
             // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
