@@ -18,7 +18,7 @@ jobs:
       - name: Install Bundler dependencies
         run: bundle install
       - name: Run iOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.3' ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty
       - name: Lint podspec
