@@ -21,4 +21,4 @@ jobs:
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty
       - name: Lint podspec
-        run: pod lib lint
+        run: bundle exec pod lib lint
