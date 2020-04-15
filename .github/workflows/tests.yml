@@ -7,6 +7,9 @@ jobs:
     name: Run tests
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v1
+      - name: Select Xcode 11.4
+        run: sudo xcode-select -switch /Applications/Xcode_11.4.app
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.x'
@@ -14,9 +17,6 @@ jobs:
         run: gem install bundler --version 2.0.2
       - name: Install Bundler dependencies
         run: bundle install
-      - uses: actions/checkout@v1
-      - name: Select Xcode 11.4
-        run: sudo xcode-select -switch /Applications/Xcode_11.4.app
       - name: Run iOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.3' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
