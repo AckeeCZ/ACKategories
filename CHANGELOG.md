@@ -8,6 +8,10 @@
 
 ## Next
 
+### Added
+
+- Add prototype cell storage to `UITableView` and `UICollectionView` ([#78](https://github.com/AckeeCZ/ACKategories/pull/78), kudos to @olejnjak)
+
 ### Changed
 
 - Fix typos ([#76](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @michalsrutek)
