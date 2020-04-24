@@ -20,7 +20,7 @@ extension UITableView {
             objc_setAssociatedObject(self, &Keys.prototypeCellStorage, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Dequeues `UITableViewCell` generically according to expression result type
     ///
     /// Cell doesn't need to be registered as this method registers it before use.
@@ -28,13 +28,13 @@ extension UITableView {
         register(T.classForCoder(), forCellReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
     /// Get prototype cell of given type
     public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UITableViewCell {
         if let prototype = prototypeCells[T.reuseIdentifier] as? T {
             return prototype
         }
-        
+
         let prototype = T()
         prototypeCells[T.reuseIdentifier] = prototype
         return prototype
@@ -59,7 +59,7 @@ extension UICollectionView {
             objc_setAssociatedObject(self, &Keys.prototypeCellStorage, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Dequeues `UICollectionViewCell` generically according to expression result type
     ///
     /// Cell doesn't need to be registered as this method registers it before use.
@@ -67,13 +67,13 @@ extension UICollectionView {
         register(T.classForCoder(), forCellWithReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
     /// Get prototype cell of given type
     public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UICollectionViewCell {
         if let prototype = prototypeCells[T.reuseIdentifier] as? T {
             return prototype
         }
-        
+
         let prototype = T()
         prototypeCells[T.reuseIdentifier] = prototype
         return prototype
