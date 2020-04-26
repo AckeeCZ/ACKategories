@@ -12,6 +12,13 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
       - name: Install Bundler dependencies
         run: bundle install
+      - name: Setup Carthage cache
+      - uses: actions/cache@v1
+        with:
+          path: Carthage
+          key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-carthage-
       - name: Install Carthage dependencies
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
