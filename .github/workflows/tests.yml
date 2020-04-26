@@ -10,8 +10,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Select Xcode 11.4.1
         run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
-      - name: Install Bundler dependencies
-        run: bundle install
       - uses: actions/cache@v1
         with:
           path: Carthage
@@ -26,5 +24,3 @@ jobs:
         run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty
-      - name: Lint podspec
-        run: bundle exec pod lib lint

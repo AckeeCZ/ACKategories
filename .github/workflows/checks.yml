@@ -20,3 +20,11 @@ jobs:
         uses: peterjgrainger/action-changelog-reminder@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  podspec:
+    name: Podspec
+    runs-on: macos-latest
+    steps:
+      - name: Install Bundler dependencies
+        run: bundle install
+      - name: Lint podspec
+        run: bundle exec pod lib lint
