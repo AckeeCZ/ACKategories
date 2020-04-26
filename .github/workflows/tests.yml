@@ -8,8 +8,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Select Xcode 11.4
-        run: sudo xcode-select -switch /Applications/Xcode_11.4.app
+      - name: Select Xcode 11.4.1
+        run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
       - name: Install Bundler dependencies
         run: bundle install
       - name: Install Carthage dependencies
