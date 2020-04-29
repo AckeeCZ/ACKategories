@@ -10,6 +10,7 @@
 
 ### Changed
 
+- Deprecated `safeArea` extension on iOS 11+ ([#79](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @olejnjak)
 - Fix typos ([#76](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @michalsrutek)
 - Set `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES` ([#75](https://github.com/AckeeCZ/ACKategories/pull/75), kudos to @fortmarek)
 - Do not dismiss `presentingViewController` of `rootViewController` on `Base.FlowCoordinator` `stop()` when remaining VCs in the navigation stack ([#72](https://github.com/AckeeCZ/ACKategories/pull/72), kudos to @IgorRosocha)
