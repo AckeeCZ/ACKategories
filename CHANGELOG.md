@@ -18,6 +18,10 @@
 - Set `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES` ([#75](https://github.com/AckeeCZ/ACKategories/pull/75), kudos to @fortmarek)
 - Do not dismiss `presentingViewController` of `rootViewController` on `Base.FlowCoordinator` `stop()` when remaining VCs in the navigation stack ([#72](https://github.com/AckeeCZ/ACKategories/pull/72), kudos to @IgorRosocha)
 
+### Fixed
+
+- Fix changelog check ([#81](https://github.com/AckeeCZ/ACKategories/pull/72), kudos to @olejnjak)
+
 ## 6.4.1
 
 ### Fixed
