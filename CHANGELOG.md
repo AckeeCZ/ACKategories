@@ -10,6 +10,7 @@
 
 ### Added
 
+- Add more arguments from `NSLocalizedString` to `String.localized()` ([#80](https://github.com/AckeeCZ/ACKategories/pull/80), kudos to @olejnjak)
 - Add prototype cell storage to `UITableView` and `UICollectionView` ([#78](https://github.com/AckeeCZ/ACKategories/pull/78), kudos to @olejnjak)
 
 ### Changed
