@@ -71,6 +71,7 @@
 		695096EC23C790A100E8F457 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695096B523C78F6600E8F457 /* SnapKit.framework */; };
 		695096EF23C790A900E8F457 /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E81A0723C773370054687B /* ACKategories.framework */; };
 		695096F023C790A900E8F457 /* ACKategories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69E81A0723C773370054687B /* ACKategories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		696DF854245304F400A6AC69 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DF853245304F400A6AC69 /* ReusableViewTests.swift */; };
 		69E819F423C773240054687B /* ACKategoriesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E819EA23C773240054687B /* ACKategoriesCore.framework */; };
 		69E819FB23C773240054687B /* ACKategoriesCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E819ED23C773240054687B /* ACKategoriesCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69E81A1023C773370054687B /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E81A0723C773370054687B /* ACKategories.framework */; platformFilter = ios; };
@@ -188,6 +189,7 @@
 		695096B423C78E6400E8F457 /* Cartfile.private */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Cartfile.private; sourceTree = "<group>"; };
 		695096B523C78F6600E8F457 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		695096D823C7908B00E8F457 /* ACKategoriesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACKategoriesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		696DF853245304F400A6AC69 /* ReusableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewTests.swift; sourceTree = "<group>"; };
 		697CECF023C877B20019FE61 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		69E819EA23C773240054687B /* ACKategoriesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategoriesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E819ED23C773240054687B /* ACKategoriesCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACKategoriesCore.h; sourceTree = "<group>"; };
@@ -411,10 +413,11 @@
 			children = (
 				6950968D23C78CC200E8F457 /* ColorTests.swift */,
 				6950969423C78CC200E8F457 /* ControlBlocksTests.swift */,
-				6950969123C78CC200E8F457 /* UIStackViewTests.swift */,
-				6950969323C78CC200E8F457 /* UIViewTests.swift */,
-				6950969023C78CC200E8F457 /* UIViewControllerChildrenTests.swift */,
 				69E81A1623C773370054687B /* Info.plist */,
+				696DF853245304F400A6AC69 /* ReusableViewTests.swift */,
+				6950969123C78CC200E8F457 /* UIStackViewTests.swift */,
+				6950969023C78CC200E8F457 /* UIViewControllerChildrenTests.swift */,
+				6950969323C78CC200E8F457 /* UIViewTests.swift */,
 			);
 			path = "ACKategories-iOSTests";
 			sourceTree = "<group>";
@@ -638,7 +641,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				TargetAttributes = {
 					695096D723C7908B00E8F457 = {
 						CreatedOnToolsVersion = 11.3;
@@ -854,6 +857,7 @@
 				695096A523C78CC200E8F457 /* UIViewTests.swift in Sources */,
 				6950969923C78CC200E8F457 /* ColorTests.swift in Sources */,
 				695096A723C78CC200E8F457 /* ControlBlocksTests.swift in Sources */,
+				696DF854245304F400A6AC69 /* ReusableViewTests.swift in Sources */,
 				695096A123C78CC200E8F457 /* UIStackViewTests.swift in Sources */,
 				6950969F23C78CC200E8F457 /* UIViewControllerChildrenTests.swift in Sources */,
 			);
@@ -1031,6 +1035,33 @@
 		69E819E323C773010054687B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1038,6 +1069,31 @@
 		69E819E423C773010054687B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
