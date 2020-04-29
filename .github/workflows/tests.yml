@@ -8,8 +8,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Select Xcode 11.4.1
-        run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
+      - uses: olejnjak/load-xcode-version@master
       - uses: actions/cache@v1
         with:
           path: Carthage
