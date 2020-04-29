@@ -20,6 +20,6 @@ jobs:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: carthage bootstrap --platform iOS --cache-builds
       - name: Run iOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty
