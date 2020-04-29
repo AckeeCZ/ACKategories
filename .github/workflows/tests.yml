@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: olejnjak/load-xcode-version@master
+      - uses: AckeeCZ/load-xcode-version@master
       - uses: actions/cache@v1
         with:
           path: Carthage
