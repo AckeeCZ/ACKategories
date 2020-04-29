@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Generate Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
@@ -26,4 +26,4 @@ jobs:
         with:
           path: "Documentation"
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.CI_TOKEN }}

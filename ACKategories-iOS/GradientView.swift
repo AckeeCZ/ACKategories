@@ -21,7 +21,7 @@ open class GradientView: UIView {
             return CAGradientLayer.self
         }
     }
-    
+
     /**
      Creates a gradient view with colors and axis
      - Parameters:
