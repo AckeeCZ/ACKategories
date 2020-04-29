@@ -11,6 +11,7 @@ extension UIViewController {
     /// On iOS 11+ is the same as `view.safeAreaLayoutGuide`.
     ///
     /// On older systems it fallbacks to `topLayoutGuide.bottom` and `bottomLayoutGuide.top`, side constraints are equal to superview.
+    @available(iOS, deprecated: 11, renamed: "view.safeAreaLayoutGuide")
     public var safeArea: UILayoutGuide {
         if #available(iOS 11.0, *) {
             return view.safeAreaLayoutGuide
