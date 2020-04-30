@@ -10,6 +10,7 @@
 
 ### Added
 
+- Add Random extensions ([#82](https://github.com/AckeeCZ/ACKategories/pull/82), kudos to @fortmarek)
 - Add prototype cell storage to `UITableView` and `UICollectionView` ([#78](https://github.com/AckeeCZ/ACKategories/pull/78), kudos to @olejnjak)
 
 ### Changed
