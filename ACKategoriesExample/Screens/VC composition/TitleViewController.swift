@@ -39,7 +39,7 @@ class TitleViewController: BaseViewControllerNoVM {
         nameLabel.text = name
         view.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { (make) in
-            make.leading.trailing.top.equalTo(safeArea).inset(20)
+            make.leading.trailing.top.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         self.nameLabel = nameLabel
     }

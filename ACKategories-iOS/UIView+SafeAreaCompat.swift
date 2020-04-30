@@ -19,6 +19,7 @@ extension UIView {
     /// On iOS 11+ is the same as `safeAreaLayoutGuide`.
     ///
     /// On older systems it fallbacks to superview bounds
+    @available(iOS, deprecated: 11, renamed: "safeAreaLayoutGuide")
     public var safeArea: UILayoutGuide {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide
