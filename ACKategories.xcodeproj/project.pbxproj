@@ -98,6 +98,7 @@
 		F885BD9F245AC43A0071073D /* DateRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD9C245AC43A0071073D /* DateRandomTests.swift */; };
 		F885BDA0245AC43A0071073D /* IntRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD9D245AC43A0071073D /* IntRandomTests.swift */; };
 		F885BDA1245AC43A0071073D /* StringRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD9E245AC43A0071073D /* StringRandomTests.swift */; };
+		F885BDA3245ACD010071073D /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BDA2245ACD010071073D /* Randomizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		F885BD9C245AC43A0071073D /* DateRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRandomTests.swift; sourceTree = "<group>"; };
 		F885BD9D245AC43A0071073D /* IntRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntRandomTests.swift; sourceTree = "<group>"; };
 		F885BD9E245AC43A0071073D /* StringRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRandomTests.swift; sourceTree = "<group>"; };
+		F885BDA2245ACD010071073D /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				F885BD95245AC4240071073D /* Date+Random.swift */,
+				F885BDA2245ACD010071073D /* Randomizable.swift */,
 				F885BD96245AC4240071073D /* String+Random.swift */,
 				F885BD97245AC4240071073D /* Int+Random.swift */,
 			);
@@ -811,6 +814,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F885BDA3245ACD010071073D /* Randomizable.swift in Sources */,
 				6950964423C774DB00E8F457 /* ConditionalAssignment.swift in Sources */,
 				6950963C23C774DB00E8F457 /* DictionaryExtensions.swift in Sources */,
 				6950963E23C774DB00E8F457 /* CollectionExtensions.swift in Sources */,
