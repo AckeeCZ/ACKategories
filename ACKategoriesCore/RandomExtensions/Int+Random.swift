@@ -7,7 +7,7 @@ public extension Int {
     /// - Returns random Int
     static func random(min: Int = 20, max: Int = 1000) -> Int {
         assert(min <= max, "Min must be smaller than max")
-        return Int(arc4random_uniform(UInt32(max - min + 1))) + min
+        return .random(in: min...max)
     }
 }
 
