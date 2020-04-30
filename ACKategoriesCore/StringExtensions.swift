@@ -21,7 +21,7 @@ extension String {
     /// Uses `self` as key in stringsfile and returns its localized value or `self`
     ///
     /// - parameter comment: Comment to string usage, is displayed if `key` is missing in table and `value` is empty string
-    /// - parameter value: Value to be displayed if `key` is missing, if empty string then `comment` is displayed
+    /// - parameter value: Value to be displayed if `key` is missing, if empty string then `key` is displayed
     /// - parameter tableName: Name of strings table
     /// - parameter bundle: Bundle where localization table is stored
     public func localized(comment: String = "", value: String = "", tableName: String? = nil, bundle: Bundle = .main) -> String {
