@@ -4,7 +4,7 @@ extension String: Randomizable {
     public static func random() -> String {
         String.random(minLength: 5)
     }
-    
+
     /// - Parameters:
     ///     - minLength: Minimum length of a returned String
     ///     - maxLength: Maxium length of a returned String

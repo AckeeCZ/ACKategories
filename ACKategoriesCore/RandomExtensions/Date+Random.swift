@@ -4,7 +4,7 @@ extension Date: Randomizable {
     public static func random() -> Date {
         Date.random(min: 0)
     }
-    
+
     /// - Parameters:
     ///     - min: Minimum `timeIntervalSince1970`
     ///     - max: Maxium `timeIntervalSince1970`
