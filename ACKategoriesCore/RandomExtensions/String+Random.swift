@@ -11,13 +11,13 @@ extension String: Randomizable {
     ///     - allowedLetters: Letters that will be used in the randomization
     /// - Returns: Randomized String
     public static func random(minLength: Int = 5,
-                       maxLength: Int = 10,
-                       allowedLetters: String = "abcdefghijklmnopqrstuvwxyzěščřžýáíéABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉ0123456789") -> String {
-        let length = (Int.random() % maxLength) + minLength
-        return (0...length).map { _ in
-            let rand = arc4random_uniform(UInt32(allowedLetters.count))
-            var nextChar = (allowedLetters as NSString).character(at: Int(rand))
-            return NSString(characters: &nextChar, length: 1) as String
+                              maxLength: Int = 10,
+                              allowedLetters: String = "abcdefghijklmnopqrstuvwxyzěščřžýáíéABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉ0123456789") -> String {
+        let length = Int.random(in: minLength...maxLength)
+        return (0..<length).map { _ in
+            let position = Int.random(in: 0..<allowedLetters.count)
+            let index = allowedLetters.index(allowedLetters.startIndex, offsetBy: position)
+            return String(allowedLetters[index])
         }
         .joined()
     }

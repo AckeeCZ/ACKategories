@@ -12,6 +12,7 @@ final class StringRandomTests: XCTestCase {
     func testLengthOfStringIsSmallerThanGivenValue() {
         DispatchQueue.concurrentPerform(iterations: 50) { _ in
             let randomString = String.random(minLength: 0, maxLength: 2)
+            print(randomString.count)
             XCTAssertTrue(0...2 ~= randomString.count)
         }
     }
