@@ -22,11 +22,14 @@ jobs:
         run: carthage build --no-skip-current --cache-builds
       - name: Archive
         run: carthage archive ACKategories
-      - uses: fnkr/github-action-ghr@v1
+      - uses: xresloader/upload-to-github-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         env:
-          GHR_PATH: ACKategories.framework.zip
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: ACKategories.framework.zip
+          tags: true
+          draft: false
   cocoapods:
     name: Push podspec to Cocoapods trunk
     runs-on: macos-latest
@@ -37,3 +40,5 @@ jobs:
         run: bundle install
       - name: Push podspec
         run: bundle exec pod trunk push --allow-warnings
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
