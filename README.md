@@ -1,7 +1,7 @@
 ![ackee|ACKategories](https://github.com/AckeeCZ/ACKategories/blob/master/Resources/cover-image.png)
 
-[![Swift](https://img.shields.io/badge/swift-4.0-orange.svg)](https://github.com/AckeeCZ/ACKategories)
-[![CI Status](http://img.shields.io/travis/AckeeCZ/ACKategories.svg?style=flat)](https://travis-ci.org/AckeeCZ/ACKategories)
+[![Swift](https://img.shields.io/badge/swift-5.2-orange.svg)](https://github.com/AckeeCZ/ACKategories)
+![CI Status](https://github.com/AckeeCZ/ACKategories/workflows/Tests/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/ACKategories.svg?style=flat)](http://cocoapods.org/pods/ACKategories)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/ACKategories.svg?style=flat)](http://cocoapods.org/pods/ACKategories)
@@ -37,7 +37,7 @@ Or you can use [SPM](https://github.com/apple/swift-package-manager). Add this t
 
 
 ### Swift versions
-ACKategories is written in **Swift 5.1**.
+ACKategories is written in **Swift 5.2**.
 
 If you're interested in using ACKategories in your older projects see all branches, there probably is the version you need.
 
