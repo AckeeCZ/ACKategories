@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.5.0
+
 ### Added
 
 - Add Random extensions ([#82](https://github.com/AckeeCZ/ACKategories/pull/82), kudos to @fortmarek)
