@@ -11,10 +11,12 @@
 ### Added
 
 - Add Random extensions ([#82](https://github.com/AckeeCZ/ACKategories/pull/82), kudos to @fortmarek)
+- Add more arguments from `NSLocalizedString` to `String.localized()` ([#80](https://github.com/AckeeCZ/ACKategories/pull/80), kudos to @olejnjak)
 - Add prototype cell storage to `UITableView` and `UICollectionView` ([#78](https://github.com/AckeeCZ/ACKategories/pull/78), kudos to @olejnjak)
 
 ### Changed
 
+- Deprecated `safeArea` extension on iOS 11+ ([#79](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @olejnjak)
 - Fix typos ([#76](https://github.com/AckeeCZ/ACKategories/pull/76), kudos to @michalsrutek)
 - Set `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES` ([#75](https://github.com/AckeeCZ/ACKategories/pull/75), kudos to @fortmarek)
 - Do not dismiss `presentingViewController` of `rootViewController` on `Base.FlowCoordinator` `stop()` when remaining VCs in the navigation stack ([#72](https://github.com/AckeeCZ/ACKategories/pull/72), kudos to @IgorRosocha)
