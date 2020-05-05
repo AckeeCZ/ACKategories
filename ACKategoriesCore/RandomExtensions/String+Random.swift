@@ -13,8 +13,6 @@ extension String: Randomizable {
     public static func random(minLength: Int = 5,
                               maxLength: Int = 10,
                               allowedCharacters: String = "abcdefghijklmnopqrstuvwxyzěščřžýáíéABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉ0123456789") -> String {
-        assert(minLength >= 0, "Minimum length must be greater than or equal to zero")
-        assert(!allowedCharacters.isEmpty, "Allowed characters can not be empty")
         let length = Int.random(in: minLength...maxLength)
         return (0..<length).map { _ in
             let position = Int.random(in: 0..<allowedCharacters.count)
