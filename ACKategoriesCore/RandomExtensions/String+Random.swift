@@ -8,16 +8,18 @@ extension String: Randomizable {
     /// - Parameters:
     ///     - minLength: Minimum length of a returned String
     ///     - maxLength: Maxium length of a returned String
-    ///     - allowedLetters: Letters that will be used in the randomization
+    ///     - allowedCharacters: Letters that will be used in the randomization
     /// - Returns: Randomized String
     public static func random(minLength: Int = 5,
                               maxLength: Int = 10,
-                              allowedLetters: String = "abcdefghijklmnopqrstuvwxyzěščřžýáíéABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉ0123456789") -> String {
+                              allowedCharacters: String = "abcdefghijklmnopqrstuvwxyzěščřžýáíéABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉ0123456789") -> String {
+        assert(minLength >= 0, "Minimum length must be greater than or equal to zero")
+        assert(!allowedCharacters.isEmpty, "Allowed characters can not be empty")
         let length = Int.random(in: minLength...maxLength)
         return (0..<length).map { _ in
-            let position = Int.random(in: 0..<allowedLetters.count)
-            let index = allowedLetters.index(allowedLetters.startIndex, offsetBy: position)
-            return String(allowedLetters[index])
+            let position = Int.random(in: 0..<allowedCharacters.count)
+            let index = allowedCharacters.index(allowedCharacters.startIndex, offsetBy: position)
+            return String(allowedCharacters[index])
         }
         .joined()
     }

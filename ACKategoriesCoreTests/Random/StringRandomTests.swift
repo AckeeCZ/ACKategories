@@ -4,7 +4,7 @@ import Foundation
 final class StringRandomTests: XCTestCase {
     func testRandomStringContainsOnlyAllowedLetters() {
         DispatchQueue.concurrentPerform(iterations: 50) { _ in
-            let randomString = String.random(allowedLetters: "ad")
+            let randomString = String.random(allowedCharacters: "ad")
             XCTAssertTrue(randomString.allSatisfy("ad".contains))
         }
     }
@@ -12,7 +12,6 @@ final class StringRandomTests: XCTestCase {
     func testLengthOfStringIsSmallerThanGivenValue() {
         DispatchQueue.concurrentPerform(iterations: 50) { _ in
             let randomString = String.random(minLength: 0, maxLength: 2)
-            print(randomString.count)
             XCTAssertTrue(0...2 ~= randomString.count)
         }
     }

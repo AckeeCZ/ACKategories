@@ -13,8 +13,8 @@ public extension Collection where Element: Randomizable {
     ///     - max: Maximal number of returned elements
     /// - Returns: Array of random elements
     static func random(min: Int = 20, max: Int = 100) -> [Element] {
-        assert(min <= max, "Min must be smaller than max")
-        let count = (Int.random() % max) + min
+        assert(min >= 0, "Min must be greater or equal to zero")
+        let count = Int.random(in: min...max)
         return (0..<count).map { _ in .random() }
     }
 }

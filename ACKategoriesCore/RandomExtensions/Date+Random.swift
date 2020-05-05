@@ -10,6 +10,6 @@ extension Date: Randomizable {
     ///     - max: Maxium `timeIntervalSince1970`
     /// - Returns: Random date
     public static func random(min: Int = 0, max: Int = Int.max) -> Date {
-        return Date(timeIntervalSince1970: TimeInterval(Int.random(in: min...max)))
+        Date(timeIntervalSince1970: TimeInterval(Int.random(in: min...max)))
     }
 }
