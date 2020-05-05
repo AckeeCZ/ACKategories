@@ -1,4 +1,4 @@
-![ackee|ACKategories](https://github.com/AckeeCZ/ACKategories/blob/master/Resources/cover-image.png)
+![ackee|ACKategories](Resources/cover-image.png)
 
 [![Swift](https://img.shields.io/badge/swift-5.2-orange.svg)](https://github.com/AckeeCZ/ACKategories)
 ![CI Status](https://github.com/AckeeCZ/ACKategories/workflows/Tests/badge.svg)
