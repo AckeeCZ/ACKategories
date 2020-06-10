@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.5.1
+
 ### Changed
 - Reverted `BUILD_LIBRARY_FOR_DISTRIBUTION` to false ([#84](https://github.com/AckeeCZ/ACKategories/pull/84), kudos to @fortmarek)
 
