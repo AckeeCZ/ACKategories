@@ -8,6 +8,10 @@
 
 ## Next
 
+### Added
+
+- Add UserDefault property wrapper ([#85](https://github.com/AckeeCZ/ACKategories/pull/85), kudos to @fortmarek)
+
 ## 6.5.1
 
 ### Changed
