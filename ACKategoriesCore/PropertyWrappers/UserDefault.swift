@@ -10,7 +10,7 @@ import Foundation
 ///
 /// [Apple documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
 @propertyWrapper
-struct UserDefault<Value: Codable> {
+public struct UserDefault<Value: Codable> {
     let key: String
     let defaultValue: Value
     var userDefaults: UserDefaults
@@ -19,13 +19,13 @@ struct UserDefault<Value: Codable> {
     ///     - key: Key for which the value should be saved
     ///     - default: Default value to be used
     ///     - userDefaults: `UserDefaults` where value should be saved into. Default is `UserDefaults.standard`
-    init(_ key: String, `default`: Value, userDefaults: UserDefaults = .standard) {
+    public init(_ key: String, `default`: Value, userDefaults: UserDefaults = .standard) {
         self.key = key
         self.defaultValue = `default`
         self.userDefaults = userDefaults
     }
 
-    var wrappedValue: Value {
+    public var wrappedValue: Value {
         get {
             guard let data = userDefaults.object(forKey: key) as? Data else { return defaultValue }
             let decoder = JSONDecoder()
@@ -39,7 +39,7 @@ struct UserDefault<Value: Codable> {
     }
 }
 
-extension UserDefault {
+public extension UserDefault {
     init<Wrapped>(_ key: String, `default`: Optional<Wrapped> = nil, userDefaults: UserDefaults = .standard) where Value == Optional<Wrapped> {
         self.init(key, default: `default`, userDefaults: userDefaults)
     }
