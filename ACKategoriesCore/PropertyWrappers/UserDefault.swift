@@ -14,7 +14,7 @@ public struct UserDefault<Value: Codable> {
     let key: String
     let defaultValue: Value
     var userDefaults: UserDefaults
-    
+
     /// - Parameters:
     ///     - key: Key for which the value should be saved
     ///     - default: Default value to be used
