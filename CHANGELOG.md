@@ -10,6 +10,7 @@
 
 ### Added
 
+- Run SwiftLint on build if installed locally ([#87](https://github.com/AckeeCZ/ACKategories/pull/87), kudos to @olejnjak)
 - Add Catalyst support to iOS target ([#86](https://github.com/AckeeCZ/ACKategories/pull/86), kudos to @olejnjak)
 - Add UserDefault property wrapper ([#85](https://github.com/AckeeCZ/ACKategories/pull/85), kudos to @fortmarek)
 
