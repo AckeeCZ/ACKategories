@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ACKategories",
     platforms: [
-        .iOS("8.3"),
+        .iOS(.v9),
         .macOS("10.9")
     ],
     products: [
