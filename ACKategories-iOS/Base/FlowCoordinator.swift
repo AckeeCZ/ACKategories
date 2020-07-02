@@ -68,18 +68,24 @@ extension Base {
         }
 
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpected behavior.
-        open func stop(animated: Bool = false) {
+        open func stop(animated: Bool = false, completion: (() -> Void)? = nil) {
 
             /// Determines whether dismiss should be called on `presentingViewController` of root,
             /// based on whether there are remaining VCs in the navigation stack.
             var shouldCallDismissOnPresentingVC = true
 
+            let animationGroup = DispatchGroup()
+
             // stop all children
-            childCoordinators.forEach { $0.stop(animated: animated) }
+            childCoordinators.forEach {
+                animationGroup.enter()
+                $0.stop(animated: animated, completion: animationGroup.leave)
+            }
 
             // dismiss all VCs presented from root or nav
             if rootViewController.presentedViewController != nil {
-                rootViewController.dismiss(animated: animated)
+                animationGroup.enter()
+                rootViewController.dismiss(animated: animated, completion: animationGroup.leave)
             }
 
             // pop all view controllers when started within navigation controller
@@ -90,7 +96,8 @@ extension Base {
                 // dismiss all presented VCs on VCs to be removed
                 toRemoveViewControllers.forEach { vc in
                     if vc.presentedViewController != nil {
-                        vc.dismiss(animated: animated)
+                        animationGroup.enter()
+                        vc.dismiss(animated: animated, completion: animationGroup.leave)
                     }
                 }
 
@@ -111,13 +118,18 @@ extension Base {
             // remaining in the navigation stack
             if shouldCallDismissOnPresentingVC {
                 // dismiss when root was presented
-                rootViewController.presentingViewController?.dismiss(animated: animated)
+                animationGroup.enter()
+                rootViewController.presentingViewController?.dismiss(animated: animated, completion: animationGroup.leave)
             }
 
             // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
             navigationController?.delegate = parentCoordinator
 
             parentCoordinator?.removeChild(self)
+
+            animationGroup.notify(queue: DispatchQueue(label: "animationGroup")) {
+                completion?()
+            }
         }
 
         // MARK: - Child coordinators
