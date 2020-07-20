@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.6.0
+
 ### Added
 
 - Completion block for `stop` ([#88](https://github.com/AckeeCZ/ACKategories/pull/88), kudos to @fortmarek)
