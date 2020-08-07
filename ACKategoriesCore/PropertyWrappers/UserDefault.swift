@@ -29,11 +29,14 @@ public struct UserDefault<Value: Codable> {
         get {
             guard let data = userDefaults.object(forKey: key) as? Data else { return defaultValue }
             let decoder = JSONDecoder()
-            return (try? decoder.decode(Value.self, from: data)) ?? defaultValue
+            // Encoding root-level `singleValueContainer` fails on iOS <= 12.0
+            // Thus we always encode it into array, so it has a root object
+            // Related issue: https://github.com/AckeeCZ/ACKategories/issues/89
+            return (try? decoder.decode([Value].self, from: data))?.first ?? defaultValue
         }
         set {
             let encoder = JSONEncoder()
-            let data = try? encoder.encode(newValue)
+            let data = try? encoder.encode([newValue])
             userDefaults.set(data, forKey: key)
         }
     }

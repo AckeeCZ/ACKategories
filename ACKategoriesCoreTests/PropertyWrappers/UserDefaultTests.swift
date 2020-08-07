@@ -29,7 +29,7 @@ final class UserDefaultTests: XCTestCase {
         // Then
         XCTAssertTrue(subject.hasSeen)
         let hasSeenData = try XCTUnwrap(userDefaults.object(forKey: "has_seen") as? Data)
-        XCTAssertEqual(try decoder.decode(Bool.self, from: hasSeenData), true)
+        XCTAssertEqual(try decoder.decode([Bool].self, from: hasSeenData), [true])
     }
     
     func testSettingCodableValue() throws {
@@ -45,7 +45,7 @@ final class UserDefaultTests: XCTestCase {
         // Then
         XCTAssertEqual(subject.codableValue, value)
         let data = try XCTUnwrap(userDefaults.object(forKey: "codable_value") as? Data)
-        XCTAssertEqual(try decoder.decode(CodableValue.self, from: data), value)
+        XCTAssertEqual(try decoder.decode([CodableValue].self, from: data), [value])
     }
 }
 
