@@ -106,6 +106,7 @@
 		69FA5FBC23C868A900B44BCD /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAB23C868A900B44BCD /* AppFlowCoordinator.swift */; };
 		69FA5FBD23C868A900B44BCD /* ModalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */; };
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
+		6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */; };
 		F885BD98245AC4240071073D /* Date+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD95245AC4240071073D /* Date+Random.swift */; };
 		F885BD99245AC4240071073D /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD96245AC4240071073D /* String+Random.swift */; };
 		F885BD9A245AC4240071073D /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885BD97245AC4240071073D /* Int+Random.swift */; };
@@ -262,6 +263,7 @@
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69FA5FC323C869A200B44BCD /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ACKategories.podspec; sourceTree = "<group>"; };
 		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		F885BD95245AC4240071073D /* Date+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Random.swift"; sourceTree = "<group>"; };
 		F885BD96245AC4240071073D /* String+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
 		F885BD97245AC4240071073D /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				6950964823C7751600E8F457 /* GradientView.swift */,
 				6950964D23C7752B00E8F457 /* NSMutableParagraphStyleExtensions.swift */,
 				6950965223C7753D00E8F457 /* ReusableView.swift */,
+				6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */,
 				6950966623C78AC800E8F457 /* TableHeaderFooterView.swift */,
 				6950966023C78AC800E8F457 /* UIApplicationExtensions.swift */,
 				6950966423C78AC800E8F457 /* UIButtonExtensions.swift */,
@@ -974,6 +977,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */,
 				6950962F23C7747800E8F457 /* ViewController.swift in Sources */,
 				F8B81697246C59F7005D1D74 /* Int+Random.swift in Sources */,
 				6950964323C774DB00E8F457 /* DateExtensions.swift in Sources */,
