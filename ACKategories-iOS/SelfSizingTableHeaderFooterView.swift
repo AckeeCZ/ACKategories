@@ -10,7 +10,7 @@ import UIKit
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
 open class SelfSizingTableHeaderFooterView: UITableViewHeaderFooterView {
 
-    fileprivate enum Status {
+    private enum Status {
         /// View is set as tableHeaderView
         case header
         /// View is set as tableFooterView
@@ -21,11 +21,11 @@ open class SelfSizingTableHeaderFooterView: UITableViewHeaderFooterView {
 
     // MARK: - Fileprivate properties
 
-    fileprivate var tableView: UITableView? {
+    private var tableView: UITableView? {
         return superview as? UITableView
     }
 
-    fileprivate var status: Status {
+    private var status: Status {
         return self == tableView?.tableHeaderView ? .header :
             self == tableView?.tableFooterView ? .footer :
             .none
@@ -55,7 +55,7 @@ open class SelfSizingTableHeaderFooterView: UITableViewHeaderFooterView {
 
     // MARK: - Helpers
 
-    fileprivate func fittingSize(for view: UIView) -> CGSize {
+    private func fittingSize(for view: UIView) -> CGSize {
         let targetSize = CGSize(
             width: view.frame.width,
             height: UIView.layoutFittingCompressedSize.height
