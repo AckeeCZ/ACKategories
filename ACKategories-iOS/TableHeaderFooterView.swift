@@ -1,6 +1,7 @@
 import UIKit
 
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
+@available(*, deprecated, message: "Use SelfSizingTableHeaderFooterView instead. TableHeaderFooterView inherits from UIView and not UITableViewHeaderFooterView, its readableContentGuide behaves differently from UITableViewCells.")
 open class TableHeaderFooterView: UIView {
     fileprivate var tableView: UITableView? {
         return superview as? UITableView

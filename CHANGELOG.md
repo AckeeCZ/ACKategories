@@ -8,6 +8,8 @@
 
 ## Next
 
+- Deprecated `TableHeaderFooterView` because of different `readableContentGuide` behavior ([#92](https://github.com/AckeeCZ/ACKategories/pull/92), kudos to @leinhauplk)
+
 ### Fixed
 
 - Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek) 
