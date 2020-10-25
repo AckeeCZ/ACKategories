@@ -127,7 +127,7 @@ extension Base {
 
             parentCoordinator?.removeChild(self)
 
-            animationGroup.notify(queue: DispatchQueue(label: "animationGroup")) {
+            animationGroup.notify(queue: .main) {
                 completion?()
             }
         }
