@@ -116,10 +116,10 @@ extension Base {
             // as presentingVC of root when modally presenting can be UITabBarController,
             // but the whole navigation shouldn't be dismissed, as there are still VCs
             // remaining in the navigation stack
-            if shouldCallDismissOnPresentingVC {
+            if shouldCallDismissOnPresentingVC, let presentingViewController = rootViewController.presentingViewController {
                 // dismiss when root was presented
                 animationGroup.enter()
-                rootViewController.presentingViewController?.dismiss(animated: animated, completion: animationGroup.leave)
+                presentingViewController.dismiss(animated: animated, completion: animationGroup.leave)
             }
 
             // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
