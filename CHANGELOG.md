@@ -13,6 +13,7 @@
 ### Fixed
 
 - Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek) 
+- `completion` of `Base.FlowCoordinator.stop()` is sometimes not called ([#94](https://github.com/AckeeCZ/ACKategories/pull/94), kudos to @lukashromadnik)
 
 ## 6.6.0
 
