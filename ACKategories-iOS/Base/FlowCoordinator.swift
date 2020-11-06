@@ -89,9 +89,9 @@ extension Base {
             }
 
             // pop all view controllers when started within navigation controller
-            if let index = navigationController?.viewControllers.firstIndex(of: rootViewController) {
+            if let navigationController = navigationController, let index = navigationController.viewControllers.firstIndex(of: rootViewController) {
                 // VCs to be removed from navigation stack
-                let toRemoveViewControllers = navigationController.flatMap { Array($0.viewControllers[index..<$0.viewControllers.count]) } ?? []
+                let toRemoveViewControllers = navigationController.viewControllers[index..<navigationController.viewControllers.count]
 
                 // dismiss all presented VCs on VCs to be removed
                 toRemoveViewControllers.forEach { vc in
@@ -102,10 +102,10 @@ extension Base {
                 }
 
                 // VCs to remain in the navigation stack
-                let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
+                let remainingViewControllers = Array(navigationController.viewControllers[0..<index])
 
                 if remainingViewControllers.isNotEmpty {
-                    navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+                    navigationController.setViewControllers(remainingViewControllers, animated: animated)
                 }
 
                 // set the appropriate value based on whether there are VCs remaining in the navigation stack
