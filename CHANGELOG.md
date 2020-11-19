@@ -8,8 +8,10 @@
 
 ## Next
 
+## 6.7.0
+
 - Deprecated `TableHeaderFooterView` because of different `readableContentGuide` behavior ([#92](https://github.com/AckeeCZ/ACKategories/pull/92), kudos to @leinhauplk)
-- Updated iOS deployment target to **9.0** to make Xcode 12 happy ([#95](https://github.com/AckeeCZ/ACKategories/pull/92), kudos to @olejnjak)
+- Updated iOS deployment target to **9.0** to make Xcode 12 happy ([#95](https://github.com/AckeeCZ/ACKategories/pull/95), kudos to @olejnjak)
 
 ### Fixed
 
