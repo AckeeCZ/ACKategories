@@ -8,83 +8,6 @@
 import XCTest
 @testable import ACKategories
 
-extension UIWindow {
-    static var dummy: UIWindow {
-        UIWindow(frame: UIScreen.main.bounds)
-    }
-}
-
-extension Base.FlowCoordinatorNoDeepLink {
-    func push(_ vc: UIViewController) {
-        navigationController?.pushViewController(vc, animated: false)
-    }
-    
-    func present(_ vc: UIViewController) {
-        rootViewController.present(vc, animated: false)
-    }
-}
-
-class SimpleViewController: UIViewController {
-    init() { super.init(nibName: nil, bundle: nil) }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func loadView() {
-        super.loadView()
-        
-        view.backgroundColor = .white
-    }
-}
-
-class NavigationFC: Base.FlowCoordinatorNoDeepLink {
-    override func start(in window: UIWindow) {
-        let rootVC = SimpleViewController()
-        let navVC = UINavigationController(rootViewController: rootVC)
-        rootViewController = rootVC
-        navigationController = navVC
-        
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        _ = navVC.view
-        
-        super.start(in: window)
-    }
-}
-
-class InnerNavigationFC: Base.FlowCoordinatorNoDeepLink {
-    override func start(with navigationController: UINavigationController) {
-        let controller = SimpleViewController()
-        navigationController.pushViewController(controller, animated: false)
-
-        rootViewController = controller
-
-        super.start(with: navigationController)        
-    }
-}
-
-class PresentFC: Base.FlowCoordinatorNoDeepLink {
-    private let completion: () -> Void
-    
-    init(completion: @escaping () -> Void) {
-        self.completion = completion
-    }
-    
-    override func start(from viewController: UIViewController) {
-        let rootVC = SimpleViewController()
-        let navVC = UINavigationController(rootViewController: rootVC)
-        navVC.modalPresentationStyle = .fullScreen
-        viewController.present(navVC, animated: false, completion: completion)
-        
-        rootViewController = rootVC
-        navigationController = navVC
-
-        super.start(from: viewController)
-    }
-}
-
 final class FlowCoordinatorTests: XCTestCase {
     private var window: UIWindow!
     
@@ -134,13 +57,13 @@ final class FlowCoordinatorTests: XCTestCase {
         let childFC = InnerNavigationFC()
         fc.addChild(childFC)
         childFC.start(with: fc.navigationController!)
-        childFC.push(SimpleViewController())
+        childFC.push(UIViewController())
         _ = childFC.rootViewController.view
         
         let child2FC = InnerNavigationFC()
         childFC.addChild(child2FC)
         child2FC.start(with: fc.navigationController!)
-        child2FC.push(SimpleViewController())
+        child2FC.push(UIViewController())
         _ = child2FC.rootViewController.view
         
         XCTAssertEqual(fc.navigationController?.viewControllers.count, 5)
@@ -258,21 +181,5 @@ final class FlowCoordinatorTests: XCTestCase {
         
         XCTAssertEqual(fc.navigationController?.viewControllers.count, 1)
         XCTAssertEqual(fc.childCoordinators.count, 0)
-    }
-}
-
-extension UINavigationController {
-    func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping () -> Void) {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock(completion)
-        popToViewController(viewController, animated: animated)
-        CATransaction.commit()
-    }
-    
-    func popToRootViewController(animated: Bool, completion: @escaping () -> Void) {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock(completion)
-        popToRootViewController(animated: animated)
-        CATransaction.commit()
     }
 }
