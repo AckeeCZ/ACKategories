@@ -69,7 +69,6 @@ extension Base {
 
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpected behavior.
         open func stop(animated: Bool = false, completion: (() -> Void)? = nil) {
-
             /// Determines whether dismiss should be called on `presentingViewController` of root,
             /// based on whether there are remaining VCs in the navigation stack.
             var shouldCallDismissOnPresentingVC = true
@@ -150,14 +149,7 @@ extension Base {
         // MARK: - UINavigationControllerDelegate
 
         public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-
-            // ensure the view controller is popping
-            guard
-                let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
-                !navigationController.viewControllers.contains(fromViewController)
-                else { return }
-
-            if let firstViewController = rootViewController, fromViewController == firstViewController {
+            if let rootViewController = rootViewController, !navigationController.viewControllers.contains(rootViewController) {
                 navigationController.delegate = parentCoordinator
                 stop()
             }
@@ -175,7 +167,7 @@ extension Base {
 
         /// Handle deep link with currently active coordinator. If not handled, function returns false
         @discardableResult open func handleDeeplink(_ deeplink: DeepLinkType) -> Bool {
-            return activeChild?.handleDeeplink(deeplink) ?? false
+            activeChild?.handleDeeplink(deeplink) ?? false
         }
 
         // MARK: - Debug

@@ -235,4 +235,44 @@ final class FlowCoordinatorTests: XCTestCase {
         XCTAssertNil(navFC.rootViewController.presentingViewController)
         XCTAssertEqual(navFC.childCoordinators.count, 0)
     }
+    
+    func testPopMoreThanRootViewController() {
+        let fc = NavigationFC()
+        fc.start(in: window)
+        _ = fc.rootViewController.view
+        
+        let childFC = InnerNavigationFC()
+        fc.addChild(childFC)
+        childFC.start(with: fc.navigationController!)
+        childFC.push(UIViewController())
+        _ = childFC.rootViewController.view
+        
+        XCTAssertEqual(fc.navigationController?.viewControllers.count, 3)
+        XCTAssertEqual(fc.childCoordinators.count, 1)
+        
+        let exp = expectation(description: "did pop")
+        
+        fc.navigationController?.popToRootViewController(animated: false) { exp.fulfill() }
+        
+        wait(for: [exp], timeout: 1)
+        
+        XCTAssertEqual(fc.navigationController?.viewControllers.count, 1)
+        XCTAssertEqual(fc.childCoordinators.count, 0)
+    }
+}
+
+extension UINavigationController {
+    func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping () -> Void) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        popToViewController(viewController, animated: animated)
+        CATransaction.commit()
+    }
+    
+    func popToRootViewController(animated: Bool, completion: @escaping () -> Void) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        popToRootViewController(animated: animated)
+        CATransaction.commit()
+    }
 }
