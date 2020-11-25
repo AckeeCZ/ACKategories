@@ -18,8 +18,10 @@ extension Base.FlowCoordinatorNoDeepLink {
     }
 }
 
-class NavigationFC: Base.FlowCoordinatorNoDeepLink {
+final class NavigationFC: Base.FlowCoordinatorNoDeepLink {
     override func start(in window: UIWindow) {
+        super.start(in: window)
+
         let rootVC = UIViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         rootViewController = rootVC
@@ -28,23 +30,21 @@ class NavigationFC: Base.FlowCoordinatorNoDeepLink {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         _ = navVC.view
-        
-        super.start(in: window)
     }
 }
 
-class InnerNavigationFC: Base.FlowCoordinatorNoDeepLink {
+final class InnerNavigationFC: Base.FlowCoordinatorNoDeepLink {
     override func start(with navigationController: UINavigationController) {
+        super.start(with: navigationController)
+
         let controller = UIViewController()
         navigationController.pushViewController(controller, animated: false)
 
         rootViewController = controller
-
-        super.start(with: navigationController)
     }
 }
 
-class PresentFC: Base.FlowCoordinatorNoDeepLink {
+final class PresentFC: Base.FlowCoordinatorNoDeepLink {
     private let completion: () -> Void
     
     init(completion: @escaping () -> Void) {
@@ -52,6 +52,8 @@ class PresentFC: Base.FlowCoordinatorNoDeepLink {
     }
     
     override func start(from viewController: UIViewController) {
+        super.start(from: viewController)
+
         let rootVC = UIViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
@@ -59,8 +61,5 @@ class PresentFC: Base.FlowCoordinatorNoDeepLink {
         
         rootViewController = rootVC
         navigationController = navVC
-
-        super.start(from: viewController)
     }
 }
-

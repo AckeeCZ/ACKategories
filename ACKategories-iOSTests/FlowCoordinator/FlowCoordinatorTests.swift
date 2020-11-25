@@ -27,14 +27,16 @@ final class FlowCoordinatorTests: XCTestCase {
     
     // MARK: - Tests
 
-    func testNavigationSubflowIsStopped() {
+    func testNavigationSubflowIsStopped() throws {
         let fc = NavigationFC()
         fc.start(in: window)
         _ = fc.rootViewController.view
         
+        let navigationController = try XCTUnwrap(fc.navigationController)
+        
         let childFC = InnerNavigationFC()
         fc.addChild(childFC)
-        childFC.start(with: fc.navigationController!)
+        childFC.start(with: navigationController)
         childFC.push(UIViewController())
         _ = childFC.rootViewController.view
         
@@ -45,28 +47,30 @@ final class FlowCoordinatorTests: XCTestCase {
         childFC.stop { exp.fulfill() }
         wait(for: [exp], timeout: 1)
         
-        XCTAssertEqual(fc.navigationController?.viewControllers.count, 1)
+        XCTAssertEqual(navigationController.viewControllers.count, 1)
         XCTAssertEqual(fc.childCoordinators.count, 0)
     }
     
-    func testFirstNavigationSubflowStopsSecondAlso() {
+    func testFirstNavigationSubflowStopsSecondAlso() throws {
         let fc = NavigationFC()
         fc.start(in: window)
         _ = fc.rootViewController.view
         
+        let navigationController = try XCTUnwrap(fc.navigationController)
+        
         let childFC = InnerNavigationFC()
         fc.addChild(childFC)
-        childFC.start(with: fc.navigationController!)
+        childFC.start(with: navigationController)
         childFC.push(UIViewController())
         _ = childFC.rootViewController.view
         
         let child2FC = InnerNavigationFC()
         childFC.addChild(child2FC)
-        child2FC.start(with: fc.navigationController!)
+        child2FC.start(with: navigationController)
         child2FC.push(UIViewController())
         _ = child2FC.rootViewController.view
         
-        XCTAssertEqual(fc.navigationController?.viewControllers.count, 5)
+        XCTAssertEqual(navigationController.viewControllers.count, 5)
         XCTAssertEqual(fc.childCoordinators.count, 1)
         XCTAssertEqual(childFC.childCoordinators.count, 1)
         
@@ -74,7 +78,7 @@ final class FlowCoordinatorTests: XCTestCase {
         childFC.stop { exp.fulfill() }
         wait(for: [exp], timeout: 1)
         
-        XCTAssertEqual(fc.navigationController?.viewControllers.count, 1)
+        XCTAssertEqual(navigationController.viewControllers.count, 1)
         XCTAssertEqual(fc.childCoordinators.count, 0)
     }
     
@@ -90,7 +94,7 @@ final class FlowCoordinatorTests: XCTestCase {
         _ = childFC.rootViewController.view
         wait(for: [exp], timeout: 1)
 
-        XCTAssertNotNil(fc.rootViewController!.presentedViewController)
+        XCTAssertNotNil(fc.rootViewController?.presentedViewController)
         
         let exp2 = expectation(description: "did stop")
         childFC.stop { exp2.fulfill() }
@@ -112,7 +116,7 @@ final class FlowCoordinatorTests: XCTestCase {
         _ = childFC.rootViewController.view
         wait(for: [exp], timeout: 1)
 
-        XCTAssertNotNil(fc.rootViewController!.presentedViewController)
+        XCTAssertNotNil(fc.rootViewController?.presentedViewController)
 
         let exp2 = expectation(description: "did present")
         let child2FC = PresentFC { exp2.fulfill() }
@@ -121,7 +125,7 @@ final class FlowCoordinatorTests: XCTestCase {
         _ = child2FC.rootViewController.view
         wait(for: [exp2], timeout: 1)
 
-        XCTAssertNotNil(childFC.rootViewController!.presentedViewController)
+        XCTAssertNotNil(childFC.rootViewController?.presentedViewController)
         
         let exp3 = expectation(description: "did stop")
         childFC.stop { exp3.fulfill() }
@@ -159,27 +163,29 @@ final class FlowCoordinatorTests: XCTestCase {
         XCTAssertEqual(navFC.childCoordinators.count, 0)
     }
     
-    func testPopMoreThanRootViewController() {
+    func testPopMoreThanRootViewController() throws {
         let fc = NavigationFC()
         fc.start(in: window)
         _ = fc.rootViewController.view
         
+        let navigationController = try XCTUnwrap(fc.navigationController)
+        
         let childFC = InnerNavigationFC()
         fc.addChild(childFC)
-        childFC.start(with: fc.navigationController!)
+        childFC.start(with: navigationController)
         childFC.push(UIViewController())
         _ = childFC.rootViewController.view
         
-        XCTAssertEqual(fc.navigationController?.viewControllers.count, 3)
+        XCTAssertEqual(navigationController.viewControllers.count, 3)
         XCTAssertEqual(fc.childCoordinators.count, 1)
         
         let exp = expectation(description: "did pop")
         
-        fc.navigationController?.popToRootViewController(animated: false) { exp.fulfill() }
+        navigationController.popToRootViewController(animated: false) { exp.fulfill() }
         
         wait(for: [exp], timeout: 1)
         
-        XCTAssertEqual(fc.navigationController?.viewControllers.count, 1)
+        XCTAssertEqual(navigationController.viewControllers.count, 1)
         XCTAssertEqual(fc.childCoordinators.count, 0)
     }
 }
