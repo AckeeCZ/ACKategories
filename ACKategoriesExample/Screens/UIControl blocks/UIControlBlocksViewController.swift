@@ -28,9 +28,11 @@ final class UIControlBlocksViewController: BaseViewControllerNoVM {
         }
 
         view.addSubview(button)
-        button.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
         self.button = button
     }
 

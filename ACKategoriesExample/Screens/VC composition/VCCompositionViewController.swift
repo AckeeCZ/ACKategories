@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class VCCompositionViewController: TitleViewController {
 
@@ -28,10 +27,13 @@ final class VCCompositionViewController: TitleViewController {
 
         let containerView = UIView()
         view.addSubview(containerView)
-        containerView.snp.makeConstraints { (make) in
-            make.leading.trailing.bottom.equalToSuperview()
-            make.top.equalTo(nameLabel.snp.bottom).offset(30)
-        }
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30),
+            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
 
         let childVC = TitleViewController(name: "Child", color: .blue)
         display(childViewController: childVC, in: containerView)

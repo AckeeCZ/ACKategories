@@ -38,9 +38,12 @@ class TitleViewController: BaseViewControllerNoVM {
         nameLabel.textAlignment = .center
         nameLabel.text = name
         view.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints { (make) in
-            make.leading.trailing.top.equalTo(view.safeAreaLayoutGuide).inset(20)
-        }
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            nameLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+        ])
         self.nameLabel = nameLabel
     }
 }

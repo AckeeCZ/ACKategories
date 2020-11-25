@@ -18,9 +18,13 @@ final class MapViewController: BaseViewController<MapViewModeling> {
         let mapView = MKMapView()
         view.addSubview(mapView)
         mapView.delegate = self
-        mapView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mapView.topAnchor.constraint(equalTo: view.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
         self.mapView = mapView
     }
 
