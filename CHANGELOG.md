@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.7.1
+
 ### Added
 
 - Tests for `FlowCoordinator.stop()` ([#96](https://github.com/AckeeCZ/ACKategories/pull/96), kudos to @lukashromadnik)
