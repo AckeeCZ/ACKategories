@@ -69,7 +69,6 @@ extension Base {
 
         /// Clean up. Must be called when FC finished the flow to avoid memory leaks and unexpected behavior.
         open func stop(animated: Bool = false, completion: (() -> Void)? = nil) {
-
             /// Determines whether dismiss should be called on `presentingViewController` of root,
             /// based on whether there are remaining VCs in the navigation stack.
             var shouldCallDismissOnPresentingVC = true
@@ -89,9 +88,9 @@ extension Base {
             }
 
             // pop all view controllers when started within navigation controller
-            if let index = navigationController?.viewControllers.firstIndex(of: rootViewController) {
+            if let navigationController = navigationController, let index = navigationController.viewControllers.firstIndex(of: rootViewController) {
                 // VCs to be removed from navigation stack
-                let toRemoveViewControllers = navigationController.flatMap { Array($0.viewControllers[index..<$0.viewControllers.count]) } ?? []
+                let toRemoveViewControllers = navigationController.viewControllers[index..<navigationController.viewControllers.count]
 
                 // dismiss all presented VCs on VCs to be removed
                 toRemoveViewControllers.forEach { vc in
@@ -102,10 +101,10 @@ extension Base {
                 }
 
                 // VCs to remain in the navigation stack
-                let remainingViewControllers = Array(navigationController?.viewControllers[0..<index] ?? [])
+                let remainingViewControllers = Array(navigationController.viewControllers[0..<index])
 
                 if remainingViewControllers.isNotEmpty {
-                    navigationController?.setViewControllers(remainingViewControllers, animated: animated)
+                    navigationController.setViewControllers(remainingViewControllers, animated: animated)
                 }
 
                 // set the appropriate value based on whether there are VCs remaining in the navigation stack
@@ -150,14 +149,7 @@ extension Base {
         // MARK: - UINavigationControllerDelegate
 
         public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-
-            // ensure the view controller is popping
-            guard
-                let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
-                !navigationController.viewControllers.contains(fromViewController)
-                else { return }
-
-            if let firstViewController = rootViewController, fromViewController == firstViewController {
+            if let rootViewController = rootViewController, !navigationController.viewControllers.contains(rootViewController) {
                 navigationController.delegate = parentCoordinator
                 stop()
             }
@@ -175,7 +167,7 @@ extension Base {
 
         /// Handle deep link with currently active coordinator. If not handled, function returns false
         @discardableResult open func handleDeeplink(_ deeplink: DeepLinkType) -> Bool {
-            return activeChild?.handleDeeplink(deeplink) ?? false
+            activeChild?.handleDeeplink(deeplink) ?? false
         }
 
         // MARK: - Debug

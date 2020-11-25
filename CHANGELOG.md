@@ -8,6 +8,14 @@
 
 ## Next
 
+### Added
+
+- Tests for `FlowCoordinator.stop()` ([#96](https://github.com/AckeeCZ/ACKategories/pull/96), kudos to @lukashromadnik)
+
+### Fixed
+
+- Fix `FlowCoordinator`'s navigation flow handler ([#96](https://github.com/AckeeCZ/ACKategories/pull/96), kudos to @lukashromadnik)
+
 ## 6.7.0
 
 - Deprecated `TableHeaderFooterView` because of different `readableContentGuide` behavior ([#92](https://github.com/AckeeCZ/ACKategories/pull/92), kudos to @leinhauplk)
