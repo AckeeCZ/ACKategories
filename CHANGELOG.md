@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.7.2
+
 ### Fixed
 
 - Remove support for unavailable type `Float80` on macOS ([#97](https://github.com/AckeeCZ/ACKategories/pull/97), kudos to @lukashromadnik)
