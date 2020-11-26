@@ -8,7 +8,6 @@
 
 import UIKit
 import XCTest
-import SnapKit
 import ACKategories
 
 final class UIViewControllerChildrenTests: XCTestCase {
@@ -37,10 +36,13 @@ final class UIViewControllerChildrenTests: XCTestCase {
         
         let container = UIView()
         vc.view.addSubview(container)
-        container.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.height.equalTo(100)
-        }
+        container.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            container.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor),
+            container.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor),
+            container.widthAnchor.constraint(equalToConstant: 100),
+            container.heightAnchor.constraint(equalToConstant: 100)
+        ])
         
         vc.display(childViewController: childVC, in: container)
         vc.view.layoutIfNeeded()
