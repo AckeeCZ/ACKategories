@@ -8,6 +8,8 @@
 
 ## Next
 
+- Check the value of `rootViewController` before stopping the flow ([#98](https://github.com/AckeeCZ/ACKategories/pull/98), kudos to @lukashromadnik)
+
 ## 6.7.2
 
 ### Fixed
