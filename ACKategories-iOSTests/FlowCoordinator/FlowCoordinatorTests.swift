@@ -188,4 +188,15 @@ final class FlowCoordinatorTests: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers.count, 1)
         XCTAssertEqual(fc.childCoordinators.count, 0)
     }
+    
+    func testRootViewControllerIsNil() {
+        let fc = NavigationFC()
+        fc.start(in: window)
+        _ = fc.rootViewController.view
+        fc.rootViewController = nil
+        
+        let exp = expectation(description: "Flow did finish")
+        fc.stop(animated: false) { exp.fulfill() }
+        wait(for: [exp], timeout: 0.3)
+    }
 }
