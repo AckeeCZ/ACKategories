@@ -76,13 +76,13 @@ extension Base {
                 animationGroup.enter()
                 $0.stop(animated: animated, completion: animationGroup.leave)
             }
-            
+
             dismissPresentedViewControllerIfPossible(animated: animated, group: animationGroup)
-            
+
             /// Determines whether dismiss should be called on `presentingViewController` of root,
             /// based on whether there are remaining VCs in the navigation stack.
             let shouldCallDismissOnPresentingVC = popAllViewControllersIfPossible(animated: animated, group: animationGroup)
-                
+
             // ensure that dismiss will be called on presentingVC of root only when appropriate,
             // as presentingVC of root when modally presenting can be UITabBarController,
             // but the whole navigation shouldn't be dismissed, as there are still VCs
@@ -102,9 +102,9 @@ extension Base {
                 completion?()
             }
         }
-        
+
         // MARK: - Stop helpers
-        
+
         /// Dismiss all VCs presented from root or nav if possible
         private func dismissPresentedViewControllerIfPossible(animated: Bool, group: DispatchGroup) {
             if let rootViewController = rootViewController, rootViewController.presentedViewController != nil {
@@ -112,7 +112,7 @@ extension Base {
                 rootViewController.dismiss(animated: animated, completion: group.leave)
             }
         }
-    
+
         /// Pop all view controllers when started within navigation controller
         /// - Returns: Flag whether dismiss should be called on `presentingViewController` of root,
         /// based on whether there are remaining VCs in the navigation stack.
@@ -124,7 +124,7 @@ extension Base {
             {
                 // VCs to be removed from navigation stack
                 let toRemoveViewControllers = navigationController.viewControllers[index..<navigationController.viewControllers.count]
-                
+
                 // dismiss all presented VCs on VCs to be removed
                 toRemoveViewControllers.forEach { vc in
                     if vc.presentedViewController != nil {
@@ -132,22 +132,21 @@ extension Base {
                         vc.dismiss(animated: animated, completion: group.leave)
                     }
                 }
-                
+
                 // VCs to remain in the navigation stack
                 let remainingViewControllers = Array(navigationController.viewControllers[0..<index])
-                
+
                 if remainingViewControllers.isNotEmpty {
                     navigationController.setViewControllers(remainingViewControllers, animated: animated)
                 }
-                
+
                 // set the appropriate value based on whether there are VCs remaining in the navigation stack
                 return remainingViewControllers.isEmpty
             }
-            
+
             // Return the default value for the flag
             return true
         }
-        
 
         // MARK: - Child coordinators
 
