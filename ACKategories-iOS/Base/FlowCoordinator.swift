@@ -149,7 +149,9 @@ extension Base {
         // MARK: - UINavigationControllerDelegate
 
         public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-            if let rootViewController = rootViewController, !navigationController.viewControllers.contains(rootViewController) {
+            guard let rootViewController = rootViewController else { return }
+            guard self.navigationController != rootViewController else { return }
+            if !navigationController.viewControllers.contains(rootViewController) {
                 navigationController.delegate = parentCoordinator
                 stop()
             }
