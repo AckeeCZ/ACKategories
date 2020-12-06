@@ -15,12 +15,7 @@ import UIKit
     `[UIColor.white, UIColor.white.withAlphaComponent(0)]`
  */
 open class GradientView: UIView {
-
-    override open class var layerClass: Swift.AnyClass {
-        get {
-            return CAGradientLayer.self
-        }
-    }
+    override open class var layerClass: Swift.AnyClass { CAGradientLayer.self }
 
     /**
      Creates a gradient view with colors and axis
@@ -30,9 +25,14 @@ open class GradientView: UIView {
      */
     public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+
         guard let gradientLayer = layer as? CAGradientLayer else { return }
+        
+        isUserInteractionEnabled = false
+
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map { $0.cgColor }
+
         if axis == .vertical {
             gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
