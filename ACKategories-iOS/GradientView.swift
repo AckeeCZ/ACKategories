@@ -27,7 +27,7 @@ open class GradientView: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
 
         guard let gradientLayer = layer as? CAGradientLayer else { return }
-        
+
         isUserInteractionEnabled = false
 
         gradientLayer.frame = bounds
