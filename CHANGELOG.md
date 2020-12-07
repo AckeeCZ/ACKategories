@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.7.3
+
 ### Fixed
 
 - Check if `navigationController != rootViewController` before running navigation delegate method ([#100](https://github.com/AckeeCZ/ACKategories/pull/100), kudos to @lukashromadnik)
