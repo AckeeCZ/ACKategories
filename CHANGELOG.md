@@ -8,6 +8,10 @@
 
 ## Next
 
+### Fixed
+
+- `GradientView` has `isUserInteractionEnabled = false` as it is not supposed to be interactive by design ([#99](https://github.com/AckeeCZ/ACKategories/pull/99), kudos to @olejnjak)
+
 ## 6.7.2
 
 ### Fixed
