@@ -107,6 +107,7 @@
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
 		6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */; };
 		A33559012555270F009B9D89 /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */; };
+		A38883E3257E2D2D00B958DD /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */; };
 		A3BA685B256BEC7B006DB42F /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA685A256BEC7B006DB42F /* UIWindow.swift */; };
 		A3BA6867256BECC6006DB42F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA6866256BECC6006DB42F /* UINavigationController.swift */; };
 		A3BA686E256BED96006DB42F /* Dummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA686D256BED96006DB42F /* Dummies.swift */; };
@@ -266,6 +267,7 @@
 		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorTests.swift; sourceTree = "<group>"; };
+		A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
 		A3BA685A256BEC7B006DB42F /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		A3BA6866256BECC6006DB42F /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		A3BA686D256BED96006DB42F /* Dummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummies.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			children = (
 				6950963023C7747C00E8F457 /* Base */,
 				697CECF023C877B20019FE61 /* Aliases.swift */,
+				A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */,
 				6950964823C7751600E8F457 /* GradientView.swift */,
 				6950964D23C7752B00E8F457 /* NSMutableParagraphStyleExtensions.swift */,
 				6950965223C7753D00E8F457 /* ReusableView.swift */,
@@ -995,6 +998,7 @@
 				6950965123C7753500E8F457 /* NumberFormatterExtensions.swift in Sources */,
 				6950964523C774DB00E8F457 /* ConditionalAssignment.swift in Sources */,
 				6950962823C7740B00E8F457 /* Base.swift in Sources */,
+				A38883E3257E2D2D00B958DD /* ErrorHandlers.swift in Sources */,
 				6950964C23C7751E00E8F457 /* NSAttributedStringExtensions.swift in Sources */,
 				6950967123C78AC900E8F457 /* UILabelExtensions.swift in Sources */,
 				F8B81694246C59F7005D1D74 /* Date+Random.swift in Sources */,

@@ -77,6 +77,10 @@ extension Base {
                 $0.stop(animated: animated, completion: animationGroup.leave)
             }
 
+            if rootViewController == nil {
+                ErrorHandlers.rootViewControllerDeallocatedBeforeStop?()
+            }
+
             dismissPresentedViewControllerIfPossible(animated: animated, group: animationGroup)
 
             /// Determines whether dismiss should be called on `presentingViewController` of root,
