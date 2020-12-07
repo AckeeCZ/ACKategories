@@ -157,7 +157,7 @@ extension Base {
             // But that's not possible with our current implementation.
             guard self.navigationController != rootViewController else { return }
 
-            // If `rootViewController` is not presented in the navigation stack
+            // If `rootViewController` is not present in the navigation stack
             // we have to stop the current flow
             if !navigationController.viewControllers.contains(rootViewController) {
                 navigationController.delegate = parentCoordinator
