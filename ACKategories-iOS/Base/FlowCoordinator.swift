@@ -149,8 +149,16 @@ extension Base {
         // MARK: - UINavigationControllerDelegate
 
         public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+            // Check if the root is not dead
             guard let rootViewController = rootViewController else { return }
+
+            // If the navigation controller is the current root view controller
+            // then this method shouldn't get called.
+            // But that's not possible with our current implementation.
             guard self.navigationController != rootViewController else { return }
+
+            // If `rootViewController` is not presented in the navigation stack
+            // we have to stop the current flow
             if !navigationController.viewControllers.contains(rootViewController) {
                 navigationController.delegate = parentCoordinator
                 stop()
