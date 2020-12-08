@@ -21,4 +21,11 @@ extension UINavigationController {
         popViewController(animated: animated)
         CATransaction.commit()
     }
+    
+    func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping () -> ()) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        popToViewController(viewController, animated: animated)
+        CATransaction.commit()
+    }
 }
