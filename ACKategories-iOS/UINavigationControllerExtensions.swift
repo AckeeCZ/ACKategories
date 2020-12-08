@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UINavigationController {
+public extension UINavigationController {
     func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping () -> ()) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
