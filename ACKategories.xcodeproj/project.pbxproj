@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		69372705257FAF02007CE25C /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */; };
 		6950962523C7740B00E8F457 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962223C7740A00E8F457 /* ViewModel.swift */; };
 		6950962623C7740B00E8F457 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962223C7740A00E8F457 /* ViewModel.swift */; };
 		6950962723C7740B00E8F457 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962323C7740A00E8F457 /* Base.swift */; };
@@ -187,6 +188,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		6950962223C7740A00E8F457 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6950962323C7740A00E8F457 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		6950962423C7740B00E8F457 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				6950965C23C78AC800E8F457 /* UIDeviceExtensions.swift */,
 				6950965F23C78AC800E8F457 /* UIImageExtensions.swift */,
 				6950966223C78AC800E8F457 /* UILabelExtensions.swift */,
+				69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */,
 				6950965D23C78AC800E8F457 /* UISearchBarExtensions.swift */,
 				6950966823C78AC900E8F457 /* UIStackViewExtensions.swift */,
 				6950966523C78AC800E8F457 /* UIView+SafeAreaCompat.swift */,
@@ -1001,6 +1004,7 @@
 				A38883E3257E2D2D00B958DD /* ErrorHandlers.swift in Sources */,
 				6950964C23C7751E00E8F457 /* NSAttributedStringExtensions.swift in Sources */,
 				6950967123C78AC900E8F457 /* UILabelExtensions.swift in Sources */,
+				69372705257FAF02007CE25C /* UINavigationControllerExtensions.swift in Sources */,
 				F8B81694246C59F7005D1D74 /* Date+Random.swift in Sources */,
 				6950966C23C78AC900E8F457 /* UISearchBarExtensions.swift in Sources */,
 				6950966B23C78AC900E8F457 /* UIDeviceExtensions.swift in Sources */,
