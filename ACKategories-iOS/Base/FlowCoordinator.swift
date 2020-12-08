@@ -17,10 +17,10 @@ extension Base {
     open class FlowCoordinator<DeepLinkType>: NSObject, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate {
 
         /// Reference to the navigation controller used within the flow
-        public weak var navigationController: UINavigationController?
+        open weak var navigationController: UINavigationController?
 
         /// First VC of the flow. Must be set when FC starts.
-        public weak var rootViewController: UIViewController! {
+        open weak var rootViewController: UIViewController! {
             didSet { rootVCSetter(rootViewController) }
         }
 
@@ -28,13 +28,13 @@ extension Base {
         private var rootVCSetter: (UIViewController?) -> () = { _ in }
 
         /// Parent coordinator
-        public weak var parentCoordinator: FlowCoordinator?
+        open weak var parentCoordinator: FlowCoordinator?
 
         /// Array of child coordinators
-        public var childCoordinators = [FlowCoordinator]()
+        open var childCoordinators = [FlowCoordinator]()
 
         /// Currently active coordinator
-        public weak var activeChild: FlowCoordinator?
+        open weak var activeChild: FlowCoordinator?
 
         // MARK: - Lifecycle
 
@@ -154,14 +154,14 @@ extension Base {
 
         // MARK: - Child coordinators
 
-        public func addChild(_ flowController: FlowCoordinator) {
+        open func addChild(_ flowController: FlowCoordinator) {
             if !childCoordinators.contains(where: { $0 === flowController }) {
                 childCoordinators.append(flowController)
                 flowController.parentCoordinator = self
             }
         }
 
-        public func removeChild(_ flowController: FlowCoordinator) {
+        open func removeChild(_ flowController: FlowCoordinator) {
             if let index = childCoordinators.firstIndex(where: { $0 === flowController }) {
                 childCoordinators.remove(at: index)
             }
@@ -169,7 +169,7 @@ extension Base {
 
         // MARK: - UINavigationControllerDelegate
 
-        public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        open func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
             // Check if the root is not dead
             guard let rootViewController = rootViewController else { return }
 
@@ -188,7 +188,7 @@ extension Base {
 
         // MARK: - UIAdaptivePresentationControllerDelegate
 
-        public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        open func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
             if presentationController.presentedViewController == rootViewController {
                 stop()
             }
