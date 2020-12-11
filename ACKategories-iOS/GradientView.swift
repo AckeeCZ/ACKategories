@@ -16,11 +16,11 @@ import UIKit
  */
 open class GradientView: UIView {
     override open class var layerClass: Swift.AnyClass { CAGradientLayer.self }
-    
+
     // MARK: - Private properties
-    
+
     private var colors: [UIColor]
-    
+
     // MARK: - Initializers
 
     /**
@@ -52,17 +52,17 @@ open class GradientView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - View lifecycle
-    
+
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
         setupGradientColors()
     }
-    
+
     // MARK: - Helpers
-    
+
     private func setupGradientColors() {
         guard let gradientLayer = layer as? CAGradientLayer else { return }
         gradientLayer.colors = colors.map { $0.cgColor }
