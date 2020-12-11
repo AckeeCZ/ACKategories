@@ -8,6 +8,10 @@
 
 ## Next
 
+### Fixed
+
+-  Update colors in GradientView when user interface style changed ([#102](https://github.com/AckeeCZ/ACKategories/pull/102), kudos to @leinhauplk)
+
 ## 6.7.3
 
 ### Fixed
