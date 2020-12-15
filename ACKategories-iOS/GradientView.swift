@@ -17,6 +17,12 @@ import UIKit
 open class GradientView: UIView {
     override open class var layerClass: Swift.AnyClass { CAGradientLayer.self }
 
+    // MARK: - Private properties
+
+    private var colors: [UIColor]
+
+    // MARK: - Initializers
+
     /**
      Creates a gradient view with colors and axis
      - Parameters:
@@ -24,6 +30,7 @@ open class GradientView: UIView {
         - axis: The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
      */
     public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
+        self.colors = colors
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
 
         guard let gradientLayer = layer as? CAGradientLayer else { return }
@@ -31,7 +38,7 @@ open class GradientView: UIView {
         isUserInteractionEnabled = false
 
         gradientLayer.frame = bounds
-        gradientLayer.colors = colors.map { $0.cgColor }
+        setupGradientColors()
 
         if axis == .vertical {
             gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
@@ -44,5 +51,20 @@ open class GradientView: UIView {
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - View lifecycle
+
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        setupGradientColors()
+    }
+
+    // MARK: - Helpers
+
+    private func setupGradientColors() {
+        guard let gradientLayer = layer as? CAGradientLayer else { return }
+        gradientLayer.colors = colors.map { $0.cgColor }
     }
 }
