@@ -12,6 +12,8 @@
 
 - Add completion blocks to `UINavigationController` pop and push methods ([#101](https://github.com/AckeeCZ/ACKategories/pull/101), kudos to @olejnjak)
 
+## 6.7.4
+
 ### Fixed
 
 -  Update colors in `GradientView` when user interface style changed ([#102](https://github.com/AckeeCZ/ACKategories/pull/102), kudos to @leinhauplk)
