@@ -30,4 +30,4 @@ jobs:
       - name: Install Bundler dependencies
         run: bundle install
       - name: Lint podspec
-        run: bundle exec pod lib lint
+        run: bundle exec pod lib lint --allow-warnings
