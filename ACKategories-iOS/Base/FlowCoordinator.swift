@@ -72,9 +72,11 @@ extension Base {
             let animationGroup = DispatchGroup()
 
             // stop all children
-            childCoordinators.forEach {
-                animationGroup.enter()
-                $0.stop(animated: animated, completion: animationGroup.leave)
+            DispatchQueue.main.async { [weak self] in
+                self?.childCoordinators.forEach {
+                    animationGroup.enter()
+                    $0.stop(animated: animated, completion: animationGroup.leave)
+                }
             }
 
             if rootViewController == nil {
