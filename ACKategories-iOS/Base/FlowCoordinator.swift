@@ -73,7 +73,9 @@ extension Base {
 
             // stop all children
             DispatchQueue.main.async { [weak self] in
-                self?.childCoordinators.forEach {
+                guard let self = self else { return }
+
+                self.childCoordinators.forEach {
                     animationGroup.enter()
                     $0.stop(animated: animated, completion: animationGroup.leave)
                 }
