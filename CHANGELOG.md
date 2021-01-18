@@ -8,6 +8,10 @@
 
 ## Next
 
+### Fixed
+
+- Put `stop` of `childCoordinators` on main thread ([#103](https://github.com/AckeeCZ/ACKategories/pull/103), kudos to @IgorRosocha)
+
 ### Added 
 
 - Add completion blocks to `UINavigationController` pop and push methods ([#101](https://github.com/AckeeCZ/ACKategories/pull/101), kudos to @olejnjak)

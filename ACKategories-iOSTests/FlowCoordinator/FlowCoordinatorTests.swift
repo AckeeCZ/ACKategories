@@ -215,4 +215,51 @@ final class FlowCoordinatorTests: XCTestCase {
         fc.stop(animated: false) { exp.fulfill() }
         wait(for: [exp, rootExp], timeout: 0.3)
     }
+
+    func testAllChildCoordinatorsAreCorrectlyStoppedWhenPreseting() throws {
+        let fc = NavigationFC()
+        fc.start(in: window)
+        _ = fc.rootViewController.view
+
+        let navigationController = try XCTUnwrap(fc.navigationController)
+
+        let exp = expectation(description: "did present")
+        let childFC = PresentFC { exp.fulfill() }
+        childFC.navigationController?.modalPresentationStyle = .overFullScreen
+        fc.addChild(childFC)
+        childFC.start(from: fc.rootViewController)
+        _ = childFC.rootViewController.view
+        wait(for: [exp], timeout: 1)
+
+        XCTAssertEqual(fc.childCoordinators.count, 1)
+        XCTAssertNotNil(fc.rootViewController?.presentedViewController)
+
+        let exp2 = expectation(description: "did present")
+        let child2FC = PresentFC { exp2.fulfill() }
+        childFC.addChild(child2FC)
+        child2FC.start(from: childFC.rootViewController)
+        _ = child2FC.rootViewController.view
+        wait(for: [exp2], timeout: 1)
+
+        XCTAssertEqual(childFC.childCoordinators.count, 1)
+        XCTAssertNotNil(childFC.rootViewController?.presentedViewController)
+
+        let exp3 = expectation(description: "did present")
+        let child3FC = PresentFC { exp3.fulfill() }
+        child2FC.addChild(child3FC)
+        child3FC.start(from: child2FC.rootViewController)
+        _ = child3FC.rootViewController.view
+        wait(for: [exp3], timeout: 1)
+
+        XCTAssertEqual(child2FC.childCoordinators.count, 1)
+        XCTAssertNotNil(child2FC.rootViewController?.presentedViewController)
+
+        let exp4 = expectation(description: "did stop")
+        childFC.stop { exp4.fulfill() }
+        wait(for: [exp4], timeout: 1)
+
+        XCTAssertEqual(fc.childCoordinators.count, 0)
+        XCTAssertNil(fc.rootViewController?.presentedViewController)
+        XCTAssertEqual(navigationController.viewControllers.count, 1)
+    }
 }
