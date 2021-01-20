@@ -27,7 +27,7 @@ open class GradientView: UIView {
             setupAxis()
         }
     }
-    
+
     /// The colors to be used for the gradient
     public var colors: [UIColor] {
         didSet {
@@ -50,9 +50,9 @@ open class GradientView: UIView {
 
         guard let gradientLayer = layer as? CAGradientLayer else { return }
         gradientLayer.frame = bounds
-        
+
         isUserInteractionEnabled = false
-        
+
         setupAxis()
         setupGradientColors()
     }
@@ -75,7 +75,7 @@ open class GradientView: UIView {
         guard let gradientLayer = layer as? CAGradientLayer else { return }
         gradientLayer.colors = colors.map { $0.cgColor }
     }
-    
+
     private func setupAxis() {
         guard let gradientLayer = layer as? CAGradientLayer else { return }
         if axis == .vertical {

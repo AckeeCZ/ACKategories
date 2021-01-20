@@ -12,12 +12,12 @@ class GradientViewController: UIViewController {
 
     private weak var gradientView: GradientView!
     private weak var button: UIButton!
-    
+
     override func loadView() {
         super.loadView()
-        
+
         view.backgroundColor = .white
-        
+
         let gradientView = GradientView()
         view.addSubview(gradientView)
         gradientView.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +28,7 @@ class GradientViewController: UIViewController {
             gradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         self.gradientView = gradientView
-        
+
         let button = UIButton(type: .system)
         button.setTitle("Change colors and switch axis", for: .normal)
         button.backgroundColor = .white
@@ -41,7 +41,7 @@ class GradientViewController: UIViewController {
         ])
         self.button = button
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,10 +50,10 @@ class GradientViewController: UIViewController {
             self.gradientView.axis = (self.gradientView.axis == .vertical) ? .horizontal : .vertical
         }
     }
-    
+
     private static func randomColors() -> [UIColor] {
         let colorsCount = Int.random(in: 2..<5)
-        
+
         var colors = [UIColor]()
         (0..<colorsCount).forEach { _ in
             colors.append(UIColor.random())
