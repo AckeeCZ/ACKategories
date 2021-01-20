@@ -15,6 +15,7 @@
 ### Added 
 
 - Add completion blocks to `UINavigationController` pop and push methods ([#101](https://github.com/AckeeCZ/ACKategories/pull/101), kudos to @olejnjak)
+- Add possibility to configure GradientView with public properties `colors` and `axis` even after init ([#104](https://github.com/AckeeCZ/ACKategories/pull/104), kudos to @janmisar)
 
 ## 6.7.4
 
