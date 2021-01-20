@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.8.0
+
 ### Fixed
 
 - Put `stop` of `childCoordinators` on main thread ([#103](https://github.com/AckeeCZ/ACKategories/pull/103), kudos to @IgorRosocha)
