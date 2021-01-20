@@ -19,7 +19,19 @@ open class GradientView: UIView {
 
     // MARK: - Private properties
 
-    private var colors: [UIColor]
+    /// The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
+    public var axis: NSLayoutConstraint.Axis {
+        didSet {
+            setupAxis()
+        }
+    }
+    
+    /// The colors to be used for the gradient
+    public var colors: [UIColor] {
+        didSet {
+            setupGradientColors()
+        }
+    }
 
     // MARK: - Initializers
 
@@ -30,23 +42,17 @@ open class GradientView: UIView {
         - axis: The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
      */
     public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
+        self.axis = axis
         self.colors = colors
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
 
         guard let gradientLayer = layer as? CAGradientLayer else { return }
-
-        isUserInteractionEnabled = false
-
         gradientLayer.frame = bounds
+        
+        isUserInteractionEnabled = false
+        
+        setupAxis()
         setupGradientColors()
-
-        if axis == .vertical {
-            gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-        } else {
-            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        }
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -66,5 +72,16 @@ open class GradientView: UIView {
     private func setupGradientColors() {
         guard let gradientLayer = layer as? CAGradientLayer else { return }
         gradientLayer.colors = colors.map { $0.cgColor }
+    }
+    
+    private func setupAxis() {
+        guard let gradientLayer = layer as? CAGradientLayer else { return }
+        if axis == .vertical {
+            gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        } else {
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
     }
 }

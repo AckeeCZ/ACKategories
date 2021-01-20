@@ -108,6 +108,7 @@
 		69FA5FBD23C868A900B44BCD /* ModalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */; };
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
 		6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */; };
+		88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDD90325B8252E00207987 /* GradientViewController.swift */; };
 		A33559012555270F009B9D89 /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */; };
 		A38883E3257E2D2D00B958DD /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */; };
 		A3BA685B256BEC7B006DB42F /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA685A256BEC7B006DB42F /* UIWindow.swift */; };
@@ -269,6 +270,7 @@
 		69FA5FC323C869A200B44BCD /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ACKategories.podspec; sourceTree = "<group>"; };
 		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		88EDD90325B8252E00207987 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
 		A3BA685A256BEC7B006DB42F /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 		69FA5F9123C868A900B44BCD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				88EDD8FD25B824C200207987 /* GradientView */,
 				69FA5F9223C868A900B44BCD /* UIControl blocks */,
 				69FA5F9423C868A900B44BCD /* VC composition */,
 				69FA5F9723C868A900B44BCD /* MapView */,
@@ -578,6 +581,14 @@
 				69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */,
 			);
 			path = "Flow coordinators";
+			sourceTree = "<group>";
+		};
+		88EDD8FD25B824C200207987 /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				88EDD90325B8252E00207987 /* GradientViewController.swift */,
+			);
+			path = GradientView;
 			sourceTree = "<group>";
 		};
 		A3BA6858256BEC56006DB42F /* FlowCoordinator */ = {
@@ -919,6 +930,7 @@
 			files = (
 				69FA5FBD23C868A900B44BCD /* ModalFlowCoordinator.swift in Sources */,
 				69FA5FB523C868A900B44BCD /* ModalViewController.swift in Sources */,
+				88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */,
 				69FA5FBC23C868A900B44BCD /* AppFlowCoordinator.swift in Sources */,
 				69FA5FB023C868A900B44BCD /* VCCompositionViewController.swift in Sources */,
 				69FA5FB223C868A900B44BCD /* MapViewModel.swift in Sources */,
