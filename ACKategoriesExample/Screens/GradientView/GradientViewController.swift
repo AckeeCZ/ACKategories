@@ -18,7 +18,7 @@ class GradientViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        let gradientView = GradientView(colors: GradientViewController.randomColors(), axis: .vertical)
+        let gradientView = GradientView()
         view.addSubview(gradientView)
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

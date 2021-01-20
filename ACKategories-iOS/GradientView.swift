@@ -20,6 +20,8 @@ open class GradientView: UIView {
     // MARK: - Private properties
 
     /// The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
+    ///
+    /// Default value is `.vertical`
     public var axis: NSLayoutConstraint.Axis {
         didSet {
             setupAxis()
@@ -41,7 +43,7 @@ open class GradientView: UIView {
         - colors: The colors to be used for the gradient.
         - axis: The axis of the gradient: `.vertical` for bottom-to-top gradient, `.horizontal` for left-to-right gradient.
      */
-    public init(colors: [UIColor], axis: NSLayoutConstraint.Axis) {
+    public init(colors: [UIColor] = [], axis: NSLayoutConstraint.Axis = .vertical) {
         self.axis = axis
         self.colors = colors
         super.init(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
