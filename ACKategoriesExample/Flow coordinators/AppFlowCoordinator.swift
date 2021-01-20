@@ -44,6 +44,10 @@ extension AppFlowCoordinator: ExampleListFlowDelegate {
             let mapVC = MapViewController(viewModel: MapViewModel())
             mapVC.title = item.title
             navigationController?.pushViewController(mapVC, animated: true)
+        case .gradientView:
+            let gradientVC = GradientViewController()
+            gradientVC.title = item.title
+            navigationController?.pushViewController(gradientVC, animated: true)
         }
     }
 }
