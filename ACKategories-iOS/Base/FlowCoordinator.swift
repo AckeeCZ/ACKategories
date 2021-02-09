@@ -156,14 +156,14 @@ extension Base {
 
         // MARK: - Child coordinators
 
-        public func addChild(_ flowController: FlowCoordinator) {
+        open func addChild(_ flowController: FlowCoordinator) {
             if !childCoordinators.contains(where: { $0 === flowController }) {
                 childCoordinators.append(flowController)
                 flowController.parentCoordinator = self
             }
         }
 
-        public func removeChild(_ flowController: FlowCoordinator) {
+        open func removeChild(_ flowController: FlowCoordinator) {
             if let index = childCoordinators.firstIndex(where: { $0 === flowController }) {
                 childCoordinators.remove(at: index)
             }
@@ -171,7 +171,7 @@ extension Base {
 
         // MARK: - UINavigationControllerDelegate
 
-        public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        open func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
             // Check if the root is not dead
             guard let rootViewController = rootViewController else { return }
 
@@ -190,7 +190,7 @@ extension Base {
 
         // MARK: - UIAdaptivePresentationControllerDelegate
 
-        public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        open func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
             if presentationController.presentedViewController == rootViewController {
                 stop()
             }
