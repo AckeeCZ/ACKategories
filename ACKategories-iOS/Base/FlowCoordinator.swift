@@ -190,7 +190,7 @@ extension Base {
 
         // MARK: - UIAdaptivePresentationControllerDelegate
 
-        public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        open func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
             if presentationController.presentedViewController == rootViewController {
                 stop()
             }
