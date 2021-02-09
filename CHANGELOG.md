@@ -8,6 +8,8 @@
 
 ## Next
 
+- Make `presentationControllerDidDismiss` open to enable overrides in subclasses ([#105](https://github.com/AckeeCZ/ACKategories/pull/105), kudos to @janmisar)
+
 ## 6.8.0
 
 ### Fixed
