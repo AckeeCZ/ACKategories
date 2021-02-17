@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: AckeeCZ/load-xcode-version@1.0
       - name: Run iOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro Max,OS=latest' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty
