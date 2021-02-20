@@ -228,8 +228,14 @@ extension Base {
 
         /// Wait for a second and check whether rootViewController was set
         private func checkRootViewController() {
-            DispatchQueue(label: "rootViewController").asyncAfter(deadline: .now() + 1) { [weak self] in
-                if self?.rootViewController == nil { assertionFailure("rootViewController is nil") }
+            let currentQueue = OperationQueue.current?.underlyingQueue
+
+            assert(currentQueue != nil)
+
+            currentQueue?.asyncAfter(deadline: .now() + 1) { [weak self] in
+                /// If `self` is nil, then I think we should not care
+                guard let self = self else { return }
+                if self.rootViewController == nil { assertionFailure("rootViewController is nil") }
             }
         }
     }
