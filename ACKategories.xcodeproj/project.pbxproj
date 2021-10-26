@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6914B1142728231300FF177E /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914B1132728231300FF177E /* TagListView.swift */; };
 		69372705257FAF02007CE25C /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */; };
 		69372720257FB0A3007CE25C /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */; };
 		6950962523C7740B00E8F457 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962223C7740A00E8F457 /* ViewModel.swift */; };
@@ -189,6 +190,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6914B1132728231300FF177E /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTests.swift; sourceTree = "<group>"; };
 		6950962223C7740A00E8F457 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				6950965223C7753D00E8F457 /* ReusableView.swift */,
 				6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */,
 				6950966623C78AC800E8F457 /* TableHeaderFooterView.swift */,
+				6914B1132728231300FF177E /* TagListView.swift */,
 				6950966023C78AC800E8F457 /* UIApplicationExtensions.swift */,
 				6950966423C78AC800E8F457 /* UIButtonExtensions.swift */,
 				6950965E23C78AC800E8F457 /* UIColorExtensions.swift */,
@@ -1001,6 +1004,7 @@
 				6950965423C7753D00E8F457 /* ReusableView.swift in Sources */,
 				6950966E23C78AC900E8F457 /* UIImageExtensions.swift in Sources */,
 				6950967623C78AC900E8F457 /* UIViewController+SafeAreaCompat.swift in Sources */,
+				6914B1142728231300FF177E /* TagListView.swift in Sources */,
 				6950964123C774DB00E8F457 /* DateFormatting.swift in Sources */,
 				6950963F23C774DB00E8F457 /* CollectionExtensions.swift in Sources */,
 				6950967523C78AC900E8F457 /* TableHeaderFooterView.swift in Sources */,
