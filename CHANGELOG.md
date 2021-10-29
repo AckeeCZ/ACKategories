@@ -8,8 +8,8 @@
 
 ## Next
 
-- Use Xcode 12.4, temporarily disable Carthage archive deploy until it supports archives with XCFrameworks ([#106](https://github.com/AckeeCZ/ACKategories/pull/106), kudos to @olejnjak)
 - Add `TagListView` ([#107](https://github.com/AckeeCZ/ACKategories/pull/107), kudos to @olejnjak)
+- Use Xcode 13.1 ([#109](https://github.com/AckeeCZ/ACKategories/pull/109), kudos to @olejnjak)
 
 ## 6.8.1
 
