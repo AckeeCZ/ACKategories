@@ -6,28 +6,33 @@ on:
     - '*'
 
 jobs:
-  # Just commenting out as we would want to return it as soon as Carthage supports archives with XCFrameworks
-  # carthage:
-  #   name: Upload Carthage binary 
-  #   runs-on: macos-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: AckeeCZ/load-xcode-version@1.0
-  #     - name: Build
-  #       run: carthage build --no-skip-current --cache-builds --use-xcframeworks
-  #     - name: Archive
-  #       run: carthage archive ACKategories
-  #     - uses: xresloader/upload-to-github-release@v1
-  #       if: startsWith(github.ref, 'refs/tags/')
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         file: ACKategories.framework.zip
-  #         tags: true
-  #         draft: false
+  carthage:
+    name: Upload Carthage binary 
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - uses: AckeeCZ/load-xcode-version@1.0
+      - name: Build
+        run: carthage build --no-skip-current --cache-builds --use-xcframeworks
+      - name: Archive
+        run: | 
+          carthage archive
+          DST=$PWD
+          mkdir -p /tmp/ACKategories
+          mv Carthage/Build/*.xcframework /tmp/ACKategories
+          cd /tmp
+          zip -r "$DST/"ACKategories.xcframework.zip ACKategories
+      - uses: xresloader/upload-to-github-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: ACKategories.xcframework.zip
+          tags: true
+          draft: false
   cocoapods:
     name: Push podspec to Cocoapods trunk
-    runs-on: macos-latest
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
       - uses: AckeeCZ/load-xcode-version@1.0
