@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.9.0
+
 - Add `TagListView` ([#107](https://github.com/AckeeCZ/ACKategories/pull/107), kudos to @olejnjak)
 - Use Xcode 13.1 ([#109](https://github.com/AckeeCZ/ACKategories/pull/109), kudos to @olejnjak)
 

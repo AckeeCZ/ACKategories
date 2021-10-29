@@ -16,7 +16,6 @@ jobs:
         run: carthage build --no-skip-current --cache-builds --use-xcframeworks
       - name: Archive
         run: | 
-          carthage archive
           DST=$PWD
           mkdir -p /tmp/ACKategories
           mv Carthage/Build/*.xcframework /tmp/ACKategories
