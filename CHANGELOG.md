@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add `Int` inits that safely convert given floating value (`Double`, `Float`, `CGFloat`) to `Int` by checking for `NaN` and `infinity` ([#110](https://github.com/AckeeCZ/ACKategories/pull/110), kudos to @olejnjak)
+
 ## 6.9.0
 
 - Add `TagListView` ([#107](https://github.com/AckeeCZ/ACKategories/pull/107), kudos to @olejnjak)
