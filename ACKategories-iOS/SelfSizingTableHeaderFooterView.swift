@@ -32,25 +32,23 @@ open class SelfSizingTableHeaderFooterView: UITableViewHeaderFooterView {
     }
 
     override open func layoutSubviews() {
-        super.layoutSubviews()
-
-        guard status != .none else { return }
-        let frameSize = fittingSize(for: self)
-        let contentViewSize = fittingSize(for: contentView)
-        frame = CGRect(
-            origin: frame.origin,
-            size: frameSize
-        )
-        contentView.frame = CGRect(
-            origin: contentView.frame.origin,
-            size: contentViewSize
-        )
-
-        switch status {
-        case .header: tableView?.tableHeaderView = self
-        case .footer: tableView?.tableFooterView = self
-        case .none: return
+        guard status != .none else {
+            super.layoutSubviews()
+            return
         }
+
+        let size = fittingSize(for: self)
+        if frame.size.height != size.height {
+            frame.size.height = size.height
+
+            switch status {
+            case .header: tableView?.tableHeaderView = self
+            case .footer: tableView?.tableFooterView = self
+            case .none: return
+            }
+        }
+
+        super.layoutSubviews()
     }
 
     // MARK: - Helpers
