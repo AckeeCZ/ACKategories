@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.9.1
+
 - Add `Int` inits that safely convert given floating value (`Double`, `Float`, `CGFloat`) to `Int` by checking for `NaN` and `infinity` ([#110](https://github.com/AckeeCZ/ACKategories/pull/110), kudos to @olejnjak)
 - `SelfSizingTableHeaderFooterView` - fix crash when device orientation has changed ([#111](https://github.com/AckeeCZ/ACKategories/pull/111), kudos to @leinhauplk)
 
