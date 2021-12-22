@@ -8,6 +8,8 @@
 
 ## Next
 
+- Fix target membership for _IntExtensions_ ([#112](https://github.com/AckeeCZ/ACKategories/pull/112), kudos to @olejnjak)
+
 ## 6.9.1
 
 - Add `Int` inits that safely convert given floating value (`Double`, `Float`, `CGFloat`) to `Int` by checking for `NaN` and `infinity` ([#110](https://github.com/AckeeCZ/ACKategories/pull/110), kudos to @olejnjak)
