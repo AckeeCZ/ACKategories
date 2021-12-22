@@ -18,7 +18,7 @@ final class ModalFlowCoordinator: Base.FlowCoordinatorNoDeepLink {
         rootViewController = modalVC
         viewController.present(modalVC, animated: true)
     }
-    
+
     // Overriden delegate method to catch dismiss by gesture
     override func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         // super implementation must be called to make FC logic work properly
