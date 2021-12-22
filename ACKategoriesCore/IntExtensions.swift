@@ -1,4 +1,5 @@
 import Foundation
+import CoreGraphics
 
 public extension Int {
     /// Optionally create `Int` checking if `double` is not Nan nor infinity

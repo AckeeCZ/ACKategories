@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		6914B1142728231300FF177E /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914B1132728231300FF177E /* TagListView.swift */; };
+		692154722773A634007A5A5B /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7058D273ADBA3004DD190 /* IntExtensions.swift */; };
 		6922A08B273B2630004B2B1F /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6922A08A273B2630004B2B1F /* IntTests.swift */; };
 		69372705257FAF02007CE25C /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */; };
 		69372720257FB0A3007CE25C /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */; };
@@ -1005,6 +1006,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692154722773A634007A5A5B /* IntExtensions.swift in Sources */,
 				6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */,
 				6950962F23C7747800E8F457 /* ViewController.swift in Sources */,
 				F8B81697246C59F7005D1D74 /* Int+Random.swift in Sources */,
