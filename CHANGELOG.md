@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.9.2
+
 - Fix target membership for _IntExtensions_ ([#112](https://github.com/AckeeCZ/ACKategories/pull/112), kudos to @olejnjak)
 
 ## 6.9.1
