@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.9.3
+
 - Update image rendering API to use the newest `UIGraphicsImageRenderer` ([#113](https://github.com/AckeeCZ/ACKategories/pull/113), kudos to @LukasHromadnik)
 
 ## 6.9.2
