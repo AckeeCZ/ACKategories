@@ -8,6 +8,8 @@
 
 ## Next
 
+- Update image rendering API to use the newest `UIGraphicsImageRenderer` ([#113](https://github.com/AckeeCZ/ACKategories/pull/113), kudos to @LukasHromadnik)
+
 ## 6.9.2
 
 - Fix target membership for _IntExtensions_ ([#112](https://github.com/AckeeCZ/ACKategories/pull/112), kudos to @olejnjak)
