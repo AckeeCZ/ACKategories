@@ -8,12 +8,7 @@ extension UIImage {
     public func fixedOrientation() -> UIImage {
         guard imageOrientation != .up else { return self }
 
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        guard let normalizedImage = UIGraphicsGetImageFromCurrentImageContext() else { return self }
-        UIGraphicsEndImageContext()
-
-        return normalizedImage
+        return renderImage(in: size) ?? self
     }
 
     /// Resize image to `maxDimension`
@@ -29,11 +24,27 @@ extension UIImage {
             newSize = CGSize(width: (size.width / size.height) * maxDimension, height: maxDimension)
         }
 
-        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
-        draw(in: CGRect(origin: .zero, size: newSize))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
+        return renderImage(in: newSize)
+    }
+
+    private func renderImage(in size: CGSize) -> UIImage? {
+        if #available(iOS 10, *) {
+            let format = UIGraphicsImageRendererFormat()
+            format.opaque = false
+            format.scale = scale
+            let renderer = UIGraphicsImageRenderer(size: size, format: format)
+
+            return renderer.image { _ in
+                self.draw(in: CGRect(origin: .zero, size: size))
+            }
+        } else {
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            draw(in: CGRect(origin: .zero, size: size))
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            return image
+        }
     }
 
 }
