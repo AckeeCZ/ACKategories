@@ -8,6 +8,7 @@ extension UICollectionReusableView: Reusable { }
 
 private enum Keys {
     static var prototypeCellStorage = UInt8(0)
+    static var prototypeSupplementaryViewsStorage = UInt8(1)
 }
 
 extension UITableView {
@@ -59,6 +60,15 @@ extension UICollectionView {
             objc_setAssociatedObject(self, &Keys.prototypeCellStorage, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
+    
+    private var prototypeSupplementaryViews: [String: UICollectionReusableView] {
+        get {
+            objc_getAssociatedObject(self, &Keys.prototypeSupplementaryViewsStorage) as? [String: UICollectionReusableView] ?? [:]
+        }
+        set {
+            objc_setAssociatedObject(self, &Keys.prototypeSupplementaryViewsStorage, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
 
     /// Dequeues `UICollectionViewCell` generically according to expression result type
     ///
@@ -69,7 +79,7 @@ extension UICollectionView {
     }
 
     /// Get prototype cell of given type
-    public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UICollectionViewCell {
+    public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UICollectionViewCell {        
         if let prototype = prototypeCells[T.reuseIdentifier] as? T {
             return prototype
         }
@@ -85,5 +95,17 @@ extension UICollectionView {
     public func dequeueSupplementaryView<T>(ofKind kind: String, for indexPath: IndexPath, type: T.Type = T.self) -> T where T: UICollectionReusableView {
         register(T.classForCoder(), forSupplementaryViewOfKind: kind, withReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
+    }
+    
+    public func prototypeSupplementaryView<T>(ofKind kind: String, type: T.Type = T.self) -> T where T: UICollectionReusableView {
+        let key = kind + "-" + T.reuseIdentifier
+        
+        if let prototype = prototypeSupplementaryViews[key] as? T {
+            return prototype
+        }
+
+        let prototype = T()
+        prototypeSupplementaryViews[key] = prototype
+        return prototype
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 import XCTest
 
 final class ReusableViewTests: XCTestCase {
-    func testTableViewCellPrototypeIsCached() {
+    func test_tableViewCellPrototype_isCached() {
         final class CustomCell: UITableViewCell { }
         
         let tableView = UITableView()
@@ -14,7 +14,7 @@ final class ReusableViewTests: XCTestCase {
         XCTAssertFalse(prototype === CustomCell())
     }
     
-    func testCollectionViewCellPrototypeIsCached() {
+    func test_collectionViewCellPrototype_isCached() {
         final class CustomCell: UICollectionViewCell { }
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -23,5 +23,16 @@ final class ReusableViewTests: XCTestCase {
         
         XCTAssertTrue(prototype === prototype2)
         XCTAssertFalse(prototype === CustomCell())
+    }
+    
+    func test_collectionViewSupplementaryViewPrototype_isCached() {
+        final class CustomView: UICollectionReusableView { }
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let prototype = collectionView.prototypeSupplementaryView(ofKind: "view", type: CustomView.self)
+        let prototype2 = collectionView.prototypeSupplementaryView(ofKind: "view", type: CustomView.self)
+        
+        XCTAssertTrue(prototype === prototype2)
+        XCTAssertFalse(prototype === CustomView())
     }
 }
