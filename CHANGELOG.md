@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add `prototypeSupplementaryView(ofKind:type)` to `UICollectionView` extensions ([#114](https://github.com/AckeeCZ/ACKategories/pull/114), kudos to @olejnjak)
+
 ## 6.9.3
 
 - Update image rendering API to use the newest `UIGraphicsImageRenderer` ([#113](https://github.com/AckeeCZ/ACKategories/pull/113), kudos to @LukasHromadnik)
