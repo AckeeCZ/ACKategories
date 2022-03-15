@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.10.0
+
 - Add `prototypeSupplementaryView(ofKind:type)` to `UICollectionView` extensions ([#114](https://github.com/AckeeCZ/ACKategories/pull/114), kudos to @olejnjak)
 
 ## 6.9.3
