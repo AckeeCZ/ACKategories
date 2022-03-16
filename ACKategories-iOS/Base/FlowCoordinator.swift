@@ -187,6 +187,14 @@ extension Base {
                 stop()
             }
         }
+        
+        open func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+            nil
+        }
+        
+        open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+            nil
+        }
 
         // MARK: - UIAdaptivePresentationControllerDelegate
 
