@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0E3478AB27E37DC1004548B3 /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */; };
 		6914B1142728231300FF177E /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914B1132728231300FF177E /* TagListView.swift */; };
 		692154722773A634007A5A5B /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7058D273ADBA3004DD190 /* IntExtensions.swift */; };
 		6922A08B273B2630004B2B1F /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6922A08A273B2630004B2B1F /* IntTests.swift */; };
@@ -193,6 +194,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublisherExtensions.swift; sourceTree = "<group>"; };
 		6914B1132728231300FF177E /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		6922A08A273B2630004B2B1F /* IntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTests.swift; sourceTree = "<group>"; };
 		69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				69F7058D273ADBA3004DD190 /* IntExtensions.swift */,
 				6950964A23C7751E00E8F457 /* NSAttributedStringExtensions.swift */,
 				6950964F23C7753500E8F457 /* NumberFormatterExtensions.swift */,
+				0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */,
 				6950965523C7754D00E8F457 /* Reusable.swift */,
 				6950965823C78AB900E8F457 /* StringExtensions.swift */,
 				6950967923C78AD000E8F457 /* UserDefaultsExtensions.swift */,
@@ -964,6 +967,7 @@
 			files = (
 				69F7058E273ADBA3004DD190 /* IntExtensions.swift in Sources */,
 				F885BDA3245ACD010071073D /* Randomizable.swift in Sources */,
+				0E3478AB27E37DC1004548B3 /* PublisherExtensions.swift in Sources */,
 				6950964423C774DB00E8F457 /* ConditionalAssignment.swift in Sources */,
 				6950963C23C774DB00E8F457 /* DictionaryExtensions.swift in Sources */,
 				6950963E23C774DB00E8F457 /* CollectionExtensions.swift in Sources */,
