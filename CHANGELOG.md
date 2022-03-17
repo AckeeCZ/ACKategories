@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Create `PublisherExtensions.swift` and add `weakAssign(on:to:)`. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
 
 ## 6.10.0
 
