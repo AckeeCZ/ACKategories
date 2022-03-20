@@ -60,7 +60,7 @@ extension UICollectionView {
             objc_setAssociatedObject(self, &Keys.prototypeCellStorage, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     private var prototypeSupplementaryViews: [String: UICollectionReusableView] {
         get {
             objc_getAssociatedObject(self, &Keys.prototypeSupplementaryViewsStorage) as? [String: UICollectionReusableView] ?? [:]
@@ -79,7 +79,7 @@ extension UICollectionView {
     }
 
     /// Get prototype cell of given type
-    public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UICollectionViewCell {        
+    public func prototypeCell<T>(type: T.Type = T.self) -> T where T: UICollectionViewCell {
         if let prototype = prototypeCells[T.reuseIdentifier] as? T {
             return prototype
         }
@@ -96,10 +96,10 @@ extension UICollectionView {
         register(T.classForCoder(), forSupplementaryViewOfKind: kind, withReuseIdentifier: T.reuseIdentifier)
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
-    
+
     public func prototypeSupplementaryView<T>(ofKind kind: String, type: T.Type = T.self) -> T where T: UICollectionReusableView {
         let key = kind + "-" + T.reuseIdentifier
-        
+
         if let prototype = prototypeSupplementaryViews[key] as? T {
             return prototype
         }
