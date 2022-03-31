@@ -8,6 +8,12 @@
 
 ## Next
 
+## 6.11.0
+
+- Create `PublisherExtensions.swift` and add `weakAssign(on:to:)`. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
+
+- Add option to implement custom push transition ([#115](https://github.com/AckeeCZ/ACKategories/pull/115), kudos to @leinhauplk)
+
 ## 6.10.0
 
 - Add `prototypeSupplementaryView(ofKind:type)` to `UICollectionView` extensions ([#114](https://github.com/AckeeCZ/ACKategories/pull/114), kudos to @olejnjak)
