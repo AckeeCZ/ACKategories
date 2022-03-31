@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add custom `ZipMany` publisher. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
+
 ## 6.11.0
 
 - Create `PublisherExtensions.swift` and add `weakAssign(on:to:)`. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
