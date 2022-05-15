@@ -11,6 +11,13 @@ extension Publisher where Failure == Never {
 }
 
 @available(macOS 10.15, iOS 13.0, *)
+extension Publisher {
+    public func flatMapLatest<T: Publisher>(_ transform: @escaping (Self.Output) -> T) -> Publishers.SwitchToLatest<T, Publishers.Map<Self, T>> {
+        map(transform).switchToLatest()
+    }
+}
+
+@available(macOS 10.15, iOS 13.0, *)
 extension Publishers {
     /// A publisher created by applying the zip function to an arbitrary number of upstream publishers.
     public struct ZipMany<Upstream>: Publisher where Upstream: Publisher {
