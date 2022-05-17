@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Fix navigation stack when managed by flow coordinators in non-linear hierarchy ([#123](https://github.com/AckeeCZ/ACKategories/pull/123), kudos to @olejnjak)
 - Add custom `ZipMany` publisher. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
 
 ## 6.11.1
