@@ -30,6 +30,23 @@ extension Base {
         /// Parent coordinator
         public weak var parentCoordinator: FlowCoordinator?
 
+        /// Property keeping reference to parent `UINavigationControllerDelegate`, that will be set when
+        /// `self` is stopped.
+        ///
+        /// When multiple flow coordinators manage shared navigation stack, they should be chained propertly
+        ///
+        /// ```ParentFlow -> ChildFlow1 -> ChildFlow2```
+        ///
+        /// But this is not always easy to achieve, sometimes you end up with hierarchy like this
+        /// ```
+        /// ParentFlow -> ChildFlow1
+        ///            -> ChildFlow2
+        /// ```
+        ///
+        /// This property is set in `start(with navigationController)`
+        /// so it can be used later in `stop` and in `UINavigationControllerDelegate` implementation
+        private weak var parentNavigationDelegate: UINavigationControllerDelegate?
+
         /// Array of child coordinators
         public var childCoordinators = [FlowCoordinator]()
 
@@ -54,6 +71,8 @@ extension Base {
         /// Start within existing navigation controller.
         open func start(with navigationController: UINavigationController) {
             self.navigationController = navigationController
+
+            parentNavigationDelegate = navigationController.delegate
             navigationController.delegate = self
 
             checkRootViewController()
@@ -100,7 +119,7 @@ extension Base {
             }
 
             // stopping FC doesn't need to be nav delegate anymore -> pass it to parent
-            navigationController?.delegate = parentCoordinator
+            navigationController?.delegate = parentNavigationDelegate
 
             parentCoordinator?.removeChild(self)
 
@@ -183,7 +202,7 @@ extension Base {
             // If `rootViewController` is not present in the navigation stack
             // we have to stop the current flow
             if !navigationController.viewControllers.contains(rootViewController) {
-                navigationController.delegate = parentCoordinator
+                navigationController.delegate = parentNavigationDelegate
                 stop()
             }
         }
