@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 
 /// A type safe property wrapper to set and get values from UserDefaults with support for defaults values.
@@ -10,7 +11,7 @@ import Foundation
 ///
 /// [Apple documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
 @propertyWrapper
-public struct UserDefault<Value: Codable> {
+public final class UserDefault<Value: Codable> {
     private let key: String
     private let defaultValue: Value
     private var userDefaults: UserDefaults
@@ -64,12 +65,36 @@ public struct UserDefault<Value: Codable> {
                     errorLogger?(error)
                 }
             }
+
+            if #available(iOS 13.0, macOS 10.15, *) {
+                subject().send(newValue)
+            }
         }
+    }
+
+    @available(iOS 13.0, macOS 10.15, *)
+    public var projectedValue: CurrentValueSubject<Value, Never> {
+        subject()
+    }
+
+    @available(iOS 13.0, macOS 10.15, *)
+    private func subject() -> CurrentValueSubject<Value, Never> {
+        if let subject = objc_getAssociatedObject(self, &AssociationKeys.subject) as? CurrentValueSubject<Value, Never> {
+            return subject
+        }
+
+        let subject = CurrentValueSubject<Value, Never>(wrappedValue)
+        objc_setAssociatedObject(self, &AssociationKeys.subject, subject, .OBJC_ASSOCIATION_RETAIN)
+        return subject
     }
 }
 
+private enum AssociationKeys {
+    static var subject = UInt8(0)
+}
+
 public extension UserDefault {
-    init<Wrapped>(_ key: String, `default`: Optional<Wrapped> = nil, userDefaults: UserDefaults = .standard) where Value == Optional<Wrapped> {
+    convenience init<Wrapped>(_ key: String, `default`: Optional<Wrapped> = nil, userDefaults: UserDefaults = .standard) where Value == Optional<Wrapped> {
         self.init(key, default: `default`, userDefaults: userDefaults)
     }
 }
