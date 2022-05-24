@@ -67,26 +67,19 @@ public final class UserDefault<Value: Codable> {
             }
 
             if #available(iOS 13.0, macOS 10.15, *) {
-                subject().send(newValue)
+                subject.send(newValue)
             }
         }
     }
 
     @available(iOS 13.0, macOS 10.15, *)
-    public var projectedValue: CurrentValueSubject<Value, Never> {
-        subject()
+    public var projectedValue: AnyPublisher<Value, Never> {
+        subject.eraseToAnyPublisher()
     }
 
     @available(iOS 13.0, macOS 10.15, *)
-    private func subject() -> CurrentValueSubject<Value, Never> {
-        if let subject = objc_getAssociatedObject(self, &AssociationKeys.subject) as? CurrentValueSubject<Value, Never> {
-            return subject
-        }
-
-        let subject = CurrentValueSubject<Value, Never>(wrappedValue)
-        objc_setAssociatedObject(self, &AssociationKeys.subject, subject, .OBJC_ASSOCIATION_RETAIN)
-        return subject
-    }
+    // cannot have stored property with limited availability, so lazy...
+    private lazy var subject = CurrentValueSubject<Value, Never>(wrappedValue)
 }
 
 private enum AssociationKeys {
