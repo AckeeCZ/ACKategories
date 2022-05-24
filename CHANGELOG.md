@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Add `flatMapLatest` extension to `Publisher`. ([#120](https://github.com/AckeeCZ/ACKategories/pull/120), kudos to @olejnjak)
 - Add custom `ZipMany` publisher. ([#116](https://github.com/AckeeCZ/ACKategories/pull/116), kudos to @vendulasvastal)
 
 ## 6.11.1
