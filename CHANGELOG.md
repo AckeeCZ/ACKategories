@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Binary is built using Xcode 13.4 ([#125](https://github.com/AckeeCZ/ACKategories/pull/125), kudos to @olejnjak)
 - Add `projectedValue` to `UserDefault` property wrapper with `CurrentValueSubject` ([#124](https://github.com/AckeeCZ/ACKategories/pull/124), kudos to @olejnjak)
 - Fix navigation stack when managed by flow coordinators in non-linear hierarchy ([#123](https://github.com/AckeeCZ/ACKategories/pull/123), kudos to @olejnjak)
 - Add `flatMapLatest` extension to `Publisher`. ([#120](https://github.com/AckeeCZ/ACKategories/pull/120), kudos to @olejnjak)
