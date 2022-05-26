@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import XCTest
 @testable import ACKategoriesCore
@@ -6,6 +7,7 @@ final class UserDefaultTests: XCTestCase {
     private var subject: MyUserDefaultProvider!
     private var userDefaults: UserDefaults!
     private var decoder: JSONDecoder!
+    private var cancellables: Set<AnyCancellable>!
     
     override func setUp() {
         super.setUp()
@@ -13,6 +15,7 @@ final class UserDefaultTests: XCTestCase {
         decoder = JSONDecoder()
         userDefaults = UserDefaults(suiteName: "my_user_default")
         subject = MyUserDefaultProvider()
+        cancellables = .init()
     }
     
     override func tearDown() {
@@ -20,6 +23,7 @@ final class UserDefaultTests: XCTestCase {
         
         userDefaults.removePersistentDomain(forName: "my_user_default")
         userDefaults = nil
+        cancellables = nil
     }
     
     func testBoolValueChanges() throws {
@@ -57,6 +61,17 @@ final class UserDefaultTests: XCTestCase {
         XCTAssertEqual(subject.codableValue, value)
         let data = try XCTUnwrap(userDefaults.object(forKey: "codable_value") as? Data)
         XCTAssertEqual(try decoder.decode([CodableValue].self, from: data), [value])
+    }
+
+    func test_projectedValue() {
+        var values = [Bool]()
+
+        subject.$hasSeen.sink { value in
+            values.append(value)
+        }.store(in: &cancellables)
+
+        subject.hasSeen = true
+        XCTAssertEqual([false, true], values)
     }
 }
 
