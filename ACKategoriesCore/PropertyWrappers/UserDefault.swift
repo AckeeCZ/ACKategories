@@ -82,10 +82,6 @@ public final class UserDefault<Value: Codable> {
     private lazy var subject = CurrentValueSubject<Value, Never>(wrappedValue)
 }
 
-private enum AssociationKeys {
-    static var subject = UInt8(0)
-}
-
 public extension UserDefault {
     convenience init<Wrapped>(_ key: String, `default`: Optional<Wrapped> = nil, userDefaults: UserDefaults = .standard) where Value == Optional<Wrapped> {
         self.init(key, default: `default`, userDefaults: userDefaults)
