@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Update for Xcode 14 ([#126](https://github.com/AckeeCZ/ACKategories/pull/126), kudos to @olejnjak)
 
 ## 6.12.0
 - Binary is built using Xcode 13.4 ([#125](https://github.com/AckeeCZ/ACKategories/pull/125), kudos to @olejnjak)
