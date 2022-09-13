@@ -7,7 +7,6 @@
 ```
 
 ## Next
-- Update for Xcode 14 ([#126](https://github.com/AckeeCZ/ACKategories/pull/126), kudos to @olejnjak)
 
 ## 6.12.1
 - Update for Xcode 14 ([#126](https://github.com/AckeeCZ/ACKategories/pull/126), kudos to @olejnjak)
