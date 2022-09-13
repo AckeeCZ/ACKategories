@@ -1,6 +1,10 @@
 import Combine
 import Foundation
 
+private enum Keys {
+    static var subject = UInt8(0)
+}
+
 /// A type safe property wrapper to set and get values from UserDefaults with support for defaults values.
 ///
 /// Usage:
@@ -78,8 +82,16 @@ public final class UserDefault<Value: Codable> {
     }
 
     @available(iOS 13.0, macOS 10.15, *)
-    // cannot have stored property with limited availability, so lazy...
-    private lazy var subject = CurrentValueSubject<Value, Never>(wrappedValue)
+    // cannot have stored property with limited availability, cannot be lazy since Xcode 14
+    private var subject: CurrentValueSubject<Value, Never> {
+        if let subject = objc_getAssociatedObject(self, &Keys.subject) as? CurrentValueSubject<Value, Never> {
+            return subject
+        }
+
+        let subject = CurrentValueSubject<Value, Never>(wrappedValue)
+        objc_setAssociatedObject(self, &Keys.subject, subject, .OBJC_ASSOCIATION_RETAIN)
+        return subject
+    }
 }
 
 public extension UserDefault {
