@@ -9,6 +9,9 @@
 ## Next
 - Update for Xcode 14 ([#126](https://github.com/AckeeCZ/ACKategories/pull/126), kudos to @olejnjak)
 
+## 6.12.1
+- Update for Xcode 14 ([#126](https://github.com/AckeeCZ/ACKategories/pull/126), kudos to @olejnjak)
+
 ## 6.12.0
 - Binary is built using Xcode 13.4 ([#125](https://github.com/AckeeCZ/ACKategories/pull/125), kudos to @olejnjak)
 - Add `projectedValue` to `UserDefault` property wrapper with `CurrentValueSubject` ([#124](https://github.com/AckeeCZ/ACKategories/pull/124), kudos to @olejnjak)
