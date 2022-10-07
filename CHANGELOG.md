@@ -7,6 +7,8 @@
 ```
 
 ## Next
+
+## 6.12.2
 - Specify Obj-C name for TagListView ([#127](https://github.com/AckeeCZ/ACKategories/pull/127), kudos to @olejnjak)
 
 ## 6.12.1
