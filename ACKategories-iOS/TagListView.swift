@@ -1,6 +1,7 @@
 import UIKit
 
 /// View to show collection of views in flow layout style
+@objc(ACKTagListView)
 open class TagListView: UIView {
 
     /// Horizontal spacing between elements in the list
