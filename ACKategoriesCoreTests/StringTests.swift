@@ -92,4 +92,11 @@ final class StringTests: XCTestCase {
         let originalString = "ěščřžýáíéasdfghjkl"
         XCTAssertEqual(originalString.removingDiacritics(), "escrzyaieasdfghjkl")
     }
+
+    func testValidURLWithWhitespace() {
+        let urlString = "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/image .jpg"
+        let validURL = ACKUrl(rawValue: urlString)
+        XCTAssertNotNil(validURL, "Url should not be nil")
+        XCTAssertEqual(validURL?.url.absoluteString, "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/image%20.jpg")
+    }
 }
