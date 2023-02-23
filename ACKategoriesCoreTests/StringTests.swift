@@ -92,36 +92,4 @@ final class StringTests: XCTestCase {
         let originalString = "ěščřžýáíéasdfghjkl"
         XCTAssertEqual(originalString.removingDiacritics(), "escrzyaieasdfghjkl")
     }
-
-    func testValidURLWithWhitespace() throws {
-        let urlStringWithWhitespace = "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/image .jpg"
-        let validURLWithWhitespace = BetterURL(rawValue: urlStringWithWhitespace)
-        let unwrappedURL = try XCTUnwrap(validURLWithWhitespace, "Url should not be nil")
-        
-        XCTAssertEqual(unwrappedURL.url.absoluteString, "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/image%20.jpg")
-    }
-
-    func testValidUrlWithSymbols() throws {
-        let urlStringWithSymbols = "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/{WIDTH}/{HEIGHT}/image.jpg"
-        let validUrlWithSymbols = BetterURL(rawValue: urlStringWithSymbols)
-        let unwrappedURL = try XCTUnwrap(validUrlWithSymbols, "Url should not be nil")
-
-        XCTAssertEqual(unwrappedURL.url.absoluteString, "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/%7BWIDTH%7D/%7BHEIGHT%7D/image.jpg")
-    }
-
-    func testValidUrlWithPercentageSymbol() throws {
-        let urlStringWithPercentageSymbols = "https://google.com/some%20thing"
-        let validUrlWithPercentageSymbols = BetterURL(rawValue: urlStringWithPercentageSymbols)
-        let unwrappedURL = try XCTUnwrap(validUrlWithPercentageSymbols, "Url should not be nil")
-
-        XCTAssertEqual(unwrappedURL.url.absoluteString, "https://google.com/some%20thing")
-    }
-
-    func testCodable() throws {
-        let betterURL = BetterURL(rawValue: "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/{WIDTH}/{HEIGHT}/image.jpg")
-        let jsonData = try JSONEncoder().encode(betterURL)
-        let decodedBetterURL = try JSONDecoder().decode(BetterURL.self, from: jsonData)
-
-        XCTAssertEqual(decodedBetterURL, betterURL)
-    }
 }
