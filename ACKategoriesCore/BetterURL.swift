@@ -11,6 +11,11 @@ public struct BetterURL: RawRepresentable, Codable, Hashable {
     public let url: URL
     public let rawValue: String
 
+    public init(url: URL) {
+        self.url = url
+        self.rawValue = url.absoluteString
+    }
+
     public init?(rawValue: String) {
         if let url = URL(string: rawValue) {
             self.url = url

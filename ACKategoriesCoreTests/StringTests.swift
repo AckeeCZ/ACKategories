@@ -120,7 +120,7 @@ final class StringTests: XCTestCase {
     func testCodable() throws {
         let betterURL = BetterURL(rawValue: "https://raw.githubusercontent.com/olejnjak/csas-transparent-accounts/url_test/{WIDTH}/{HEIGHT}/image.jpg")
         let jsonData = try JSONEncoder().encode(betterURL)
-        let decodedBetterURL = try? JSONDecoder().decode(BetterURL.self, from: jsonData)
+        let decodedBetterURL = try JSONDecoder().decode(BetterURL.self, from: jsonData)
 
         XCTAssertEqual(decodedBetterURL, betterURL)
     }
