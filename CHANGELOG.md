@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Added `BetterUrl` implementation for working with invalid ULRs ([#129](https://github.com/AckeeCZ/ACKategories/pull/129), kudos to @AGr-AlexandrGrigoryev)
 
 ## 6.12.2
 - Specify Obj-C name for TagListView ([#127](https://github.com/AckeeCZ/ACKategories/pull/127), kudos to @olejnjak)
