@@ -8,7 +8,7 @@ jobs:
     name: Carthage
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.0
       - uses: AckeeCZ/load-xcode-version@main
       - name: Build
         run: carthage build --no-skip-current --cache-builds --use-xcframeworks
