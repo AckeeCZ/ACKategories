@@ -1,15 +1,15 @@
 # https://help.github.com/en/github/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idname
 name: Build
 
-on: [pull_request, push]
+on: [pull_request, push, workflow_dispatch]
 
 jobs:
   carthage:
     name: Carthage
     runs-on: macos-12
     steps:
-      - uses: actions/checkout@v2
-      - uses: AckeeCZ/load-xcode-version@1.0
+      - uses: actions/checkout@v3.5.0
+      - uses: AckeeCZ/load-xcode-version@1.1.0
       - name: Build
         run: carthage build --no-skip-current --cache-builds --use-xcframeworks
         
