@@ -7,7 +7,10 @@
 ```
 
 ## Next
+
+## 6.12.3
 - Added `BetterURL` implementation to improve URL parsing ([#129](https://github.com/AckeeCZ/ACKategories/pull/129), kudos to @AGr-AlexandrGrigoryev)
+- Bump deployment target to iOS 11.0 and macOS 10.13
 
 ## 6.12.2
 - Specify Obj-C name for TagListView ([#127](https://github.com/AckeeCZ/ACKategories/pull/127), kudos to @olejnjak)
