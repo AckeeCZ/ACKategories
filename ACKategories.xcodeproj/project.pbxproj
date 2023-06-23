@@ -715,7 +715,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69E819FC23C773240054687B /* Build configuration list for PBXNativeTarget "ACKategoriesCore" */;
 			buildPhases = (
-				6996E46424634043007B79FD /* Swiftlint */,
 				69E819E523C773240054687B /* Headers */,
 				69E819E623C773240054687B /* Sources */,
 				69E819E723C773240054687B /* Frameworks */,
@@ -753,7 +752,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69E81A1823C773370054687B /* Build configuration list for PBXNativeTarget "ACKategories-iOS" */;
 			buildPhases = (
-				6996E46524634056007B79FD /* Swiftlint */,
 				69E81A0223C773370054687B /* Headers */,
 				69E81A0323C773370054687B /* Sources */,
 				69E81A0423C773370054687B /* Frameworks */,
@@ -891,44 +889,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6996E46424634043007B79FD /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect || true\nswiftlint || true\n";
-		};
-		6996E46524634056007B79FD /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect || true\nswiftlint || true\n";
-		};
 		69EB1EA12498CDEF00AF815F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
