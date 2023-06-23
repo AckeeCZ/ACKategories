@@ -6,9 +6,9 @@ on: [pull_request, push, workflow_dispatch]
 jobs:
   carthage:
     name: Carthage
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
       - uses: AckeeCZ/load-xcode-version@1.1.0
       - name: Build
         run: carthage build --no-skip-current --cache-builds --use-xcframeworks
