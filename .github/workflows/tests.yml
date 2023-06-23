@@ -5,11 +5,11 @@ on: [pull_request, push]
 jobs:
   tests:
     name: Run tests
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
       - uses: AckeeCZ/load-xcode-version@1.1.0
       - name: Run iOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro Max,OS=latest' ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max,OS=latest' ONLY_ACTIVE_ARCH=YES | xcpretty
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -destination 'platform=OS X,arch=x86_64' | xcpretty

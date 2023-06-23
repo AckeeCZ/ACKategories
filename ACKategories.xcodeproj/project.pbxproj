@@ -3,22 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
-
-/* Begin PBXAggregateTarget section */
-		69EB1E9D2498CDE900AF815F /* SwiftLint */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 69EB1EA02498CDE900AF815F /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
-			buildPhases = (
-				69EB1EA12498CDEF00AF815F /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = SwiftLint;
-			productName = SwiftLint;
-		};
-/* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		0E3478AB27E37DC1004548B3 /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */; };
@@ -166,20 +152,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 69E81A0623C773370054687B;
 			remoteInfo = "ACKategories-iOS";
-		};
-		69EB1EA22498CDFB00AF815F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69E819DF23C773010054687B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 69EB1E9D2498CDE900AF815F;
-			remoteInfo = SwiftLint;
-		};
-		69EB1EA42498CE0000AF815F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69E819DF23C773010054687B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 69EB1E9D2498CDE900AF815F;
-			remoteInfo = SwiftLint;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -723,7 +695,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				69EB1EA52498CE0000AF815F /* PBXTargetDependency */,
 			);
 			name = ACKategoriesCore;
 			productName = ACKategoriesCore;
@@ -760,7 +731,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				69EB1EA32498CDFB00AF815F /* PBXTargetDependency */,
 			);
 			name = "ACKategories-iOS";
 			packageProductDependencies = (
@@ -818,9 +788,6 @@
 						LastSwiftMigration = 1130;
 						TestTargetID = 695096D723C7908B00E8F457;
 					};
-					69EB1E9D2498CDE900AF815F = {
-						CreatedOnToolsVersion = 11.5;
-					};
 				};
 			};
 			buildConfigurationList = 69E819E223C773010054687B /* Build configuration list for PBXProject "ACKategories" */;
@@ -843,7 +810,6 @@
 				69E819F223C773240054687B /* ACKategoriesCoreTests */,
 				69E81A0623C773370054687B /* ACKategories-iOS */,
 				69E81A0E23C773370054687B /* ACKategories-iOSTests */,
-				69EB1E9D2498CDE900AF815F /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -887,27 +853,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		69EB1EA12498CDEF00AF815F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect || true\nswiftlint || true\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		695096D423C7908B00E8F457 /* Sources */ = {
@@ -1075,16 +1020,6 @@
 			platformFilter = ios;
 			target = 69E81A0623C773370054687B /* ACKategories-iOS */;
 			targetProxy = 69E81A1123C773370054687B /* PBXContainerItemProxy */;
-		};
-		69EB1EA32498CDFB00AF815F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 69EB1E9D2498CDE900AF815F /* SwiftLint */;
-			targetProxy = 69EB1EA22498CDFB00AF815F /* PBXContainerItemProxy */;
-		};
-		69EB1EA52498CE0000AF815F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 69EB1E9D2498CDE900AF815F /* SwiftLint */;
-			targetProxy = 69EB1EA42498CE0000AF815F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1886,26 +1821,6 @@
 			};
 			name = Release;
 		};
-		69EB1E9E2498CDE900AF815F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		69EB1E9F2498CDE900AF815F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1959,15 +1874,6 @@
 			buildConfigurations = (
 				69E81A1C23C773370054687B /* Debug */,
 				69E81A1D23C773370054687B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		69EB1EA02498CDE900AF815F /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				69EB1E9E2498CDE900AF815F /* Debug */,
-				69EB1E9F2498CDE900AF815F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

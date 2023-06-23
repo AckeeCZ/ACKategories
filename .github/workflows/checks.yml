@@ -8,14 +8,14 @@ jobs:
     name: Swiftlint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.1.0
   changelog:
     name: Changelog
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
       - name: Changelog Reminder
         uses: peterjgrainger/action-changelog-reminder@v1.2.0
         with:
@@ -24,9 +24,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   podspec:
     name: Podspec
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
       - name: Install Bundler dependencies
         run: bundle install
       - name: Lint podspec
