@@ -81,6 +81,7 @@
 		695096F023C790A900E8F457 /* ACKategories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69E81A0723C773370054687B /* ACKategories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		696DF854245304F400A6AC69 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DF853245304F400A6AC69 /* ReusableViewTests.swift */; };
 		6984CE132A5C218A001EE958 /* UIViewController+FrontMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */; };
+		6984CE152A5C26AA001EE958 /* UIView+Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984CE142A5C26AA001EE958 /* UIView+Spacer.swift */; };
 		69DB1A012831839F004B32D7 /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */; };
 		69E819F423C773240054687B /* ACKategoriesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E819EA23C773240054687B /* ACKategoriesCore.framework */; };
 		69E819FB23C773240054687B /* ACKategoriesCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E819ED23C773240054687B /* ACKategoriesCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -229,6 +230,7 @@
 		697B023227DB65B50082F4AC /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		697CECF023C877B20019FE61 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FrontMost.swift"; sourceTree = "<group>"; };
+		6984CE142A5C26AA001EE958 /* UIView+Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Spacer.swift"; sourceTree = "<group>"; };
 		69E819EA23C773240054687B /* ACKategoriesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategoriesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E819ED23C773240054687B /* ACKategoriesCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACKategoriesCore.h; sourceTree = "<group>"; };
 		69E819EE23C773240054687B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -444,13 +446,11 @@
 		69E81A0823C773370054687B /* ACKategories-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6950963023C7747C00E8F457 /* Base */,
 				697CECF023C877B20019FE61 /* Aliases.swift */,
 				A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */,
 				6950964823C7751600E8F457 /* GradientView.swift */,
 				6950964D23C7752B00E8F457 /* NSMutableParagraphStyleExtensions.swift */,
 				6950965223C7753D00E8F457 /* ReusableView.swift */,
-				6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */,
 				6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */,
 				6950966623C78AC800E8F457 /* TableHeaderFooterView.swift */,
 				6914B1132728231300FF177E /* TagListView.swift */,
@@ -466,9 +466,12 @@
 				6950965D23C78AC800E8F457 /* UISearchBarExtensions.swift */,
 				6950966823C78AC900E8F457 /* UIStackViewExtensions.swift */,
 				6950966523C78AC800E8F457 /* UIView+SafeAreaCompat.swift */,
+				6984CE142A5C26AA001EE958 /* UIView+Spacer.swift */,
 				6950966923C78AC900E8F457 /* UIViewController+Children.swift */,
+				6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */,
 				6950966723C78AC800E8F457 /* UIViewController+SafeAreaCompat.swift */,
 				6950966323C78AC800E8F457 /* UIViewExtensions.swift */,
+				6950963023C7747C00E8F457 /* Base */,
 				6950963523C7749F00E8F457 /* Supporting files */,
 			);
 			path = "ACKategories-iOS";
@@ -477,16 +480,16 @@
 		69E81A1323C773370054687B /* ACKategories-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3BA6859256BEC6A006DB42F /* Extensions */,
-				A3BA6858256BEC56006DB42F /* FlowCoordinator */,
+				69E81A1623C773370054687B /* Info.plist */,
 				6950968D23C78CC200E8F457 /* ColorTests.swift */,
 				6950969423C78CC200E8F457 /* ControlBlocksTests.swift */,
-				69E81A1623C773370054687B /* Info.plist */,
 				696DF853245304F400A6AC69 /* ReusableViewTests.swift */,
+				6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */,
 				6950969123C78CC200E8F457 /* UIStackViewTests.swift */,
 				6950969023C78CC200E8F457 /* UIViewControllerChildrenTests.swift */,
 				6950969323C78CC200E8F457 /* UIViewTests.swift */,
-				6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */,
+				A3BA6859256BEC6A006DB42F /* Extensions */,
+				A3BA6858256BEC56006DB42F /* FlowCoordinator */,
 			);
 			path = "ACKategories-iOSTests";
 			sourceTree = "<group>";
@@ -950,6 +953,7 @@
 				F8B81695246C59F7005D1D74 /* Randomizable.swift in Sources */,
 				6950963D23C774DB00E8F457 /* DictionaryExtensions.swift in Sources */,
 				693D773329A4BD1200B1AF0C /* BetterURL.swift in Sources */,
+				6984CE152A5C26AA001EE958 /* UIView+Spacer.swift in Sources */,
 				6950967423C78AC900E8F457 /* UIView+SafeAreaCompat.swift in Sources */,
 				6950963323C7748D00E8F457 /* ArrayExtensions.swift in Sources */,
 				6950962E23C7747800E8F457 /* FlowCoordinator.swift in Sources */,
