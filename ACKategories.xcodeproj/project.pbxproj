@@ -107,6 +107,7 @@
 		69FA5FBD23C868A900B44BCD /* ModalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */; };
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
 		6A31C9F3250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */; };
+		6A572DB92ADE89B0002BD518 /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A572DB82ADE89B0002BD518 /* FontModifier.swift */; };
 		88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDD90325B8252E00207987 /* GradientViewController.swift */; };
 		A33559012555270F009B9D89 /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */; };
 		A38883E3257E2D2D00B958DD /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */; };
@@ -265,6 +266,7 @@
 		69FA5FC323C869A200B44BCD /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ACKategories.podspec; sourceTree = "<group>"; };
 		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		6A572DB82ADE89B0002BD518 /* FontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
 		88EDD90325B8252E00207987 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		A33559002555270F009B9D89 /* FlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
@@ -450,6 +452,8 @@
 		69E81A0823C773370054687B /* ACKategories-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6950963023C7747C00E8F457 /* Base */,
+				6A572DB72ADE8994002BD518 /* SwiftUIExtensions */,
 				697CECF023C877B20019FE61 /* Aliases.swift */,
 				A38883E2257E2D2D00B958DD /* ErrorHandlers.swift */,
 				6950964823C7751600E8F457 /* GradientView.swift */,
@@ -586,6 +590,14 @@
 				69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */,
 			);
 			path = "Flow coordinators";
+			sourceTree = "<group>";
+		};
+		6A572DB72ADE8994002BD518 /* SwiftUIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				6A572DB82ADE89B0002BD518 /* FontModifier.swift */,
+			);
+			path = SwiftUIExtensions;
 			sourceTree = "<group>";
 		};
 		88EDD8FD25B824C200207987 /* GradientView */ = {
@@ -979,6 +991,7 @@
 				6950967023C78AC900E8F457 /* UIControlEvents.swift in Sources */,
 				6950965723C7754D00E8F457 /* Reusable.swift in Sources */,
 				69F83E972A617A2500E9C8EA /* Combine+Concurrency.swift in Sources */,
+				6A572DB92ADE89B0002BD518 /* FontModifier.swift in Sources */,
 				6950962A23C7740B00E8F457 /* Logger.swift in Sources */,
 				6950967823C78AC900E8F457 /* UIViewController+Children.swift in Sources */,
 				6950967223C78AC900E8F457 /* UIViewExtensions.swift in Sources */,
