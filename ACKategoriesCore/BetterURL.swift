@@ -11,14 +11,14 @@ public struct BetterURL: RawRepresentable, Codable, Hashable {
 
     public init?(rawValue: String) {
         self.rawValue = rawValue
-        
+
         var replacedURLString: String {
             rawValue
                 .replacingOccurrences(of: " ", with: "%20")
                 .replacingOccurrences(of: "{", with: "%7B")
                 .replacingOccurrences(of: "}", with: "%7D")
         }
-        
+
         if let url = URL(string: rawValue) {
             self.url = url
         } else if let url = URL(string: replacedURLString) {
@@ -28,4 +28,3 @@ public struct BetterURL: RawRepresentable, Codable, Hashable {
         }
     }
 }
-

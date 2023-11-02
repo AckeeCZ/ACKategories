@@ -95,7 +95,7 @@ public final class UserDefault<Value: Codable> {
 }
 
 public extension UserDefault {
-    convenience init<Wrapped>(_ key: String, `default`: Optional<Wrapped> = nil, userDefaults: UserDefaults = .standard) where Value == Optional<Wrapped> {
+    convenience init<Wrapped>(_ key: String, `default`: Wrapped? = nil, userDefaults: UserDefaults = .standard) where Value == Wrapped? {
         self.init(key, default: `default`, userDefaults: userDefaults)
     }
 }

@@ -25,7 +25,7 @@ extension Base {
         }
 
         /// When flow coordinator handles modally presented flow, we are interested `rootVC` changes
-        private var rootVCSetter: (UIViewController?) -> () = { _ in }
+        private var rootVCSetter: (UIViewController?) -> Void = { _ in }
 
         /// Parent coordinator
         public weak var parentCoordinator: FlowCoordinator?
