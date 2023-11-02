@@ -479,7 +479,6 @@
 				6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */,
 				6950966723C78AC800E8F457 /* UIViewController+SafeAreaCompat.swift */,
 				6950966323C78AC800E8F457 /* UIViewExtensions.swift */,
-				6950963023C7747C00E8F457 /* Base */,
 				6950963523C7749F00E8F457 /* Supporting files */,
 			);
 			path = "ACKategories-iOS";

@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(iOSApplicationExtension 14.0, *)
+@available(iOS 14.0, *)
 extension View {
     /// Sets font and line height for text in this view.
     ///
