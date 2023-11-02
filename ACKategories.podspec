@@ -10,6 +10,7 @@ Tools, cocoa subclasses and extensions we love to use at Ackee.
   s.author           = { 'Ackee' => 'info@ackee.cz' }
   s.source           = { :git => 'https://github.com/AckeeCZ/ACKategories.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ackeecz'
+  s.swift_version    = '5.9'
   
   s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '10.13'
