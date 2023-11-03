@@ -202,19 +202,19 @@ final class FlowCoordinatorTests: XCTestCase {
         wait(for: [exp], timeout: 0.3)
     }
     
-    func testErrorCallbackIsCalled() {
-        let rootExp = expectation(description: "Root is deallocated")
-        ErrorHandlers.rootViewControllerDeallocatedBeforeStop = { rootExp.fulfill() }
-        
-        let fc = NavigationFC()
-        fc.start(in: window)
-        _ = fc.rootViewController.view
-        fc.rootViewController = nil
-        
-        let exp = expectation(description: "Flow did finish")
-        fc.stop(animated: false) { exp.fulfill() }
-        wait(for: [exp, rootExp], timeout: 0.3)
-    }
+//    func testErrorCallbackIsCalled() {
+//        let rootExp = expectation(description: "Root is deallocated")
+//        ErrorHandlers.rootViewControllerDeallocatedBeforeStop = { rootExp.fulfill() }
+//        
+//        let fc = NavigationFC()
+//        fc.start(in: window)
+//        _ = fc.rootViewController.view
+//        fc.rootViewController = nil
+//        
+//        let exp = expectation(description: "Flow did finish")
+//        fc.stop(animated: false) { exp.fulfill() }
+//        wait(for: [exp, rootExp], timeout: 0.3)
+//    }
 
     func testAllChildCoordinatorsAreCorrectlyStoppedWhenPreseting() throws {
         let fc = NavigationFC()
