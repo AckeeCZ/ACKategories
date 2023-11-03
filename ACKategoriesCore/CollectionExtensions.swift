@@ -41,7 +41,7 @@ extension Collection {
 
 extension Collection where Index: Strideable, Index.Stride: SignedInteger {
     /// Return objects in given range
-    public subscript(safe range: CountableRange<Index>) -> Array<Element> {
+    public subscript(safe range: CountableRange<Index>) -> [Element] {
         return range.compactMap { self[safe: $0] }
     }
 }

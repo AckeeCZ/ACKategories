@@ -1,11 +1,11 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "ACKategories",
     platforms: [
-        .iOS(.v11),
-        .macOS("10.13")
+        .iOS(.v12),
+        .macOS(.v10_13)
     ],
     products: [
         .library(name: "ACKategories", targets: ["ACKategories-iOS"]),
@@ -16,8 +16,5 @@ let package = Package(
         .testTarget(name: "ACKategories-iOSTests", dependencies: ["ACKategories-iOS"], path: "ACKategories-iOSTests"),
         .target(name: "ACKategoriesCore", path: "ACKategoriesCore"),
         .testTarget(name: "ACKategoriesCoreTests", dependencies: ["ACKategoriesCore"], path: "ACKategoriesCoreTests"),
-    ],
-    swiftLanguageVersions: [
-        .v5
     ]
 )

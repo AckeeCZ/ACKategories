@@ -22,6 +22,7 @@ final class FlowCoordinatorTests: XCTestCase {
     }
     
     override func tearDown() {
+        ErrorHandlers.rootViewControllerDeallocatedBeforeStop = nil
         window = nil
         
         super.tearDown()

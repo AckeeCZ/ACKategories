@@ -38,7 +38,7 @@ extension Dictionary where Value: OptionalProtocol {
             guard let key = key as? Key else {
                 return
             }
-            result = (result as? Dictionary<Key, Value>)?[key]
+            result = (result as? [Key: Value])?[key]
         }
         return result as? T
     }

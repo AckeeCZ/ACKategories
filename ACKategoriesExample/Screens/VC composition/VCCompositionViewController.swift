@@ -32,7 +32,7 @@ final class VCCompositionViewController: TitleViewController {
             containerView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30),
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
         let childVC = TitleViewController(name: "Child", color: .blue)
