@@ -5,7 +5,7 @@ import UIKit
 public extension UIView {
     private final class Spacer: UIView {
         fileprivate var observation: NSKeyValueObservation?
-        
+
         init(
             size: CGFloat,
             axis: NSLayoutConstraint.Axis,
@@ -18,9 +18,9 @@ public extension UIView {
                     height: axis == .vertical ? size : 0
                 )
             ))
-            
+
             translatesAutoresizingMaskIntoConstraints = false
-            
+
             switch axis {
             case .horizontal:
                 let constraint = widthAnchor.constraint(equalToConstant: size)
@@ -33,12 +33,12 @@ public extension UIView {
             default: assertionFailure("Unknown axis \(axis)")
             }
         }
-        
+
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
     }
-    
+
     private func createSpacer(_ size: CGFloat, axis: NSLayoutConstraint.Axis, priority: Float) -> UIView {
         let spacer = Spacer(size: size, axis: axis, priority: priority)
         spacer.isHidden = isHidden
@@ -58,4 +58,3 @@ public extension UIView {
         createSpacer(width, axis: .horizontal, priority: priority)
     }
 }
-
