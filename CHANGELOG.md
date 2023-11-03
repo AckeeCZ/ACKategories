@@ -7,6 +7,8 @@
 ```
 
 ## Next
+- Bump deployment target to iOS 12 ([#137](https://github.com/AckeeCZ/ACKategories/pull/137), kudos to @olejnjak)
+- Add Font modifier for SwiftUI fonts ([#134](https://github.com/AckeeCZ/ACKategories/pull/134), kudos to @leinhauplk)
 
 ## 6.12.3
 - Added `BetterURL` implementation to improve URL parsing ([#129](https://github.com/AckeeCZ/ACKategories/pull/129), kudos to @AGr-AlexandrGrigoryev)
