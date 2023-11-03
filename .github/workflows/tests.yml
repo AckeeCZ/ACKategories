@@ -7,26 +7,19 @@ jobs:
     name: Run tests
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4
       - uses: AckeeCZ/load-xcode-version@1.1.0
-      - name: Install yeetd
-        run: |
-            wget https://github.com/biscuitehh/yeetd/releases/download/1.0/yeetd-normal.pkg
-            sudo installer -pkg yeetd-normal.pkg -target /
-            yeetd &
       - name: Run iOS tests
-        env:
-          DEVICE: iPhone 15 Pro Max
-        run: |
-          xcrun simctl boot "$DEVICE"
-          set -o pipefail && xcodebuild test -scheme ACKategories-iOS -resultBundlePath Tests-iOS.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories-iOS -resultBundlePath Tests-iOS.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro Max,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
+          name: Tests-iOS.xcresult
           path: Tests-iOS.xcresult
       - name: Run macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategoriesCore -resultBundlePath Tests-macOS.xcresult -destination 'platform=OS X,arch=x86_64' | xcpretty
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
+          name: Tests-macOS.xcresult
           path: Tests-macOS.xcresult
