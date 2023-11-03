@@ -21,4 +21,3 @@ public extension AnyPublisher where Failure == Error {
         self = Future { try await operation() }.eraseToAnyPublisher()
     }
 }
-
