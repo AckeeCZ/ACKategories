@@ -110,7 +110,7 @@ public extension UIColor {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
 
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, watchOS 6.0, *) {
             // if self has alpha < 1 then this alpha is correctly applied on content
             // during context rendering, which is right behavior. But after that in
             // `.withTintColor(self)` below, this alpha is applied again and resulting
@@ -126,7 +126,7 @@ public extension UIColor {
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, watchOS 6.0, *) {
             return image.withTintColor(self)
         } else {
             return image

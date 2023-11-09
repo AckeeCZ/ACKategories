@@ -1,4 +1,4 @@
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 /// Extend you container controllers with this protocol, to make sure `frontmostChild` and `frontmostController` properties

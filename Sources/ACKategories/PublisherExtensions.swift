@@ -1,6 +1,6 @@
 import Combine
 
-@available(macOS 10.15, iOS 13.0, *)
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Publisher where Failure == Never {
     /// Weakifies `Root` object and assigns `Output` to `keyPath` on `Root`.
     public func weakAssign<Root: AnyObject>(to keyPath: ReferenceWritableKeyPath<Root, Output>, on object: Root) -> AnyCancellable {
@@ -10,14 +10,14 @@ extension Publisher where Failure == Never {
     }
 }
 
-@available(macOS 10.15, iOS 13.0, *)
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Publisher {
     public func flatMapLatest<T: Publisher>(_ transform: @escaping (Self.Output) -> T) -> Publishers.SwitchToLatest<T, Publishers.Map<Self, T>> {
         map(transform).switchToLatest()
     }
 }
 
-@available(macOS 10.15, iOS 13.0, *)
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension Publishers {
     /// A publisher created by applying the zip function to an arbitrary number of upstream publishers.
     public struct ZipMany<Upstream>: Publisher where Upstream: Publisher {

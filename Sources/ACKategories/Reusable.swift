@@ -1,10 +1,3 @@
-//
-//  Reusable.swift
-//  ACKategories
-//
-//  Created by Jakub Olejník on 09/01/2020.
-//
-
 import MapKit
 
 // swiftlint:disable force_cast
@@ -18,6 +11,7 @@ extension Reusable {
     }
 }
 
+#if !os(watchOS)
 extension MKAnnotationView: Reusable { }
 
 extension MKMapView {
@@ -31,3 +25,4 @@ extension MKMapView {
         return dequeueReusableAnnotationView(withIdentifier: T.reuseIdentifier, for: annotation) as! T
     }
 }
+#endif

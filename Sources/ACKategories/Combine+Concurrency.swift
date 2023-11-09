@@ -1,6 +1,6 @@
 import Combine
 
-@available(macOS 10.15, iOS 13.0, *)
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Future where Failure == Error {
     convenience init(operation: @escaping () async throws -> Output) {
         self.init { promise in
@@ -15,7 +15,7 @@ public extension Future where Failure == Error {
     }
 }
 
-@available(macOS 10.15, iOS 13.0, *)
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension AnyPublisher where Failure == Error {
     init(operation: @escaping () async throws -> Output) {
         self = Future { try await operation() }.eraseToAnyPublisher()

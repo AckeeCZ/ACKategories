@@ -1,4 +1,4 @@
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
