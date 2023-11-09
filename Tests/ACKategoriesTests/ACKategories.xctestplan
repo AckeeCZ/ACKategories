@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "A8C859B5-6A42-4829-A72E-D5426E6EBD28",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ACKategories.xcodeproj",
+        "identifier" : "69ACD6C82AFD130D0021127B",
+        "name" : "ACKategoriesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

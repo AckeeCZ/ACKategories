@@ -14,10 +14,7 @@ let package = Package(
         .target(name: "ACKategories"),
         .testTarget(
             name: "ACKategoriesTests",
-            dependencies: ["ACKategories"],
-            swiftSettings: [
-                .define("SPM_TESTS"),
-            ]
+            dependencies: ["ACKategories"]
         ),
     ]
 )

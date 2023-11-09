@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "20EB720B-1E18-40B8-A96D-8167CF3E1986",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ACKategories.xcodeproj",
+        "identifier" : "6971A9852AFD1AF5000FC317",
+        "name" : "ACKategoriesResponderTests"
+      }
+    }
+  ],
+  "version" : 1
+}
