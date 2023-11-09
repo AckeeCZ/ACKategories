@@ -23,12 +23,3 @@ jobs:
           changelog_regex: 'CHANGELOG.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  podspec:
-    name: Podspec
-    runs-on: macos-13
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Bundler dependencies
-        run: bundle install
-      - name: Lint podspec
-        run: bundle exec pod lib lint --allow-warnings

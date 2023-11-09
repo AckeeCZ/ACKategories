@@ -1,11 +1,3 @@
-//
-//  ColorTests.swift
-//  ACKategories
-//
-//  Created by Jan Mísař on 31.08.16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
-//
-
 import XCTest
 import ACKategories
 

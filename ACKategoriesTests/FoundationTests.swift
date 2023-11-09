@@ -1,11 +1,3 @@
-//
-//  FoundationTests.swift
-//  ACKategories
-//
-//  Created by Tomas Holka on 29/06/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import XCTest
 import ACKategories
 

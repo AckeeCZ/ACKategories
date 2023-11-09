@@ -216,7 +216,6 @@
 		69FA5FAB23C868A900B44BCD /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalFlowCoordinator.swift; sourceTree = "<group>"; };
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		69FA5FC323C869A200B44BCD /* ACKategories.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ACKategories.podspec; sourceTree = "<group>"; };
 		69FA5FE423C8712D00B44BCD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		69FFF56F2AFCFF470049A4A7 /* ACKategoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACKategoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A31C9F2250572FE0047A983 /* SelfSizingTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -350,7 +349,6 @@
 		69E819DE23C773010054687B = {
 			isa = PBXGroup;
 			children = (
-				69FA5FC323C869A200B44BCD /* ACKategories.podspec */,
 				697B023227DB65B50082F4AC /* CHANGELOG.md */,
 				69FA5FE423C8712D00B44BCD /* Package.swift */,
 				695096D923C7908B00E8F457 /* ACKategoriesExample */,

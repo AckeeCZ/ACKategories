@@ -1,11 +1,3 @@
-//
-//  StringTests.swift
-//  ACKategories
-//
-//  Created by Jakub Olejník on 06/09/16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
-//
-
 import XCTest
 import ACKategories
 
