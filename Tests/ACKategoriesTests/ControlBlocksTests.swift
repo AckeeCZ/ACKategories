@@ -1,7 +1,11 @@
+#if !SPM_TESTS
+// For these tests to work, we need a host app with responder chain
+// SPM tests cannot ensure that, so we skip them
+
 import UIKit
 import XCTest
 import ACKategories
-
+ 
 final class ControlBlocksTests: XCTestCase {
 
     func testHandlerRunsOnTap() {
@@ -90,3 +94,4 @@ final class ControlBlocksTests: XCTestCase {
         XCTAssertFalse(firstCalled)
     }
 }
+#endif

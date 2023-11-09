@@ -1,12 +1,9 @@
-//
-//  FlowCoordinatorTests.swift
-//  ACKategories-iOSTests
-//
-//  Created by Lukáš Hromadník on 06/11/2020.
-//
+#if !SPM_TESTS
+// For these tests to work, we need a host app with responder chain
+// SPM tests cannot ensure that, so we skip them
 
 import XCTest
-@testable import ACKategories
+import ACKategories
 
 final class FlowCoordinatorTests: XCTestCase {
     private var window: UIWindow!
@@ -264,3 +261,4 @@ final class FlowCoordinatorTests: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers.count, 1)
     }
 }
+#endif

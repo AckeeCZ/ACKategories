@@ -1,9 +1,6 @@
-//
-//  UINavigationControllerTests.swift
-//  ACKategories-iOSTests
-//
-//  Created by Jakub Olejník on 08.12.2020.
-//
+#if !SPM_TESTS
+// For these tests to work, we need a host app with responder chain
+// SPM tests cannot ensure that, so we skip them
 
 import ACKategories
 import UIKit
@@ -90,3 +87,4 @@ final class UINavigationControllerTests: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers.count, 1)
     }
 }
+#endif

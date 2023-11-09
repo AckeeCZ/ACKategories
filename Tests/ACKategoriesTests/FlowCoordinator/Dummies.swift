@@ -6,7 +6,7 @@
 //
 
 import UIKit
-@testable import ACKategories
+import ACKategories
 
 extension Base.FlowCoordinatorNoDeepLink {
     func push(_ vc: UIViewController) {

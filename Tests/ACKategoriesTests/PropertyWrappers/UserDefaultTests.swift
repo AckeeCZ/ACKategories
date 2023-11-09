@@ -1,7 +1,7 @@
 import Combine
 import Foundation
 import XCTest
-@testable import ACKategories
+import ACKategories
 
 @available(iOS 13.0, *)
 final class UserDefaultTests: XCTestCase {

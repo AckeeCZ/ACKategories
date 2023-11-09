@@ -8,13 +8,16 @@ let package = Package(
         .macOS(.v10_13)
     ],
     products: [
-        .library(name: "ACKategories", targets: ["ACKategories-iOS"]),
-        .library(name: "ACKategoriesCore", targets: ["ACKategoriesCore"]),
+        .library(name: "ACKategories", targets: ["ACKategories"]),
     ],
     targets: [
-        .target(name: "ACKategories-iOS", dependencies: ["ACKategoriesCore"], path: "ACKategories-iOS"),
-        .testTarget(name: "ACKategories-iOSTests", dependencies: ["ACKategories-iOS"], path: "ACKategories-iOSTests"),
-        .target(name: "ACKategoriesCore", path: "ACKategoriesCore"),
-        .testTarget(name: "ACKategoriesCoreTests", dependencies: ["ACKategoriesCore"], path: "ACKategoriesCoreTests"),
+        .target(name: "ACKategories"),
+        .testTarget(
+            name: "ACKategoriesTests",
+            dependencies: ["ACKategories"],
+            swiftSettings: [
+                .define("SPM_TESTS"),
+            ]
+        ),
     ]
 )
