@@ -4,6 +4,24 @@ on: [pull_request]
 
 jobs:
   tests:
+    name: Tests
     uses: ./.github/workflows/tests.yml
-
-        
+  swiftlint:
+    name: Swiftlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.1.0
+  changelog:
+    name: Changelog
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.head.repo.fork }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Changelog Reminder
+        uses: peterjgrainger/action-changelog-reminder@v1.2.0
+        with:
+          changelog_regex: 'CHANGELOG.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
