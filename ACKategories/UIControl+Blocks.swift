@@ -58,7 +58,6 @@ public extension UIControlEventHandling where Self: UIControl {
      
      - parameter handler: Actionblock to be executed
      */
-    @available(iOS 9.0, *)
     func on(handler: @escaping (Self) -> Void) {
         on(.primaryActionTriggered, handler: handler)
     }

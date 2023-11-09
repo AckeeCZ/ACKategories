@@ -19,21 +19,13 @@ extension Base {
 
         public init() {
             if Base.memoryLoggingEnabled && Base.viewModelMemoryLoggingEnabled {
-                if #available(iOS 10.0, macOS 10.12, *) {
-                    os_log("🧠 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
-                } else {
-                    NSLog("🧠 👶 \(self)")
-                }
+                os_log("🧠 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
             }
         }
 
         deinit {
             if Base.memoryLoggingEnabled && Base.viewModelMemoryLoggingEnabled {
-                if #available(iOS 10.0, macOS 10.12, *) {
-                    os_log("🧠 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
-                } else {
-                    NSLog("🧠 ⚰️ \(self)")
-                }
+                os_log("🧠 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
             }
         }
     }

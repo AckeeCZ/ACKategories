@@ -18,8 +18,6 @@ public struct LoggerCategory {
     public static var lifecycle: String { return "Lifecycle" }
 }
 
-/// Wrapper class for os_log function
-@available(iOS 10.0, macOS 10.12, *)
 public struct Logger {
     /// Create OSLog with subsystem and category
     public static func osLog(subsystem: String = Bundle.main.bundleIdentifier ?? "-", category: String) -> OSLog {

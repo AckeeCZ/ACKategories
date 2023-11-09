@@ -236,21 +236,13 @@ extension Base {
         override public init() {
             super.init()
             if Base.memoryLoggingEnabled && Base.flowCoordinatorMemoryLoggingEnabled {
-                if #available(iOS 10.0, *) {
-                    os_log("🔀 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
-                } else {
-                    NSLog("🔀 👶 \(self)")
-                }
+                os_log("🔀 👶 %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
             }
         }
 
         deinit {
             if Base.memoryLoggingEnabled && Base.flowCoordinatorMemoryLoggingEnabled {
-                if #available(iOS 10.0, *) {
-                    os_log("🔀 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
-                } else {
-                    NSLog("🔀 ⚰️ \(self)")
-                }
+                os_log("🔀 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, "\(self)")
             }
         }
 

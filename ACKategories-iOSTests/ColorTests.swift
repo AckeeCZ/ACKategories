@@ -32,11 +32,9 @@ final class ColorTests: XCTestCase {
     }
     
     func testP3RedColorToHex() {
-        if #available(iOS 10, *) {
-            let p3redColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
-            let hexColor = p3redColor.hexString
-            XCTAssertEqual("#000000", hexColor)
-        }
+        let p3redColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
+        let hexColor = p3redColor.hexString
+        XCTAssertEqual("#000000", hexColor)
     }
     
     func testPatternImageColorToHex() {
