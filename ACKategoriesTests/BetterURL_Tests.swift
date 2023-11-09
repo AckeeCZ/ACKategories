@@ -1,4 +1,4 @@
-import ACKategoriesCore
+import ACKategories
 import XCTest
 
 final class BetterURL_Tests: XCTestCase {

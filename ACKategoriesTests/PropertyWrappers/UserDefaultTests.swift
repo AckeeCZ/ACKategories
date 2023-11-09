@@ -1,8 +1,9 @@
 import Combine
 import Foundation
 import XCTest
-@testable import ACKategoriesCore
+@testable import ACKategories
 
+@available(iOS 13.0, *)
 final class UserDefaultTests: XCTestCase {
     private var subject: MyUserDefaultProvider!
     private var userDefaults: UserDefaults!

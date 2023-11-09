@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import ACKategoriesCore
+import ACKategories
 
 final class FoundationTests: XCTestCase {
     
