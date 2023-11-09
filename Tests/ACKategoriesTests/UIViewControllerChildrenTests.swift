@@ -1,11 +1,4 @@
-//
-//  UIViewControllerChildrenTests.swift
-//  ACKategories
-//
-//  Created by Jakub Olejník on 13/04/2018.
-//  Copyright © 2018 Josef Dolezal. All rights reserved.
-//
-
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 import XCTest
 import ACKategories
@@ -72,3 +65,4 @@ final class UIViewControllerChildrenTests: XCTestCase {
         XCTAssertEqual(childVC.parent, parentVC)
     }
 }
+#endif

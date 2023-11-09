@@ -5,7 +5,9 @@ let package = Package(
     name: "ACKategories",
     platforms: [
         .iOS(.v12),
-        .macOS(.v10_13)
+        .macOS(.v10_13),
+        .watchOS(.v5),
+        .tvOS(.v12),
     ],
     products: [
         .library(name: "ACKategories", targets: ["ACKategories"]),

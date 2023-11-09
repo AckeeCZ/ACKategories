@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import ACKategories
 import UIKit
 import XCTest
@@ -36,3 +37,4 @@ final class ReusableViewTests: XCTestCase {
         XCTAssertFalse(prototype === CustomView())
     }
 }
+#endif

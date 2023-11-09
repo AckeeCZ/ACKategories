@@ -1,10 +1,4 @@
-//
-//  UIWindow.swift
-//  ACKategories-iOSTests
-//
-//  Created by Lukáš Hromadník on 23.11.2020.
-//
-
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 extension UIWindow {
@@ -12,3 +6,4 @@ extension UIWindow {
         UIWindow(frame: UIScreen.main.bounds)
     }
 }
+#endif

@@ -1,5 +1,7 @@
+#if canImport(UIKit)
 import XCTest
 import ACKategories
+import UIKit
 
 final class ColorTests: XCTestCase {
     
@@ -71,3 +73,4 @@ final class ColorTests: XCTestCase {
         XCTAssertTrue(color.isDark)
     }
 }
+#endif

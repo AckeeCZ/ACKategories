@@ -1,11 +1,4 @@
-//
-//  UIViewTests.swift
-//  UnitTests
-//
-//  Created by Jakub Olejník on 14/06/2019.
-//  Copyright © 2019 Ackee, s.r.o. All rights reserved.
-//
-
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 import XCTest
 import ACKategories
@@ -82,3 +75,4 @@ final class UIViewTests: XCTestCase {
         XCTAssertNil(weakSpacer)
     }
 }
+#endif

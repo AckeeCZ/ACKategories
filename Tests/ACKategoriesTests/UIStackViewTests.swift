@@ -1,13 +1,7 @@
-//
-//  UIStackViewTests.swift
-//  ACKategories
-//
-//  Created by Jakub Olejník on 13/06/2018.
-//  Copyright © 2018 Ackee, s.r.o. All rights reserved.
-//
-
+#if canImport(UIKit) && !os(watchOS)
 import XCTest
 import ACKategories
+import UIKit
 
 final class UIStackViewTests: XCTestCase {
     
@@ -26,3 +20,4 @@ final class UIStackViewTests: XCTestCase {
     }
     
 }
+#endif
