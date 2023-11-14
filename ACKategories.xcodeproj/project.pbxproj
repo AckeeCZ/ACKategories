@@ -16,6 +16,8 @@
 		69372720257FB0A3007CE25C /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */; };
 		693D773229A4BD1200B1AF0C /* BetterURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D773129A4BD1200B1AF0C /* BetterURL.swift */; };
 		693D773329A4BD1200B1AF0C /* BetterURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D773129A4BD1200B1AF0C /* BetterURL.swift */; };
+		694F00112AFC4DE100D8D5E6 /* EdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694F00102AFC4DE100D8D5E6 /* EdgeInsetsTests.swift */; };
+		694F00122AFC4E0100D8D5E6 /* EdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA469F2AFC4A34003CAB57 /* EdgeInsetsExtensions.swift */; };
 		6950962523C7740B00E8F457 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962223C7740A00E8F457 /* ViewModel.swift */; };
 		6950962623C7740B00E8F457 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962223C7740A00E8F457 /* ViewModel.swift */; };
 		6950962723C7740B00E8F457 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950962323C7740A00E8F457 /* Base.swift */; };
@@ -82,6 +84,8 @@
 		696DF854245304F400A6AC69 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DF853245304F400A6AC69 /* ReusableViewTests.swift */; };
 		6984CE132A5C218A001EE958 /* UIViewController+FrontMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */; };
 		6984CE152A5C26AA001EE958 /* UIView+Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984CE142A5C26AA001EE958 /* UIView+Spacer.swift */; };
+		69DA46A22AFC4B01003CAB57 /* EdegeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA46A12AFC4B01003CAB57 /* EdegeInsetsTests.swift */; };
+		69DA46A32AFC4C2A003CAB57 /* EdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA469F2AFC4A34003CAB57 /* EdgeInsetsExtensions.swift */; };
 		69DB1A012831839F004B32D7 /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3478AA27E37DC1004548B3 /* PublisherExtensions.swift */; };
 		69E819F423C773240054687B /* ACKategoriesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E819EA23C773240054687B /* ACKategoriesCore.framework */; };
 		69E819FB23C773240054687B /* ACKategoriesCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E819ED23C773240054687B /* ACKategoriesCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -182,6 +186,7 @@
 		69372704257FAF02007CE25C /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTests.swift; sourceTree = "<group>"; };
 		693D773129A4BD1200B1AF0C /* BetterURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterURL.swift; sourceTree = "<group>"; };
+		694F00102AFC4DE100D8D5E6 /* EdgeInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetsTests.swift; sourceTree = "<group>"; };
 		6950962223C7740A00E8F457 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6950962323C7740A00E8F457 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		6950962423C7740B00E8F457 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -234,6 +239,8 @@
 		697CECF023C877B20019FE61 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 		6984CE122A5C218A001EE958 /* UIViewController+FrontMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FrontMost.swift"; sourceTree = "<group>"; };
 		6984CE142A5C26AA001EE958 /* UIView+Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Spacer.swift"; sourceTree = "<group>"; };
+		69DA469F2AFC4A34003CAB57 /* EdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetsExtensions.swift; sourceTree = "<group>"; };
+		69DA46A12AFC4B01003CAB57 /* EdegeInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdegeInsetsTests.swift; sourceTree = "<group>"; };
 		69E819EA23C773240054687B /* ACKategoriesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategoriesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E819ED23C773240054687B /* ACKategoriesCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACKategoriesCore.h; sourceTree = "<group>"; };
 		69E819EE23C773240054687B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -418,6 +425,7 @@
 				6950963923C774DB00E8F457 /* DateExtensions.swift */,
 				6950963823C774DB00E8F457 /* DateFormatting.swift */,
 				6950963623C774DB00E8F457 /* DictionaryExtensions.swift */,
+				69DA469F2AFC4A34003CAB57 /* EdgeInsetsExtensions.swift */,
 				69F7058D273ADBA3004DD190 /* IntExtensions.swift */,
 				6950964A23C7751E00E8F457 /* NSAttributedStringExtensions.swift */,
 				6950964F23C7753500E8F457 /* NumberFormatterExtensions.swift */,
@@ -441,6 +449,7 @@
 				6950968F23C78CC200E8F457 /* CollectionTests.swift */,
 				6950968E23C78CC200E8F457 /* ConditionalAssignmentTests.swift */,
 				6950969523C78CC200E8F457 /* DateFormattingTests.swift */,
+				69DA46A12AFC4B01003CAB57 /* EdegeInsetsTests.swift */,
 				6950969223C78CC200E8F457 /* FoundationTests.swift */,
 				6922A08A273B2630004B2B1F /* IntTests.swift */,
 				6950969623C78CC200E8F457 /* StringTests.swift */,
@@ -490,6 +499,7 @@
 				69E81A1623C773370054687B /* Info.plist */,
 				6950968D23C78CC200E8F457 /* ColorTests.swift */,
 				6950969423C78CC200E8F457 /* ControlBlocksTests.swift */,
+				694F00102AFC4DE100D8D5E6 /* EdgeInsetsTests.swift */,
 				696DF853245304F400A6AC69 /* ReusableViewTests.swift */,
 				6937271F257FB0A3007CE25C /* UINavigationControllerTests.swift */,
 				6950969123C78CC200E8F457 /* UIStackViewTests.swift */,
@@ -919,6 +929,7 @@
 				6950962523C7740B00E8F457 /* ViewModel.swift in Sources */,
 				F8E398C52493A2DF0063256A /* UserDefault.swift in Sources */,
 				6950963223C7748D00E8F457 /* ArrayExtensions.swift in Sources */,
+				69DA46A32AFC4C2A003CAB57 /* EdgeInsetsExtensions.swift in Sources */,
 				6950964B23C7751E00E8F457 /* NSAttributedStringExtensions.swift in Sources */,
 				6950965923C78AB900E8F457 /* StringExtensions.swift in Sources */,
 				6950964623C774DB00E8F457 /* BundleExtensions.swift in Sources */,
@@ -935,6 +946,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6922A08B273B2630004B2B1F /* IntTests.swift in Sources */,
+				69DA46A22AFC4B01003CAB57 /* EdegeInsetsTests.swift in Sources */,
 				695096B123C78E2200E8F457 /* DateFormattingTests.swift in Sources */,
 				F885BD9F245AC43A0071073D /* DateRandomTests.swift in Sources */,
 				695096AE23C78E2200E8F457 /* ArrayTests.swift in Sources */,
@@ -997,6 +1009,7 @@
 				6950967223C78AC900E8F457 /* UIViewExtensions.swift in Sources */,
 				6950964923C7751600E8F457 /* GradientView.swift in Sources */,
 				F8E398C62493A2DF0063256A /* UserDefault.swift in Sources */,
+				694F00122AFC4E0100D8D5E6 /* EdgeInsetsExtensions.swift in Sources */,
 				6950964E23C7752B00E8F457 /* NSMutableParagraphStyleExtensions.swift in Sources */,
 				6950962623C7740B00E8F457 /* ViewModel.swift in Sources */,
 				6950967723C78AC900E8F457 /* UIStackViewExtensions.swift in Sources */,
@@ -1012,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				695096A523C78CC200E8F457 /* UIViewTests.swift in Sources */,
+				694F00112AFC4DE100D8D5E6 /* EdgeInsetsTests.swift in Sources */,
 				A33559012555270F009B9D89 /* FlowCoordinatorTests.swift in Sources */,
 				6950969923C78CC200E8F457 /* ColorTests.swift in Sources */,
 				695096A723C78CC200E8F457 /* ControlBlocksTests.swift in Sources */,
