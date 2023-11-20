@@ -14,6 +14,7 @@
 		6922C7812AFD1C8B00519CDF /* FlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A12AFD114600C8E8D9 /* FlowCoordinatorTests.swift */; };
 		6971A98A2AFD1AF5000FC317 /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ACD6C22AFD130C0021127B /* ACKategories.framework */; };
 		6971A9902AFD1B0F000FC317 /* ControlBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B62AFD114600C8E8D9 /* ControlBlocksTests.swift */; };
+		697D61D42B0BC41900020664 /* EdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D61D32B0BC41900020664 /* EdgeInsetsExtensions.swift */; };
 		69ACD6CA2AFD130D0021127B /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ACD6C22AFD130C0021127B /* ACKategories.framework */; };
 		69ACD6D72AFD133A0021127B /* ACKategories.h in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5F92AFD10BE00C8E8D9 /* ACKategories.h */; };
 		69ACD6D82AFD133A0021127B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5F82AFD10BE00C8E8D9 /* ArrayExtensions.swift */; };
@@ -77,11 +78,11 @@
 		69ACD7142AFD13480021127B /* UIStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A42AFD114600C8E8D9 /* UIStackViewTests.swift */; };
 		69ACD7152AFD13480021127B /* UIViewControllerChildrenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6AD2AFD114600C8E8D9 /* UIViewControllerChildrenTests.swift */; };
 		69ACD7162AFD13480021127B /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A92AFD114600C8E8D9 /* UIViewTests.swift */; };
-		69ACD7172AFD13480021127B /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A82AFD114600C8E8D9 /* UIWindow.swift */; };
 		69ACD71A2AFD13480021127B /* UserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A69E2AFD114600C8E8D9 /* UserDefaultTests.swift */; };
 		69ACD71B2AFD13480021127B /* DateRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B12AFD114600C8E8D9 /* DateRandomTests.swift */; };
 		69ACD71C2AFD13480021127B /* IntRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B22AFD114600C8E8D9 /* IntRandomTests.swift */; };
 		69ACD71D2AFD13480021127B /* StringRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B32AFD114600C8E8D9 /* StringRandomTests.swift */; };
+		69C6BE902B0BC80E008A4ECF /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A82AFD114600C8E8D9 /* UIWindow.swift */; };
 		69FA5FAD23C868A900B44BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5F9023C868A900B44BCD /* Assets.xcassets */; };
 		69FA5FAE23C868A900B44BCD /* UIControlBlocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9323C868A900B44BCD /* UIControlBlocksViewController.swift */; };
 		69FA5FAF23C868A900B44BCD /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9523C868A900B44BCD /* TitleViewController.swift */; };
@@ -153,6 +154,7 @@
 		695096D823C7908B00E8F457 /* ACKategoriesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACKategoriesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6971A9862AFD1AF5000FC317 /* ACKategoriesResponderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACKategoriesResponderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		697B023227DB65B50082F4AC /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		697D61D32B0BC41900020664 /* EdgeInsetsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 		69ACD6C22AFD130C0021127B /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ACD6C92AFD130D0021127B /* ACKategoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACKategoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E0A5F52AFD10BE00C8E8D9 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				69E0A6B62AFD114600C8E8D9 /* ControlBlocksTests.swift */,
 				6922C77C2AFD1C1A00519CDF /* UINavigationControllerTests.swift */,
 				6922C77E2AFD1C3300519CDF /* ACKategoriesResponder.xctestplan */,
+				69E0A6A72AFD114600C8E8D9 /* Extensions */,
 				69E0A69F2AFD114600C8E8D9 /* FlowCoordinator */,
 			);
 			path = ACKategoriesResponderTests;
@@ -334,6 +337,7 @@
 				69E0A6182AFD10BE00C8E8D9 /* DateExtensions.swift */,
 				69E0A6082AFD10BE00C8E8D9 /* DateFormatting.swift */,
 				69E0A6052AFD10BE00C8E8D9 /* DictionaryExtensions.swift */,
+				697D61D32B0BC41900020664 /* EdgeInsetsExtensions.swift */,
 				69E0A6102AFD10BE00C8E8D9 /* ErrorHandlers.swift */,
 				69E0A61A2AFD10BE00C8E8D9 /* GradientView.swift */,
 				69E0A6172AFD10BE00C8E8D9 /* IntExtensions.swift */,
@@ -435,7 +439,6 @@
 				69E0A6AD2AFD114600C8E8D9 /* UIViewControllerChildrenTests.swift */,
 				69E0A6A92AFD114600C8E8D9 /* UIViewTests.swift */,
 				6922C77F2AFD1C5000519CDF /* ACKategories.xctestplan */,
-				69E0A6A72AFD114600C8E8D9 /* Extensions */,
 				69E0A69D2AFD114600C8E8D9 /* PropertyWrappers */,
 				69E0A6B02AFD114600C8E8D9 /* Random */,
 			);
@@ -798,6 +801,7 @@
 			files = (
 				6922C7812AFD1C8B00519CDF /* FlowCoordinatorTests.swift in Sources */,
 				6971A9902AFD1B0F000FC317 /* ControlBlocksTests.swift in Sources */,
+				69C6BE902B0BC80E008A4ECF /* UIWindow.swift in Sources */,
 				6922C7802AFD1C8B00519CDF /* Dummies.swift in Sources */,
 				6922C77D2AFD1C1A00519CDF /* UINavigationControllerTests.swift in Sources */,
 			);
@@ -823,6 +827,7 @@
 				69ACD6E42AFD133A0021127B /* NSAttributedStringExtensions.swift in Sources */,
 				69ACD6E52AFD133A0021127B /* NSMutableParagraphStyleExtensions.swift in Sources */,
 				69ACD6E62AFD133A0021127B /* NumberFormatterExtensions.swift in Sources */,
+				697D61D42B0BC41900020664 /* EdgeInsetsExtensions.swift in Sources */,
 				69ACD6E72AFD133A0021127B /* PublisherExtensions.swift in Sources */,
 				69ACD6E82AFD133A0021127B /* Reusable.swift in Sources */,
 				69ACD6E92AFD133A0021127B /* ReusableView.swift in Sources */,
@@ -876,7 +881,6 @@
 				69ACD7142AFD13480021127B /* UIStackViewTests.swift in Sources */,
 				69ACD7152AFD13480021127B /* UIViewControllerChildrenTests.swift in Sources */,
 				69ACD7162AFD13480021127B /* UIViewTests.swift in Sources */,
-				69ACD7172AFD13480021127B /* UIWindow.swift in Sources */,
 				69ACD71A2AFD13480021127B /* UserDefaultTests.swift in Sources */,
 				69ACD71B2AFD13480021127B /* DateRandomTests.swift in Sources */,
 				69ACD71C2AFD13480021127B /* IntRandomTests.swift in Sources */,
