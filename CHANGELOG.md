@@ -7,6 +7,7 @@
 ```
 
 ## Next
+- Support tvOS & watchOS, use single multiplatform target for Carthage ([#14%](https://github.com/AckeeCZ/ACKategories/pull/140), kudos to @olejnjak)
 - Add helpers for `SwiftUI.EdgeInsets` ([#138](https://github.com/AckeeCZ/ACKategories/pull/138), kudos to @olejnjak)
 - Bump deployment target to iOS 12 ([#137](https://github.com/AckeeCZ/ACKategories/pull/137), kudos to @olejnjak)
 - Add Font modifier for SwiftUI fonts ([#134](https://github.com/AckeeCZ/ACKategories/pull/134), kudos to @leinhauplk)

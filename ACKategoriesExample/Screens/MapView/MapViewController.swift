@@ -39,13 +39,6 @@ final class MapViewController: BaseViewController<MapViewModeling> {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if #available(iOS 11.0, *) {
-            let annotationView: MKMarkerAnnotationView = mapView.dequeueAnnotationView(for: annotation)
-            return annotationView
-        } else {
-            let annotationView: MKAnnotationView = mapView.dequeueAnnotationView(for: annotation)
-            annotationView.image = UIColor.red.image(of: CGSize(width: 30, height: 30))
-            return annotationView
-        }
+        mapView.dequeueAnnotationView(for: annotation, type: MKMarkerAnnotationView.self)
     }
 }

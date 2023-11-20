@@ -1,11 +1,7 @@
 *.xcodeproj/**/xcuserdata/
 *.xcscmblueprint
-Carthage/Build
-Carthage/Checkouts
+Carthage
 /.build
 .DS_Store
 DerivedData
 .swiftpm/
-# Tapestry
-Tapestries/.build
-Tapestries/.swiftpm
