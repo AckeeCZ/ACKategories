@@ -1,6 +1,6 @@
+#if os(iOS)
 import UIKit
 
-#if os(iOS)
 private class BackGestureDelegate: NSObject {
     // MARK: - Private properties
 
