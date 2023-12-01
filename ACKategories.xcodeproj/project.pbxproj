@@ -99,6 +99,7 @@
 		69FA5FBC23C868A900B44BCD /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAB23C868A900B44BCD /* AppFlowCoordinator.swift */; };
 		69FA5FBD23C868A900B44BCD /* ModalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */; };
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
+		6A72B2222B1A15AC00A59EDD /* BackGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72B2212B1A15AC00A59EDD /* BackGesture.swift */; };
 		88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDD90325B8252E00207987 /* GradientViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -244,6 +245,7 @@
 		69FA5FAB23C868A900B44BCD /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		69FA5FAC23C868A900B44BCD /* ModalFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalFlowCoordinator.swift; sourceTree = "<group>"; };
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A72B2212B1A15AC00A59EDD /* BackGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGesture.swift; sourceTree = "<group>"; };
 		88EDD90325B8252E00207987 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,6 +372,7 @@
 				69E0A5F62AFD10BE00C8E8D9 /* PropertyWrappers */,
 				69E0A5FE2AFD10BE00C8E8D9 /* RandomExtensions */,
 				69E0A6032AFD10BE00C8E8D9 /* SwiftUIExtensions */,
+				6A72B2212B1A15AC00A59EDD /* BackGesture.swift */,
 			);
 			path = ACKategories;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				69ACD6F72AFD133A0021127B /* UIStackViewExtensions.swift in Sources */,
 				69ACD6F82AFD133A0021127B /* UIView+Spacer.swift in Sources */,
 				69ACD6F92AFD133A0021127B /* UIViewController+Children.swift in Sources */,
+				6A72B2222B1A15AC00A59EDD /* BackGesture.swift in Sources */,
 				69ACD6FA2AFD133A0021127B /* UIViewController+FrontMost.swift in Sources */,
 				69ACD6FB2AFD133A0021127B /* UIViewExtensions.swift in Sources */,
 				69ACD6FC2AFD133A0021127B /* UserDefaultsExtensions.swift in Sources */,
