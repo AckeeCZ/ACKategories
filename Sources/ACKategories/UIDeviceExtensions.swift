@@ -6,6 +6,11 @@ extension UIDevice {
     public var isPad: Bool {
         return userInterfaceIdiom == .pad
     }
+    
+    /// Return **true** if device is TV
+    public var isTV: Bool {
+        userInterfaceIdiom == .tv
+    }
 
     /// Returns device model name e.g. "iPhone11,6" for XS Max
     public var modelName: String {
