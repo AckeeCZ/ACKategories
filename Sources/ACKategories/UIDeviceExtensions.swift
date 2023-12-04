@@ -7,6 +7,17 @@ extension UIDevice {
         return userInterfaceIdiom == .pad
     }
 
+    /// Return **true** if device is Apple TV
+    public var isTV: Bool {
+        userInterfaceIdiom == .tv
+    }
+
+    /// Return **true** if device is Mac (Catalyst)
+    @available(iOS 14.0, tvOS 14.0, *)
+    public var isMac: Bool {
+        userInterfaceIdiom == .mac
+    }
+
     /// Returns device model name e.g. "iPhone11,6" for XS Max
     public var modelName: String {
         var systemInfo = utsname()
