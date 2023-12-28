@@ -18,11 +18,17 @@ let package = Package(
         .target(name: "ACKategories"),
         .testTarget(
             name: "ACKategoriesTests",
-            dependencies: ["ACKategories"]
+            dependencies: [
+                "ACKategories",
+                "ACKategoriesTesting",
+            ]
         ),
         .target(
             name: "ACKategoriesTesting",
-            dependencies: ["Networking"]
+            dependencies: [
+                "ACKategories",
+                "Networking",
+            ]
         ),
         .target(name: "Networking"),
         .testTarget(
