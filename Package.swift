@@ -13,6 +13,13 @@ let package = Package(
         .library(name: "ACKategories", targets: ["ACKategories"]),
         .library(name: "ACKategoriesTesting", targets: ["ACKategoriesTesting"]),
         .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "FirebaseFetcher", targets: ["FirebaseFetcher"]),
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/firebase/firebase-ios-sdk",
+            from: "10.19.0"
+        ),
     ],
     targets: [
         .target(name: "ACKategories"),
@@ -36,6 +43,13 @@ let package = Package(
             dependencies: [
                 "ACKategoriesTesting",
                 "Networking",
+            ]
+        ),
+        .target(
+            name: "FirebaseFetcher",
+            dependencies: [
+                "ACKategories",
+                .product(name: "FirebaseRemoteConfig", package: "firebase-ios-sdk"),
             ]
         ),
     ]
