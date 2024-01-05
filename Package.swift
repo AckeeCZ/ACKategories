@@ -13,6 +13,7 @@ let package = Package(
         .library(name: "ACKategories", targets: ["ACKategories"]),
         .library(name: "ACKategoriesTesting", targets: ["ACKategoriesTesting"]),
         .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "PushNotifications", targets: ["PushNotifications"]),
     ],
     targets: [
         .target(name: "ACKategories"),
@@ -38,8 +39,6 @@ let package = Package(
                 "Networking",
             ]
         ),
-            dependencies: [
-            ]
-        ),
+        .target(name: "PushNotifications"),
     ]
 )
