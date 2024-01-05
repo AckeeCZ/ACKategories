@@ -20,8 +20,6 @@ jobs:
           path: Tests-iOS.xcresult
       - name: iOS responder tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-iOS-Responder.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
-      - name: Build FirebaseFetcher
-        run: set -o pipefail && xcodebuild clean -scheme FirebaseFetcher -resultBundlePath Tests-iOS-Responder.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
