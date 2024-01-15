@@ -1,0 +1,20 @@
+name: Generate DocC
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  Build-Github-Actions:
+    runs-on: macos-latest
+
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v2
+    - name: Documentation Generation
+      run: xcodebuild docbuild -scheme ACKategories -derivedDataPath ./docbuild -destination 'platform=iOS Simulator,OS=latest,name=iPhone 13 Pro'
+    - name: Copy DoccArchive into root
+      run: cp -R ./docbuild/Build/Products/Debug/ACKategories.doccarchive ./ACKategories.doccarchive
+    - name: Delete Build Files
+      run: rm -r ./docbuild
+
+  
