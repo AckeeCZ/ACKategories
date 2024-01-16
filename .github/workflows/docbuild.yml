@@ -1,7 +1,8 @@
 name: Generate DocC
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '*'
     
 jobs:
   Build-Github-Actions:
