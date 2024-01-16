@@ -14,6 +14,6 @@ jobs:
     - name: Documentation Generation
       run: xcodebuild docbuild -scheme ACKategories -derivedDataPath ./docc -destination 'generic/platform=iOS'
     - name: Update GH Page
-      run: (xcrun --find docc) process-archive transform-for-static-hosting ./docc/Build/Products/Debug-iphoneos/ACKategories.doccarchive --hosting-base-path ACKategories --output-path docs;
+      run: (xcrun --find docc) process-archive transform-for-static-hosting ./docc/Build/Products/Debug-iphoneos/ACKategories.doccarchive --hosting-base-path ACKategories --output-path docs
 
   
