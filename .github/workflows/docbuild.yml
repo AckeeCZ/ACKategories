@@ -1,19 +1,46 @@
-name: Generate DocC
+# Name your workflow.
+name: Deploy DocC
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches:
+    branches: 
       - '*'
-    
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  Build-Github-Actions:
-    runs-on: macos-latest
-
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      # Must be set to this for deploying to GitHub Pages
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-12
     steps:
-    - name: Git Checkout
-      uses: actions/checkout@v2
-    - name: Documentation Generation
-      run: xcodebuild docbuild -scheme ACKategories -derivedDataPath ./docc -destination 'generic/platform=iOS'
-    - name: Update GH Page
-      run: $(xcrun --find docc) process-archive transform-for-static-hosting ./docc/Build/Products/Debug-iphoneos/ACKategories.doccarchive --hosting-base-path ACKategories --output-path docs
-
-  
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Build DocC
+        run: |
+          xcodebuild docbuild -scheme ACKategories \
+            -derivedDataPath /tmp/docbuild \
+            -destination 'generic/platform=iOS';
+          $(xcrun --find docc) process-archive \
+            transform-for-static-hosting /tmp/docbuild/Build/Products/Debug-iphoneos/ACKategories.doccarchive \
+            --hosting-base-path ACKategories \
+            --output-path docs;
+          echo "<script>window.location.href += \"/documentation/ackategories\"</script>" > docs/index.html;
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload only docs directory
+          path: 'docs'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
