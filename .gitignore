@@ -5,3 +5,4 @@ Carthage
 .DS_Store
 DerivedData
 .swiftpm/
+xcuserdata
