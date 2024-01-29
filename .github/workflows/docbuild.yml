@@ -21,10 +21,12 @@ jobs:
       # Must be set to this for deploying to GitHub Pages
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Check Xcode version ✅
+        uses: AckeeCZ/load-xcode-version@1.1.0
       - name: Build DocC
         run: |
           xcodebuild docbuild -scheme ACKategories \
