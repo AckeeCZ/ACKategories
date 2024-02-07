@@ -14,7 +14,7 @@ public final class APIService: APIServicing {
     }
     
     private let baseURLFactory: () -> URL
-    private let network: Networking
+    private let network: Network
     private let requestInterceptors: [RequestInterceptor]
     private let responseInterceptors: [ResponseInterceptor]
     
@@ -26,7 +26,7 @@ public final class APIService: APIServicing {
     ///   - responseInterceptors: List of response interceptors, useful for logging or token refresh
     public init(
         baseURL: @autoclosure @escaping () -> URL,
-        network: Networking,
+        network: Network,
         requestInterceptors: [RequestInterceptor] = [],
         responseInterceptors: [ResponseInterceptor] = []
     ) {

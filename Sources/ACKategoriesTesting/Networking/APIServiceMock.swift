@@ -27,6 +27,8 @@ public final class APIService_Mock: APIServicing {
             case .url(let url): return url
             case .path(let path):
                 return .ackeeCZ.appendingPathComponent(path)
+            @unknown default:
+                fatalError("Unknown case not supposed to be called")
             }
         }()
         
