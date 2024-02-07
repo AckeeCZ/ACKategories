@@ -11,12 +11,34 @@ let package = Package(
     ],
     products: [
         .library(name: "ACKategories", targets: ["ACKategories"]),
+        .library(name: "ACKategoriesTesting", targets: ["ACKategoriesTesting"]),
+        .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "PushNotifications", targets: ["PushNotifications"]),
     ],
     targets: [
         .target(name: "ACKategories"),
         .testTarget(
             name: "ACKategoriesTests",
-            dependencies: ["ACKategories"]
+            dependencies: [
+                "ACKategories",
+                "ACKategoriesTesting",
+            ]
         ),
+        .target(
+            name: "ACKategoriesTesting",
+            dependencies: [
+                "ACKategories",
+                "Networking",
+            ]
+        ),
+        .target(name: "Networking"),
+        .testTarget(
+            name: "NetworkingTests",
+            dependencies: [
+                "ACKategoriesTesting",
+                "Networking",
+            ]
+        ),
+        .target(name: "PushNotifications"),
     ]
 )

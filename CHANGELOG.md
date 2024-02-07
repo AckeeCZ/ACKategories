@@ -7,6 +7,10 @@
 ```
 
 ## Next
+- Merge [iOS template lib](https://github.com/AckeeCZ/iOS-MVVM-ProjectTemplate) ([#143](https://github.com/AckeeCZ/ACKategories/pull/143), kudos to @olejnjak)
+  - add Networking module
+  - add VersionUpdate module
+  - add PushNotifications module
 - Add `isTV` and `isMac` for `UIDevice` ([#142](https://github.com/AckeeCZ/ACKategories/pull/142), kudos to @leinhauplk)
 - Add helper function for easier back gesture setup ([#141](https://github.com/AckeeCZ/ACKategories/pull/141), kudos to @leinhauplk)
 - Support tvOS & watchOS, use single multiplatform target for Carthage ([#140](https://github.com/AckeeCZ/ACKategories/pull/140), kudos to @olejnjak)
