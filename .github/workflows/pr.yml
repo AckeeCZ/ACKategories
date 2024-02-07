@@ -3,6 +3,9 @@ name: PR
 on: [pull_request]
 
 jobs:
+  build:
+    name: Test build
+    uses: ./.github/workflows/build.yml
   tests:
     name: Tests
     uses: ./.github/workflows/tests.yml
