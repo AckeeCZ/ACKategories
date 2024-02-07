@@ -48,7 +48,6 @@
 		698376D12B3DA81200CD9E89 /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698376CC2B3DA81200CD9E89 /* ThemeExtensions.swift */; };
 		698376D22B3DA81200CD9E89 /* ThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698376CD2B3DA81200CD9E89 /* ThemeProvider.swift */; };
 		698376D32B3DA81200CD9E89 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698376CE2B3DA81200CD9E89 /* GradientView.swift */; };
-		699AC8F02B73E66700B7B8AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699AC8EF2B73E66700B7B8AC /* XCTest.framework */; };
 		69ACD6CA2AFD130D0021127B /* ACKategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ACD6C22AFD130C0021127B /* ACKategories.framework */; };
 		69ACD6D72AFD133A0021127B /* ACKategories.h in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5F92AFD10BE00C8E8D9 /* ACKategories.h */; };
 		69ACD6D82AFD133A0021127B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5F82AFD10BE00C8E8D9 /* ArrayExtensions.swift */; };
@@ -376,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				694D14F42B3DD71C0083E614 /* ACKategories.framework in Frameworks */,
-				699AC8F02B73E66700B7B8AC /* XCTest.framework in Frameworks */,
 				690BCB8D2B3DB62400EDA6F8 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
