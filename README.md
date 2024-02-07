@@ -12,7 +12,7 @@ A bunch of tools, cocoa subclasses and extensions we created and use at Ackee.
 You can also use [Carthage](https://github.com/Carthage/Carthage). Specify this repo in your Cartfile:
 
 ```
-github "AckeeCZ/ACKategories" ~> 6.12.3
+github "AckeeCZ/ACKategories" ~> 6.13.0
 ```
 
 ### SPM
@@ -20,7 +20,7 @@ github "AckeeCZ/ACKategories" ~> 6.12.3
 Or you can use [SPM](https://github.com/apple/swift-package-manager). Add this to your `Package.swift`: 
 
 ```swift
-.package(url: "https://github.com/AckeeCZ/ACKategories.git", .upToNextMajor(from: "6.12.3")),
+.package(url: "https://github.com/AckeeCZ/ACKategories.git", .upToNextMajor(from: "6.13.0")),
 ```
 
 
