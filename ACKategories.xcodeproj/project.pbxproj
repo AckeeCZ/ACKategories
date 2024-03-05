@@ -117,6 +117,9 @@
 		69C6BE902B0BC80E008A4ECF /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A82AFD114600C8E8D9 /* UIWindow.swift */; };
 		69DF227B2B459D0D0025C555 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF22792B459D0D0025C555 /* PushManager.swift */; };
 		69DF227C2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF227A2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift */; };
+		69F23E2F2B97442A00D9BCE5 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F23E2E2B97442A00D9BCE5 /* MultipartFormData.swift */; };
+		69F23E312B974E8400D9BCE5 /* MultipartRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F23E302B974E8400D9BCE5 /* MultipartRequestBuilder.swift */; };
+		69F23E342B97656800D9BCE5 /* MultipartRequestBodyBuilder_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F23E322B97654D00D9BCE5 /* MultipartRequestBodyBuilder_tests.swift */; };
 		69FA5FAD23C868A900B44BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5F9023C868A900B44BCD /* Assets.xcassets */; };
 		69FA5FAE23C868A900B44BCD /* UIControlBlocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9323C868A900B44BCD /* UIControlBlocksViewController.swift */; };
 		69FA5FAF23C868A900B44BCD /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9523C868A900B44BCD /* TitleViewController.swift */; };
@@ -332,6 +335,9 @@
 		69E0A6B32AFD114600C8E8D9 /* StringRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRandomTests.swift; sourceTree = "<group>"; };
 		69E0A6B42AFD114600C8E8D9 /* DateFormattingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		69E0A6B62AFD114600C8E8D9 /* ControlBlocksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlBlocksTests.swift; sourceTree = "<group>"; };
+		69F23E2E2B97442A00D9BCE5 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		69F23E302B974E8400D9BCE5 /* MultipartRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartRequestBuilder.swift; sourceTree = "<group>"; };
+		69F23E322B97654D00D9BCE5 /* MultipartRequestBodyBuilder_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartRequestBodyBuilder_tests.swift; sourceTree = "<group>"; };
 		69FA5F9023C868A900B44BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69FA5F9323C868A900B44BCD /* UIControlBlocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlBlocksViewController.swift; sourceTree = "<group>"; };
 		69FA5F9523C868A900B44BCD /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +438,8 @@
 				693A92782B3DB2AA008B3DC3 /* HTTPMethod.swift */,
 				693A92792B3DB2AA008B3DC3 /* APIServicing.swift */,
 				693A927A2B3DB2AA008B3DC3 /* OAuthInterceptor.swift */,
+				69F23E2E2B97442A00D9BCE5 /* MultipartFormData.swift */,
+				69F23E302B974E8400D9BCE5 /* MultipartRequestBuilder.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 				693A92852B3DB353008B3DC3 /* OAuthInterceptor_Tests.swift */,
 				693A92862B3DB353008B3DC3 /* APIService+OAuthInterceptor_Tests.swift */,
 				693A92872B3DB353008B3DC3 /* RequestAddress_Tests.swift */,
+				69F23E322B97654D00D9BCE5 /* MultipartRequestBodyBuilder_tests.swift */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -1177,8 +1186,10 @@
 				693A92822B3DB2AA008B3DC3 /* OAuthInterceptor.swift in Sources */,
 				693A927B2B3DB2AA008B3DC3 /* RequestAddress.swift in Sources */,
 				693A92802B3DB2AA008B3DC3 /* HTTPMethod.swift in Sources */,
+				69F23E312B974E8400D9BCE5 /* MultipartRequestBuilder.swift in Sources */,
 				693A927F2B3DB2AA008B3DC3 /* HTTPResponse.swift in Sources */,
 				693A927D2B3DB2AA008B3DC3 /* RequestBody.swift in Sources */,
+				69F23E2F2B97442A00D9BCE5 /* MultipartFormData.swift in Sources */,
 				693A92812B3DB2AA008B3DC3 /* APIServicing.swift in Sources */,
 				693A927E2B3DB2AA008B3DC3 /* Networking.swift in Sources */,
 			);
@@ -1192,6 +1203,7 @@
 				693A928A2B3DB353008B3DC3 /* APIService+OAuthInterceptor_Tests.swift in Sources */,
 				693A928B2B3DB353008B3DC3 /* RequestAddress_Tests.swift in Sources */,
 				693A92892B3DB353008B3DC3 /* OAuthInterceptor_Tests.swift in Sources */,
+				69F23E342B97656800D9BCE5 /* MultipartRequestBodyBuilder_tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

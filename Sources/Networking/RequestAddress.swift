@@ -20,3 +20,12 @@ extension RequestAddress: ExpressibleByStringInterpolation {
         }
     }
 }
+
+public extension RequestAddress {
+    func url(_ baseURL: @autoclosure () -> URL) -> URL {
+        switch self {
+        case .url(let url): url
+        case .path(let path): baseURL().appendingPathComponent(path)
+        }
+    }
+}

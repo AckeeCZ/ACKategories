@@ -17,8 +17,9 @@ public final class APIService: APIServicing {
     private let network: Network
     private let requestInterceptors: [RequestInterceptor]
     private let responseInterceptors: [ResponseInterceptor]
-    
-    /// Create new `JSONAPIService`
+    private lazy var multipartBodyBuilder = MultipartRequestBodyBuilder()
+
+    /// Create new `APIService`
     /// - Parameters:
     ///   - baseURL: Base URL for requests that use path instead of full URL/request
     ///   - network: Network object performing API calls, `URLSession` basically
@@ -69,21 +70,37 @@ public final class APIService: APIServicing {
         headers: [String: String]? = nil,
         body: RequestBody? = nil
     ) async throws -> HTTPResponse {
-        let url: URL = {
-            switch address {
-            case .url(let url): return url
-            case .path(let path):
-                return baseURLFactory().appendingPathComponent(path)
-            }
-        }()
-        
         return try await self.request(.init(
-            url: url,
+            url: address.url(baseURLFactory()),
             method: method,
             query: query,
             headers: headers,
             body: body
         ))
+    }
+
+    public func upload(
+        _ address: RequestAddress,
+        method: HTTPMethod,
+        query: [String: String]?,
+        headers: [String: String]?,
+        multipart multipartBuilder: @escaping (inout MultipartFormData) async -> ()
+    ) async throws -> HTTPResponse {
+        let multipart = await Task {
+            var multipart = MultipartFormData()
+            await multipartBuilder(&multipart)
+            return multipart
+        }.value
+        let (boundary, body) = await multipartBodyBuilder.buildRequestBody(multipart)
+        let headers = headers ?? [:]
+
+        return try await network.upload(.init(
+            url: address.url(baseURLFactory()),
+            method: method,
+            query: query,
+            headers: headers.merging(["Content-Type": "multipart/form-data; boundary=" + boundary]) { $1 },
+            body: nil
+        ), from: body)
     }
 }
 

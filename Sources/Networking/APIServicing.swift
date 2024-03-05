@@ -23,6 +23,14 @@ public protocol APIServicing {
         headers: [String: String]?,
         body: RequestBody?
     ) async throws -> HTTPResponse
+    
+    func upload(
+        _ address: RequestAddress,
+        method: HTTPMethod,
+        query: [String: String]?,
+        headers: [String: String]?,
+        multipart multipartBuilder: @escaping (inout MultipartFormData) async -> ()
+    ) async throws -> HTTPResponse
 }
 
 /// Protocol wrapping interceptors that can modify requests before they are sent
