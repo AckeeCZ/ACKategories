@@ -117,6 +117,7 @@
 		69C6BE902B0BC80E008A4ECF /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A82AFD114600C8E8D9 /* UIWindow.swift */; };
 		69DF227B2B459D0D0025C555 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF22792B459D0D0025C555 /* PushManager.swift */; };
 		69DF227C2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF227A2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift */; };
+		69E0C3A12B9915A800C12967 /* AsyncSequence+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0C3A02B9915A800C12967 /* AsyncSequence+Binding.swift */; };
 		69FA5FAD23C868A900B44BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5F9023C868A900B44BCD /* Assets.xcassets */; };
 		69FA5FAE23C868A900B44BCD /* UIControlBlocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9323C868A900B44BCD /* UIControlBlocksViewController.swift */; };
 		69FA5FAF23C868A900B44BCD /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA5F9523C868A900B44BCD /* TitleViewController.swift */; };
@@ -332,6 +333,7 @@
 		69E0A6B32AFD114600C8E8D9 /* StringRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRandomTests.swift; sourceTree = "<group>"; };
 		69E0A6B42AFD114600C8E8D9 /* DateFormattingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		69E0A6B62AFD114600C8E8D9 /* ControlBlocksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlBlocksTests.swift; sourceTree = "<group>"; };
+		69E0C3A02B9915A800C12967 /* AsyncSequence+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncSequence+Binding.swift"; sourceTree = "<group>"; };
 		69FA5F9023C868A900B44BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69FA5F9323C868A900B44BCD /* UIControlBlocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlBlocksViewController.swift; sourceTree = "<group>"; };
 		69FA5F9523C868A900B44BCD /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
@@ -618,6 +620,7 @@
 				69E0A6032AFD10BE00C8E8D9 /* SwiftUIExtensions */,
 				698376C72B3DA81200CD9E89 /* UI */,
 				694D14E82B3DD6190083E614 /* VersionUpdate */,
+				69E0C3A02B9915A800C12967 /* AsyncSequence+Binding.swift */,
 			);
 			path = ACKategories;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				69ACD6E62AFD133A0021127B /* NumberFormatterExtensions.swift in Sources */,
 				698376D22B3DA81200CD9E89 /* ThemeProvider.swift in Sources */,
 				697D61D42B0BC41900020664 /* EdgeInsetsExtensions.swift in Sources */,
+				69E0C3A12B9915A800C12967 /* AsyncSequence+Binding.swift in Sources */,
 				69ACD6E72AFD133A0021127B /* PublisherExtensions.swift in Sources */,
 				69ACD6E82AFD133A0021127B /* Reusable.swift in Sources */,
 				69ACD6E92AFD133A0021127B /* ReusableView.swift in Sources */,
