@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add new helpers for Combine+Concurrency ([#147](https://github.com/AckeeCZ/ACKategories/pull/147), kudos to @olejnjak)
+
 ## 6.13.0
 - Merge [iOS template lib](https://github.com/AckeeCZ/iOS-MVVM-ProjectTemplate) ([#143](https://github.com/AckeeCZ/ACKategories/pull/143), kudos to @olejnjak)
   - add Networking module
