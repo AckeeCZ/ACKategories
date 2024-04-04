@@ -8,6 +8,7 @@
 
 ## Next
 
+- Add privacy manifest ([#148](https://github.com/AckeeCZ/ACKategories/pull/148), kudos to @olejnjak)
 - Add new helpers for Combine+Concurrency ([#147](https://github.com/AckeeCZ/ACKategories/pull/147), kudos to @olejnjak)
 
 ## 6.13.0

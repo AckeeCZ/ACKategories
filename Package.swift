@@ -16,7 +16,12 @@ let package = Package(
         .library(name: "PushNotifications", targets: ["PushNotifications"]),
     ],
     targets: [
-        .target(name: "ACKategories"),
+        .target(
+            name: "ACKategories",
+            resources: [
+                .copy("PrivacyInfo.xcprivacy"),
+            ]
+        ),
         .testTarget(
             name: "ACKategoriesTests",
             dependencies: [
