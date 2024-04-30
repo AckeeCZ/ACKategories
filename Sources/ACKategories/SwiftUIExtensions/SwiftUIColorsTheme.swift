@@ -19,7 +19,7 @@ import UIKit
 @available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 @dynamicMemberLookup
 public struct SwiftUIColorsTheme {
-    subscript(dynamicMember keyPath: KeyPath<Theme<UIColor>, UIColor>) -> SwiftUI.Color {
+    public subscript(dynamicMember keyPath: KeyPath<Theme<UIColor>, UIColor>) -> SwiftUI.Color {
         let uiColor = Theme<UIColor>()[keyPath: keyPath]
         return .init(uiColor)
     }
