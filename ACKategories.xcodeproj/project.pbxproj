@@ -34,6 +34,7 @@
 		693A92A42B3DB394008B3DC3 /* HTTPResponse+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A929E2B3DB394008B3DC3 /* HTTPResponse+TestData.swift */; };
 		693A92A52B3DB394008B3DC3 /* URL+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A929F2B3DB394008B3DC3 /* URL+TestData.swift */; };
 		693A92A62B3DB39F008B3DC3 /* ACKategoriesTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A92912B3DB388008B3DC3 /* ACKategoriesTesting.framework */; };
+		693B39B72BF2359B00DF7C5E /* ACKHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */; };
 		694D14EB2B3DD61A0083E614 /* VersionUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D14E92B3DD6190083E614 /* VersionUpdateManager.swift */; };
 		694D14EC2B3DD61A0083E614 /* MinBuildNumberFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D14EA2B3DD6190083E614 /* MinBuildNumberFetcher.swift */; };
 		694D14EE2B3DD64C0083E614 /* VersionUpdateFetcher_Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D14ED2B3DD64C0083E614 /* VersionUpdateFetcher_Mock.swift */; };
@@ -246,6 +247,7 @@
 		693A929D2B3DB394008B3DC3 /* HTTPURLResponse+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+TestData.swift"; sourceTree = "<group>"; };
 		693A929E2B3DB394008B3DC3 /* HTTPResponse+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPResponse+TestData.swift"; sourceTree = "<group>"; };
 		693A929F2B3DB394008B3DC3 /* URL+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+TestData.swift"; sourceTree = "<group>"; };
+		693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACKHostingController.swift; sourceTree = "<group>"; };
 		694D14E92B3DD6190083E614 /* VersionUpdateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionUpdateManager.swift; sourceTree = "<group>"; };
 		694D14EA2B3DD6190083E614 /* MinBuildNumberFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinBuildNumberFetcher.swift; sourceTree = "<group>"; };
 		694D14ED2B3DD64C0083E614 /* VersionUpdateFetcher_Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionUpdateFetcher_Mock.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			children = (
 				69246CFA2BDFE77400AB31A1 /* SwiftUIColorsTheme.swift */,
 				69E0A6042AFD10BE00C8E8D9 /* FontModifier.swift */,
+				693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */,
 			);
 			path = SwiftUIExtensions;
 			sourceTree = "<group>";
@@ -1294,6 +1297,7 @@
 				69ACD6F62AFD133A0021127B /* UISearchBarExtensions.swift in Sources */,
 				69ACD6F72AFD133A0021127B /* UIStackViewExtensions.swift in Sources */,
 				69ACD6F82AFD133A0021127B /* UIView+Spacer.swift in Sources */,
+				693B39B72BF2359B00DF7C5E /* ACKHostingController.swift in Sources */,
 				69ACD6F92AFD133A0021127B /* UIViewController+Children.swift in Sources */,
 				6A72B2222B1A15AC00A59EDD /* BackGesture.swift in Sources */,
 				69ACD6FA2AFD133A0021127B /* UIViewController+FrontMost.swift in Sources */,
