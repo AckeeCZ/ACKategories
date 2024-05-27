@@ -1,4 +1,4 @@
-#if !os(macOS)
+#if !os(macOS) && !os(watchOS)
 import os.log
 import SwiftUI
 
@@ -7,6 +7,7 @@ open class ACKHostingController<RootView: View>: UIHostingController<RootView> {
     /// Navigation bar is shown/hidden in viewWillAppear according to this flag
     public var hasNavigationBar = true
 
+    #if !os(tvOS)
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         get { _preferredStatusBarStyle }
         set {
@@ -16,6 +17,7 @@ open class ACKHostingController<RootView: View>: UIHostingController<RootView> {
     }
 
     private var _preferredStatusBarStyle: UIStatusBarStyle = .default
+    #endif
 
     // MARK: - Initializers
 
