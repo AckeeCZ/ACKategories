@@ -1,8 +1,12 @@
+#if !os(macOS)
+import os.log
 import SwiftUI
 
-@available(iOS 13.0, *)
-open class ACKHostingController<RootView: View>: Base.ViewController {
-    public let hostingVC: UIHostingController<RootView>
+@available(iOS 13.0, tvOS 13.0, *)
+open class ACKHostingController<RootView: View>: UIHostingController<RootView> {
+    /// Navigation bar is shown/hidden in viewWillAppear according to this flag
+    public var hasNavigationBar = true
+
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         get { _preferredStatusBarStyle }
         set {
@@ -15,33 +19,33 @@ open class ACKHostingController<RootView: View>: Base.ViewController {
 
     // MARK: - Initializers
 
-    public init(rootView: RootView) {
-        hostingVC = .init(rootView: rootView)
-        super.init()
+    public override init(rootView: RootView) {
+        super.init(rootView: rootView)
+
+        navigationItem.backButtonTitle = ""
+
+        if Base.memoryLoggingEnabled && Base.viewControllerMemoryLoggingEnabled {
+            os_log("📱 👶 %@", log: Logger.lifecycleLog(), type: .info, self)
+        }
+    }
+    
+    @available(*, unavailable)
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
-    @available(*, unavailable)
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    deinit {
+        if Base.memoryLoggingEnabled && Base.viewControllerMemoryLoggingEnabled {
+            os_log("📱 ⚰️ %@", log: Logger.lifecycleLog(), type: .info, self)
+        }
     }
 
     // MARK: - View life cycle
 
-    open override func loadView() {
-        super.loadView()
+    override open func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        view.backgroundColor = .systemBackground
-
-        hostingVC.willMove(toParent: self)
-        addChild(hostingVC)
-        view.addSubview(hostingVC.view)
-        hostingVC.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            hostingVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            hostingVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            hostingVC.view.topAnchor.constraint(equalTo: view.topAnchor),
-            hostingVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-        hostingVC.didMove(toParent: self)
+        navigationController?.setNavigationBarHidden(!hasNavigationBar, animated: animated)
     }
 }
+#endif
