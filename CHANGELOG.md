@@ -8,6 +8,11 @@
 
 ## Next
 
+- SwiftUI improvements ([#149](https://github.com/AckeeCZ/ACKategories/pull/149), kudos to @olejnjak)
+  - make `lineHeight` parameter optional for `FontModifier`
+  - implement color forwarding from UIKit to SwiftUI
+  - add `ACKHostingController`
+
 ## 6.14.0
 
 - Add privacy manifest ([#148](https://github.com/AckeeCZ/ACKategories/pull/148), kudos to @olejnjak)

@@ -5,12 +5,12 @@ on: [workflow_call]
 jobs:
   xcodebuild:
     name: Xcodebuild
-    runs-on: macos-13
+    runs-on: macos-latest
     env:
       IOS_DEVICE: iPhone 15 Pro Max
     steps:
       - uses: actions/checkout@v4
-      - uses: AckeeCZ/load-xcode-version@1.1.0
+      - uses: AckeeCZ/load-xcode-version@v1
       - name: iOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-iOS.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v4
@@ -48,10 +48,10 @@ jobs:
           path: Tests-tvOS.xcresult
   spm:
     name: SPM
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: AckeeCZ/load-xcode-version@1.1.0
+      - uses: AckeeCZ/load-xcode-version@v1
       - name: SPM build
         run: swift build
       - name: SPM tests
