@@ -8,6 +8,8 @@
 
 ## Next
 
+## 6.15.0
+
 - SwiftUI improvements ([#149](https://github.com/AckeeCZ/ACKategories/pull/149), kudos to @olejnjak)
   - make `lineHeight` parameter optional for `FontModifier`
   - implement color forwarding from UIKit to SwiftUI
