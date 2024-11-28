@@ -9,10 +9,9 @@ on:
 jobs:
   carthage:
     name: Carthage
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-      - uses: AckeeCZ/load-xcode-version@v1
       - name: Build
         run: carthage build --no-skip-current --cache-builds --use-xcframeworks
       - uses: actions/cache@v3
@@ -23,10 +22,9 @@ jobs:
             ${{ runner.os }}-carthage-
   spm:
     name: SPM
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-      - uses: AckeeCZ/load-xcode-version@v1
       - name: Build
         run: swift build -c release
       - uses: actions/cache@v3
