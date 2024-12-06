@@ -8,6 +8,7 @@
 
 ## Next
 
+- Add SwiftUI extension `View+endEditingOnTap` ([#152](https://github.com/AckeeCZ/ACKategories/pull/152), kudos to @lukashromadnik)
 - Add `readSize` and `readFrame` to SwiftUI views ([#150](https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @olejnjak)
 - Add `WithLayoutMargins` to SwiftUI extensions ([#150](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
 
