@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add `WithLayoutMargins` to SwiftUI extensions ([#150](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
+
 ## 6.15.0
 
 - SwiftUI improvements ([#149](https://github.com/AckeeCZ/ACKategories/pull/149), kudos to @olejnjak)
