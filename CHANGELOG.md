@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add SwiftUI extension `View+endEditingOnTap` ([#152](https://github.com/AckeeCZ/ACKategories/pull/152), kudos to @lukashromadnik)
+
 ## 6.15.0
 
 - SwiftUI improvements ([#149](https://github.com/AckeeCZ/ACKategories/pull/149), kudos to @olejnjak)
