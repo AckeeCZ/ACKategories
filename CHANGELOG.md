@@ -8,6 +8,8 @@
 
 ## Next
 
+- Add `readSize` and `readFrame` to SwiftUI views ([#150](https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @olejnjak)
+
 ## 6.15.0
 
 - SwiftUI improvements ([#149](https://github.com/AckeeCZ/ACKategories/pull/149), kudos to @olejnjak)

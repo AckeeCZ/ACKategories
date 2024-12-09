@@ -117,6 +117,7 @@
 		69ACD71B2AFD13480021127B /* DateRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B12AFD114600C8E8D9 /* DateRandomTests.swift */; };
 		69ACD71C2AFD13480021127B /* IntRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B22AFD114600C8E8D9 /* IntRandomTests.swift */; };
 		69ACD71D2AFD13480021127B /* StringRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6B32AFD114600C8E8D9 /* StringRandomTests.swift */; };
+		69BC15952CF8A42C00A4B55F /* View+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC15942CF8A42700A4B55F /* View+Frame.swift */; };
 		69C6BE902B0BC80E008A4ECF /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6A82AFD114600C8E8D9 /* UIWindow.swift */; };
 		69DF227B2B459D0D0025C555 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF22792B459D0D0025C555 /* PushManager.swift */; };
 		69DF227C2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF227A2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift */; };
@@ -266,6 +267,7 @@
 		69ACC1812BBDF8DC00A109DB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		69ACD6C22AFD130C0021127B /* ACKategories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACKategories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ACD6C92AFD130D0021127B /* ACKategoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACKategoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BC15942CF8A42700A4B55F /* View+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Frame.swift"; sourceTree = "<group>"; };
 		69DF225A2B459CC50025C555 /* PushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DF22792B459D0D0025C555 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		69DF227A2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationSettingsExtensions.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 		69E0A6032AFD10BE00C8E8D9 /* SwiftUIExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				69BC15942CF8A42700A4B55F /* View+Frame.swift */,
 				69246CFA2BDFE77400AB31A1 /* SwiftUIColorsTheme.swift */,
 				69E0A6042AFD10BE00C8E8D9 /* FontModifier.swift */,
 				693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */,
@@ -1292,6 +1295,7 @@
 				69ACD6F12AFD133A0021127B /* UIControlEvents.swift in Sources */,
 				69ACD6F22AFD133A0021127B /* UIDeviceExtensions.swift in Sources */,
 				69ACD6F32AFD133A0021127B /* UIImageExtensions.swift in Sources */,
+				69BC15952CF8A42C00A4B55F /* View+Frame.swift in Sources */,
 				69ACD6F42AFD133A0021127B /* UILabelExtensions.swift in Sources */,
 				69ACD6F52AFD133A0021127B /* UINavigationControllerExtensions.swift in Sources */,
 				69ACD6F62AFD133A0021127B /* UISearchBarExtensions.swift in Sources */,
