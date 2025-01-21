@@ -2,7 +2,7 @@ import SwiftUI
 
 // Source: https://github.com/tgrapperon/swiftui-layout-guides
 /// This view populates its content's ``layoutMarginsInsets`` and ``readableContentInsets``.
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public struct WithLayoutMargins<Content>: View where Content: View {
     let content: (EdgeInsets) -> Content
 
@@ -37,7 +37,7 @@ public struct WithLayoutMargins<Content>: View where Content: View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 internal struct FitLayoutGuidesWidth: ViewModifier {
     enum Kind {
         case layoutMargins
@@ -81,7 +81,7 @@ internal struct FitLayoutGuidesWidth: ViewModifier {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 extension View {
     /// Use this modifier to make the view fit the readable content width.
     ///
@@ -113,17 +113,17 @@ extension View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 private struct LayoutMarginsGuidesKey: EnvironmentKey {
     static var defaultValue: EdgeInsets { .init() }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 private struct ReadableContentGuidesKey: EnvironmentKey {
     static var defaultValue: EdgeInsets { .init() }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 extension EnvironmentValues {
     /// The `EdgeInsets` corresponding to the layout margins of the nearest
     /// ``WithLayoutMargins``'s content.
@@ -140,7 +140,7 @@ extension EnvironmentValues {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 internal struct LayoutGuidesModifier: ViewModifier {
     @State var layoutMarginsInsets: EdgeInsets = .init()
     @State var readableContentInsets: EdgeInsets = .init()
@@ -167,7 +167,7 @@ internal struct LayoutGuidesModifier: ViewModifier {
 #if os(iOS) || os(tvOS)
 import UIKit
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 internal struct LayoutGuides: UIViewRepresentable {
     let onLayoutMarginsGuideChange: (EdgeInsets) -> Void
     let onReadableContentGuideChange: (EdgeInsets) -> Void
@@ -258,7 +258,7 @@ internal struct LayoutGuides: UIViewRepresentable {
 #endif
 
 #if DEBUG
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 private struct Cell: View {
         var value: String
         var body: some View {
@@ -273,7 +273,7 @@ private struct Cell: View {
         }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 private struct ListTest: View {
     var body: some View {
         List {
@@ -284,7 +284,7 @@ private struct ListTest: View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 private struct ScrollViewTest: View {
     var body: some View {
         ScrollView {
@@ -298,7 +298,7 @@ private struct ScrollViewTest: View {
 }
 
 #if os(iOS)
-@available(iOS 16.0, *)
+@available(iOS 16.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 internal struct SwiftUILayoutGuides_Previews: PreviewProvider {
     static func sample<Content>(_ title: String, _ content: () -> Content) -> some View
         where Content: View {
