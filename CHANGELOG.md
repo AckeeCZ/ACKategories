@@ -9,6 +9,7 @@
 ## Next
 
 - Add `readSize` and `readFrame` to SwiftUI views ([#150](https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @olejnjak)
+- Add `WithLayoutMargins` to SwiftUI extensions ([#150](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
 
 ## 6.15.0
 
