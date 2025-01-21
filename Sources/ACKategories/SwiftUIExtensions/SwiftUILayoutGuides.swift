@@ -259,7 +259,7 @@ internal struct LayoutGuides: UIViewRepresentable {
 
 #if DEBUG
 @available(iOS 13.0, *)
-struct Cell: View {
+private struct Cell: View {
         var value: String
         var body: some View {
             ZStack {
@@ -274,7 +274,7 @@ struct Cell: View {
 }
 
 @available(iOS 13.0, *)
-struct ListTest: View {
+private struct ListTest: View {
     var body: some View {
         List {
             ForEach(0..<30) {
@@ -285,7 +285,7 @@ struct ListTest: View {
 }
 
 @available(iOS 13.0, *)
-struct ScrollViewTest: View {
+private struct ScrollViewTest: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -299,7 +299,7 @@ struct ScrollViewTest: View {
 
 #if os(iOS)
 @available(iOS 16.0, *)
-struct SwiftUILayoutGuides_Previews: PreviewProvider {
+internal struct SwiftUILayoutGuides_Previews: PreviewProvider {
     static func sample<Content>(_ title: String, _ content: () -> Content) -> some View
         where Content: View {
         VStack(alignment: .leading) {
