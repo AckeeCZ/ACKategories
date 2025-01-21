@@ -141,7 +141,7 @@ extension EnvironmentValues {
 }
 
 @available(iOS 13.0, *)
-struct LayoutGuidesModifier: ViewModifier {
+internal struct LayoutGuidesModifier: ViewModifier {
     @State var layoutMarginsInsets: EdgeInsets = .init()
     @State var readableContentInsets: EdgeInsets = .init()
 
@@ -168,7 +168,7 @@ struct LayoutGuidesModifier: ViewModifier {
 import UIKit
 
 @available(iOS 13.0, *)
-struct LayoutGuides: UIViewRepresentable {
+internal struct LayoutGuides: UIViewRepresentable {
     let onLayoutMarginsGuideChange: (EdgeInsets) -> Void
     let onReadableContentGuideChange: (EdgeInsets) -> Void
 
