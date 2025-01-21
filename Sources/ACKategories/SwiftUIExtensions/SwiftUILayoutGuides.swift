@@ -2,6 +2,7 @@ import SwiftUI
 
 // Source: https://github.com/tgrapperon/swiftui-layout-guides
 /// This view populates its content's ``layoutMarginsInsets`` and ``readableContentInsets``.
+@available(iOS 13.0, *)
 public struct WithLayoutMargins<Content>: View where Content: View {
     let content: (EdgeInsets) -> Content
 
@@ -80,6 +81,7 @@ internal struct FitLayoutGuidesWidth: ViewModifier {
     }
 }
 
+@available(iOS 13.0, *)
 extension View {
     /// Use this modifier to make the view fit the readable content width.
     ///
@@ -114,11 +116,14 @@ extension View {
     private struct LayoutMarginsGuidesKey: EnvironmentKey {
         static var defaultValue: EdgeInsets { .init() }
     }
+@available(iOS 13.0, *)
 
     private struct ReadableContentGuidesKey: EnvironmentKey {
         static var defaultValue: EdgeInsets { .init() }
     }
+@available(iOS 13.0, *)
 
+@available(iOS 13.0, *)
 extension EnvironmentValues {
     /// The `EdgeInsets` corresponding to the layout margins of the nearest
     /// ``WithLayoutMargins``'s content.
@@ -135,6 +140,7 @@ extension EnvironmentValues {
     }
 }
 
+@available(iOS 13.0, *)
 struct LayoutGuidesModifier: ViewModifier {
     @State var layoutMarginsInsets: EdgeInsets = .init()
     @State var readableContentInsets: EdgeInsets = .init()
@@ -161,6 +167,7 @@ struct LayoutGuidesModifier: ViewModifier {
 #if os(iOS) || os(tvOS)
 import UIKit
 
+@available(iOS 13.0, *)
 struct LayoutGuides: UIViewRepresentable {
     let onLayoutMarginsGuideChange: (EdgeInsets) -> Void
     let onReadableContentGuideChange: (EdgeInsets) -> Void
@@ -251,6 +258,7 @@ struct LayoutGuides: UIViewRepresentable {
 #endif
 
 #if DEBUG
+@available(iOS 13.0, *)
 struct Cell: View {
         var value: String
         var body: some View {
@@ -265,6 +273,7 @@ struct Cell: View {
         }
 }
 
+@available(iOS 13.0, *)
 struct ListTest: View {
     var body: some View {
         List {
@@ -282,6 +291,7 @@ struct ListTest: View {
                     ForEach(0..<30) {
                         Cell(value: "\($0)")
                     }
+@available(iOS 13.0, *)
                 }
             }
         }
@@ -298,6 +308,7 @@ struct ListTest: View {
                 content()
             }
             .border(Color.primary, width: 2)
+@available(iOS 16.0, *)
         }
 
         static var previews: some View {
