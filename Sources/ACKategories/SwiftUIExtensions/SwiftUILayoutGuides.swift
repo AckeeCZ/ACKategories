@@ -113,15 +113,15 @@ extension View {
     }
 }
 
-    private struct LayoutMarginsGuidesKey: EnvironmentKey {
-        static var defaultValue: EdgeInsets { .init() }
-    }
 @available(iOS 13.0, *)
+private struct LayoutMarginsGuidesKey: EnvironmentKey {
+    static var defaultValue: EdgeInsets { .init() }
+}
 
-    private struct ReadableContentGuidesKey: EnvironmentKey {
-        static var defaultValue: EdgeInsets { .init() }
-    }
 @available(iOS 13.0, *)
+private struct ReadableContentGuidesKey: EnvironmentKey {
+    static var defaultValue: EdgeInsets { .init() }
+}
 
 @available(iOS 13.0, *)
 extension EnvironmentValues {
@@ -281,59 +281,59 @@ struct ListTest: View {
                 Cell(value: "\($0)")
             }
         }
-        }
     }
+}
 
-    struct ScrollViewTest: View {
-        var body: some View {
-            ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(0..<30) {
-                        Cell(value: "\($0)")
-                    }
 @available(iOS 13.0, *)
+struct ScrollViewTest: View {
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                ForEach(0..<30) {
+                    Cell(value: "\($0)")
                 }
             }
         }
     }
+}
 
-    #if os(iOS)
-    struct SwiftUILayoutGuides_Previews: PreviewProvider {
-        static func sample<Content>(_ title: String, _ content: () -> Content) -> some View
-            where Content: View {
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(Font.system(size: 20, weight: .bold))
-                    .padding()
-                content()
-            }
-            .border(Color.primary, width: 2)
+#if os(iOS)
 @available(iOS 16.0, *)
+struct SwiftUILayoutGuides_Previews: PreviewProvider {
+    static func sample<Content>(_ title: String, _ content: () -> Content) -> some View
+        where Content: View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(Font.system(size: 20, weight: .bold))
+                .padding()
+            content()
         }
-
-        static var previews: some View {
-            NavigationSplitView {
-                VStack(spacing: 0) {
-                    sample("ScrollView") { ScrollViewTest() }
-                    sample("List.plain") { ListTest().listStyle(.plain) }
-                    #if os(iOS) || os(tvOS)
-                    sample("List.grouped") { ListTest().listStyle(.grouped) }
-                    sample("List.insetGrouped") { ListTest().listStyle(.insetGrouped) }
-                    #endif
-                }
-            } detail: {
-                VStack(spacing: 0) {
-                    sample("ScrollView") { ScrollViewTest() }
-                    sample("List.plain") { ListTest().listStyle(.plain) }
-                    #if os(iOS) || os(tvOS)
-                    sample("List.grouped") { ListTest().listStyle(.grouped) }
-                    sample("List.insetGrouped") { ListTest().listStyle(.insetGrouped) }
-                    #endif
-                }
-            }
-            .previewInterfaceOrientation(.landscapeRight)
-            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
-        }
+        .border(Color.primary, width: 2)
     }
-    #endif
+
+    static var previews: some View {
+        NavigationSplitView {
+            VStack(spacing: 0) {
+                sample("ScrollView") { ScrollViewTest() }
+                sample("List.plain") { ListTest().listStyle(.plain) }
+                #if os(iOS) || os(tvOS)
+                sample("List.grouped") { ListTest().listStyle(.grouped) }
+                sample("List.insetGrouped") { ListTest().listStyle(.insetGrouped) }
+                #endif
+            }
+        } detail: {
+            VStack(spacing: 0) {
+                sample("ScrollView") { ScrollViewTest() }
+                sample("List.plain") { ListTest().listStyle(.plain) }
+                #if os(iOS) || os(tvOS)
+                sample("List.grouped") { ListTest().listStyle(.grouped) }
+                sample("List.insetGrouped") { ListTest().listStyle(.insetGrouped) }
+                #endif
+            }
+        }
+        .previewInterfaceOrientation(.landscapeRight)
+        .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
+    }
+}
+#endif
 #endif
