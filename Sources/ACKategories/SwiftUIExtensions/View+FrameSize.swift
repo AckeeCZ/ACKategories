@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(iOS 13, *)
+@available(iOS 13, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension View {
 
     public func frame(size: CGSize) -> some View {
