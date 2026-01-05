@@ -2,6 +2,9 @@ name: Tests
 
 on: [workflow_call]
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_26.1.1.app/Contents/Developer
+
 jobs:
   xcodebuild:
     name: Xcodebuild

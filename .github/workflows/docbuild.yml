@@ -14,6 +14,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_26.1.1.app/Contents/Developer
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
