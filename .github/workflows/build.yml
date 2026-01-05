@@ -9,7 +9,7 @@ on:
 jobs:
   carthage:
     name: Carthage
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - name: Build
@@ -22,7 +22,7 @@ jobs:
             ${{ runner.os }}-carthage-
   spm:
     name: SPM
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - name: Build
