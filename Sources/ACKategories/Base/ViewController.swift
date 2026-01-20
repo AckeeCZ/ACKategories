@@ -9,6 +9,7 @@ extension Base {
     public static var viewControllerMemoryLoggingEnabled: Bool = true
 
     /// Base class for all view controllers
+    @objc(BaseViewController)
     open class ViewController: UIViewController {
 
         /// Navigation bar is shown/hidden in viewWillAppear according to this flag
