@@ -4,7 +4,7 @@ import os.log
 
 extension Base {
     /// Turn on/off logging of init/deinit of all VCs
-    /// ⚠️ Has no effect when Base.memoryLoggingEnabled is true
+    /// ⚠️ Has no effect when Base.memoryLoggingEnabled is false
     public static var viewControllerMemoryLoggingEnabled: Bool = true
 }
 
