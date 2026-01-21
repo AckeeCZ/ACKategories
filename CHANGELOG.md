@@ -1,6 +1,6 @@
 # Changelog
 
-- please enter new entries in format 
+- please enter new entries in format
 
 ```
 - <description> (#<PR_number>, kudos to @<author>)
@@ -8,6 +8,10 @@
 
 ## Next
 
+- Rename `Base.ViewController` to `BaseViewController` ([#155] (https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @komkovla)
+    - Add Objective-C name annotation `@objc(ACKBaseViewController)` for better Objective-C interoperability
+    - Add deprecated typealias `Base.ViewController` for backward compatibility
+    - Fix comment typo in `Base.viewControllerMemoryLoggingEnabled`
 - Add `readSize` and `readFrame` to SwiftUI views ([#150](https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @olejnjak)
 - Add `WithLayoutMargins` to SwiftUI extensions ([#150](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
 
@@ -93,7 +97,7 @@
 
 - Put `stop` of `childCoordinators` on main thread ([#103](https://github.com/AckeeCZ/ACKategories/pull/103), kudos to @IgorRosocha)
 
-### Added 
+### Added
 
 - Add completion blocks to `UINavigationController` pop and push methods ([#101](https://github.com/AckeeCZ/ACKategories/pull/101), kudos to @olejnjak)
 - Add possibility to configure GradientView with public properties `colors` and `axis` even after init ([#104](https://github.com/AckeeCZ/ACKategories/pull/104), kudos to @janmisar)
@@ -139,7 +143,7 @@
 
 ### Fixed
 
-- Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek) 
+- Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek)
 - `completion` of `Base.FlowCoordinator.stop()` is sometimes not called ([#94](https://github.com/AckeeCZ/ACKategories/pull/94), kudos to @lukashromadnik)
 
 ## 6.6.0
@@ -233,6 +237,6 @@
 
 ## 6.0.2
 - move from NSLog to unified logging (#39, kudos to @fortmarek)
-- allow additional logic for isEmpty for collections (#40, kudos to @fortmarek) 
+- allow additional logic for isEmpty for collections (#40, kudos to @fortmarek)
 - add LICENSE file to Cocoapods source files
 
