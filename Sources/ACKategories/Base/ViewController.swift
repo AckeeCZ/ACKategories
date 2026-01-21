@@ -14,6 +14,7 @@ extension Base {
 }
 
 /// Base class for all view controllers
+@objc(ACKBaseViewController)
 open class BaseViewController: UIViewController {
 
     /// Navigation bar is shown/hidden in viewWillAppear according to this flag
