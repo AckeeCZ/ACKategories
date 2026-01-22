@@ -8,6 +8,8 @@
 
 ## Next
 
+- Update `font(_:lineHeight:textStyle:)` viewModifier to use native [`lineHeight`](https://developer.apple.com/documentation/swiftui/environmentvalues/lineheight) on +26.0 systems ([#154](https://github.com/AckeeCZ/ACKategories/pull/154), kudos to @olejnjak)
+
 ## 6.16.0
 
 - Add SwiftUI extension `View+FrameSize` ([#153](https://github.com/AckeeCZ/ACKategories/pull/153), kudos to @lukashromadnik)
