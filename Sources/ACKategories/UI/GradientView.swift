@@ -7,6 +7,7 @@ import UIKit
 
     `[UIColor.white, UIColor.white.withAlphaComponent(0)]`
  */
+@objc(ACKGradientView)
 open class GradientView: UIView {
     override open class var layerClass: Swift.AnyClass { CAGradientLayer.self }
 

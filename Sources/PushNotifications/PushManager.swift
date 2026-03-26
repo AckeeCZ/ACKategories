@@ -29,6 +29,7 @@ public extension PushManaging where Self: PushManagingActions {
 }
 
 @available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
+@objc(ACKPushManager)
 public final class PushManager: NSObject, PushManaging, PushManagingActions {
     public private(set) lazy var notificationSettings = AsyncStream<UNNotificationSettings> { continuation in
         notificationSettingsContinuation = continuation

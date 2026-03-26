@@ -12,6 +12,11 @@
     - Add Objective-C name annotation `@objc(ACKBaseViewController)` for better Objective-C interoperability
     - Add deprecated typealias `Base.ViewController` for backward compatibility
     - Fix comment typo in `Base.viewControllerMemoryLoggingEnabled`
+- Add `@objc(ACK...)` name annotations to all ObjC-visible public classes ([#155](https://github.com/AckeeCZ/ACKategories/pull/155))
+    - `GradientView` → `@objc(ACKGradientView)`
+    - `PopupModalAnimation` → `@objc(ACKPopupModalAnimation)`
+    - `SelfSizingTableHeaderFooterView` → `@objc(ACKSelfSizingTableHeaderFooterView)`
+    - `PushManager` → `@objc(ACKPushManager)`
 
 ## 6.16.0
 

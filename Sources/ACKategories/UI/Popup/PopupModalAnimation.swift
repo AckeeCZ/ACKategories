@@ -3,6 +3,7 @@ import Foundation
 import UIKit
 
 /// Animation for presenting popups
+@objc(ACKPopupModalAnimation)
 public final class PopupModalAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
     /// Popup horizontal inset
