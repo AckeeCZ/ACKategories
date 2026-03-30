@@ -2,10 +2,13 @@ name: Tests
 
 on: [workflow_call]
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_26.1.1.app/Contents/Developer
+
 jobs:
   xcodebuild:
     name: Xcodebuild
-    runs-on: macos-15
+    runs-on: macos-latest
     env:
       IOS_DEVICE: iPhone 16 Pro
     steps:
@@ -47,7 +50,7 @@ jobs:
           path: Tests-tvOS.xcresult
   spm:
     name: SPM
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - name: SPM build
