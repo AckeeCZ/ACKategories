@@ -2,6 +2,7 @@
 import UIKit
 
 /// This view will autolayout its height, even when used as a tableHeaderView or tableFooterView.
+@objc(ACKSelfSizingTableHeaderFooterView)
 open class SelfSizingTableHeaderFooterView: UITableViewHeaderFooterView {
 
     private enum Status {

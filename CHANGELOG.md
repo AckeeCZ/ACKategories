@@ -1,6 +1,6 @@
 # Changelog
 
-- please enter new entries in format 
+- please enter new entries in format
 
 ```
 - <description> (#<PR_number>, kudos to @<author>)
@@ -8,6 +8,15 @@
 
 ## Next
 
+- Rename `Base.ViewController` to `BaseViewController` ([#155](https://github.com/AckeeCZ/ACKategories/pull/155), kudos to @komkovla)
+    - Add Objective-C name annotation `@objc(ACKBaseViewController)` for better Objective-C interoperability
+    - Add deprecated typealias `Base.ViewController` for backward compatibility
+    - Fix comment typo in `Base.viewControllerMemoryLoggingEnabled`
+- Add `@objc(ACK...)` name annotations to all ObjC-visible public classes ([#155](https://github.com/AckeeCZ/ACKategories/pull/155))
+    - `GradientView` → `@objc(ACKGradientView)`
+    - `PopupModalAnimation` → `@objc(ACKPopupModalAnimation)`
+    - `SelfSizingTableHeaderFooterView` → `@objc(ACKSelfSizingTableHeaderFooterView)`
+    - `PushManager` → `@objc(ACKPushManager)`
 - Update `font(_:lineHeight:textStyle:)` viewModifier to use native [`lineHeight`](https://developer.apple.com/documentation/swiftui/environmentvalues/lineheight) on +26.0 systems ([#154](https://github.com/AckeeCZ/ACKategories/pull/154), kudos to @olejnjak)
 
 ## 6.16.0
@@ -98,7 +107,7 @@
 
 - Put `stop` of `childCoordinators` on main thread ([#103](https://github.com/AckeeCZ/ACKategories/pull/103), kudos to @IgorRosocha)
 
-### Added 
+### Added
 
 - Add completion blocks to `UINavigationController` pop and push methods ([#101](https://github.com/AckeeCZ/ACKategories/pull/101), kudos to @olejnjak)
 - Add possibility to configure GradientView with public properties `colors` and `axis` even after init ([#104](https://github.com/AckeeCZ/ACKategories/pull/104), kudos to @janmisar)
@@ -144,7 +153,7 @@
 
 ### Fixed
 
-- Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek) 
+- Encoding of primitive values ([#90](https://github.com/AckeeCZ/ACKategories/pull/90), kudos to @fortmarek)
 - `completion` of `Base.FlowCoordinator.stop()` is sometimes not called ([#94](https://github.com/AckeeCZ/ACKategories/pull/94), kudos to @lukashromadnik)
 
 ## 6.6.0
@@ -238,6 +247,6 @@
 
 ## 6.0.2
 - move from NSLog to unified logging (#39, kudos to @fortmarek)
-- allow additional logic for isEmpty for collections (#40, kudos to @fortmarek) 
+- allow additional logic for isEmpty for collections (#40, kudos to @fortmarek)
 - add LICENSE file to Cocoapods source files
 
