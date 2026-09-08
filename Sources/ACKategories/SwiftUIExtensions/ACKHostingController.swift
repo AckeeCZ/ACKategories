@@ -2,7 +2,6 @@
 import os.log
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
 open class ACKHostingController<RootView: View>: UIHostingController<RootView> {
     /// Navigation bar is shown/hidden in viewWillAppear according to this flag
     public var hasNavigationBar = true

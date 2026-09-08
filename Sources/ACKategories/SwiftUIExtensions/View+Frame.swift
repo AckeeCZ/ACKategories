@@ -1,6 +1,5 @@
 import SwiftUI
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public extension View {
     func readSize(
         onChange: @escaping (CGSize) -> Void
@@ -27,7 +26,6 @@ private struct FramePreferenceKey: PreferenceKey {
     static func reduce(value: inout CGRect, nextValue: () -> CGRect) { }
 }
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 #Preview {
     Text("Hello, World!")
         .readSize {
