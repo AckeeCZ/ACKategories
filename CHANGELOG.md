@@ -8,6 +8,11 @@
 
 ## Next
 
+- Raise deployment targets to iOS 15, macOS 12, tvOS 15 and watchOS 9, required by Xcode 27 ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
+    - Xcode 27 refuses to build below these versions; note the watchOS floor is 9.0, not 8.0
+- Repair CI after `macos-latest` runner image drift ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
+    - Bump the pinned Xcode to 26.6 — the image no longer ships the iOS/tvOS/watchOS 26.1 simulator runtimes that 26.1.1 needs
+    - Refresh simulator destinations to devices that still exist (`iPhone 17 Pro`, `Apple Watch Ultra 3 (49mm)`)
 - Rename `Base.ViewController` to `BaseViewController` ([#155](https://github.com/AckeeCZ/ACKategories/pull/155), kudos to @komkovla)
     - Add Objective-C name annotation `@objc(ACKBaseViewController)` for better Objective-C interoperability
     - Add deprecated typealias `Base.ViewController` for backward compatibility

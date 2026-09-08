@@ -3,14 +3,16 @@ name: Tests
 on: [workflow_call]
 
 env:
-  DEVELOPER_DIR: /Applications/Xcode_26.1.1.app/Contents/Developer
+  DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
 
 jobs:
   xcodebuild:
     name: Xcodebuild
     runs-on: macos-latest
     env:
-      IOS_DEVICE: iPhone 16 Pro
+      IOS_DEVICE: iPhone 17 Pro
+      WATCHOS_DEVICE: Apple Watch Ultra 3 (49mm)
+      TVOS_DEVICE: Apple TV 4K (3rd generation)
     steps:
       - uses: actions/checkout@v4
       - name: iOS tests
@@ -35,14 +37,14 @@ jobs:
           name: Tests-macOS.xcresult
           path: Tests-macOS.xcresult
       - name: watchOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-watchOS.xcresult -sdk watchsimulator -destination "platform=watchOS Simulator,name=Apple Watch Ultra 2 (49mm),OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-watchOS.xcresult -sdk watchsimulator -destination "platform=watchOS Simulator,name=$WATCHOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: Tests-watchOS.xcresult
           path: Tests-watchOS.xcresult
       - name: tvOS tests
-        run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-tvOS.xcresult -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
+        run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-tvOS.xcresult -sdk appletvsimulator -destination "platform=tvOS Simulator,name=$TVOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

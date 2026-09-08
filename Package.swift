@@ -4,10 +4,10 @@ import PackageDescription
 let package = Package(
     name: "ACKategories",
     platforms: [
-        .iOS(.v12),
-        .macOS(.v10_13),
-        .watchOS(.v5),
-        .tvOS(.v12),
+        .iOS(.v15),
+        .macOS(.v12),
+        .watchOS(.v9),
+        .tvOS(.v15),
     ],
     products: [
         .library(name: "ACKategories", targets: ["ACKategories"]),

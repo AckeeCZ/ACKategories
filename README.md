@@ -5,6 +5,13 @@
 
 A bunch of tools, cocoa subclasses and extensions we created and use at Ackee.
 
+## Requirements
+
+- iOS 15+
+- macOS 12+
+- tvOS 15+
+- watchOS 9+
+
 ## Installation
 
 ### Carthage
@@ -52,7 +59,7 @@ button.on(.touchUpInside) { sender in
     ...
 }
 ```
-If running on iOS 9 or later you can use implicit parameter `UIControl.primaryActionTriggered`.
+You can also omit the event to use the primary action (`.primaryActionTriggered`): `button.on { sender in ... }`.
 
 ### String
 - trim strings easily
