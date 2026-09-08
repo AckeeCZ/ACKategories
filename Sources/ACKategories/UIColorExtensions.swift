@@ -110,27 +110,19 @@ public extension UIColor {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
 
-        if #available(iOS 13.0, tvOS 13.0, watchOS 6.0, *) {
-            // if self has alpha < 1 then this alpha is correctly applied on content
-            // during context rendering, which is right behavior. But after that in
-            // `.withTintColor(self)` below, this alpha is applied again and resulting
-            // image is more transparent then it should be. So use any non-transparent
-            // color here to draw the content and set resulting color with alpha only below.
-            context?.setFillColor(UIColor.white.cgColor)
-        } else {
-            context?.setFillColor(self.cgColor)
-        }
+        // if self has alpha < 1 then this alpha is correctly applied on content
+        // during context rendering, which is right behavior. But after that in
+        // `.withTintColor(self)` below, this alpha is applied again and resulting
+        // image is more transparent then it should be. So use any non-transparent
+        // color here to draw the content and set resulting color with alpha only below.
+        context?.setFillColor(UIColor.white.cgColor)
         context?.fill(rect)
 
         // swiftlint:disable:next force_unwrapping
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        if #available(iOS 13.0, tvOS 13.0, watchOS 6.0, *) {
-            return image.withTintColor(self)
-        } else {
-            return image
-        }
+        return image.withTintColor(self)
     }
 }
 #endif
