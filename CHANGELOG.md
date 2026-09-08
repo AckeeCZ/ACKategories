@@ -8,10 +8,12 @@
 
 ## Next
 
+- Remove deprecated `UISearchBar.textField` ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
+    - ⚠️ **BREAKING CHANGE:** use `UISearchBar.searchTextField` instead — it has been the recommended replacement since iOS 13 and gives you `UISearchTextField` rather than a plain `UITextField`
 - Remove availability checks made dead by the iOS 15 floor ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
     - Drop 52 `@available` attributes and unwrap 5 `if #available` runtime branches
-    - Back `UserDefault.subject` with a `lazy` stored property instead of `objc_getAssociatedObject`
-        - The associated-object storage was lock-protected by the ObjC runtime, so a concurrent *first* access is now a data race rather than merely racy. Neither form was usable concurrently, but the failure mode changed
+    - Back `UserDefault.subject` with a stored property seeded in `init` instead of `objc_getAssociatedObject`
+        - The associated-object accessor was a check-then-act race: two threads racing the first access each created a subject, the loser's instance was dropped from the association table and its subscribers were silently orphaned. The subject is now created exactly once, so `UserDefault` no longer has racy state
 - Raise deployment targets to iOS 15, macOS 12, tvOS 15 and watchOS 9, required by Xcode 27 ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
     - Xcode 27 refuses to build below these versions; note the watchOS floor is 9.0, not 8.0
 - Repair CI after `macos-latest` runner image drift ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)

@@ -14,8 +14,9 @@ import Foundation
 public final class UserDefault<Value: Codable> {
     private let key: String
     private let defaultValue: Value
-    private var userDefaults: UserDefaults
+    private let userDefaults: UserDefaults
     private let errorLogger: ((Error) -> Void)?
+    private let subject: CurrentValueSubject<Value, Never>
 
     /// - Parameters:
     ///     - key: Key for which the value should be saved
@@ -32,12 +33,14 @@ public final class UserDefault<Value: Codable> {
         self.defaultValue = `default`
         self.userDefaults = userDefaults
         self.errorLogger = errorLogger
+        self.subject = CurrentValueSubject(`default`)
+        subject.send(wrappedValue)
     }
 
     public var wrappedValue: Value {
         get {
             // Check if `Value` is supported by default by `UserDefaults`
-            if Value.self as? PropertyListValue.Type != nil {
+            if Value.self is PropertyListValue.Type {
                 return userDefaults.object(forKey: key) as? Value ?? defaultValue
             } else {
                 guard let data = userDefaults.object(forKey: key) as? Data else { return defaultValue }
@@ -54,7 +57,7 @@ public final class UserDefault<Value: Codable> {
             }
         }
         set {
-            if Value.self as? PropertyListValue.Type != nil {
+            if Value.self is PropertyListValue.Type {
                 userDefaults.set(newValue, forKey: key)
             } else {
                 let encoder = JSONEncoder()
@@ -73,12 +76,6 @@ public final class UserDefault<Value: Codable> {
     public var projectedValue: AnyPublisher<Value, Never> {
         subject.eraseToAnyPublisher()
     }
-
-    // `lazy` so the subject starts with the value stored at the time of first use,
-    // matching the associated-object implementation this replaced.
-    // Not thread-safe: the first access must be serialised, otherwise the lazy
-    // initialisation is a data race.
-    private lazy var subject = CurrentValueSubject<Value, Never>(wrappedValue)
 }
 
 public extension UserDefault {
