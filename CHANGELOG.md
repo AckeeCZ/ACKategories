@@ -8,6 +8,9 @@
 
 ## Next
 
+- Remove availability checks made dead by the iOS 15 floor ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
+    - Drop 52 `@available` attributes and unwrap 5 `if #available` runtime branches
+    - Back `UserDefault.subject` with a `lazy` stored property instead of `objc_getAssociatedObject`
 - Raise deployment targets to iOS 15, macOS 12, tvOS 15 and watchOS 9, required by Xcode 27 ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
     - Xcode 27 refuses to build below these versions; note the watchOS floor is 9.0, not 8.0
 - Repair CI after `macos-latest` runner image drift ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
