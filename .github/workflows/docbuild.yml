@@ -39,10 +39,10 @@ jobs:
             --output-path docs;
           echo "<script>window.location.href += \"/documentation/ackategories\"</script>" > docs/index.html;
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload only docs directory
           path: 'docs'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v5
