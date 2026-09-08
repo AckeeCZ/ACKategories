@@ -74,7 +74,10 @@ public final class UserDefault<Value: Codable> {
         subject.eraseToAnyPublisher()
     }
 
-    // lazy so the subject starts with the value stored at the time of first use
+    // `lazy` so the subject starts with the value stored at the time of first use,
+    // matching the associated-object implementation this replaced.
+    // Not thread-safe: the first access must be serialised, otherwise the lazy
+    // initialisation is a data race.
     private lazy var subject = CurrentValueSubject<Value, Never>(wrappedValue)
 }
 
