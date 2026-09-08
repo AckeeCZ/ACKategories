@@ -1,11 +1,9 @@
 import Foundation
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public protocol VersionUpdateManaging {
     var updateRequired: Bool { get async }
 }
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public final class VersionUpdateManager: VersionUpdateManaging {
     public var updateRequired: Bool {
         get async {

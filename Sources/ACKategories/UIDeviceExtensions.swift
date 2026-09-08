@@ -13,7 +13,6 @@ extension UIDevice {
     }
 
     /// Return **true** if device is Mac (Catalyst)
-    @available(iOS 14.0, tvOS 14.0, *)
     public var isMac: Bool {
         userInterfaceIdiom == .mac
     }

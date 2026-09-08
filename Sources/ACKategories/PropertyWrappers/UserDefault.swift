@@ -76,12 +76,10 @@ public final class UserDefault<Value: Codable> {
         }
     }
 
-    @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
     public var projectedValue: AnyPublisher<Value, Never> {
         subject.eraseToAnyPublisher()
     }
 
-    @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
     // cannot have stored property with limited availability, cannot be lazy since Xcode 14
     private var subject: CurrentValueSubject<Value, Never> {
         if let subject = objc_getAssociatedObject(self, &Keys.subject) as? CurrentValueSubject<Value, Never> {
