@@ -13,7 +13,9 @@
 - Remove availability checks made dead by the iOS 15 floor ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
     - Drop 52 `@available` attributes and unwrap 5 `if #available` runtime branches
     - Back `UserDefault.subject` with a stored property seeded in `init` instead of `objc_getAssociatedObject`
-        - The associated-object accessor was a check-then-act race: two threads racing the first access each created a subject, the loser's instance was dropped from the association table and its subscribers were silently orphaned. The subject is now created exactly once, so `UserDefault` no longer has racy state
+        - The associated-object accessor was a check-then-act race: two threads racing the first access each created a subject, the loser's instance was dropped from the association table and its subscribers were silently orphaned. The subject is now created exactly once, so that initialization race is gone — `UserDefault` itself is still not synchronized for concurrent access
+        - `$value` now snapshots the persisted value when the wrapper is initialized rather than on first subscription or write. Writes to the same key made outside the wrapper between `init` and the first subscription are no longer reflected in the publisher's replayed value — they never were after it. `wrappedValue` still reads `UserDefaults` on every access
+        - Decode errors on corrupted data are therefore also reported to `errorLogger` during initialization
 - Raise deployment targets to iOS 15, macOS 12, tvOS 15 and watchOS 9, required by Xcode 27 ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)
     - Xcode 27 refuses to build below these versions; note the watchOS floor is 9.0, not 8.0
 - Repair CI after `macos-latest` runner image drift ([#158](https://github.com/AckeeCZ/ACKategories/pull/158), kudos to @Jidoml)

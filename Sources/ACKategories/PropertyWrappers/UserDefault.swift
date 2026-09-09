@@ -22,7 +22,7 @@ public final class UserDefault<Value: Codable> {
     ///     - key: Key for which the value should be saved
     ///     - default: Default value to be used
     ///     - userDefaults: `UserDefaults` where value should be saved into. Default is `UserDefaults.standard`
-    ///     - errorLogger: Closure that is triggered with error from encoding/decoding values from setter/getter
+    ///     - errorLogger: Closure that is triggered with error from encoding/decoding values from setter/getter and from the initial read in `init`
     public init(
         _ key: String,
         `default`: Value,
@@ -33,28 +33,14 @@ public final class UserDefault<Value: Codable> {
         self.defaultValue = `default`
         self.userDefaults = userDefaults
         self.errorLogger = errorLogger
-        self.subject = CurrentValueSubject(`default`)
-        subject.send(wrappedValue)
+        self.subject = CurrentValueSubject(
+            Self.storedValue(forKey: key, in: userDefaults, default: `default`, errorLogger: errorLogger)
+        )
     }
 
     public var wrappedValue: Value {
         get {
-            // Check if `Value` is supported by default by `UserDefaults`
-            if Value.self is PropertyListValue.Type {
-                return userDefaults.object(forKey: key) as? Value ?? defaultValue
-            } else {
-                guard let data = userDefaults.object(forKey: key) as? Data else { return defaultValue }
-                let decoder = JSONDecoder()
-                // Encoding root-level `singleValueContainer` fails on iOS <= 12.0
-                // Thus we always encode/decode it into array, so it has a root object
-                // Related issue: https://github.com/AckeeCZ/ACKategories/issues/89
-                do {
-                    return try decoder.decode([Value].self, from: data).first ?? defaultValue
-                } catch {
-                    errorLogger?(error)
-                    return defaultValue
-                }
-            }
+            Self.storedValue(forKey: key, in: userDefaults, default: defaultValue, errorLogger: errorLogger)
         }
         set {
             if Value.self is PropertyListValue.Type {
@@ -75,6 +61,33 @@ public final class UserDefault<Value: Codable> {
 
     public var projectedValue: AnyPublisher<Value, Never> {
         subject.eraseToAnyPublisher()
+    }
+
+    /// Reads the persisted value for `key`, falling back to `default` when it is missing or cannot be decoded.
+    ///
+    /// Static so `init` can seed `subject` before `self` is fully initialized.
+    private static func storedValue(
+        forKey key: String,
+        in userDefaults: UserDefaults,
+        `default` defaultValue: Value,
+        errorLogger: ((Error) -> Void)?
+    ) -> Value {
+        // Check if `Value` is supported by default by `UserDefaults`
+        if Value.self is PropertyListValue.Type {
+            return userDefaults.object(forKey: key) as? Value ?? defaultValue
+        } else {
+            guard let data = userDefaults.object(forKey: key) as? Data else { return defaultValue }
+            let decoder = JSONDecoder()
+            // Values are wrapped in an array so the JSON has a root object.
+            // Do not unwrap this — it would break decoding of everything already
+            // persisted by earlier versions. See https://github.com/AckeeCZ/ACKategories/issues/89
+            do {
+                return try decoder.decode([Value].self, from: data).first ?? defaultValue
+            } catch {
+                errorLogger?(error)
+                return defaultValue
+            }
+        }
     }
 }
 
