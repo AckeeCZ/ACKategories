@@ -1,12 +1,12 @@
 import SwiftUI
 
 // Source: https://github.com/tgrapperon/swiftui-layout-guides
-/// This view populates its content's ``layoutMarginsInsets`` and ``readableContentInsets``.
+/// This view populates its content's `layoutMarginsInsets` and `readableContentInsets`.
 public struct WithLayoutMargins<Content>: View where Content: View {
     let content: (EdgeInsets) -> Content
 
-    /// Initialize a ``WithLayoutMargins`` view, populating its content's ``layoutMarginsInsets``
-    ///  and ``readableContentInsets``.
+    /// Initialize a ``WithLayoutMargins`` view, populating its content's `layoutMarginsInsets`
+    ///  and `readableContentInsets`.
     ///
     /// - Parameter content: A closure that builds a `Content` view from the layout
     /// margins provided in the form of an `EdgeInsets` argument.
@@ -14,8 +14,8 @@ public struct WithLayoutMargins<Content>: View where Content: View {
         self.content = content
     }
 
-    /// Initialize a ``WithLayoutMargins`` view, populating  its content's ``layoutMarginsInsets``
-    /// and ``readableContentInsets``.
+    /// Initialize a ``WithLayoutMargins`` view, populating  its content's `layoutMarginsInsets`
+    /// and `readableContentInsets`.
     ///
     /// - Parameter content: A closure that builds a `Content` view.
     public init(@ViewBuilder content: @escaping () -> Content) {
@@ -85,8 +85,6 @@ extension View {
     /// - Parameter alignment: The `Alignment` to use when the view is smaller than
     /// the readable content width.
     /// - Note: You don't have to wrap this view inside a ``WithLayoutMargins`` view.
-    /// - Note: This modifier is equivalent to wrapping the view inside a
-    /// ``FitReadableContentWidth`` view.
     public func fitToReadableContentWidth(alignment: Alignment = .center) -> some View {
         self.modifier(FitLayoutGuidesWidth(alignment: alignment, kind: .readableContent))
     }
@@ -96,12 +94,10 @@ extension View {
     /// - Parameter alignment: The `Alignment` to use when the view is smaller than
     /// the readable content width.
     /// - Note: You don't have to wrap this view inside a ``WithLayoutMargins`` view.
-    /// - Note: This modifier is equivalent to wrapping the view inside a
-    /// ``FitLayoutMarginsWidth`` view.
     public func fitToLayoutMarginsWidth(alignment: Alignment = .center) -> some View {
         self.modifier(FitLayoutGuidesWidth(alignment: alignment, kind: .layoutMargins))
     }
-    /// Use this modifier to populate the ``layoutMarginsInsets`` and ``readableContentInsets``
+    /// Use this modifier to populate the `layoutMarginsInsets` and `readableContentInsets`
     /// for the target view.
     ///
     /// - Note: You don't have to wrap this view inside a ``WithLayoutMargins`` view.

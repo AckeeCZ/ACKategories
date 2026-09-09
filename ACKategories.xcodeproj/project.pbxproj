@@ -138,6 +138,8 @@
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
 		6A72B2222B1A15AC00A59EDD /* BackGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72B2212B1A15AC00A59EDD /* BackGesture.swift */; };
 		88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDD90325B8252E00207987 /* GradientViewController.swift */; };
+		A2035B6FA7B449CD92033D8B /* View+FrameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E3212C27C546A38A962094 /* View+FrameSize.swift */; };
+		C3417AD121F141AA8F873477 /* SwiftUILayoutGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +359,8 @@
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A72B2212B1A15AC00A59EDD /* BackGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGesture.swift; sourceTree = "<group>"; };
 		88EDD90325B8252E00207987 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		D0E3212C27C546A38A962094 /* View+FrameSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+FrameSize.swift"; sourceTree = "<group>"; };
+		E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutGuides.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				69BC15942CF8A42700A4B55F /* View+Frame.swift */,
+				D0E3212C27C546A38A962094 /* View+FrameSize.swift */,
+				E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */,
 				69246CFA2BDFE77400AB31A1 /* SwiftUIColorsTheme.swift */,
 				69E0A6042AFD10BE00C8E8D9 /* FontModifier.swift */,
 				693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */,
@@ -1293,6 +1299,8 @@
 				69ACD6F22AFD133A0021127B /* UIDeviceExtensions.swift in Sources */,
 				69ACD6F32AFD133A0021127B /* UIImageExtensions.swift in Sources */,
 				69BC15952CF8A42C00A4B55F /* View+Frame.swift in Sources */,
+				A2035B6FA7B449CD92033D8B /* View+FrameSize.swift in Sources */,
+				C3417AD121F141AA8F873477 /* SwiftUILayoutGuides.swift in Sources */,
 				69ACD6F42AFD133A0021127B /* UILabelExtensions.swift in Sources */,
 				69ACD6F52AFD133A0021127B /* UINavigationControllerExtensions.swift in Sources */,
 				69ACD6F72AFD133A0021127B /* UIStackViewExtensions.swift in Sources */,

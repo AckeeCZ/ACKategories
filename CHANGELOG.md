@@ -8,6 +8,9 @@
 
 ## Next
 
+- Add `SwiftUILayoutGuides.swift` and `View+FrameSize.swift` to the Xcode project ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
+    - Both files had been SPM-only since 6.16.0, where the changelog announced them. The Carthage xcframework therefore shipped without `WithLayoutMargins`, `fitToReadableContentWidth()`, `fitToLayoutMarginsWidth()`, `measureLayoutMargins()`, the `layoutMarginsInsets`/`readableContentInsets` environment values and `View.frame(size:)` — and no `xcodebuild` job ever compiled them for iOS, macOS, watchOS or tvOS
+    - Fix the 10 DocC warnings this exposed in `SwiftUILayoutGuides.swift` — they only appeared because the documentation build had never seen the file. The two environment values become plain code spans rather than symbol links, since DocC resolves extensions of SwiftUI types under an internal module name that Apple may rename; and the notes pointing at `FitReadableContentWidth`/`FitLayoutMarginsWidth` are gone, as neither type ever existed
 - Remove deprecated `UISearchBar.textField` ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
     - ⚠️ **BREAKING CHANGE:** use `UISearchBar.searchTextField` instead — it has been the recommended replacement since iOS 13 and gives you `UISearchTextField` rather than a plain `UITextField`
 - Remove availability checks made dead by the iOS 15 floor ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
@@ -38,7 +41,7 @@
 
 - Add SwiftUI extension `View+FrameSize` ([#153](https://github.com/AckeeCZ/ACKategories/pull/153), kudos to @lukashromadnik)
 - Add `readSize` and `readFrame` to SwiftUI views ([#150](https://github.com/AckeeCZ/ACKategories/pull/150), kudos to @olejnjak)
-- Add `WithLayoutMargins` to SwiftUI extensions ([#150](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
+- Add `WithLayoutMargins` to SwiftUI extensions ([#151](https://github.com/AckeeCZ/ACKategories/pull/151), kudos to @komkovla)
 
 ## 6.15.0
 
