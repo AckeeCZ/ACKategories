@@ -52,6 +52,9 @@ public final class UserDefault<Value: Codable> {
                     userDefaults.set(data, forKey: key)
                 } catch {
                     errorLogger?(error)
+                    // Nothing was persisted, so publishing would leave subscribers
+                    // holding a value `wrappedValue` never returns
+                    return
                 }
             }
 
