@@ -1,7 +1,6 @@
 import Foundation
 import Networking
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public final class APIService_Mock: APIServicing {
     public init() {
         

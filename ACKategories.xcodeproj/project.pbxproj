@@ -82,7 +82,6 @@
 		69ACD6F32AFD133A0021127B /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6122AFD10BE00C8E8D9 /* UIImageExtensions.swift */; };
 		69ACD6F42AFD133A0021127B /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6192AFD10BE00C8E8D9 /* UILabelExtensions.swift */; };
 		69ACD6F52AFD133A0021127B /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6132AFD10BE00C8E8D9 /* UINavigationControllerExtensions.swift */; };
-		69ACD6F62AFD133A0021127B /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5F52AFD10BE00C8E8D9 /* UISearchBarExtensions.swift */; };
 		69ACD6F72AFD133A0021127B /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A5FB2AFD10BE00C8E8D9 /* UIStackViewExtensions.swift */; };
 		69ACD6F82AFD133A0021127B /* UIView+Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A6092AFD10BE00C8E8D9 /* UIView+Spacer.swift */; };
 		69ACD6F92AFD133A0021127B /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0A60E2AFD10BE00C8E8D9 /* UIViewController+Children.swift */; };
@@ -139,6 +138,8 @@
 		69FA5FC223C8690A00B44BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */; };
 		6A72B2222B1A15AC00A59EDD /* BackGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72B2212B1A15AC00A59EDD /* BackGesture.swift */; };
 		88EDD90425B8252E00207987 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDD90325B8252E00207987 /* GradientViewController.swift */; };
+		A2035B6FA7B449CD92033D8B /* View+FrameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E3212C27C546A38A962094 /* View+FrameSize.swift */; };
+		C3417AD121F141AA8F873477 /* SwiftUILayoutGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,7 +272,6 @@
 		69DF225A2B459CC50025C555 /* PushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DF22792B459D0D0025C555 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		69DF227A2B459D0D0025C555 /* UNNotificationSettingsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationSettingsExtensions.swift; sourceTree = "<group>"; };
-		69E0A5F52AFD10BE00C8E8D9 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
 		69E0A5F72AFD10BE00C8E8D9 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		69E0A5F82AFD10BE00C8E8D9 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		69E0A5F92AFD10BE00C8E8D9 /* ACKategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACKategories.h; sourceTree = "<group>"; };
@@ -359,6 +359,8 @@
 		69FA5FC123C8690A00B44BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A72B2212B1A15AC00A59EDD /* BackGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGesture.swift; sourceTree = "<group>"; };
 		88EDD90325B8252E00207987 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		D0E3212C27C546A38A962094 /* View+FrameSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+FrameSize.swift"; sourceTree = "<group>"; };
+		E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutGuides.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,7 +535,6 @@
 				69E0A61F2AFD10BE00C8E8D9 /* UIApplicationExtensions.swift */,
 				69E0A6192AFD10BE00C8E8D9 /* UILabelExtensions.swift */,
 				69E0A6132AFD10BE00C8E8D9 /* UINavigationControllerExtensions.swift */,
-				69E0A5F52AFD10BE00C8E8D9 /* UISearchBarExtensions.swift */,
 				69E0A5FB2AFD10BE00C8E8D9 /* UIStackViewExtensions.swift */,
 				69E0A6092AFD10BE00C8E8D9 /* UIView+Spacer.swift */,
 				69E0A60E2AFD10BE00C8E8D9 /* UIViewController+Children.swift */,
@@ -654,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				69BC15942CF8A42700A4B55F /* View+Frame.swift */,
+				D0E3212C27C546A38A962094 /* View+FrameSize.swift */,
+				E0AE9942CD0E454B948FF15A /* SwiftUILayoutGuides.swift */,
 				69246CFA2BDFE77400AB31A1 /* SwiftUIColorsTheme.swift */,
 				69E0A6042AFD10BE00C8E8D9 /* FontModifier.swift */,
 				693B39B62BF2359B00DF7C5E /* ACKHostingController.swift */,
@@ -1296,9 +1299,10 @@
 				69ACD6F22AFD133A0021127B /* UIDeviceExtensions.swift in Sources */,
 				69ACD6F32AFD133A0021127B /* UIImageExtensions.swift in Sources */,
 				69BC15952CF8A42C00A4B55F /* View+Frame.swift in Sources */,
+				A2035B6FA7B449CD92033D8B /* View+FrameSize.swift in Sources */,
+				C3417AD121F141AA8F873477 /* SwiftUILayoutGuides.swift in Sources */,
 				69ACD6F42AFD133A0021127B /* UILabelExtensions.swift in Sources */,
 				69ACD6F52AFD133A0021127B /* UINavigationControllerExtensions.swift in Sources */,
-				69ACD6F62AFD133A0021127B /* UISearchBarExtensions.swift in Sources */,
 				69ACD6F72AFD133A0021127B /* UIStackViewExtensions.swift in Sources */,
 				69ACD6F82AFD133A0021127B /* UIView+Spacer.swift in Sources */,
 				693B39B72BF2359B00DF7C5E /* ACKHostingController.swift in Sources */,

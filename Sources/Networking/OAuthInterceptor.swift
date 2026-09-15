@@ -1,7 +1,6 @@
 import Foundation
 
 /// Interceptor that is ready to solve token refresh
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public final actor OAuthInterceptor: ResponseInterceptor {
     /// Enum for results when checking if request current auth data
     public enum UsedCurrentAuthData {

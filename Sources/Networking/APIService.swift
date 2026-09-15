@@ -1,6 +1,5 @@
 import Foundation
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public final class APIService: APIServicing {
     /// Error thrown when response status code is unexpected
     public struct UnexpectedStatusCodeError: Error {

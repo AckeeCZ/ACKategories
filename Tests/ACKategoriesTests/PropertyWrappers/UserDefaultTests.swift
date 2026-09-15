@@ -3,7 +3,6 @@ import Foundation
 import XCTest
 import ACKategories
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 final class UserDefaultTests: XCTestCase {
     private var subject: MyUserDefaultProvider!
     private var userDefaults: UserDefaults!
@@ -74,6 +73,27 @@ final class UserDefaultTests: XCTestCase {
         subject.hasSeen = true
         XCTAssertEqual([false, true], values)
     }
+
+    func testFailedWriteIsNotPublished() {
+        // Given
+        let persisted = FloatingValue(ratio: 0.5)
+        subject.ratio = persisted
+
+        var published = [FloatingValue?]()
+        subject.$ratio.sink { published.append($0) }.store(in: &cancellables)
+
+        // When – `JSONEncoder` rejects non-conforming floats, so this write cannot reach `UserDefaults`
+        subject.ratio = FloatingValue(ratio: .infinity)
+
+        // Then – nothing was published, and the getter still agrees with the publisher
+        XCTAssertEqual(published, [persisted])
+        XCTAssertEqual(subject.ratio, persisted)
+
+        // And a write that does succeed is still published
+        let next = FloatingValue(ratio: 0.75)
+        subject.ratio = next
+        XCTAssertEqual(published, [persisted, next])
+    }
 }
 
 private struct MyUserDefaultProvider {
@@ -85,9 +105,16 @@ private struct MyUserDefaultProvider {
     
     @UserDefault("codable_value", userDefaults: UserDefaults(suiteName: "my_user_default")!)
     var codableValue: CodableValue?
+
+    @UserDefault("ratio", userDefaults: UserDefaults(suiteName: "my_user_default")!)
+    var ratio: FloatingValue?
 }
 
 private struct CodableValue: Codable, Equatable {
     let stringValue: String
     let intValue: Int
+}
+
+private struct FloatingValue: Codable, Equatable {
+    let ratio: Double
 }

@@ -3,7 +3,6 @@ import Networking
 import XCTest
 
 @MainActor
-@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 final class OAuthInterceptor_Tests: XCTestCase {
     private final class UnexpectedCall: Error {
         init() { XCTFail("Should not be called") }

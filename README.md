@@ -59,6 +59,7 @@ button.on(.touchUpInside) { sender in
     ...
 }
 ```
+
 You can also omit the event to use the primary action (`.primaryActionTriggered`): `button.on { sender in ... }`.
 
 ### String
