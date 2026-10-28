@@ -8,6 +8,8 @@
 
 ## Next
 
+## 7.0.0
+
 - Replace deprecated `Scanner` API in `UIColor(hexString:)` ([#160](https://github.com/AckeeCZ/ACKategories/pull/160), kudos to @olejnjak)
     - The leading `#` is now enforced with a `precondition` instead of the first character being skipped blindly
     - Input that is not exactly six hex digits after the `#` now yields black instead of a partially parsed color
@@ -34,7 +36,7 @@
 - Rename `Base.ViewController` to `BaseViewController` ([#155](https://github.com/AckeeCZ/ACKategories/pull/155), kudos to @komkovla)
     - Add Objective-C name annotation `@objc(ACKBaseViewController)` for better Objective-C interoperability
     - Add deprecated typealias `Base.ViewController` for backward compatibility
-        - ⚠️ **BREAKING CHANGE:** the typealias is removed again in 7.0.0, use `BaseViewController` instead
+        - ⚠️ **BREAKING CHANGE:** the typealias is removed again in 7.0.0, use `BaseViewController` instead ([#161](https://github.com/AckeeCZ/ACKategories/pull/161), kudos to @olejnjak)
     - Fix comment typo in `Base.viewControllerMemoryLoggingEnabled`
 - Add `@objc(ACK...)` name annotations to all ObjC-visible public classes ([#155](https://github.com/AckeeCZ/ACKategories/pull/155))
     - `GradientView` → `@objc(ACKGradientView)`
