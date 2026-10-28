@@ -14,7 +14,7 @@ jobs:
       WATCHOS_DEVICE: Apple Watch Ultra 3 (49mm)
       TVOS_DEVICE: Apple TV 4K (3rd generation)
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Ensure simulators exist
         run: |
           # Runner images sometimes come up with no simulator devices, create the ones we need on the latest installed runtime
@@ -39,35 +39,35 @@ jobs:
           ensure_simulator "$TVOS_DEVICE" tvOS
       - name: iOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-iOS.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: Tests-iOS.xcresult
           path: Tests-iOS.xcresult
       - name: iOS responder tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-iOS-Responder.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: Tests-iOS-Responder.xcresult
           path: Tests-iOS-Responder.xcresult
       - name: macOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-macOS.xcresult -destination 'platform=OS X,arch=x86_64' | xcpretty
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: Tests-macOS.xcresult
           path: Tests-macOS.xcresult
       - name: watchOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-watchOS.xcresult -sdk watchsimulator -destination "platform=watchOS Simulator,name=$WATCHOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: Tests-watchOS.xcresult
           path: Tests-watchOS.xcresult
       - name: tvOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-tvOS.xcresult -sdk appletvsimulator -destination "platform=tvOS Simulator,name=$TVOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: Tests-tvOS.xcresult
@@ -76,7 +76,7 @@ jobs:
     name: SPM
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: SPM build
         run: swift build
       - name: SPM tests
