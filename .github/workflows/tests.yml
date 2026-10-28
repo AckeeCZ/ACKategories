@@ -15,6 +15,28 @@ jobs:
       TVOS_DEVICE: Apple TV 4K (3rd generation)
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure simulators exist
+        run: |
+          # Runner images sometimes come up with no simulator devices, create the ones we need on the latest installed runtime
+          ensure_simulator() {
+            local name="$1" platform="$2"
+            if xcrun simctl list devices available -j | jq -e --arg name "$name" '[.devices[][] | select(.name == $name)] | length > 0' > /dev/null; then
+              echo "Simulator '$name' already exists"
+              return
+            fi
+            local runtime devicetype
+            runtime=$(xcrun simctl list runtimes available -j | jq -r --arg platform "$platform" '[.runtimes[] | select(.platform == $platform)] | sort_by(.version | split(".") | map(tonumber)) | last | .identifier // empty')
+            devicetype=$(xcrun simctl list devicetypes -j | jq -r --arg name "$name" '.devicetypes[] | select(.name == $name) | .identifier')
+            if [ -z "$runtime" ] || [ -z "$devicetype" ]; then
+              echo "::error::Cannot create '$name' (runtime: '${runtime:-none}', device type: '${devicetype:-none}')"
+              return 1
+            fi
+            echo "Creating simulator '$name' ($devicetype) on $runtime"
+            xcrun simctl create "$name" "$devicetype" "$runtime"
+          }
+          ensure_simulator "$IOS_DEVICE" iOS
+          ensure_simulator "$WATCHOS_DEVICE" watchOS
+          ensure_simulator "$TVOS_DEVICE" tvOS
       - name: iOS tests
         run: set -o pipefail && xcodebuild test -scheme ACKategories -resultBundlePath Tests-iOS.xcresult -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS_DEVICE,OS=latest" ONLY_ACTIVE_ARCH=YES | xcpretty
       - uses: actions/upload-artifact@v4
