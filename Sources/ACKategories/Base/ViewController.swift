@@ -8,11 +8,6 @@ extension Base {
     public static var viewControllerMemoryLoggingEnabled: Bool = true
 }
 
-extension Base {
-    @available(*, deprecated, message: "Use BaseViewController instead")
-    public typealias ViewController = BaseViewController
-}
-
 /// Base class for all view controllers
 @objc(ACKBaseViewController)
 open class BaseViewController: UIViewController {
