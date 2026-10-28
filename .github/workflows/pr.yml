@@ -13,15 +13,15 @@ jobs:
     name: Swiftlint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.1.0
+        uses: norio-nomura/action-swiftlint@3.2.1
   changelog:
     name: Changelog
     runs-on: ubuntu-latest
     if: ${{ !github.event.pull_request.head.repo.fork }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Changelog Reminder
         uses: peterjgrainger/action-changelog-reminder@v1.3.0
         with:
