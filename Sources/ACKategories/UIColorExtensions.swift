@@ -22,11 +22,18 @@ public extension UIColor {
      - parameter hexString: Hex string to create color from
      */
     convenience init(hexString: String) {
-        var rgbValue: UInt32 = 0
-        let scanner = Scanner(string: hexString)
-        scanner.scanLocation = 1 // bypass '#' character
-        scanner.scanHexInt32(&rgbValue)
-        self.init(hex: rgbValue)
+        precondition(hexString.hasPrefix("#"), "Leading '#' is mandatory (e.g. '#ff00ff')")
+        let start = hexString.index(after: hexString.startIndex)
+        let hexBody = String(hexString[start...])
+
+        var value: UInt64 = 0
+        let scanner = Scanner(string: hexBody)
+        if scanner.scanHexInt64(&value), hexBody.count == 6 {
+            self.init(hex: UInt32(value & 0xFFFFFF))
+        } else {
+            // Fallback to black if input is malformed to keep behavior predictable
+            self.init(hex: 0x000000)
+        }
     }
 
     /**
