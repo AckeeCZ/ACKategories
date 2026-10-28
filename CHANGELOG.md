@@ -12,6 +12,7 @@
     - The leading `#` is now enforced with a `precondition` instead of the first character being skipped blindly
     - Input that is not exactly six hex digits after the `#` now yields black instead of a partially parsed color
 - Remove the shared `Networking` and `PushNotifications` Xcode schemes ([#160](https://github.com/AckeeCZ/ACKategories/pull/160), kudos to @olejnjak)
+    - Both modules remain available through the SPM distribution
 - Add `SwiftUILayoutGuides.swift` and `View+FrameSize.swift` to the Xcode project ([#159](https://github.com/AckeeCZ/ACKategories/pull/159), kudos to @Jidoml)
     - Both files had been SPM-only since 6.16.0, where the changelog announced them. The Carthage xcframework therefore shipped without `WithLayoutMargins`, `fitToReadableContentWidth()`, `fitToLayoutMarginsWidth()`, `measureLayoutMargins()`, the `layoutMarginsInsets`/`readableContentInsets` environment values and `View.frame(size:)` — and no `xcodebuild` job ever compiled them for iOS, macOS, watchOS or tvOS
     - Fix the 10 DocC warnings this exposed in `SwiftUILayoutGuides.swift` — they only appeared because the documentation build had never seen the file. The two environment values become plain code spans rather than symbol links, since DocC resolves extensions of SwiftUI types under an internal module name that Apple may rename; and the notes pointing at `FitReadableContentWidth`/`FitLayoutMarginsWidth` are gone, as neither type ever existed
