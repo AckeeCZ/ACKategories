@@ -1,7 +1,6 @@
 import Foundation
 import UserNotifications
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public protocol PushManaging {
     var actions: PushManagingActions { get }
     
@@ -9,7 +8,6 @@ public protocol PushManaging {
     var currentNotificationSettings: UNNotificationSettings? { get }
 }
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public protocol PushManagingActions {
     func start()
     func requestPermission(options: UNAuthorizationOptions) async
@@ -23,12 +21,10 @@ public protocol PushManagingActions {
     #endif
 }
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public extension PushManaging where Self: PushManagingActions {
     var actions: PushManagingActions { self }
 }
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 @objc(ACKPushManager)
 public final class PushManager: NSObject, PushManaging, PushManagingActions {
     public private(set) lazy var notificationSettings = AsyncStream<UNNotificationSettings> { continuation in
@@ -108,7 +104,6 @@ public final class PushManager: NSObject, PushManaging, PushManagingActions {
     #endif
 }
 
-@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 extension PushManager: UNUserNotificationCenterDelegate {
     public func userNotificationCenter(
         _ center: UNUserNotificationCenter,

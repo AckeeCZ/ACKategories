@@ -1,7 +1,6 @@
 import Foundation
 
 /// Protocol wrapping raw network requests, basically URLSession
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public protocol Network {
     /// Send given request
     /// - Parameter request: Request to be sent
@@ -9,7 +8,6 @@ public protocol Network {
     func request(_ request: URLRequest) async throws -> HTTPResponse
 }
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 12.0, *)
 extension URLSession: Network {
     public func request(_ request: URLRequest) async throws -> HTTPResponse {
         let (data, response) = try await data(for: request)

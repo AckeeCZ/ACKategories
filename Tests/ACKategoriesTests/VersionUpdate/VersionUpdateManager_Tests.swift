@@ -2,7 +2,6 @@ import ACKategories
 import ACKategoriesTesting
 import XCTest
 
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 final class VersionUpdateManager_Tests: XCTestCase {
     func test_minBuildNumber_lower() async throws {
         let fetcher = VersionUpdateFetcher_Mock()

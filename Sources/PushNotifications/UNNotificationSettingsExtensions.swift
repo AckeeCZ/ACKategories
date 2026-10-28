@@ -1,6 +1,5 @@
 import UserNotifications
 
-@available(iOS 13.0, macOS 10.15, *)
 public extension UNNotificationSettings {
     var allowedPresentationOptions: UNNotificationPresentationOptions {
         var options = [(UNNotificationSetting, UNNotificationPresentationOptions)]()

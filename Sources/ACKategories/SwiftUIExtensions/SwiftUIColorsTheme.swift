@@ -16,7 +16,6 @@ import UIKit
 /// ```
 ///
 /// Then you can use `Color.theme.primary` in SwiftUI
-@available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 @dynamicMemberLookup
 public struct SwiftUIColorsTheme {
     public subscript(dynamicMember keyPath: KeyPath<Theme<UIColor>, UIColor>) -> SwiftUI.Color {
@@ -25,7 +24,6 @@ public struct SwiftUIColorsTheme {
     }
 }
 
-@available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 public extension Color {
     /// Namespace for bridged ``Theme`` colors from `Theme<UIColor>` extension, see ``SwiftUIColorsTheme``.
     static let theme = SwiftUIColorsTheme()

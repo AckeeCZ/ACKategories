@@ -1,6 +1,5 @@
 import Combine
 
-@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Future {
     /// Run async operation as Publisher
     /// - Parameter operation: Operation to be run
@@ -33,7 +32,6 @@ public extension Future {
     }
 }
 
-@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension AnyPublisher {
     /// Run async operation as Publisher
     /// - Parameter operation: Operation to be run

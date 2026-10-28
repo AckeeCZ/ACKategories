@@ -9,7 +9,7 @@
 import UIKit
 import ACKategories
 
-class BaseViewController<ViewModelType>: Base.ViewController {
+class BaseViewController<ViewModelType>: ACKategories.BaseViewController {
 
     /// Corresponding viewModel
     let viewModel: ViewModelType

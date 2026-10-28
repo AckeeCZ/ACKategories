@@ -1,7 +1,6 @@
 import Foundation
 
 /// Protocol wrapping objects that perform network requests
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public protocol APIServicing {
     /// Send given `URLRequest`
     /// - Parameter request: Request to be sent
@@ -26,7 +25,6 @@ public protocol APIServicing {
 }
 
 /// Protocol wrapping interceptors that can modify requests before they are sent
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public protocol RequestInterceptor {
     /// Intercept request sent by service
     /// - Parameters:
@@ -39,7 +37,6 @@ public protocol RequestInterceptor {
 }
 
 /// Protocol wrapping interceptors that can modify responses before they are returned from API service
-@available(tvOS 13.0, iOS 13.0, watchOS 6.0, macOS 10.15, *)
 public protocol ResponseInterceptor {
     /// Intercept response that was returned to service
     /// - Parameters:
